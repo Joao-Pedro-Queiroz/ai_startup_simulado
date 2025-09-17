@@ -33,10 +33,11 @@ public class ModeloClient {
     }
 
     /** Gera as ~44 questões do simulado normal em uma chamada */
-    public Map<String,Object> gerarSimuladoOriginal(String userId, String topic) {
+    public Map<String,Object> gerarSimuladoOriginal(String userId) {
         String url = base + originalPath;
-        var headers = new HttpHeaders(); headers.setContentType(MediaType.APPLICATION_JSON);
-        var payload = Map.of("user_id", userId, "topic", topic);
+        var headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        var payload = Map.of("user_id", userId); // <- sem topic
         return rt.exchange(url, HttpMethod.POST, new HttpEntity<>(payload, headers), Map.class).getBody();
     }
 }

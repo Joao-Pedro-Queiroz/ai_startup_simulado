@@ -55,10 +55,11 @@ public class SimuladoController {
     @SecurityRequirement(name = "bearerAuth")
     @Operation(summary = "Inicia simulado original e retorna simulado + questões")
     @PostMapping("/simulados/original")
-    public ResponseEntity<SimuladoComQuestoesDTO> iniciarOriginal(@RequestBody StartAdaptativoDTO dto,
-                                                                  HttpServletRequest req) {
+    public ResponseEntity<SimuladoComQuestoesDTO> iniciarOriginal(@RequestBody StartOriginalDTO dto,
+                                                                jakarta.servlet.http.HttpServletRequest req) {
         return ResponseEntity.ok(service.iniciarOriginal(req, dto));
     }
+
 
     // Finalizar simulado: calcula perfis e fecha
     @SecurityRequirement(name = "bearerAuth")

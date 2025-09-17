@@ -119,9 +119,9 @@ public class SimuladoService {
     }
 
     // ===== Criação Original (1 chamada de 44) =====
-    public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req, StartAdaptativoDTO payload) {
+    public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req, StartOriginalDTO payload) {
         String bearer = req.getHeader("Authorization");
-        String email = (String) req.getAttribute("authEmail");
+        String email  = (String) req.getAttribute("authEmail");
         if (email == null) throw new RuntimeException("E-mail não encontrado no JWT.");
 
         String userId = usuarioClient.getUserIdByEmail(email, bearer);
@@ -133,13 +133,14 @@ public class SimuladoService {
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
                 .tipo("ORIGINAL")
-                .data(LocalDateTime.now())
+                .data(java.time.LocalDateTime.now())
                 .status("ABERTO")
                 .faturaWins(payload.fatura_wins())
                 .build());
 
-        var modulo = modeloClient.gerarSimuladoOriginal(userId, payload.topic()); // 44 questões
-        var lista = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
+        // chama o modelo UMA vez e sem topic
+        var modulo = modeloClient.gerarSimuladoOriginal(userId);
+        var lista  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
         var qsCriadas = questaoClient.criarQuestoes(bearer, lista);
 
         return new SimuladoComQuestoesDTO(
