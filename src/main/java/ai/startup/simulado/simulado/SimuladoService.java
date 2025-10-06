@@ -3,6 +3,9 @@ package ai.startup.simulado.simulado;
 import ai.startup.simulado.client.ModeloClient;
 import ai.startup.simulado.perfil.PerfilClient;
 import ai.startup.simulado.perfil.PerfilCreateDTO;
+import ai.startup.simulado.perfil.TopicDTO;
+import ai.startup.simulado.perfil.SubskillDTO;
+import ai.startup.simulado.perfil.StructureDTO;
 import ai.startup.simulado.questaosimulado.QuestaoClient;
 import ai.startup.simulado.questaosimulado.QuestoesCreateItemDTO;
 import ai.startup.simulado.usuario.UsuarioClient;
@@ -13,8 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.*;
-import java.util.stream.Collectors;
-
 @Service
 public class SimuladoService {
 
@@ -36,14 +37,16 @@ public class SimuladoService {
         this.perfilClient = perfilClient;
     }
 
-    // ===== CRUD =====
+    // ================= CRUD =================
+
     public List<SimuladoDTO> listar() {
         return repo.findAll(Sort.by(Sort.Direction.DESC, "data"))
                 .stream().map(this::toDTO).toList();
     }
 
     public SimuladoDTO obter(String id) {
-        return repo.findById(id).map(this::toDTO)
+        return repo.findById(id)
+                .map(this::toDTO)
                 .orElseThrow(() -> new RuntimeException("Simulado não encontrado."));
     }
 
@@ -68,7 +71,7 @@ public class SimuladoService {
         return toDTO(repo.save(s));
     }
 
-    /** DELETE: remove também as questões do simulado na API de Questões */
+    /** DELETE: também remove as questões do simulado na API de Questões */
     public void deletar(String id, String bearerToken) {
         if (!repo.existsById(id)) throw new RuntimeException("Simulado não encontrado.");
         var qs = questaoClient.listarPorSimulado(bearerToken, id);
@@ -81,16 +84,17 @@ public class SimuladoService {
         repo.deleteById(id);
     }
 
-    // ===== Criação Adaptativo (2 chamadas de 22) =====
+    // ================= Início: ADAPTATIVO & ORIGINAL =================
+
+    /** Inicia simulado ADAPTATIVO (2 chamadas ao modelo de 22 questões; total 44), cadastra questões e retorna tudo */
     public SimuladoComQuestoesDTO iniciarAdaptativo(HttpServletRequest req, StartAdaptativoDTO payload) {
         String bearer = req.getHeader("Authorization");
-        String email = (String) req.getAttribute("authEmail");
+        String email  = (String) req.getAttribute("authEmail");
         if (email == null) throw new RuntimeException("E-mail não encontrado no JWT.");
 
-        // id_usuario via API de usuário
         String userId = usuarioClient.getUserIdByEmail(email, bearer);
 
-        // Regra: não criar se último está ABERTO
+        // Regra: não criar se o último está ABERTO
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
             throw new RuntimeException("Há um simulado em aberto. Finalize-o antes de criar outro.");
@@ -118,7 +122,7 @@ public class SimuladoService {
         );
     }
 
-    // ===== Criação Original (1 chamada de 44) =====
+    /** Inicia simulado ORIGINAL (1 chamada que já retorna 44), cadastra questões e retorna tudo */
     public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req, StartOriginalDTO payload) {
         String bearer = req.getHeader("Authorization");
         String email  = (String) req.getAttribute("authEmail");
@@ -133,13 +137,12 @@ public class SimuladoService {
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
                 .tipo("ORIGINAL")
-                .data(java.time.LocalDateTime.now())
+                .data(LocalDateTime.now())
                 .status("ABERTO")
                 .faturaWins(payload.fatura_wins())
                 .build());
 
-        // chama o modelo UMA vez e sem topic
-        var modulo = modeloClient.gerarSimuladoOriginal(userId);
+        var modulo = modeloClient.gerarSimuladoOriginal(userId); // sem topic
         var lista  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
         var qsCriadas = questaoClient.criarQuestoes(bearer, lista);
 
@@ -149,7 +152,8 @@ public class SimuladoService {
         );
     }
 
-    // ===== Finalizar simulado =====
+    // ================= Finalização: calcula Perfil (formato novo) e encerra =================
+
     public SimuladoDTO finalizar(String idSimulado, HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
 
@@ -160,41 +164,101 @@ public class SimuladoService {
         var qs = questaoClient.listarPorSimulado(bearer, idSimulado);
         if (qs == null) qs = List.of();
 
-        // agrupa por (topic, subskill) e computa métricas
-        Map<String, Map<String, List<Map<String,Object>>>> porTopicSubskill = qs.stream()
-                .collect(Collectors.groupingBy(
-                        q -> String.valueOf(q.getOrDefault("topic","")),
-                        Collectors.groupingBy(q -> String.valueOf(q.getOrDefault("subskill","")))
-                ));
+        // Monta árvore: topic -> subskill -> structure -> lista de questões
+        Map<String, Map<String, Map<String, List<Map<String,Object>>>>> tree = new HashMap<>();
+        for (var q : qs) {
+            String topic = String.valueOf(q.getOrDefault("topic",""));
+            String sub   = String.valueOf(q.getOrDefault("subskill",""));
+            String struc = String.valueOf(q.getOrDefault("structure",""));
 
-        List<PerfilCreateDTO> perfis = new ArrayList<>();
-        for (var eTopic : porTopicSubskill.entrySet()) {
-            String topic = eTopic.getKey();
-            for (var eSub : eTopic.getValue().entrySet()) {
-                String sub = eSub.getKey();
-                var list = eSub.getValue();
-
-                long total = list.size();
-                long acertos = list.stream().filter(q -> {
-                    Object marcada = q.get("alternativa_marcada");
-                    Object correta  = q.get("correct_option");
-                    return marcada != null && marcada.toString().equalsIgnoreCase(String.valueOf(correta));
-                }).count();
-                long erros = total - acertos;            // não respondidas contam como erradas
-                double acuracia = (total == 0) ? 0.0 : (acertos * 1.0 / total);
-
-                perfis.add(new PerfilCreateDTO(sim.getIdUsuario(), topic, sub, acertos, erros, acuracia));
-            }
+            tree.computeIfAbsent(topic, t -> new HashMap<>())
+                .computeIfAbsent(sub, s -> new HashMap<>())
+                .computeIfAbsent(struc, st -> new ArrayList<>())
+                .add(q);
         }
 
-        if (!perfis.isEmpty()) perfilClient.criarPerfis(bearer, perfis);
+        // Constrói DTO hierárquico do Perfil
+        Map<String, TopicDTO> topicsDTO = new HashMap<>();
 
+        for (var eTopic : tree.entrySet()) {
+            Map<String, SubskillDTO> subskillsDTO = new HashMap<>();
+
+            for (var eSub : eTopic.getValue().entrySet()) {
+                Map<String, StructureDTO> structuresDTO = new HashMap<>();
+
+                long attempts_s = 0, correct_s = 0, hints_s = 0, solutions_s = 0;
+                boolean easy_s = false, med_s = false, hard_s = false;
+
+                for (var eStr : eSub.getValue().entrySet()) {
+                    var list = eStr.getValue();
+
+                    long attempts_sc = list.size();
+                    long correct_sc  = list.stream().filter(x -> {
+                        var m = x.get("alternativa_marcada");
+                        var c = x.get("correct_option");
+                        return m != null && c != null && m.toString().equalsIgnoreCase(c.toString());
+                    }).count();
+                    long hints_sc     = list.stream().filter(x -> Boolean.TRUE.equals(x.get("dica"))).count();
+                    long solutions_sc = list.stream().filter(x -> Boolean.TRUE.equals(x.get("solucao"))).count();
+
+                    boolean easy_seen   = list.stream().anyMatch(x -> "easy".equalsIgnoreCase(String.valueOf(x.get("difficulty"))));
+                    boolean medium_seen = list.stream().anyMatch(x -> "medium".equalsIgnoreCase(String.valueOf(x.get("difficulty"))));
+                    boolean hard_seen   = list.stream().anyMatch(x -> "hard".equalsIgnoreCase(String.valueOf(x.get("difficulty"))));
+
+                    double hr = attempts_sc == 0 ? 0.0 : (hints_sc * 1.0 / attempts_sc);
+                    double sr = attempts_sc == 0 ? 0.0 : (solutions_sc * 1.0 / attempts_sc);
+
+                    long mediumExp = list.stream().filter(x -> "medium".equalsIgnoreCase(String.valueOf(x.get("difficulty")))).count();
+                    long hardExp   = list.stream().filter(x -> "hard".equalsIgnoreCase(String.valueOf(x.get("difficulty")))).count();
+
+                    structuresDTO.put(eStr.getKey(),
+                            new StructureDTO(
+                                    50, attempts_sc, correct_sc, hr, sr,
+                                    easy_seen, medium_seen, hard_seen,
+                                    mediumExp, hardExp, "easy", 0, null
+                            )
+                    );
+
+                    attempts_s  += attempts_sc;
+                    correct_s   += correct_sc;
+                    hints_s     += hints_sc;
+                    solutions_s += solutions_sc;
+
+                    easy_s |= easy_seen;  med_s |= medium_seen;  hard_s |= hard_seen;
+                }
+
+                long vistas = structuresDTO.values().stream()
+                        .filter(st -> st.attempts_sc() != null && st.attempts_sc() > 0)
+                        .count();
+                long total  = structuresDTO.size();
+                double hr_s = attempts_s == 0 ? 0.0 : (hints_s * 1.0 / attempts_s);
+                double sr_s = attempts_s == 0 ? 0.0 : (solutions_s * 1.0 / attempts_s);
+
+                subskillsDTO.put(eSub.getKey(),
+                        new SubskillDTO(
+                                attempts_s, correct_s, hr_s, sr_s, null,
+                                easy_s, med_s, hard_s,
+                                vistas, total, structuresDTO
+                        )
+                );
+            }
+
+            topicsDTO.put(eTopic.getKey(), new TopicDTO(subskillsDTO));
+        }
+
+        // Envia 1 item (user_id + topics) para a API de Perfil
+        var perfilPayload = List.of(new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO));
+        perfilClient.criarPerfis(bearer, perfilPayload);
+
+        // Finaliza o simulado
         sim.setStatus("FINALIZADO");
         repo.save(sim);
+
         return toDTO(sim);
     }
 
-    // ===== Listagens por usuário =====
+    // ================= Listagens por usuário =================
+
     public List<SimuladoDTO> listarPorUsuario(String idUsuario) {
         return repo.findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"))
                 .stream().map(this::toDTO).toList();
@@ -206,10 +270,16 @@ public class SimuladoService {
         return toDTO(s);
     }
 
-    // ===== Helpers =====
+    // ================= Helpers =================
+
+    @SuppressWarnings("unchecked")
     private List<QuestoesCreateItemDTO> mapModeloParaQuestoes(String idSimulado, String userId,
                                                               Map<String,Object> moduloResp, int modulo) {
-        var arr = (List<Map<String,Object>>) moduloResp.getOrDefault("questions", List.of());
+        Object raw = moduloResp == null ? null : moduloResp.get("questions");
+        List<Map<String,Object>> arr = (raw instanceof List<?> list)
+                ? (List<Map<String,Object>>) list
+                : List.of();
+
         List<QuestoesCreateItemDTO> out = new ArrayList<>();
         for (var q : arr) {
             out.add(new QuestoesCreateItemDTO(
@@ -228,9 +298,9 @@ public class SimuladoService {
                     str(q.get("hint")),
                     (List<String>) q.get("target_mistakes"),
                     str(q.getOrDefault("source","ai_generated")),
-                    null,      // alternativa_marcada
-                    false,     // dica
-                    false,     // solucao
+                    null,   // alternativa_marcada
+                    false,  // dica
+                    false,  // solucao
                     modulo
             ));
         }
