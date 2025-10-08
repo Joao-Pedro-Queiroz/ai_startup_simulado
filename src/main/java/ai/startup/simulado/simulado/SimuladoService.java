@@ -164,20 +164,19 @@ public class SimuladoService {
         var qs = questaoClient.listarPorSimulado(bearer, idSimulado);
         if (qs == null) qs = List.of();
 
-        // Monta árvore: topic -> subskill -> structure -> lista de questões
+        // ===== monta árvore topic -> subskill -> structure =====
         Map<String, Map<String, Map<String, List<Map<String,Object>>>>> tree = new HashMap<>();
         for (var q : qs) {
             String topic = String.valueOf(q.getOrDefault("topic",""));
             String sub   = String.valueOf(q.getOrDefault("subskill",""));
             String struc = String.valueOf(q.getOrDefault("structure",""));
-
             tree.computeIfAbsent(topic, t -> new HashMap<>())
                 .computeIfAbsent(sub, s -> new HashMap<>())
                 .computeIfAbsent(struc, st -> new ArrayList<>())
                 .add(q);
         }
 
-        // Constrói DTO hierárquico do Perfil
+        // ===== constrói o DTO hierárquico do Perfil (um único objeto) =====
         Map<String, TopicDTO> topicsDTO = new HashMap<>();
 
         for (var eTopic : tree.entrySet()) {
@@ -187,7 +186,7 @@ public class SimuladoService {
                 Map<String, StructureDTO> structuresDTO = new HashMap<>();
 
                 long attempts_s = 0, correct_s = 0, hints_s = 0, solutions_s = 0;
-                boolean easy_s = false, med_s = false, hard_s = false;
+                boolean easy_s=false, med_s=false, hard_s=false;
 
                 for (var eStr : eSub.getValue().entrySet()) {
                     var list = eStr.getValue();
@@ -205,52 +204,48 @@ public class SimuladoService {
                     boolean medium_seen = list.stream().anyMatch(x -> "medium".equalsIgnoreCase(String.valueOf(x.get("difficulty"))));
                     boolean hard_seen   = list.stream().anyMatch(x -> "hard".equalsIgnoreCase(String.valueOf(x.get("difficulty"))));
 
-                    double hr = attempts_sc == 0 ? 0.0 : (hints_sc * 1.0 / attempts_sc);
-                    double sr = attempts_sc == 0 ? 0.0 : (solutions_sc * 1.0 / attempts_sc);
+                    double hr = attempts_sc==0 ? 0.0 : (hints_sc*1.0/attempts_sc);
+                    double sr = attempts_sc==0 ? 0.0 : (solutions_sc*1.0/attempts_sc);
 
                     long mediumExp = list.stream().filter(x -> "medium".equalsIgnoreCase(String.valueOf(x.get("difficulty")))).count();
                     long hardExp   = list.stream().filter(x -> "hard".equalsIgnoreCase(String.valueOf(x.get("difficulty")))).count();
 
                     structuresDTO.put(eStr.getKey(),
-                            new StructureDTO(
-                                    50, attempts_sc, correct_sc, hr, sr,
-                                    easy_seen, medium_seen, hard_seen,
-                                    mediumExp, hardExp, "easy", 0, null
-                            )
+                        new StructureDTO(50, attempts_sc, correct_sc, hr, sr,
+                            easy_seen, medium_seen, hard_seen,
+                            mediumExp, hardExp, "easy", 0, null)
                     );
 
                     attempts_s  += attempts_sc;
                     correct_s   += correct_sc;
                     hints_s     += hints_sc;
                     solutions_s += solutions_sc;
-
                     easy_s |= easy_seen;  med_s |= medium_seen;  hard_s |= hard_seen;
                 }
 
                 long vistas = structuresDTO.values().stream()
-                        .filter(st -> st.attempts_sc() != null && st.attempts_sc() > 0)
-                        .count();
+                        .filter(st -> st.attempts_sc()!=null && st.attempts_sc()>0).count();
                 long total  = structuresDTO.size();
-                double hr_s = attempts_s == 0 ? 0.0 : (hints_s * 1.0 / attempts_s);
-                double sr_s = attempts_s == 0 ? 0.0 : (solutions_s * 1.0 / attempts_s);
+                double hr_s = attempts_s==0 ? 0.0 : (hints_s*1.0/attempts_s);
+                double sr_s = attempts_s==0 ? 0.0 : (solutions_s*1.0/attempts_s);
 
                 subskillsDTO.put(eSub.getKey(),
-                        new SubskillDTO(
-                                attempts_s, correct_s, hr_s, sr_s, null,
-                                easy_s, med_s, hard_s,
-                                vistas, total, structuresDTO
-                        )
+                    new SubskillDTO(
+                        attempts_s, correct_s, hr_s, sr_s, null,
+                        easy_s, med_s, hard_s,
+                        vistas, total, structuresDTO
+                    )
                 );
             }
 
             topicsDTO.put(eTopic.getKey(), new TopicDTO(subskillsDTO));
         }
 
-        // Envia 1 item (user_id + topics) para a API de Perfil
-        var perfilPayload = List.of(new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO));
-        perfilClient.criarPerfis(bearer, perfilPayload);
+        // ===== envia UM perfil (não lista) =====
+        var perfilPayload = new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO);
+        perfilClient.criarPerfil(bearer, perfilPayload);
 
-        // Finaliza o simulado
+        // finaliza o simulado
         sim.setStatus("FINALIZADO");
         repo.save(sim);
 
