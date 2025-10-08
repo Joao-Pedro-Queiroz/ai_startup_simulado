@@ -19,7 +19,7 @@ public class PerfilClient {
         var headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", bearerToken);
-        rt.exchange(url, HttpMethod.POST, new HttpEntity<>(item, headers), PerfilDTO.class);
+        rt.exchange(url, HttpMethod.POST, new HttpEntity<>(item, headers), Void.class);
         // Se não precisa da resposta, pode usar Void.class
     }
 }
