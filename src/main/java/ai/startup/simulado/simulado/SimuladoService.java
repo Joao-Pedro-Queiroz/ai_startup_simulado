@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.*;
+
 @Service
 public class SimuladoService {
 
@@ -86,7 +87,7 @@ public class SimuladoService {
 
     // ================= Início: ADAPTATIVO & ORIGINAL =================
 
-    /** Inicia simulado ADAPTATIVO (2 chamadas ao modelo de 22 questões; total 44), cadastra questões e retorna tudo */
+    /** Inicia simulado ADAPTATIVO (2 chamadas de ~22 questões cada; total 44) */
     public SimuladoComQuestoesDTO iniciarAdaptativo(HttpServletRequest req, StartAdaptativoDTO payload) {
         String bearer = req.getHeader("Authorization");
         String email  = (String) req.getAttribute("authEmail");
@@ -94,7 +95,6 @@ public class SimuladoService {
 
         String userId = usuarioClient.getUserIdByEmail(email, bearer);
 
-        // Regra: não criar se o último está ABERTO
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
             throw new RuntimeException("Há um simulado em aberto. Finalize-o antes de criar outro.");
@@ -122,7 +122,7 @@ public class SimuladoService {
         );
     }
 
-    /** Inicia simulado ORIGINAL (1 chamada que já retorna 44), cadastra questões e retorna tudo */
+    /** Inicia simulado ORIGINAL (1 chamada que já retorna ~44) */
     public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req, StartOriginalDTO payload) {
         String bearer = req.getHeader("Authorization");
         String email  = (String) req.getAttribute("authEmail");
@@ -152,7 +152,7 @@ public class SimuladoService {
         );
     }
 
-    // ================= Finalização: calcula Perfil (formato novo) e encerra =================
+    // ================= Finalização: calcula Perfil (novo formato) e encerra =================
 
     public SimuladoDTO finalizar(String idSimulado, HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
@@ -164,7 +164,7 @@ public class SimuladoService {
         var qs = questaoClient.listarPorSimulado(bearer, idSimulado);
         if (qs == null) qs = List.of();
 
-        // ===== monta árvore topic -> subskill -> structure =====
+        // topic -> subskill -> structure -> lista de questões
         Map<String, Map<String, Map<String, List<Map<String,Object>>>>> tree = new HashMap<>();
         for (var q : qs) {
             String topic = String.valueOf(q.getOrDefault("topic",""));
@@ -176,7 +176,6 @@ public class SimuladoService {
                 .add(q);
         }
 
-        // ===== constrói o DTO hierárquico do Perfil (um único objeto) =====
         Map<String, TopicDTO> topicsDTO = new HashMap<>();
 
         for (var eTopic : tree.entrySet()) {
@@ -211,9 +210,11 @@ public class SimuladoService {
                     long hardExp   = list.stream().filter(x -> "hard".equalsIgnoreCase(String.valueOf(x.get("difficulty")))).count();
 
                     structuresDTO.put(eStr.getKey(),
-                        new StructureDTO(50, attempts_sc, correct_sc, hr, sr,
-                            easy_seen, medium_seen, hard_seen,
-                            mediumExp, hardExp, "easy", 0, null)
+                            new StructureDTO(
+                                    50, attempts_sc, correct_sc, hr, sr,
+                                    easy_seen, medium_seen, hard_seen,
+                                    mediumExp, hardExp, "easy", 0, null
+                            )
                     );
 
                     attempts_s  += attempts_sc;
@@ -230,18 +231,18 @@ public class SimuladoService {
                 double sr_s = attempts_s==0 ? 0.0 : (solutions_s*1.0/attempts_s);
 
                 subskillsDTO.put(eSub.getKey(),
-                    new SubskillDTO(
-                        attempts_s, correct_s, hr_s, sr_s, null,
-                        easy_s, med_s, hard_s,
-                        vistas, total, structuresDTO
-                    )
+                        new SubskillDTO(
+                                attempts_s, correct_s, hr_s, sr_s, null,
+                                easy_s, med_s, hard_s,
+                                vistas, total, structuresDTO
+                        )
                 );
             }
 
             topicsDTO.put(eTopic.getKey(), new TopicDTO(subskillsDTO));
         }
 
-        // ===== envia UM perfil (não lista) =====
+        // envia UM perfil (novo contrato do Perfil)
         var perfilPayload = new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO);
         perfilClient.criarPerfil(bearer, perfilPayload);
 
@@ -277,6 +278,19 @@ public class SimuladoService {
 
         List<QuestoesCreateItemDTO> out = new ArrayList<>();
         for (var q : arr) {
+            Map<String,String> options = (Map<String,String>) q.get("options"); // pode ser {}
+            Object correct             = q.get("correct_option");               // "A"/"B"/... ou -1
+            List<String> solOld        = (List<String>) q.get("solution");      // legado
+
+            List<String> solEn         = (List<String>) q.get("solution_english");
+            List<String> solPt         = (List<String>) q.get("solution_portugues");
+
+            String hintOld             = str(q.get("hint"));          // legado
+            String hintEn              = str(q.get("hint_english"));
+            String hintPt              = str(q.get("hint_portugues"));
+
+            Map<String,Object> figure  = (Map<String,Object>) q.get("figure");
+
             out.add(new QuestoesCreateItemDTO(
                     idSimulado,
                     userId,
@@ -284,18 +298,27 @@ public class SimuladoService {
                     str(q.get("subskill")),
                     str(q.get("difficulty")),
                     str(q.get("question")),
-                    (Map<String,String>) q.get("options"),
-                    str(q.get("correct_option")),
-                    (List<String>) q.get("solution"),
+                    options,
+                    correct,
+                    solOld,
                     str(q.get("structure")),
                     str(q.get("format")),
                     str(q.get("representation")),
-                    str(q.get("hint")),
+                    hintOld,
                     (List<String>) q.get("target_mistakes"),
                     str(q.getOrDefault("source","ai_generated")),
-                    null,   // alternativa_marcada
-                    false,  // dica
-                    false,  // solucao
+
+                    // novos campos
+                    solEn,
+                    solPt,
+                    hintEn,
+                    hintPt,
+                    figure,
+
+                    // app
+                    null,      // alternativa_marcada
+                    false,     // dica
+                    false,     // solucao
                     modulo
             ));
         }
