@@ -88,12 +88,14 @@ public class SimuladoService {
     // ================= Início: ADAPTATIVO & ORIGINAL =================
 
     /** Inicia simulado ADAPTATIVO (2 chamadas de ~22 questões cada; total 44) */
-    public SimuladoComQuestoesDTO iniciarAdaptativo(HttpServletRequest req, StartAdaptativoDTO payload) {
+    public SimuladoComQuestoesDTO iniciarAdaptativo(HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
-        String email  = (String) req.getAttribute("authEmail");
-        if (email == null) throw new RuntimeException("E-mail não encontrado no JWT.");
+        var user = usuarioClient.me(bearer);       // uma chamada só
+        String userId = user.id();
 
-        String userId = usuarioClient.getUserIdByEmail(email, bearer);
+        if (user.wins() == null || user.wins() < 5) {
+            throw new RuntimeException("Saldo insuficiente de wins (mínimo 5).");
+        }
 
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
@@ -104,18 +106,17 @@ public class SimuladoService {
                 .tipo("ADAPTATIVO")
                 .data(LocalDateTime.now())
                 .status("ABERTO")
-                .faturaWins(payload.fatura_wins())
+                .faturaWins(5)
                 .build());
 
-        var m1 = modeloClient.gerarModuloAdaptativo(userId, payload.topic());
-        var m2 = modeloClient.gerarModuloAdaptativo(userId, payload.topic());
+        var m1 = modeloClient.gerarModuloAdaptativo(userId);
+        var m2 = modeloClient.gerarModuloAdaptativo(userId);
 
         var todas = new ArrayList<QuestoesCreateItemDTO>();
         todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m1, 1));
         todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m2, 2));
 
         var qsCriadas = questaoClient.criarQuestoes(bearer, todas);
-
         return new SimuladoComQuestoesDTO(
                 sim.getId(), sim.getIdUsuario(), sim.getTipo(), sim.getData(), sim.getStatus(), sim.getFaturaWins(),
                 qsCriadas
@@ -123,12 +124,14 @@ public class SimuladoService {
     }
 
     /** Inicia simulado ORIGINAL (1 chamada que já retorna ~44) */
-    public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req, StartOriginalDTO payload) {
+    public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
-        String email  = (String) req.getAttribute("authEmail");
-        if (email == null) throw new RuntimeException("E-mail não encontrado no JWT.");
+        var user = usuarioClient.me(bearer);       // uma chamada só
+        String userId = user.id();
 
-        String userId = usuarioClient.getUserIdByEmail(email, bearer);
+        if (user.wins() == null || user.wins() < 5) {
+            throw new RuntimeException("Saldo insuficiente de wins (mínimo 5).");
+        }
 
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
@@ -139,7 +142,7 @@ public class SimuladoService {
                 .tipo("ORIGINAL")
                 .data(LocalDateTime.now())
                 .status("ABERTO")
-                .faturaWins(payload.fatura_wins())
+                .faturaWins(5)
                 .build());
 
         var modulo = modeloClient.gerarSimuladoOriginal(userId); // sem topic
@@ -153,7 +156,6 @@ public class SimuladoService {
     }
 
     // ================= Finalização: calcula Perfil (novo formato) e encerra =================
-
     public SimuladoDTO finalizar(String idSimulado, HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
 

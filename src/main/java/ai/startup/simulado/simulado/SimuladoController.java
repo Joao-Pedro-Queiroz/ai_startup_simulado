@@ -46,18 +46,16 @@ public class SimuladoController {
     @SecurityRequirement(name = "bearerAuth")
     @Operation(summary = "Inicia simulado adaptativo e retorna simulado + questões")
     @PostMapping("/simulados/adaptativo")
-    public ResponseEntity<SimuladoComQuestoesDTO> iniciarAdaptativo(@RequestBody StartAdaptativoDTO dto,
-                                                                    HttpServletRequest req) {
-        return ResponseEntity.ok(service.iniciarAdaptativo(req, dto));
+    public ResponseEntity<SimuladoComQuestoesDTO> iniciarAdaptativo(HttpServletRequest req) {
+        return ResponseEntity.ok(service.iniciarAdaptativo(req));
     }
 
     // Iniciar simulado original (gera 44 questões em 1 chamada)
     @SecurityRequirement(name = "bearerAuth")
     @Operation(summary = "Inicia simulado original e retorna simulado + questões")
     @PostMapping("/simulados/original")
-    public ResponseEntity<SimuladoComQuestoesDTO> iniciarOriginal(@RequestBody StartOriginalDTO dto,
-                                                                jakarta.servlet.http.HttpServletRequest req) {
-        return ResponseEntity.ok(service.iniciarOriginal(req, dto));
+    public ResponseEntity<SimuladoComQuestoesDTO> iniciarOriginal(HttpServletRequest req) {
+        return ResponseEntity.ok(service.iniciarOriginal(req));
     }
 
 

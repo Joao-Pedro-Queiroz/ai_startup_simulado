@@ -25,10 +25,11 @@ public class ModeloClient {
     }
 
     /** Gera ~22 questões (módulo) – usado 2x no adaptativo */
-    public Map<String,Object> gerarModuloAdaptativo(String userId, String topic) {
+    public Map<String,Object> gerarModuloAdaptativo(String userId) {
         String url = base + adaptativoPath;
-        var headers = new HttpHeaders(); headers.setContentType(MediaType.APPLICATION_JSON);
-        var payload = Map.of("user_id", userId, "topic", topic);
+        var headers = new HttpHeaders(); 
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        var payload = Map.of("user_id", userId);
         return rt.exchange(url, HttpMethod.POST, new HttpEntity<>(payload, headers), Map.class).getBody();
     }
 
