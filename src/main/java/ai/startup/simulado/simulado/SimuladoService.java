@@ -12,7 +12,9 @@ import ai.startup.simulado.usuario.UsuarioClient;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -48,7 +50,7 @@ public class SimuladoService {
     public SimuladoDTO obter(String id) {
         return repo.findById(id)
                 .map(this::toDTO)
-                .orElseThrow(() -> new RuntimeException("Simulado não encontrado."));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado."));
     }
 
     public SimuladoDTO criar(SimuladoCreateDTO d) {
@@ -63,7 +65,8 @@ public class SimuladoService {
     }
 
     public SimuladoDTO atualizar(String id, SimuladoUpdateDTO d) {
-        var s = repo.findById(id).orElseThrow(() -> new RuntimeException("Simulado não encontrado."));
+        var s = repo.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado."));
         if (d.id_usuario()  != null) s.setIdUsuario(d.id_usuario());
         if (d.tipo()        != null) s.setTipo(d.tipo());
         if (d.data()        != null) s.setData(d.data());
@@ -74,13 +77,17 @@ public class SimuladoService {
 
     /** DELETE: também remove as questões do simulado na API de Questões */
     public void deletar(String id, String bearerToken) {
-        if (!repo.existsById(id)) throw new RuntimeException("Simulado não encontrado.");
-        var qs = questaoClient.listarPorSimulado(bearerToken, id);
-        if (qs != null) {
-            for (var q : qs) {
-                Object qid = q.get("id");
-                if (qid != null) questaoClient.deletar(bearerToken, qid.toString());
+        if (!repo.existsById(id)) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado.");
+         try {
+            var qs = questaoClient.listarPorSimulado(bearerToken, id);
+            if (qs != null) {
+                for (var q : qs) {
+                    Object qid = q.get("id");
+                    if (qid != null) questaoClient.deletar(bearerToken, qid.toString());
+                }
             }
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao excluir questões do simulado.", e);
         }
         repo.deleteById(id);
     }
@@ -94,12 +101,12 @@ public class SimuladoService {
         String userId = user.id();
 
         if (user.wins() == null || user.wins() < 5) {
-            throw new RuntimeException("Saldo insuficiente de wins (mínimo 5).");
+            throw new ResponseStatusException(HttpStatus.PAYMENT_REQUIRED, "Saldo insuficiente de wins (mínimo 5).");
         }
 
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
-            throw new RuntimeException("Há um simulado em aberto. Finalize-o antes de criar outro.");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
 
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
@@ -109,14 +116,25 @@ public class SimuladoService {
                 .faturaWins(5)
                 .build());
 
-        var m1 = modeloClient.gerarModuloAdaptativo(userId);
-        var m2 = modeloClient.gerarModuloAdaptativo(userId);
+        Map<String,Object> m1, m2;
+        try {
+            m1 = modeloClient.gerarModuloAdaptativo(userId);
+            m2 = modeloClient.gerarModuloAdaptativo(userId);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao gerar módulos adaptativos.", e);
+        }
 
         var todas = new ArrayList<QuestoesCreateItemDTO>();
         todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m1, 1));
         todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m2, 2));
 
-        var qsCriadas = questaoClient.criarQuestoes(bearer, todas);
+        List<Map<String,Object>> qsCriadas;
+        try {
+            qsCriadas = questaoClient.criarQuestoes(bearer, todas);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões.", e);
+        }
+
         return new SimuladoComQuestoesDTO(
                 sim.getId(), sim.getIdUsuario(), sim.getTipo(), sim.getData(), sim.getStatus(), sim.getFaturaWins(),
                 qsCriadas
@@ -130,12 +148,12 @@ public class SimuladoService {
         String userId = user.id();
 
         if (user.wins() == null || user.wins() < 5) {
-            throw new RuntimeException("Saldo insuficiente de wins (mínimo 5).");
+            throw new ResponseStatusException(HttpStatus.PAYMENT_REQUIRED, "Saldo insuficiente de wins (mínimo 5).");
         }
 
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
-            throw new RuntimeException("Há um simulado em aberto. Finalize-o antes de criar outro.");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
 
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
@@ -145,9 +163,21 @@ public class SimuladoService {
                 .faturaWins(5)
                 .build());
 
-        var modulo = modeloClient.gerarSimuladoOriginal(userId); // sem topic
+        Map<String,Object> modulo;
+        try {
+            modulo = modeloClient.gerarSimuladoOriginal(userId); // sem topic
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao gerar simulado original.", e);
+        }
+
         var lista  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
-        var qsCriadas = questaoClient.criarQuestoes(bearer, lista);
+
+        List<Map<String,Object>> qsCriadas;
+        try {
+            qsCriadas = questaoClient.criarQuestoes(bearer, lista);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões.", e);
+        }
 
         return new SimuladoComQuestoesDTO(
                 sim.getId(), sim.getIdUsuario(), sim.getTipo(), sim.getData(), sim.getStatus(), sim.getFaturaWins(),
@@ -159,12 +189,18 @@ public class SimuladoService {
     public SimuladoDTO finalizar(String idSimulado, HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
 
-        var sim = repo.findById(idSimulado).orElseThrow(() -> new RuntimeException("Simulado não encontrado."));
+        var sim = repo.findById(idSimulado)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado."));
         if (!"ABERTO".equalsIgnoreCase(sim.getStatus()))
-            throw new RuntimeException("Simulado já finalizado.");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Simulado já finalizado.");
 
-        var qs = questaoClient.listarPorSimulado(bearer, idSimulado);
-        if (qs == null) qs = List.of();
+        List<Map<String,Object>> qs;
+        try {
+            qs = questaoClient.listarPorSimulado(bearer, idSimulado);
+            if (qs == null) qs = List.of();
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao listar questões do simulado.", e);
+        }
 
         // topic -> subskill -> structure -> lista de questões
         Map<String, Map<String, Map<String, List<Map<String,Object>>>>> tree = new HashMap<>();
@@ -246,7 +282,11 @@ public class SimuladoService {
 
         // envia UM perfil (novo contrato do Perfil)
         var perfilPayload = new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO);
-        perfilClient.atualizarPerfilPorUsuario(bearer, sim.getIdUsuario(), perfilPayload);
+        try {
+            perfilClient.atualizarPerfilPorUsuario(bearer, sim.getIdUsuario(), perfilPayload);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao atualizar Perfil do usuário.", e);
+        }
 
         // finaliza o simulado
         sim.setStatus("FINALIZADO");
@@ -264,7 +304,7 @@ public class SimuladoService {
 
     public SimuladoDTO ultimoPorUsuario(String idUsuario) {
         var s = repo.findMaisRecente(idUsuario);
-        if (s == null) throw new RuntimeException("Nenhum simulado encontrado para o usuário.");
+        if (s == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum simulado encontrado para o usuário.");
         return toDTO(s);
     }
 
