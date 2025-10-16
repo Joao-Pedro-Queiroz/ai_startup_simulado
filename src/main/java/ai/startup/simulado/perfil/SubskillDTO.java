@@ -1,4 +1,4 @@
-package ai.startup.perfil.perfil;
+package ai.startup.simulado.perfil;
 
 import java.util.Map;
 

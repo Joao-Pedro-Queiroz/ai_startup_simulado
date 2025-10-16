@@ -234,8 +234,8 @@ public class SimuladoService {
 
                 subskillsDTO.put(eSub.getKey(),
                         new SubskillDTO(
-                                attempts_s, correct_s, hr_s, sr_s, null,
-                                easy_s, med_s, hard_s,
+                                attempts_s, correct_s, hr_s, sr_s, null, 
+                                null, easy_s, med_s, hard_s,
                                 vistas, total, structuresDTO
                         )
                 );
@@ -246,7 +246,7 @@ public class SimuladoService {
 
         // envia UM perfil (novo contrato do Perfil)
         var perfilPayload = new PerfilCreateDTO(sim.getIdUsuario(), topicsDTO);
-        perfilClient.criarPerfil(bearer, perfilPayload);
+        perfilClient.atualizarPerfilPorUsuario(bearer, sim.getIdUsuario(), perfilPayload);
 
         // finaliza o simulado
         sim.setStatus("FINALIZADO");

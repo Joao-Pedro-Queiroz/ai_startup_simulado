@@ -14,12 +14,21 @@ public class PerfilClient {
         this.rt = rt; this.base = base;
     }
 
-    public void criarPerfil(String bearerToken, PerfilCreateDTO item) {
-        var url = base + "/perfis"; // endpoint agora aceita UM objeto
+    // (opcional, manter) POST /perfis -> upsert por user_id
+    public void criarOuAtualizarPerfil(String bearerToken, PerfilCreateDTO item) {
+        var url = base + "/perfis";
         var headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", bearerToken);
         rt.exchange(url, HttpMethod.POST, new HttpEntity<>(item, headers), Void.class);
-        // Se não precisa da resposta, pode usar Void.class
+    }
+
+    // NOVO: PUT /perfis/by-usuario/{userId} -> upsert/merge garantido por userId
+    public void atualizarPerfilPorUsuario(String bearerToken, String userId, PerfilCreateDTO item) {
+        var url = base + "/perfis/by-usuario/" + userId;
+        var headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.set("Authorization", bearerToken);
+        rt.exchange(url, HttpMethod.PUT, new HttpEntity<>(item, headers), Void.class);
     }
 }
