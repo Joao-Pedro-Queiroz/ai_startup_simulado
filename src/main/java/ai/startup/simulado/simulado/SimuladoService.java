@@ -116,17 +116,14 @@ public class SimuladoService {
                 .faturaWins(5)
                 .build());
 
-        Map<String,Object> m1, m2;
+        Map<String,Object> modulo;
         try {
-            m1 = modeloClient.gerarModuloAdaptativo(userId);
-            m2 = modeloClient.gerarModuloAdaptativo(userId);
+            modulo = modeloClient.gerarModuloAdaptativo(userId);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao gerar módulos adaptativos.", e);
         }
 
-        var todas = new ArrayList<QuestoesCreateItemDTO>();
-        todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m1, 1));
-        todas.addAll(mapModeloParaQuestoes(sim.getId(), userId, m2, 2));
+        var todas  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
 
         List<Map<String,Object>> qsCriadas;
         try {
