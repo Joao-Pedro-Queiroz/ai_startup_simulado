@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.*;
+import java.time.Duration;
 
 @Service
 public class SimuladoService {
@@ -30,6 +31,10 @@ public class SimuladoService {
     private final ModeloClient modeloClient;
     private final PerfilClient perfilClient;
     private final PerfilTemplateProvider perfilTemplateProvider;
+
+    private transient Map<String, java.time.LocalDateTime> simIdToDateTmp;
+    private transient java.util.Set<String> subsUlt1Tmp;
+    private transient java.util.Set<String> subsUlt2Tmp;
 
     public SimuladoService(SimuladoRepository repo,
                            UsuarioClient usuarioClient,
@@ -263,21 +268,66 @@ public class SimuladoService {
         sim.setStatus("FINALIZADO");
         repo.save(sim);
 
-        // 3) RECALCULAR PERFIL
-        //    sempre a partir de TODAS as questões do USUÁRIO
+        // 3) RECALCULAR PERFIL a partir de TODO o histórico do usuário
         var todasQuestoesUsuario = questaoClient.listarPorUsuario(bearer, sim.getIdUsuario());
 
-        //    3.1 Carregar template COMPLETO de perfil (todas subskills/structures)
-        //        -> você pode injetar um provider que lê o mesmo JSON usado no register
-        Map<String, TopicDTO> template = perfilTemplateProvider.getTopicsTemplate(sim.getIdUsuario()); // injete isso
+        // 3.1) Carregar todos os simulados do usuário (datas e últimos finalizados)
+        var simuladosUsuario = repo.findByIdUsuario(sim.getIdUsuario(),
+                Sort.by(Sort.Direction.DESC, "data"));
 
-        //    3.2 Construir um mapa mutável a partir do template (zerado)
+        Map<String, LocalDateTime> simIdToDate = new HashMap<>();
+        for (var sx : simuladosUsuario) {
+            if (sx.getData() != null) simIdToDate.put(sx.getId(), sx.getData());
+        }
+        List<Simulado> ult2Finalizados = simuladosUsuario.stream()
+                .filter(sx -> "FINALIZADO".equalsIgnoreCase(sx.getStatus()))
+                .limit(2)
+                .toList();
+
+        Set<String> subsUlt1 = new HashSet<>();
+        Set<String> subsUlt2 = new HashSet<>();
+        if (ult2Finalizados.size() >= 1) {
+            String ult1Id = ult2Finalizados.get(0).getId();
+            for (var q : todasQuestoesUsuario) {
+                if (ult1Id.equals(String.valueOf(q.get("id_formulario")))) {
+                    String sub = str(q.get("subskill"));
+                    if (sub != null) subsUlt1.add(sub);
+                }
+            }
+        }
+        if (ult2Finalizados.size() >= 2) {
+            String ult2Id = ult2Finalizados.get(1).getId();
+            for (var q : todasQuestoesUsuario) {
+                if (ult2Id.equals(String.valueOf(q.get("id_formulario")))) {
+                    String sub = str(q.get("subskill"));
+                    if (sub != null) subsUlt2.add(sub);
+                }
+            }
+        }
+
+        // 3.2) Carregar template COMPLETO
+        Map<String, TopicDTO> template = perfilTemplateProvider.getTopicsTemplate(sim.getIdUsuario());
+
+        // 3.3) Clonar e zerar (mantendo catálogo)
         Map<String, TopicDTO> topicsAgregado = deepCloneAndZero(template);
 
-        //    3.3 Agregar todas as questões do usuário
+        // 3.4) Agregar com timestamps e níveis
+        // (armazeno em campos temporários para usar dentro dos helpers)
+        this.simIdToDateTmp = simIdToDate;
+        this.subsUlt1Tmp = subsUlt1;
+        this.subsUlt2Tmp = subsUlt2;
+
         agregarQuestoesNoPerfil(topicsAgregado, todasQuestoesUsuario);
 
-        //    3.4 Montar payload e chamar API de Perfil (update por usuário = merge)
+        // 3.5) Derivar last_seen_at_s e missed_two_sessions
+        fecharSubskills(topicsAgregado);
+
+        // limpando auxiliares
+        this.simIdToDateTmp = null;
+        this.subsUlt1Tmp = null;
+        this.subsUlt2Tmp = null;
+
+        // 3.6) Atualiza Perfil na API
         var perfilPayload = new PerfilCreateDTO(sim.getIdUsuario(), topicsAgregado);
         perfilClient.atualizarPerfilPorUsuario(bearer, sim.getIdUsuario(), perfilPayload);
 
@@ -372,20 +422,18 @@ public class SimuladoService {
                     int totalStructs = 0;
                     if (subDTO.structures() != null) {
                         for (var e : subDTO.structures().entrySet()) {
-                            var stName = e.getKey();
-                            var tpl = e.getValue();
                             totalStructs++;
-                            newStructs.put(stName, new StructureDTO(
+                            newStructs.put(e.getKey(), new StructureDTO(
                                     50, 0L, 0L, 0.0, 0.0,
                                     false, false, false,
                                     0L, 0L,
-                                    "easy", 0, null
+                                    "easy", 0, null // last_seen_at_sc = null
                             ));
                         }
                     }
                     newSubs.put(subName, new SubskillDTO(
-                            0L, 0L, 0.0, 0.0, "",     // last_seen_at_s string vazia (mantemos padrão)
-                            null,                     // missed_two_sessions: não recalculamos aqui (merge ignora null)
+                            0L, 0L, 0.0, 0.0, null,   // last_seen_at_s = null
+                            null,                     // missed_two_sessions (derivaremos depois)
                             false, false, false,
                             0L, (long) totalStructs,
                             newStructs
@@ -401,7 +449,6 @@ public class SimuladoService {
      * Soma/agg das métricas nas structures e subskills.
      * Entrada: lista “todasQuestoesUsuario” como Maps (da API de Questões).
      */
-    @SuppressWarnings("unchecked")
     private void agregarQuestoesNoPerfil(Map<String, TopicDTO> profile, List<Map<String,Object>> qs) {
         if (qs == null || qs.isEmpty()) return;
 
@@ -412,7 +459,7 @@ public class SimuladoService {
             if (topic == null || sub == null || st == null) continue;
 
             var t = profile.get(topic);
-            if (t == null) continue; // não existe no template → ignoramos
+            if (t == null) continue;
             var s = t.subskills().get(sub);
             if (s == null) continue;
             var mapStructs = s.structures();
@@ -420,8 +467,9 @@ public class SimuladoService {
             var stDTO = mapStructs.get(st);
             if (stDTO == null) continue;
 
-            // ====== nível structure ======
-            long attempts_sc = (stDTO.attempts_sc() == null ? 0L : stDTO.attempts_sc()) + 1L;
+            // ===== contadores básicos =====
+            long attempts_prev = stDTO.attempts_sc() == null ? 0L : stDTO.attempts_sc();
+            long attempts_sc   = attempts_prev + 1L;
 
             Object marcada = q.get("alternativa_marcada");
             Object correta = q.get("correct_option");
@@ -432,10 +480,10 @@ public class SimuladoService {
             boolean usouDica = Boolean.TRUE.equals(q.get("dica"));
             boolean abriuSol = Boolean.TRUE.equals(q.get("solucao"));
 
-            long hintsCount     = Math.round((stDTO.hints_rate_sc() == null ? 0.0 : stDTO.hints_rate_sc()) * (stDTO.attempts_sc() == null ? 0 : stDTO.attempts_sc()));
-            long solutionsCount = Math.round((stDTO.solutions_rate_sc() == null ? 0.0 : stDTO.solutions_rate_sc()) * (stDTO.attempts_sc() == null ? 0 : stDTO.attempts_sc()));
-            hintsCount     += (usouDica ? 1 : 0);
-            solutionsCount += (abriuSol ? 1 : 0);
+            long hintsCountPrev     = Math.round((stDTO.hints_rate_sc()     == null ? 0.0 : stDTO.hints_rate_sc())     * attempts_prev);
+            long solutionsCountPrev = Math.round((stDTO.solutions_rate_sc() == null ? 0.0 : stDTO.solutions_rate_sc()) * attempts_prev);
+            long hintsCount     = hintsCountPrev     + (usouDica ? 1 : 0);
+            long solutionsCount = solutionsCountPrev + (abriuSol ? 1 : 0);
 
             String diff = str(q.get("difficulty"));
             boolean easy   = "easy".equalsIgnoreCase(diff);
@@ -445,29 +493,63 @@ public class SimuladoService {
             long mediumExp = (stDTO.medium_exposures_sc() == null ? 0L : stDTO.medium_exposures_sc()) + (medium ? 1L : 0L);
             long hardExp   = (stDTO.hard_exposures_sc()   == null ? 0L : stDTO.hard_exposures_sc())   + (hard   ? 1L : 0L);
 
-            // Recalcula rates
             double hintsRate     = attempts_sc == 0 ? 0.0 : (hintsCount * 1.0 / attempts_sc);
             double solutionsRate = attempts_sc == 0 ? 0.0 : (solutionsCount * 1.0 / attempts_sc);
 
-            // aplica no structure
+            // ===== last_seen_at_sc a partir da data do simulado =====
+            String simId = str(q.get("id_formulario"));
+            LocalDateTime seenAt = (this.simIdToDateTmp == null) ? null : this.simIdToDateTmp.get(simId);
+            String prevSeen = stDTO.last_seen_at_sc();
+            String newSeen  = prevSeen;
+            if (seenAt != null) {
+                if (prevSeen == null) newSeen = seenAt.toString();
+                else {
+                    LocalDateTime prev = LocalDateTime.parse(prevSeen);
+                    if (seenAt.isAfter(prev)) newSeen = seenAt.toString();
+                }
+            }
+
+            // ===== nível aplicado (maior dificuldade vista)
+            String prevLevel = stDTO.last_level_applied_sc() == null ? "easy" : stDTO.last_level_applied_sc();
+            String newLevel  = promoteLevel(prevLevel, diff);
+
+            // ===== P_sc heurístico
+            int p = stDTO.P_sc() == null ? 50 : stDTO.P_sc();
+            double acc = attempts_sc == 0 ? 0.0 : (correct_sc * 1.0 / attempts_sc);
+            if (acc >= 0.8) p += 5;
+            if (hardExp >= 2 && acc >= 0.6) p += 3;
+            if (hintsRate >= 0.5) p -= 4;
+            if (solutionsRate >= 0.3) p -= 6;
+            p = Math.max(0, Math.min(100, p));
+
+            // ===== cooldown por “tempo desde última exposição”
+            int cooldown = 0;
+            if (newSeen != null) {
+                LocalDateTime last = LocalDateTime.parse(newSeen);
+                long days = Duration.between(last, LocalDateTime.now()).toDays();
+                cooldown = (int) Math.max(0, 2 - days);
+            }
+
+            // aplica
             mapStructs.put(st, new StructureDTO(
-                    stDTO.P_sc() == null ? 50 : stDTO.P_sc(), // mantemos P_sc neutro
+                    p,
                     attempts_sc,
                     correct_sc,
                     hintsRate,
                     solutionsRate,
-                    stDTO.easy_seen_sc()   || easy,
-                    stDTO.medium_seen_sc() || medium,
-                    stDTO.hard_seen_sc()   || hard,
+                    (stDTO.easy_seen_sc()   != null && stDTO.easy_seen_sc())   || easy,
+                    (stDTO.medium_seen_sc() != null && stDTO.medium_seen_sc()) || medium,
+                    (stDTO.hard_seen_sc()   != null && stDTO.hard_seen_sc())   || hard,
                     mediumExp,
                     hardExp,
-                    stDTO.last_level_applied_sc() == null ? "easy" : stDTO.last_level_applied_sc(),
-                    stDTO.cooldown_sc() == null ? 0 : stDTO.cooldown_sc(),
-                    stDTO.last_seen_at_sc()  // opcional manter vazio
+                    newLevel,
+                    cooldown,
+                    newSeen
             ));
         }
+    }
 
-        // ====== derivar métricas no nível subskill (somatórios dos structures)
+    private void fecharSubskills(Map<String, TopicDTO> profile) {
         for (var tEntry : profile.entrySet()) {
             var subs = tEntry.getValue().subskills();
             if (subs == null) continue;
@@ -483,32 +565,80 @@ public class SimuladoService {
                 long vistas = 0;
                 long total  = sDTO.total_estruturas_s() == null ? structs.size() : sDTO.total_estruturas_s();
 
+                String lastSeenS = null;
+
                 for (var stDTO : structs.values()) {
                     long a = stDTO.attempts_sc() == null ? 0L : stDTO.attempts_sc();
                     attempts_s += a;
                     correct_s  += (stDTO.correct_sc() == null ? 0L : stDTO.correct_sc());
+
                     if (a > 0) {
                         vistas += 1;
-                        // reverse rates → contagem aproximada para derivar rate_s
                         hintsUsed += Math.round((stDTO.hints_rate_sc() == null ? 0.0 : stDTO.hints_rate_sc()) * a);
                         solsUsed  += Math.round((stDTO.solutions_rate_sc() == null ? 0.0 : stDTO.solutions_rate_sc()) * a);
                     }
+
                     easy_s |= (stDTO.easy_seen_sc()   != null && stDTO.easy_seen_sc());
                     med_s  |= (stDTO.medium_seen_sc() != null && stDTO.medium_seen_sc());
                     hard_s |= (stDTO.hard_seen_sc()   != null && stDTO.hard_seen_sc());
+
+                    // last_seen_at_s = max(last_seen_at_sc)
+                    String stSeen = stDTO.last_seen_at_sc();
+                    if (stSeen != null) {
+                        if (lastSeenS == null) lastSeenS = stSeen;
+                        else {
+                            LocalDateTime aSeen = LocalDateTime.parse(lastSeenS);
+                            LocalDateTime bSeen = LocalDateTime.parse(stSeen);
+                            if (bSeen.isAfter(aSeen)) lastSeenS = stSeen;
+                        }
+                    }
                 }
+
                 double hr_s = attempts_s == 0 ? 0.0 : (hintsUsed * 1.0 / attempts_s);
                 double sr_s = attempts_s == 0 ? 0.0 : (solsUsed  * 1.0 / attempts_s);
 
+                // missed_two_sessions com base nos dois últimos finalizados
+                Boolean missedTwo = null;
+                if (this.subsUlt1Tmp != null) {
+                    boolean inUlt1 = this.subsUlt1Tmp.contains(sName);
+                    if (this.subsUlt2Tmp != null && !this.subsUlt2Tmp.isEmpty()) {
+                        boolean inUlt2 = this.subsUlt2Tmp.contains(sName);
+                        missedTwo = (!inUlt1 && !inUlt2);
+                    } else {
+                        // só 1 simulado finalizado disponível
+                        missedTwo = (!inUlt1);
+                    }
+                }
+
                 subs.put(sName, new SubskillDTO(
-                        attempts_s, correct_s, hr_s, sr_s, "",
-                        null,                    // missed_two_sessions: não recalculamos aqui
+                        attempts_s, correct_s, hr_s, sr_s, lastSeenS,
+                        missedTwo,
                         easy_s, med_s, hard_s,
                         vistas, total,
                         structs
                 ));
             }
         }
+    }
+
+    private String promoteLevel(String prev, String seenNow) {
+        int rp = rank(prev);
+        int rn = rank(seenNow);
+        return rn > rp ? norm(seenNow) : norm(prev);
+    }
+    private int rank(String lvl) {
+        String v = norm(lvl);
+        return switch (v) {
+            case "hard" -> 3;
+            case "medium" -> 2;
+            default -> 1;
+        };
+    }
+    private String norm(String lvl) {
+        if (lvl == null) return "easy";
+        String v = lvl.trim().toLowerCase();
+        if ("hard".equals(v) || "medium".equals(v)) return v;
+        return "easy";
     }
 
     private String str(Object o) { return o == null ? null : o.toString(); }
