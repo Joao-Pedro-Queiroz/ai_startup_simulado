@@ -61,9 +61,10 @@ public class SimuladoController {
 
     // Finalizar simulado: calcula perfis e fecha
     @SecurityRequirement(name = "bearerAuth")
-    @PutMapping("/simulados/{id}/finalizar")
-    public ResponseEntity<SimuladoDTO> finalizar(@PathVariable String id, HttpServletRequest req) {
-        return ResponseEntity.ok(service.finalizar(id, req));
+    @PutMapping("/simulados/finalizar")
+    public ResponseEntity<SimuladoDTO> finalizar(@RequestBody FinalizarSimuladoRequestFlat body,
+                                                HttpServletRequest req) {
+        return ResponseEntity.ok(service.finalizarAtualizandoTudo(body, req));
     }
 
     // Listagens por usuário

@@ -1,0 +1,759 @@
+{
+  "user_id": "NEW_USER_ID",
+  "topics": {
+    "algebra": {
+      "subskills": {
+        "absolute_value": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "identifying_solutions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "absolute_value_functions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "linear_inequality": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "identifying_solutions_of_linear_inequalities": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "isolating_constants": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "rearranging_equations": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "isolating_variables": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "two_step_solution": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "one_step_solution": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "linear_equations": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 3,
+          "structures": {
+            "identifying_intercept": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "properties_of_a_line": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "evaluating_linear_functions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "linear_translation": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "vertical_translation": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "linear_word_problems": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 3,
+          "structures": {
+            "linear_inequality_word_problem": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "geometry_linear_word_problem": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "interpreting_linear_equations": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "system_of_linear_equations": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "identifying_solution": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "classifying_system_of_linear_equations": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        }
+      }
+    },
+
+    "advanced_math": {
+      "subskills": {
+        "equivalent_expressions": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "adding_and_subtracting_exponents": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "multiplying_and_dividing_exponents": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "quadratic_equations": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 4,
+          "structures": {
+            "evaluating_quadratic_functions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "quadratic_word_problem": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "evaluating_maximum_and_minimumm": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "evaluating_solutions_of_quadratics": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "radicals_and_exponents": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "evaluating_exponent_expressions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "linear_and_quadratic": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "identifying_solution_adv": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        }
+      }
+    },
+
+    "problem_solving_and_data_analysis": {
+      "subskills": {
+        "exponential_functions": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "exponential_function_word_problem": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "evaluating_exponential_functions": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "percentages": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "applying_percentages": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "percentage_increase_decrease": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "ratios_rates_and_proportional_relationships": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "converting_units": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "converting_square_units": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        },
+        "statistics": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 1,
+          "structures": {
+            "margin_of_error": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        }
+      }
+    },
+
+    "geometry_and_trigonometry": {
+      "subskills": {
+        "right_triangles_and_trigonometry": {
+          "attempts_s": 0,
+          "correct_s": 0,
+          "hints_rate_s": 0.0,
+          "solutions_rate_s": 0.0,
+          "last_seen_at_s": "",
+          "missed_two_sessions": false,
+          "easy_seen_s": false,
+          "medium_seen_s": false,
+          "hard_seen_s": false,
+          "estruturas_vistas_s": 0,
+          "total_estruturas_s": 2,
+          "structures": {
+            "trig_ratios": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            },
+            "applying_pythagorean_theorem": {
+              "attempts_sc": 0,
+              "correct_sc": 0,
+              "hints_rate_sc": 0.0,
+              "solutions_rate_sc": 0.0,
+              "P_sc": 50,
+              "last_level_applied_sc": "easy",
+              "easy_seen_sc": false,
+              "medium_seen_sc": false,
+              "hard_seen_sc": false,
+              "medium_exposures_sc": 0,
+              "hard_exposures_sc": 0,
+              "cooldown_sc": 0,
+              "last_seen_at_sc": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}
