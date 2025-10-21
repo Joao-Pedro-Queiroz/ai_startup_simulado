@@ -11,6 +11,7 @@ import ai.startup.simulado.questaosimulado.QuestaoClient;
 import ai.startup.simulado.questaosimulado.QuestaoUpdateDTO;
 import ai.startup.simulado.questaosimulado.QuestoesCreateItemDTO;
 import ai.startup.simulado.usuario.UsuarioClient;
+import ai.startup.simulado.usuario.UsuarioUpdateDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.data.domain.Sort;
@@ -104,7 +105,7 @@ public class SimuladoService {
 
     // ================= Início: ADAPTATIVO & ORIGINAL =================
 
-    /** Inicia simulado ADAPTATIVO (2 chamadas de ~22 questões cada; total 44) */
+    /** Inicia simulado ADAPTATIVO (1 chamadas que já retorna ~44) */
     public SimuladoComQuestoesDTO iniciarAdaptativo(HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
         var user = usuarioClient.me(bearer);       // uma chamada só
@@ -118,6 +119,17 @@ public class SimuladoService {
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
 
+        long novoSaldo = Math.max(0L, user.wins() - 5L);
+        UsuarioUpdateDTO debitoWins = new UsuarioUpdateDTO(
+                null, null, null, null, null, null, // nome, sobrenome, telefone, nascimento, email, cpf
+                null,                                // senha
+                novoSaldo,                           // wins (apenas este campo será aplicado)
+                null,                                // streaks
+                null,                                // xp
+                null                                 // permissao
+        );
+        usuarioClient.atualizar(bearer, userId, debitoWins);
+        
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
                 .tipo("ADAPTATIVO")
@@ -161,6 +173,17 @@ public class SimuladoService {
         var ultimo = repo.findMaisRecente(userId);
         if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
+
+        long novoSaldo = Math.max(0L, user.wins() - 5L);
+        UsuarioUpdateDTO debitoWins = new UsuarioUpdateDTO(
+                null, null, null, null, null, null, // nome, sobrenome, telefone, nascimento, email, cpf
+                null,                                // senha
+                novoSaldo,                           // wins (apenas este campo será aplicado)
+                null,                                // streaks
+                null,                                // xp
+                null                                 // permissao
+        );
+        usuarioClient.atualizar(bearer, userId, debitoWins);
 
         var sim = repo.save(Simulado.builder()
                 .idUsuario(userId)
