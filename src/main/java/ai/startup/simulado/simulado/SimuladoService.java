@@ -365,9 +365,17 @@ public class SimuladoService {
         }
 
         public SimuladoDTO ultimoPorUsuario(String idUsuario) {
-            var s = repo.findMaisRecente(idUsuario);
-            if (s == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum simulado encontrado para o usuário.");
-            return toDTO(s);
+            // Retorna apenas simulados com status ABERTO (mais recente)
+            var todos = repo.findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"));
+            var aberto = todos.stream()
+                    .filter(s -> "ABERTO".equalsIgnoreCase(s.getStatus()))
+                    .findFirst()
+                    .orElse(null);
+            
+            if (aberto == null) {
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum simulado em aberto encontrado para o usuário.");
+            }
+            return toDTO(aberto);
         }
 
     // ================= Helpers =================
