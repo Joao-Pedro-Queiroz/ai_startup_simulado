@@ -8,7 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
+
+import java.time.Duration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Components;
@@ -32,7 +35,19 @@ public class SimuladoApplication {
     }
 
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder b) { return b.build(); }
+    public RestTemplate restTemplate(RestTemplateBuilder b) {
+        // Configurar timeouts maiores para chamadas ao serviço de modelo (Flask)
+        // que pode demorar até 2 minutos para gerar todas as questões
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout((int) Duration.ofSeconds(10).toMillis());
+        factory.setReadTimeout((int) Duration.ofMinutes(5).toMillis());
+        
+        return b
+            .requestFactory(() -> factory)
+            .setConnectTimeout(Duration.ofSeconds(10))
+            .setReadTimeout(Duration.ofMinutes(5))
+            .build();
+    }
 
     @Bean
     public OpenAPI openAPI() {
