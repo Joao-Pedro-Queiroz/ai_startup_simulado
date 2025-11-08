@@ -40,14 +40,14 @@ public class SecurityFilter extends OncePerRequestFilter {
             return;
         }
 
-        String auth = req.getHeader("Authorization");
-        if (auth == null || !auth.startsWith("Bearer ")) {
-            res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Missing or invalid Authorization header");
+        String token = extractToken(req);
+        if (token == null || token.isBlank()) {
+            res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Missing or invalid authentication token");
             return;
         }
 
         Claims claims;
-        try { claims = jwtService.validar(auth.substring(7)); }
+        try { claims = jwtService.validar(token); }
         catch (Exception e) {
             res.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid or expired token");
             return;
@@ -63,6 +63,32 @@ public class SecurityFilter extends OncePerRequestFilter {
         chain.doFilter(req, res);
     }
 
+    /**
+     * Extrai JWT token: primeiro tenta cookie "jwt", depois Authorization header
+     */
+    private String extractToken(HttpServletRequest request) {
+        // 1. Tentar obter de cookie (prioridade)
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("jwt".equals(cookie.getName())) {
+                    String value = cookie.getValue();
+                    if (value != null && !value.isBlank()) {
+                        return value;
+                    }
+                }
+            }
+        }
+
+        // 2. Fallback: Authorization header (retrocompatibilidade)
+        String auth = request.getHeader("Authorization");
+        if (auth != null && auth.startsWith("Bearer ")) {
+            return auth.substring(7);
+        }
+
+        return null;
+    }
+
     private boolean isPublic(HttpServletRequest req) {
         String path = req.getRequestURI();
         for (String p : PUBLIC_PATHS) if (pathMatcher.match(p, path)) return true;
@@ -70,7 +96,8 @@ public class SecurityFilter extends OncePerRequestFilter {
     }
 
     private void addCors(HttpServletResponse res) {
-        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+        res.setHeader("Access-Control-Allow-Credentials", "true");
         res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
         res.setHeader("Access-Control-Allow-Headers", "Authorization,Content-Type");
         res.setHeader("Access-Control-Expose-Headers", "Authorization");
