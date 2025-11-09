@@ -48,4 +48,25 @@ public class UsuarioClient {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao atualizar usuário.", e);
         }
     }
+
+    public UsuarioDTO buscarPorId(String idUsuario, String bearerToken) {
+        String url = base + "/users/" + idUsuario;
+        var headers = new HttpHeaders();
+        headers.set("Authorization", bearerToken);
+        
+        try {
+            var resp = rt.exchange(url, HttpMethod.GET, new HttpEntity<>(headers), UsuarioDTO.class);
+            var body = resp.getBody();
+            if (body == null) throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Resposta vazia ao buscar usuário");
+            return body;
+        } catch (HttpStatusCodeException e) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_GATEWAY,
+                    "Falha ao buscar usuário: " + e.getStatusCode() + " - " + e.getResponseBodyAsString(),
+                    e
+            );
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao buscar usuário.", e);
+        }
+    }
 }

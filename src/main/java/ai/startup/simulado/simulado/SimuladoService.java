@@ -32,6 +32,7 @@ public class SimuladoService {
     private final ModeloClient modeloClient;
     private final PerfilClient perfilClient;
     private final PerfilTemplateProvider perfilTemplateProvider;
+    private final ai.startup.simulado.custompractice.CustomPracticeService customPracticeService;
 
     private transient Map<String, java.time.LocalDateTime> simIdToDateTmp;
     private transient java.util.Set<String> subsUlt1Tmp;
@@ -42,13 +43,15 @@ public class SimuladoService {
                            QuestaoClient questaoClient,
                            ModeloClient modeloClient,
                            PerfilClient perfilClient,
-                           PerfilTemplateProvider perfilTemplateProvider) {
+                           PerfilTemplateProvider perfilTemplateProvider,
+                           ai.startup.simulado.custompractice.CustomPracticeService customPracticeService) {
         this.repo = repo;
         this.usuarioClient = usuarioClient;
         this.questaoClient = questaoClient;
         this.modeloClient = modeloClient;
         this.perfilClient = perfilClient;
         this.perfilTemplateProvider = perfilTemplateProvider;
+        this.customPracticeService = customPracticeService;
     }
 
     // ================= CRUD =================
@@ -154,10 +157,8 @@ public class SimuladoService {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões.", e);
         }
 
-        return new SimuladoComQuestoesDTO(
-                sim.getId(), sim.getIdUsuario(), sim.getTipo(), sim.getData(), sim.getStatus(), sim.getFaturaWins(),
-                qsCriadas
-        );
+        SimuladoDTO simuladoDTO = toDTO(sim);
+        return new SimuladoComQuestoesDTO(simuladoDTO, qsCriadas);
     }
 
     /** Inicia simulado ORIGINAL (1 chamada que já retorna ~44) */
@@ -209,10 +210,23 @@ public class SimuladoService {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões.", e);
         }
 
-        return new SimuladoComQuestoesDTO(
-                sim.getId(), sim.getIdUsuario(), sim.getTipo(), sim.getData(), sim.getStatus(), sim.getFaturaWins(),
-                qsCriadas
-        );
+        SimuladoDTO simuladoDTO = toDTO(sim);
+        return new SimuladoComQuestoesDTO(simuladoDTO, qsCriadas);
+    }
+
+    /**
+     * Inicia um Custom Practice delegando para o CustomPracticeService.
+     * 
+     * @param request DTO com usuarioId, selections e totalQuestions
+     * @param authorizationHeader JWT token
+     * @return SimuladoComQuestoesDTO com simulado + questões personalizadas
+     */
+    public SimuladoComQuestoesDTO iniciarCustomPractice(
+            ai.startup.simulado.custompractice.CustomPracticeRequestDTO request,
+            String authorizationHeader
+    ) {
+        // Delega para o serviço especializado que já retorna o tipo correto
+        return customPracticeService.criarCustomPractice(request, authorizationHeader);
     }
 
     // ================= Finalização: calcula Perfil (novo formato) e encerra =================

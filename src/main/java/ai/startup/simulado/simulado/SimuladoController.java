@@ -58,6 +58,16 @@ public class SimuladoController {
         return ResponseEntity.ok(service.iniciarOriginal(req));
     }
 
+    // Iniciar custom practice (questões personalizadas baseadas em seleções do MindMap)
+    @SecurityRequirement(name = "bearerAuth")
+    @Operation(summary = "Inicia custom practice e retorna simulado + questões personalizadas")
+    @PostMapping("/simulados/custom-practice")
+    public ResponseEntity<SimuladoComQuestoesDTO> iniciarCustomPractice(
+            @RequestBody ai.startup.simulado.custompractice.CustomPracticeRequestDTO request,
+            HttpServletRequest req
+    ) {
+        return ResponseEntity.ok(service.iniciarCustomPractice(request, req.getHeader("Authorization")));
+    }
 
     // Finalizar simulado: calcula perfis e fecha
     @SecurityRequirement(name = "bearerAuth")
