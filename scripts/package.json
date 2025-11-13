@@ -1,0 +1,13 @@
+{
+  "name": "simulado-seed-scripts",
+  "version": "1.0.0",
+  "description": "Scripts para popular MongoDB com simulados originais",
+  "scripts": {
+    "import": "node import_original_exams.js",
+    "validate": "node validate_exams.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.0.0"
+  }
+}
+

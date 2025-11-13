@@ -1,0 +1,47 @@
+═══════════════════════════════════════════════
+🚀 Import de Simulados Originais para MongoDB
+═══════════════════════════════════════════════
+
+📊 Database: SatQuestions
+📁 Collection: original_exams
+
+🔌 Conectando ao MongoDB...
+✅ Conectado com sucesso!
+
+📊 Simulados existentes: 0
+
+📝 Processando original_exam_001.json...
+   📊 exam_id: SAT_ORIGINAL_001
+   🧩 Tipo: ADAPTATIVO
+   📚 Módulo 1: 22 questões
+   📘 Módulo 2 Easy: 22 questões
+   📕 Módulo 2 Hard: 22 questões
+   🎯 Total: 66 questões
+   ⚡ Threshold: 16
+   ➕ Inserindo novo simulado...
+   ✅ SAT_ORIGINAL_001 inserido!
+
+📝 Processando original_exam_002.json...
+   ❌ ERRO ao processar original_exam_002.json: Unexpected end of JSON input
+
+📝 Processando original_exam_003.json...
+   ❌ ERRO ao processar original_exam_003.json: Unexpected end of JSON input
+
+📝 Processando original_exam_004.json...
+   ❌ ERRO ao processar original_exam_004.json: Unexpected end of JSON input
+⏭️  Pulando original_exam_005.json (arquivo não encontrado)
+
+═══════════════════════════════════════════════
+🎉 Import Concluído!
+═══════════════════════════════════════════════
+✅ Importados: 1
+⏭️  Pulados: 4
+📊 Total na collection: 1
+═══════════════════════════════════════════════
+
+⚠️  Atenção: Esperava 5 simulados, mas encontrou 1
+   Verifique se todos os arquivos JSON foram criados
+
+🚀 Próximo passo: Testar os endpoints da API!
+
+🔌 Conexão com MongoDB fechada.

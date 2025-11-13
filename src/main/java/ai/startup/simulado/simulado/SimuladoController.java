@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping
@@ -67,6 +68,21 @@ public class SimuladoController {
             HttpServletRequest req
     ) {
         return ResponseEntity.ok(service.iniciarCustomPractice(request, req.getHeader("Authorization")));
+    }
+
+    // Carregar Módulo 2 de um simulado original adaptativo
+    @SecurityRequirement(name = "bearerAuth")
+    @Operation(summary = "Carrega Módulo 2 de um simulado original baseado na performance do M1")
+    @PostMapping("/simulados/original/module2")
+    public ResponseEntity<Map<String, Object>> carregarModule2Original(
+            @RequestBody Map<String, Object> request,
+            HttpServletRequest req
+    ) {
+        String simuladoId = (String) request.get("simuladoId");
+        String examId = (String) request.get("examId");
+        Integer module1Correct = (Integer) request.get("module1Correct");
+        
+        return ResponseEntity.ok(service.carregarModule2Original(simuladoId, examId, module1Correct, req.getHeader("Authorization")));
     }
 
     // Finalizar simulado: calcula perfis e fecha

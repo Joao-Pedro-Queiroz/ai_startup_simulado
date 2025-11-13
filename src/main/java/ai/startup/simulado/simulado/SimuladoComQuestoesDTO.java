@@ -9,5 +9,11 @@ import java.util.Map;
  */
 public record SimuladoComQuestoesDTO(
         SimuladoDTO simulado,
-        List<Map<String, Object>> questoes
-) {}
+        List<Map<String, Object>> questoes,
+        Map<String, Object> metadata  // Metadados extras (ex: exam_id, is_adaptive, threshold para originais)
+) {
+    // Construtor para compatibilidade com código existente (sem metadata)
+    public SimuladoComQuestoesDTO(SimuladoDTO simulado, List<Map<String, Object>> questoes) {
+        this(simulado, questoes, null);
+    }
+}

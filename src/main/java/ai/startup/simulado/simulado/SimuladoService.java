@@ -14,6 +14,7 @@ import ai.startup.simulado.usuario.UsuarioClient;
 import ai.startup.simulado.usuario.UsuarioUpdateDTO;
 
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 import java.time.Duration;
 
+@Slf4j
 @Service
 public class SimuladoService {
 
@@ -33,6 +35,7 @@ public class SimuladoService {
     private final PerfilClient perfilClient;
     private final PerfilTemplateProvider perfilTemplateProvider;
     private final ai.startup.simulado.custompractice.CustomPracticeService customPracticeService;
+    private final ai.startup.simulado.originalexam.OriginalExamService originalExamService;
 
     private transient Map<String, java.time.LocalDateTime> simIdToDateTmp;
     private transient java.util.Set<String> subsUlt1Tmp;
@@ -44,7 +47,8 @@ public class SimuladoService {
                            ModeloClient modeloClient,
                            PerfilClient perfilClient,
                            PerfilTemplateProvider perfilTemplateProvider,
-                           ai.startup.simulado.custompractice.CustomPracticeService customPracticeService) {
+                           ai.startup.simulado.custompractice.CustomPracticeService customPracticeService,
+                           ai.startup.simulado.originalexam.OriginalExamService originalExamService) {
         this.repo = repo;
         this.usuarioClient = usuarioClient;
         this.questaoClient = questaoClient;
@@ -52,6 +56,7 @@ public class SimuladoService {
         this.perfilClient = perfilClient;
         this.perfilTemplateProvider = perfilTemplateProvider;
         this.customPracticeService = customPracticeService;
+        this.originalExamService = originalExamService;
     }
 
     // ================= CRUD =================
@@ -161,7 +166,7 @@ public class SimuladoService {
         return new SimuladoComQuestoesDTO(simuladoDTO, qsCriadas);
     }
 
-    /** Inicia simulado ORIGINAL (1 chamada que já retorna ~44) */
+    /** Inicia simulado ORIGINAL (busca do banco de simulados fixos) */
     public SimuladoComQuestoesDTO iniciarOriginal(HttpServletRequest req) {
         String bearer = req.getHeader("Authorization");
         var user = usuarioClient.me(bearer);       // uma chamada só
@@ -194,24 +199,40 @@ public class SimuladoService {
                 .faturaWins(5)
                 .build());
 
-        Map<String,Object> modulo;
+        // Buscar próximo simulado original não feito pelo usuário
+        Map<String, Object> nextExamData;
         try {
-            modulo = modeloClient.gerarSimuladoOriginal(userId); // sem topic
+            nextExamData = originalExamService.getNextExamForUser(userId);
         } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao gerar simulado original.", e);
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao buscar simulado original.", e);
         }
 
-        var lista  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
+        // Mapear as questões do Módulo 1 para o formato esperado
+        var lista = mapOriginalExamModule1(sim.getId(), userId, nextExamData);
+        
+        log.info("[OriginalExam] 🔍 DEBUG - Questões mapeadas do M1: {}", lista.size());
+        log.info("[OriginalExam] 🔍 DEBUG - nextExamData.module_1 size: {}", 
+                 nextExamData.get("module_1") instanceof List ? ((List<?>)nextExamData.get("module_1")).size() : "não é lista");
 
         List<Map<String,Object>> qsCriadas;
         try {
             qsCriadas = questaoClient.criarQuestoes(bearer, lista);
+            log.info("[OriginalExam] 🔍 DEBUG - Questões CRIADAS retornadas: {}", qsCriadas.size());
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões.", e);
         }
 
+        // Criar metadados para o frontend saber que é original adaptativo
+        Map<String, Object> metadata = new HashMap<>();
+        metadata.put("exam_id", nextExamData.get("exam_id"));
+        metadata.put("is_adaptive", nextExamData.get("is_adaptive"));
+        metadata.put("threshold", nextExamData.get("metadata") instanceof Map 
+            ? ((Map<?,?>)nextExamData.get("metadata")).get("threshold") 
+            : 16);
+        metadata.put("module1_questions", lista.size());
+        
         SimuladoDTO simuladoDTO = toDTO(sim);
-        return new SimuladoComQuestoesDTO(simuladoDTO, qsCriadas);
+        return new SimuladoComQuestoesDTO(simuladoDTO, qsCriadas, metadata);
     }
 
     /**
@@ -227,6 +248,48 @@ public class SimuladoService {
     ) {
         // Delega para o serviço especializado que já retorna o tipo correto
         return customPracticeService.criarCustomPractice(request, authorizationHeader);
+    }
+
+    /**
+     * Carrega Módulo 2 de um simulado original adaptativo baseado na performance do M1
+     * 
+     * @param simuladoId ID do simulado no banco
+     * @param examId ID do exam original (SAT_ORIGINAL_001, etc)
+     * @param module1Correct Número de acertos no Módulo 1
+     * @param bearer JWT token
+     * @return Map com questões do M2 criadas e metadata
+     */
+    public Map<String, Object> carregarModule2Original(String simuladoId, String examId, 
+                                                       Integer module1Correct, String bearer) {
+        // Buscar dados do Módulo 2 (easy ou hard)
+        Map<String, Object> module2Data = originalExamService.getModule2Questions(examId, module1Correct);
+        
+        if (module2Data == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Módulo 2 não encontrado para este exam.");
+        }
+        
+        // Buscar simulado para pegar userId
+        var sim = repo.findById(simuladoId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado."));
+        
+        // Converter questões do M2 para criar no banco
+        var lista = mapOriginalExamModule2(simuladoId, sim.getIdUsuario(), module2Data);
+        
+        List<Map<String,Object>> qsCriadas;
+        try {
+            qsCriadas = questaoClient.criarQuestoes(bearer, lista);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao criar questões do Módulo 2.", e);
+        }
+        
+        // Retornar questões criadas + metadata
+        Map<String, Object> response = new HashMap<>();
+        response.put("questions", qsCriadas);
+        response.put("module_type", module2Data.get("module_type"));
+        response.put("threshold_used", module2Data.get("threshold_used"));
+        response.put("module1_correct", module1Correct);
+        
+        return response;
     }
 
     // ================= Finalização: calcula Perfil (novo formato) e encerra =================
@@ -447,6 +510,145 @@ public class SimuladoService {
                     false,     // solucao
                     modulo
             ));
+        }
+        return out;
+    }
+
+    /**
+     * Mapeia as questões do Módulo 1 de um Original Exam para QuestoesCreateItemDTO
+     */
+    @SuppressWarnings("unchecked")
+    private List<QuestoesCreateItemDTO> mapOriginalExamModule1(String idSimulado, String userId,
+                                                                Map<String, Object> examData) {
+        Object raw = examData == null ? null : examData.get("module_1");
+        
+        // O Spring retorna List<OriginalExam.ExamQuestion>, não List<Map>
+        if (!(raw instanceof List<?>)) {
+            return List.of();
+        }
+        
+        List<?> rawList = (List<?>) raw;
+        List<QuestoesCreateItemDTO> out = new ArrayList<>();
+        
+        for (Object item : rawList) {
+            // Se for ExamQuestion (objeto tipado do Spring)
+            if (item instanceof ai.startup.simulado.originalexam.OriginalExam.ExamQuestion examQ) {
+                out.add(new QuestoesCreateItemDTO(
+                        idSimulado,
+                        userId,
+                        examQ.getTopic(),
+                        examQ.getSubskill(),
+                        examQ.getDifficulty(),
+                        examQ.getQuestion(),
+                        examQ.getOptions(),               // Map<String, String>
+                        examQ.getCorrectOption(),         // String
+                        examQ.getSolution(),              // List<String> - legado
+                        examQ.getStructure(),
+                        examQ.getFormat(),
+                        examQ.getRepresentation(),
+                        examQ.getHint(),                  // legado
+                        null,                             // target_mistakes
+                        "sat_original",                   // source
+                        
+                        // novos campos
+                        examQ.getSolution(),              // solution_english (reusa solution)
+                        null,                             // solution_portugues
+                        examQ.getHint(),                  // hint_english (reusa hint)
+                        null,                             // hint_portugues
+                        null,                             // figure
+                        
+                        // app
+                        null,                             // alternativa_marcada
+                        false,                            // dica
+                        false,                            // solucao
+                        1                                 // modulo 1
+                ));
+            }
+            // Se for Map (compatibilidade com estrutura antiga)
+            else if (item instanceof Map<?,?> q) {
+                Map<String,Object> qMap = (Map<String,Object>) q;
+                Map<String,String> options = (Map<String,String>) qMap.get("options");
+                Object correct = qMap.get("correct_option");
+                List<String> solution = (List<String>) qMap.get("solution");
+                String hint = str(qMap.get("hint"));
+                
+                out.add(new QuestoesCreateItemDTO(
+                        idSimulado,
+                        userId,
+                        str(qMap.get("topic")),
+                        str(qMap.get("subskill")),
+                        str(qMap.get("difficulty")),
+                        str(qMap.get("question")),
+                        options,
+                        correct,
+                        solution,
+                        str(qMap.get("structure")),
+                        str(qMap.get("format")),
+                        str(qMap.get("representation")),
+                        hint,
+                        null,
+                        "sat_original",
+                        solution,
+                        null,
+                        hint,
+                        null,
+                        null,
+                        null,
+                        false,
+                        false,
+                        1
+                ));
+            }
+        }
+        return out;
+    }
+
+    /**
+     * Mapeia as questões do Módulo 2 de um Original Exam para QuestoesCreateItemDTO
+     */
+    @SuppressWarnings("unchecked")
+    private List<QuestoesCreateItemDTO> mapOriginalExamModule2(String idSimulado, String userId,
+                                                                Map<String, Object> module2Data) {
+        Object raw = module2Data == null ? null : module2Data.get("questions");
+        
+        // O Spring retorna List<OriginalExam.ExamQuestion>, não List<Map>
+        if (!(raw instanceof List<?>)) {
+            return List.of();
+        }
+        
+        List<?> rawList = (List<?>) raw;
+        List<QuestoesCreateItemDTO> out = new ArrayList<>();
+        
+        for (Object item : rawList) {
+            // Se for ExamQuestion (objeto tipado do Spring)
+            if (item instanceof ai.startup.simulado.originalexam.OriginalExam.ExamQuestion examQ) {
+                out.add(new QuestoesCreateItemDTO(
+                        idSimulado,
+                        userId,
+                        examQ.getTopic(),
+                        examQ.getSubskill(),
+                        examQ.getDifficulty(),
+                        examQ.getQuestion(),
+                        examQ.getOptions(),
+                        examQ.getCorrectOption(),
+                        examQ.getSolution(),
+                        examQ.getStructure(),
+                        examQ.getFormat(),
+                        examQ.getRepresentation(),
+                        examQ.getHint(),
+                        null,
+                        "sat_original",
+                        examQ.getSolution(),
+                        null,
+                        examQ.getHint(),
+                        null,
+                        null,
+                        null,
+                        false,
+                        false,
+                        2  // modulo 2
+                ));
+            }
         }
         return out;
     }

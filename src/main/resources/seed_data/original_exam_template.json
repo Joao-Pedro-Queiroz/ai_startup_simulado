@@ -1,0 +1,42 @@
+{
+  "exam_id": "SAT_ORIGINAL_001",
+  "version": 1,
+  "name": "SAT Practice Test #1",
+  "difficulty_level": "standard",
+  "is_active": true,
+  "metadata": {
+    "total_questions": 44,
+    "duration_minutes": 70,
+    "topics_distribution": {
+      "algebra": 11,
+      "advanced_math": 13,
+      "problem_solving": 15,
+      "geometry": 5
+    }
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "Se 2x + 5 = 13, qual é o valor de x?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_option": "B",
+      "hint": "Subtraia 5 de ambos os lados e depois divida por 2",
+      "solution": [
+        "Subtraia 5 de ambos os lados: 2x = 8",
+        "Divida ambos os lados por 2: x = 4"
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_for_x"
+    }
+  ]
+}
+
