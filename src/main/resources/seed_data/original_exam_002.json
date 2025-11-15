@@ -1,0 +1,1467 @@
+{
+  "exam_id": "SAT_ORIGINAL_002",
+  "version": 1,
+  "name": "SAT Practice Test #2",
+  "difficulty_level": "medium",
+  "is_active": true,
+  "is_adaptive": true,
+  "metadata": {
+    "total_questions": 66,
+    "module_1_questions": 22,
+    "module_2_questions": 22,
+    "threshold": 16,
+    "duration_minutes": 70,
+    "topics_distribution": {
+      "algebra": 12,
+      "advanced_math": 14,
+      "problem_solving": 15,
+      "geometry": 7
+    }
+  },
+  "module_1": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "equivalent_expressions",
+      "difficulty": "easy",
+      "question": "Which expression is equivalent to \\(13(x^2 - 7)\\)?",
+      "options": {
+        "A": "\\(13x^2 - 91\\)",
+        "B": "\\(13x^2 - 20\\)",
+        "C": "\\(13x^2 - 7\\)",
+        "D": "\\(13x^2 + 6\\)"
+      },
+      "correct_option": "A",
+      "hint": "Distribute 13 to both terms inside the parentheses.",
+      "solution": [
+        "Apply the distributive property: \\(13(x^2 - 7) = 13x^2 - 13 \\cdot 7\\).",
+        "Compute \\(13 \\cdot 7 = 91\\).",
+        "So the equivalent expression is \\(13x^2 - 91\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "distributive_property"
+    },
+    {
+      "question_number": 2,
+      "topic": "problem_solving",
+      "subskill": "interpreting_graphs",
+      "difficulty": "medium",
+      "question": "The scatterplot shows 5 measurements of the body length, in centimeters, of a New Zealand fur seal from ages 1 to 6 years, along with a line of best fit. According to the line of best fit, what is the predicted body length, to the nearest 10 cm, of a seal that is 3 years old?",
+      "options": {},
+      "correct_option": "100",
+      "hint": "Trace the line of best fit up from \\(x = 3\\) until it meets the line, then read the corresponding \\(y\\)-value.",
+      "solution": [
+        "On the line of best fit, when \\(x = 3\\) the \\(y\\)-value is roughly halfway between 90 cm and 110 cm.",
+        "That value is about 100 cm.",
+        "Rounding to the nearest 10 cm keeps it at 100 cm."
+      ],
+      "representation": "cartesian_graph_with_points_and_line",
+      "figure": {
+        "type": "scatter_with_line",
+        "showGrid": true,
+        "tickStep": 1,
+        "xRange": [0, 6],
+        "yRange": [60, 140],
+        "points": [
+          [1, 80],
+          [2, 95],
+          [3, 100],
+          [4, 105],
+          [5, 125]
+        ],
+        "trendLine": {
+          "through": [
+            [1, 80],
+            [6, 130]
+          ]
+        },
+        "xLabel": "Age (years)",
+        "yLabel": "Body length (cm)"
+      },
+      "format": "free_response",
+      "structure": "reading_lines_of_best_fit"
+    },
+    {
+      "question_number": 3,
+      "topic": "algebra",
+      "subskill": "one_variable_linear_equations",
+      "difficulty": "easy",
+      "question": "If \\(6a + 36 = 54\\), what is the value of \\(a + 6\\)?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "36",
+        "D": "42"
+      },
+      "correct_option": "B",
+      "hint": "Solve for \\(a\\) first, then add 6.",
+      "solution": [
+        "Subtract 36 from both sides: \\(6a = 18\\).",
+        "Divide by 6: \\(a = 3\\).",
+        "Compute \\(a + 6 = 3 + 6 = 9\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_linear_equations"
+    },
+    {
+      "question_number": 4,
+      "topic": "problem_solving",
+      "subskill": "probability",
+      "difficulty": "easy",
+      "question": "A sleep study consisted of 59 participants, and 53 of them averaged more than 120 minutes of REM sleep per night. If a participant is selected at random, what is the probability that the participant averaged more than 120 minutes of REM sleep per night?",
+      "options": {
+        "A": "\\(\\tfrac{53}{100}\\)",
+        "B": "\\(\\tfrac{59}{100}\\)",
+        "C": "\\(\\tfrac{53}{59}\\)",
+        "D": "\\(\\tfrac{59}{53}\\)"
+      },
+      "correct_option": "C",
+      "hint": "Probability = (favorable outcomes) / (total outcomes).",
+      "solution": [
+        "Favorable participants: 53.",
+        "Total participants: 59.",
+        "Probability = \\(\\tfrac{53}{59}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "basic_probability"
+    },
+    {
+      "question_number": 5,
+      "topic": "algebra",
+      "subskill": "linear_inequalities",
+      "difficulty": "easy",
+      "question": "A soccer team wants to earn at least $1{,}320 by selling coupon books. The team earns $12 per coupon book. Which inequality describes all possible values of the number of coupon books, \\(n\\), the team can sell to meet the goal?",
+      "options": {
+        "A": "\\(n + 12 \\le 1{,}320\\)",
+        "B": "\\(n + 12 \\ge 1{,}320\\)",
+        "C": "\\(12n \\le 1{,}320\\)",
+        "D": "\\(12n \\ge 1{,}320\\)"
+      },
+      "correct_option": "D",
+      "hint": "Multiply the price per book by the number of books and require the total to be at least the goal.",
+      "solution": [
+        "Total revenue is \\(12n\\).",
+        "To earn at least $1,320: \\(12n \\ge 1{,}320\\).",
+        "That matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "writing_inequalities"
+    },
+    {
+      "question_number": 6,
+      "topic": "geometry",
+      "subskill": "triangle_inequalities",
+      "difficulty": "medium",
+      "question": "The perimeter of an obtuse triangle is 32 meters. Two sides measure 8 meters and 9 meters. What is the length, in meters, of the third side?",
+      "options": {
+        "A": "24",
+        "B": "23",
+        "C": "17",
+        "D": "15"
+      },
+      "correct_option": "D",
+      "hint": "Use the perimeter to find the third side, then verify that the triangle can be obtuse.",
+      "solution": [
+        "Let the third side be \\(s\\). Perimeter condition: \\(8 + 9 + s = 32\\).",
+        "Solve for \\(s\\): \\(s = 32 - 17 = 15\\).",
+        "Check obtuse: longest side is 15, and \\(15^2 = 225 > 8^2 + 9^2 = 145\\), so the triangle can be obtuse."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "triangle_properties"
+    },
+    {
+      "question_number": 7,
+      "topic": "problem_solving",
+      "subskill": "linear_models",
+      "difficulty": "medium",
+      "question": "An event planner pays a one-time fee of $30 to rent a skating rink plus $10.25 per attendee. If the budget is $250, what is the greatest number of attendees possible without exceeding the budget?",
+      "options": {},
+      "correct_option": "21",
+      "hint": "Set up an inequality with fixed cost + 10.25 times the number of attendees \\(n\\) being at most 250.",
+      "solution": [
+        "Inequality: \\(30 + 10.25n \\le 250\\).",
+        "Subtract 30: \\(10.25n \\le 220\\).",
+        "Divide: \\(n \\le 21.463\\dots\\).",
+        "The greatest whole number not exceeding that is 21 attendees."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "two_step_linear_inequalities"
+    },
+    {
+      "question_number": 8,
+      "topic": "algebra",
+      "subskill": "polynomial_operations",
+      "difficulty": "medium",
+      "question": "Which expression is equivalent to \\((5x^3 - 3x + 8) - (9x^6 + 5x - 3)\\)?",
+      "options": {
+        "A": "\\(-4x^9 - 8x - 11\\)",
+        "B": "\\(-9x^6 + 5x^3 - 8x + 11\\)",
+        "C": "\\(-9x^6 + 5x^3 + 2x + 5\\)",
+        "D": "\\(-4x^9 - 2x + 5\\)"
+      },
+      "correct_option": "B",
+      "hint": "Distribute the subtraction to each term in the second polynomial and combine like terms.",
+      "solution": [
+        "Rewrite: \\(5x^3 - 3x + 8 - 9x^6 - 5x + 3\\).",
+        "Combine terms: \\(-9x^6 + 5x^3 - 8x + 11\\).",
+        "That matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "subtracting_polynomials"
+    },
+    {
+      "question_number": 9,
+      "topic": "geometry",
+      "subskill": "polygons",
+      "difficulty": "easy",
+      "question": "The function \\(f(x) = 180(x - 2)\\) gives the sum of the interior angles, in degrees, of a polygon with \\(x\\) sides. What is the sum of the interior angles of a polygon with 25 sides?",
+      "options": {},
+      "correct_option": "4140",
+      "hint": "Substitute \\(x = 25\\) into the formula.",
+      "solution": [
+        "Compute \\(f(25) = 180(25 - 2)\\).",
+        "Simplify: \\(25 - 2 = 23\\).",
+        "Multiply: \\(180 \\times 23 = 4{,}140\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "polygon_angle_sums"
+    },
+    {
+      "question_number": 10,
+      "topic": "algebra",
+      "subskill": "functions_from_tables",
+      "difficulty": "easy",
+      "question": "For the function \\(h\\), the table shows three values of \\(x\\) and their corresponding values of \\(h(x)\\). Which equation could define \\(h\\)?",
+      "options": {
+        "A": "\\(h(x) = 2^x\\)",
+        "B": "\\(h(x) = 2^x + 2\\)",
+        "C": "\\(h(x) = 2^x + 20\\)",
+        "D": "\\(h(x) = 2^x + 21\\)"
+      },
+      "correct_option": "D",
+      "hint": "Check which rule matches all three pairs by substituting the given \\(x\\)-values.",
+      "solution": [
+        "From the table: \\(h(0) = 22\\), \\(h(1) = 23\\), \\(h(2) = 25\\).",
+        "Evaluate \\(2^x + 21\\): \\(2^0 + 21 = 1 + 21 = 22\\); \\(2^1 + 21 = 2 + 21 = 23\\); \\(2^2 + 21 = 4 + 21 = 25\\).",
+        "Only \\(h(x) = 2^x + 21\\) fits all three points."
+      ],
+      "representation": "table",
+      "figure": {
+        "type": "table",
+        "headers": [
+          "x",
+          "h(x)"
+        ],
+        "rows": [
+          [0, 22],
+          [1, 23],
+          [2, 25]
+        ]
+      },
+      "format": "multiple_choice",
+      "structure": "matching_function_rules"
+    },
+    {
+      "question_number": 11,
+      "topic": "algebra",
+      "subskill": "systems_of_linear_equations",
+      "difficulty": "medium",
+      "question": "The system \\(x + 2y = 19\\) and \\(5x + y = 2\\) has solution \\((x, y)\\). What is the value of \\(6x + 3y\\)?",
+      "options": {
+        "A": "6",
+        "B": "17",
+        "C": "21",
+        "D": "38"
+      },
+      "correct_option": "C",
+      "hint": "Solve the system (substitution or elimination) and then plug the result into \\(6x + 3y\\).",
+      "solution": [
+        "From \\(5x + y = 2\\), \\(y = 2 - 5x\\).",
+        "Substitute into \\(x + 2y = 19\\): \\(x + 2(2 - 5x) = 19 \\Rightarrow -9x = 15 \\Rightarrow x = -\\tfrac{5}{3}\\).",
+        "Then \\(y = 2 - 5(-\\tfrac{5}{3}) = \\tfrac{31}{3}\\).",
+        "Compute \\(6x + 3y = 6(-\\tfrac{5}{3}) + 3(\\tfrac{31}{3}) = -10 + 31 = 21\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_linear_systems"
+    },
+    {
+      "question_number": 12,
+      "topic": "problem_solving",
+      "subskill": "interpreting_linear_functions",
+      "difficulty": "easy",
+      "question": "The function \\(W(x) = 4x + 80\\) gives the total time, in minutes, it takes a gardener to water \\(x\\) plants and mow the grass. According to the function, how many minutes does it take the gardener to mow the grass?",
+      "options": {},
+      "correct_option": "80",
+      "hint": "Identify which part of the function represents the fixed time when no plants are watered.",
+      "solution": [
+        "The constant term 80 represents the time when \\(x = 0\\).",
+        "With no plants watered, the gardener only mows the grass.",
+        "Therefore it takes 80 minutes to mow the grass."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "interpret_linear_models"
+    },
+    {
+      "question_number": 13,
+      "topic": "algebra",
+      "subskill": "systems_non_linear",
+      "difficulty": "medium",
+      "question": "Consider the system \\(x^2 + y = 111\\) and \\(-3x + y = 3\\). The solutions are of the form \\((x, y)\\). Which of the following is a possible value of \\(x\\)?",
+      "options": {
+        "A": "-12",
+        "B": "-9",
+        "C": "-3",
+        "D": "111"
+      },
+      "correct_option": "A",
+      "hint": "Eliminate \\(y\\) by substituting from the linear equation into the quadratic.",
+      "solution": [
+        "From \\(-3x + y = 3\\), \\(y = 3 + 3x\\).",
+        "Substitute into \\(x^2 + y = 111\\): \\(x^2 + 3 + 3x = 111\\).",
+        "Rewrite: \\(x^2 + 3x - 108 = 0\\), which factors as \\((x + 12)(x - 9) = 0\\).",
+        "Thus \\(x = -12\\) or \\(x = 9\\). Of the choices given, only \\(-12\\) appears."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_nonlinear_systems"
+    },
+    {
+      "question_number": 14,
+      "topic": "geometry",
+      "subskill": "similarity_and_dilation",
+      "difficulty": "easy",
+      "question": "Triangle \\(ABC\\) has \\(\\angle A = 60^{\\circ}\\). The triangle is dilated by a scale factor of 5 to obtain triangle \\(XYZ\\), where vertex \\(X\\) corresponds to vertex \\(A\\). What is the measure, in degrees, of \\(\\angle X\\)?",
+      "options": {
+        "A": "12",
+        "B": "55",
+        "C": "60",
+        "D": "65"
+      },
+      "correct_option": "C",
+      "hint": "Dilations change lengths but preserve angle measures.",
+      "solution": [
+        "A dilation maps corresponding angles to congruent angles.",
+        "Since \\(\\angle A = 60^{\\circ}\\) and \\(X\\) corresponds to \\(A\\), \\(\\angle X = 60^{\\circ}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "angle_preservation_dilation"
+    },
+    {
+      "question_number": 15,
+      "topic": "geometry",
+      "subskill": "circles",
+      "difficulty": "medium",
+      "question": "In the \\(xy\\)-plane, the graph of \\(x^2 - 16x + y^2 - 10y - 55 = 0\\) is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
+      "options": {
+        "A": "24",
+        "B": "48",
+        "C": "96",
+        "D": "220"
+      },
+      "correct_option": "C",
+      "hint": "Complete the square to find the radius, then relate the circle's diameter to the square's side length.",
+      "solution": [
+        "Complete squares: \\((x - 8)^2 + (y - 5)^2 = 144\\), so the radius is 12.",
+        "An inscribed circle touches the square on all four sides, so the square's side length is the diameter: 24.",
+        "Perimeter = \\(4 \\times 24 = 96\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "circle_geometry"
+    },
+    {
+      "question_number": 16,
+      "topic": "geometry",
+      "subskill": "right_triangle_trigonometry",
+      "difficulty": "easy",
+      "question": "In a right triangle, the leg adjacent to angle \\(x\\) measures 39 units, the leg opposite \\(x\\) measures 40 units, and the hypotenuse connects the endpoints of those legs. If \\(\\tan x^{\\circ} = \\tfrac{c}{39}\\), what is the value of \\(c\\)?",
+      "options": {
+        "A": "79",
+        "B": "40",
+        "C": "39",
+        "D": "1"
+      },
+      "correct_option": "B",
+      "hint": "Remember that \\(\\tan x = \\frac{\\text{opposite}}{\\text{adjacent}}\\).",
+      "solution": [
+        "The side opposite \\(x\\) is 40 units and the adjacent side is 39 units.",
+        "Thus \\(\\tan x = \\tfrac{40}{39}\\).",
+        "Comparing with \\(\\tan x = \\tfrac{c}{39}\\) shows \\(c = 40\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "basic_trig_ratios"
+    },
+    {
+      "question_number": 17,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "medium",
+      "question": "The function \\(C(t) = 240\\left(\\tfrac{53}{52}\\right)^{t - 15} + 7\\) models the estimated number of cephalopods in an area, where \\(t\\) is the number of months since a study began. After how many months was the population estimated to be 247?",
+      "options": {},
+      "correct_option": "15",
+      "hint": "Set \\(C(t) = 247\\) and solve for \\(t\\) by isolating the exponential expression.",
+      "solution": [
+        "Set \\(247 = 240\\left(\\tfrac{53}{52}\\right)^{t - 15} + 7\\).",
+        "Subtract 7: \\(240\\left(\\tfrac{53}{52}\\right)^{t - 15} = 240\\).",
+        "Divide by 240 to get \\(\\left(\\tfrac{53}{52}\\right)^{t - 15} = 1\\).",
+        "Since the base is greater than 1, the exponent must be 0, so \\(t - 15 = 0\\) and \\(t = 15\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "solving_exponential_equations"
+    },
+    {
+      "question_number": 18,
+      "topic": "problem_solving",
+      "subskill": "percentages",
+      "difficulty": "medium",
+      "question": "An object weighs 220.00 pounds on Earth and 234.52 pounds on Saturn. Its weight on Jupiter is 252.8\\% of its Earth weight. If the object's weight on Saturn is \\(x\\)% of its weight on Jupiter, which value is closest to \\(x\\)?",
+      "options": {
+        "A": "42.17",
+        "B": "69.76",
+        "C": "269.48",
+        "D": "556.16"
+      },
+      "correct_option": "A",
+      "hint": "First find the weight on Jupiter, then express the Saturn weight as a percentage of that value.",
+      "solution": [
+        "Weight on Jupiter: \\(1.0 + 1.528 = 2.528\\) times the Earth weight, so \\(2.528 \\times 220 = 556.16\\) pounds.",
+        "Compute \\(x = \\frac{234.52}{556.16} \\times 100 \\approx 42.17\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "multi_step_percent"
+    },
+    {
+      "question_number": 19,
+      "topic": "advanced_math",
+      "subskill": "trigonometric_functions",
+      "difficulty": "easy",
+      "question": "What is the value of \\(\\sin(18\\pi)\\)?",
+      "options": {
+        "A": "0",
+        "B": "\\(\\tfrac{1}{2}\\)",
+        "C": "\\(\\tfrac{\\sqrt{2}}{2}\\)",
+        "D": "1"
+      },
+      "correct_option": "A",
+      "hint": "Recall that sine has period \\(2\\pi\\).",
+      "solution": [
+        "Since \\(18\\pi = 9(2\\pi)\\), it is an integer multiple of \\(2\\pi\\).",
+        "Sine of any multiple of \\(2\\pi\\) is 0, so \\(\\sin(18\\pi) = 0\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_trig_functions"
+    },
+    {
+      "question_number": 20,
+      "topic": "geometry",
+      "subskill": "similar_figures",
+      "difficulty": "easy",
+      "question": "Rectangles \\(ABCD\\) and \\(EFGH\\) are similar. Each side of \\(EFGH\\) is 7 times the length of the corresponding side of \\(ABCD\\). If the area of \\(ABCD\\) is 68 square units, what is the area of \\(EFGH\\), in square units?",
+      "options": {},
+      "correct_option": "3332",
+      "hint": "When similar figures have a scale factor of \\(k\\), their areas scale by \\(k^2\\).",
+      "solution": [
+        "Scale factor of sides: 7.",
+        "Area scale factor: \\(7^2 = 49\\).",
+        "Area of \\(EFGH = 49 \\times 68 = 3{,}332\\) square units."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "area_scale_factor"
+    },
+    {
+      "question_number": 21,
+      "topic": "geometry",
+      "subskill": "angles_and_units",
+      "difficulty": "medium",
+      "question": "Angle \\(S\\) measures \\(\\tfrac{8\\pi}{13}\\) radians. Angle \\(T\\) measures three times as much as angle \\(S\\). Which expression represents the measure, in degrees, of angle \\(T\\)?",
+      "options": {
+        "A": "\\(\\tfrac{8}{13}(90)(3)\\)",
+        "B": "\\(\\tfrac{8}{13}(180)(3)\\)",
+        "C": "\\(\\tfrac{8}{13\\pi}(90)(3)\\)",
+        "D": "\\(\\tfrac{8\\pi}{13}(180)(3)\\)"
+      },
+      "correct_option": "B",
+      "hint": "Multiply angle \\(S\\) by 3, then convert from radians to degrees by multiplying by \\(\\tfrac{180}{\\pi}\\).",
+      "solution": [
+        "Angle \\(T\\) in radians: \\(3 \\times \\tfrac{8\\pi}{13} = \\tfrac{24\\pi}{13}\\).",
+        "Convert to degrees: \\(\\tfrac{24\\pi}{13} \\times \\tfrac{180}{\\pi} = \\tfrac{8}{13} (180)(3)\\).",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "radian_degree_conversion"
+    },
+    {
+      "question_number": 22,
+      "topic": "advanced_math",
+      "subskill": "quadratic_functions",
+      "difficulty": "hard",
+      "question": "A quadratic function \\(f\\) has vertex at \\((1,7)\\) and passes through the points \\((2,53)\\) and \\((-1,191)\\). What is the value of \\(f(-2) - f(0)\\)?",
+      "options": {
+        "A": "145",
+        "B": "237",
+        "C": "368",
+        "D": "421"
+      },
+      "correct_option": "C",
+      "hint": "Write \\(f(x)\\) in vertex form \\(a(x-1)^2 + 7\\) and use a known point to find \\(a\\).",
+      "solution": [
+        "Vertex form: \\(f(x) = a(x - 1)^2 + 7\\).",
+        "Using \\((2,53)\\): \\(53 = a(1)^2 + 7 \\Rightarrow a = 46\\).",
+        "Then \\(f(-2) = 46(-3)^2 + 7 = 46 \\times 9 + 7 = 421\\) and \\(f(0) = 46(-1)^2 + 7 = 53\\).",
+        "Difference: \\(421 - 53 = 368\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "vertex_form_applications"
+    }
+  ],
+  "module_2_easy": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "one_variable_linear_equations",
+      "difficulty": "easy",
+      "question": "What is the solution to \\(k + 12 = 336\\)?",
+      "options": {
+        "A": "28",
+        "B": "324",
+        "C": "348",
+        "D": "4{,}032"
+      },
+      "correct_option": "B",
+      "hint": "Isolate \\(k\\) by subtracting 12 from both sides.",
+      "solution": [
+        "Subtract 12 from both sides: \\(k = 336 - 12 = 324\\).",
+        "Thus the solution corresponds to option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_linear_equations"
+    },
+    {
+      "question_number": 2,
+      "topic": "problem_solving",
+      "subskill": "unit_conversions",
+      "difficulty": "easy",
+      "question": "What length, in centimeters, is equivalent to 51 meters? (1 meter = 100 centimeters)",
+      "options": {
+        "A": "0.051",
+        "B": "0.51",
+        "C": "5{,}100",
+        "D": "51{,}000"
+      },
+      "correct_option": "C",
+      "hint": "Multiply meters by 100 to convert to centimeters.",
+      "solution": [
+        "Centimeters = meters × 100 = 51 × 100 = 5,100 cm."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "metric_conversions"
+    },
+    {
+      "question_number": 3,
+      "topic": "algebra",
+      "subskill": "systems_of_linear_equations",
+      "difficulty": "easy",
+      "question": "The graph of a system of two linear equations is shown. What is the solution \\((x, y)\\) to the system?",
+      "options": {
+        "A": "\\((0, 4)\\)",
+        "B": "\\((2, 2)\\)",
+        "C": "\\((4, 0)\\)",
+        "D": "\\((4, 4)\\)"
+      },
+      "correct_option": "B",
+      "hint": "Look for the point where the two lines intersect.",
+      "solution": [
+        "The lines cross at \\((2, 2)\\).",
+        "Therefore the system’s solution is \\((2, 2)\\)."
+      ],
+      "representation": "graph",
+      "format": "multiple_choice",
+      "structure": "reading_line_intersections"
+    },
+    {
+      "question_number": 4,
+      "topic": "advanced_math",
+      "subskill": "interpreting_graphs",
+      "difficulty": "easy",
+      "question": "The exponential graph shown has a y-intercept at \\((0, y)\\). What is the value of \\(y\\)?",
+      "options": {},
+      "correct_option": "3",
+      "hint": "Read the y-value where the curve crosses the y-axis.",
+      "solution": [
+        "From the graph, the point \\((0, 3)\\) lies on the curve.",
+        "Hence \\(y = 3\\)."
+      ],
+      "representation": "graph",
+      "format": "free_response",
+      "structure": "graph_reading"
+    },
+    {
+      "question_number": 5,
+      "topic": "problem_solving",
+      "subskill": "data_interpretation",
+      "difficulty": "easy",
+      "question": "Based on the bar graph of extracurricular activities, how many more students are in drama than in chess?",
+      "options": {
+        "A": "10",
+        "B": "30",
+        "C": "40",
+        "D": "70"
+      },
+      "correct_option": "A",
+      "hint": "Subtract the number of chess students from the number of drama students.",
+      "solution": [
+        "Chess has about 30 students, drama about 40 students.",
+        "Difference: 40 − 30 = 10 students."
+      ],
+      "representation": "bar_graph",
+      "format": "multiple_choice",
+      "structure": "bar_graph_analysis"
+    },
+    {
+      "question_number": 6,
+      "topic": "algebra",
+      "subskill": "rational_expressions",
+      "difficulty": "easy",
+      "question": "Which expression is equivalent to \\(\\dfrac{8x(x-7) - 3(x-7)}{2x - 14}\\) for \\(x > 7\\)?",
+      "options": {
+        "A": "\\(\\dfrac{x - 7}{5}\\)",
+        "B": "\\(\\dfrac{8x - 3}{2}\\)",
+        "C": "\\(\\dfrac{8x^2 - 3x - 14}{2x - 14}\\)",
+        "D": "\\(\\dfrac{8x^2 - 3x - 77}{2x - 14}\\)"
+      },
+      "correct_option": "B",
+      "hint": "Factor \\((x - 7)\\) from the numerator and simplify.",
+      "solution": [
+        "Numerator: \\((x - 7)(8x - 3)\\).",
+        "Denominator: \\(2(x - 7)\\).",
+        "Cancel \\((x - 7)\\) to get \\(\\tfrac{8x - 3}{2}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "simplifying_rationals"
+    },
+    {
+      "question_number": 7,
+      "topic": "problem_solving",
+      "subskill": "percentages",
+      "difficulty": "easy",
+      "question": "Out of 300 seeds planted, 80% sprouted. How many seeds sprouted?",
+      "options": {},
+      "correct_option": "240",
+      "hint": "Multiply 300 by 0.80.",
+      "solution": [
+        "Sprouted = 0.80 × 300 = 240 seeds."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "percent_application"
+    },
+    {
+      "question_number": 8,
+      "topic": "problem_solving",
+      "subskill": "rates",
+      "difficulty": "easy",
+      "question": "Ty must walk at least 24 km. If Ty walks 4 km per hour, what is the minimum number of hours required?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "20",
+        "D": "24"
+      },
+      "correct_option": "B",
+      "hint": "Use time = distance ÷ rate.",
+      "solution": [
+        "Time = 24 ÷ 4 = 6 hours."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "distance_rate_time"
+    },
+    {
+      "question_number": 9,
+      "topic": "algebra",
+      "subskill": "tables_and_equations",
+      "difficulty": "easy",
+      "question": "For the equation \\(y = x + 4\\), which table lists three \\((x, y)\\) pairs that satisfy the equation?",
+      "options": {
+        "A": "Table with pairs (0,4), (1,5), (2,6)",
+        "B": "Table with pairs (0,6), (1,5), (2,4)",
+        "C": "Table with pairs (0,2), (1,1), (2,0)",
+        "D": "Table with pairs (0,0), (1,1), (2,2)"
+      },
+      "correct_option": "A",
+      "hint": "Plug in each \\(x\\) value to compute \\(y = x + 4\\).",
+      "solution": [
+        "When \\(x = 0\\), \\(y = 4\\); \\(x = 1\\), \\(y = 5\\); \\(x = 2\\), \\(y = 6\\).",
+        "Only option A matches these pairs."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "function_tables"
+    },
+    {
+      "question_number": 10,
+      "topic": "algebra",
+      "subskill": "one_variable_linear_equations",
+      "difficulty": "easy",
+      "question": "The function \\(g\\) is defined by \\(g(x) = 6x\\). For what value of \\(x\\) is \\(g(x) = 54\\)?",
+      "options": {},
+      "correct_option": "9",
+      "hint": "Set \\(6x = 54\\) and solve for \\(x\\).",
+      "solution": [
+        "Divide both sides by 6: \\(x = 54 \\div 6 = 9\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "solving_linear_equations"
+    },
+    {
+      "question_number": 11,
+      "topic": "problem_solving",
+      "subskill": "linear_models",
+      "difficulty": "easy",
+      "question": "Sean rents a tent for $11 per day plus a one-time insurance fee of $10. Which equation represents the total cost \\(c\\) in dollars for \\(d\\) days?",
+      "options": {
+        "A": "\\(c = 11(d + 10)\\)",
+        "B": "\\(c = 10(d + 11)\\)",
+        "C": "\\(c = 11d + 10\\)",
+        "D": "\\(c = 10d + 11\\)"
+      },
+      "correct_option": "C",
+      "hint": "Combine the daily cost with the fixed fee.",
+      "solution": [
+        "Daily charge: \\(11d\\). Add the one-time $10 fee: \\(c = 11d + 10\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "linear_cost_models"
+    },
+    {
+      "question_number": 12,
+      "topic": "geometry",
+      "subskill": "parallel_lines",
+      "difficulty": "easy",
+      "question": "Lines \\(p\\) and \\(q\\) are parallel and transversal \\(t\\) cuts both, forming angles of \\(x^{\\circ}\\) and \\(142^{\\circ}\\) as shown. What is the value of \\(x + 142\\)?",
+      "options": {
+        "A": "52",
+        "B": "90",
+        "C": "142",
+        "D": "180"
+      },
+      "correct_option": "D",
+      "hint": "Angles on a straight line sum to 180 degrees.",
+      "solution": [
+        "The angles form a linear pair, so \\(x + 142 = 180\\).",
+        "Therefore \\(x + 142 = 180\\)."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "linear_pair_angles"
+    },
+    {
+      "question_number": 13,
+      "topic": "geometry",
+      "subskill": "area",
+      "difficulty": "easy",
+      "question": "What is the area, in square centimeters, of a rectangle with length 34 cm and width 29 cm?",
+      "options": {},
+      "correct_option": "986",
+      "hint": "Area = length × width.",
+      "solution": [
+        "Area = 34 × 29 = 986 square centimeters."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "area_rectangles"
+    },
+    {
+      "question_number": 14,
+      "topic": "algebra",
+      "subskill": "linear_functions",
+      "difficulty": "easy",
+      "question": "For the linear function \\(h(x) = x + b\\), it is known that \\(h(0) = 45\\). What is the value of \\(b\\)?",
+      "options": {},
+      "correct_option": "45",
+      "hint": "Evaluate the function at \\(x = 0\\).",
+      "solution": [
+        "Plugging in \\(x = 0\\) gives \\(h(0) = 0 + b = b\\).",
+        "Since \\(h(0) = 45\\), \\(b = 45\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "linear_function_parameters"
+    },
+    {
+      "question_number": 15,
+      "topic": "algebra",
+      "subskill": "lines_and_slope",
+      "difficulty": "easy",
+      "question": "Which equation represents the line passing through \\((0, 5)\\) that is parallel to \\(y = 7x + 4\\)?",
+      "options": {
+        "A": "\\(y = 5x\\)",
+        "B": "\\(y = 7x + 5\\)",
+        "C": "\\(y = 7x\\)",
+        "D": "\\(y = 5x + 7\\)"
+      },
+      "correct_option": "B",
+      "hint": "Parallel lines share the same slope.",
+      "solution": [
+        "The given line has slope 7, so our line must also have slope 7.",
+        "Using point \\((0,5)\\): \\(y = 7x + 5\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "parallel_lines_equations"
+    },
+    {
+      "question_number": 16,
+      "topic": "algebra",
+      "subskill": "linear_inequalities",
+      "difficulty": "easy",
+      "question": "An inequality is graphed with a shaded region to the right of the boundary line shown. Which ordered pair is a solution?",
+      "options": {
+        "A": "\\((-5, -6)\\)",
+        "B": "\\((-2, 5)\\)",
+        "C": "\\((1, 4)\\)",
+        "D": "\\((6, -2)\\)"
+      },
+      "correct_option": "D",
+      "hint": "Choose a point in the shaded region.",
+      "solution": [
+        "Point \\((6, -2)\\) lies in the shaded region to the right of the boundary.",
+        "Therefore it satisfies the inequality."
+      ],
+      "representation": "graph",
+      "format": "multiple_choice",
+      "structure": "graphing_inequalities"
+    },
+    {
+      "question_number": 17,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "easy",
+      "question": "The number of bacteria in a liquid medium doubles every day. There are 44,000 bacteria at the start of observation. Which expression models the number \\(y\\) of bacteria after \\(t\\) days?",
+      "options": {
+        "A": "\\(y = \\tfrac{1}{2}(44{,}000)^t\\)",
+        "B": "\\(y = 2(44{,}000)^t\\)",
+        "C": "\\(y = 44{,}000\\left(\\tfrac{1}{2}\\right)^t\\)",
+        "D": "\\(y = 44{,}000(2)^t\\)"
+      },
+      "correct_option": "D",
+      "hint": "Use \\(y = y_0 \\cdot 2^t\\) for doubling growth.",
+      "solution": [
+        "Initial amount \\(y_0 = 44{,}000\\).",
+        "Thus \\(y = 44{,}000(2)^t\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "exponential_growth_models"
+    },
+    {
+      "question_number": 18,
+      "topic": "algebra",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "The product of a positive number \\(x\\) and the number 8 greater than \\(x\\) is 180. What is \\(x\\)?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "18",
+        "D": "36"
+      },
+      "correct_option": "B",
+      "hint": "Write the product as \\(x(x + 8) = 180\\) and solve.",
+      "solution": [
+        "Solve \\(x^2 + 8x - 180 = 0\\) which factors to \\((x + 18)(x - 10) = 0\\).",
+        "Since \\(x\\) is positive, \\(x = 10\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "quadratic_word_problems"
+    },
+    {
+      "question_number": 19,
+      "topic": "algebra",
+      "subskill": "factoring",
+      "difficulty": "easy",
+      "question": "Which value of \\(x\\) satisfies \\((5x + 4)(2x - 5) = 0\\)?",
+      "options": {
+        "A": "\\(-\\tfrac{5}{2}\\)",
+        "B": "\\(-\\tfrac{5}{4}\\)",
+        "C": "\\(-\\tfrac{4}{5}\\)",
+        "D": "\\(-\\tfrac{2}{5}\\)"
+      },
+      "correct_option": "C",
+      "hint": "Set each factor equal to zero.",
+      "solution": [
+        "From \\(5x + 4 = 0\\) we get \\(x = -\\tfrac{4}{5}\\); from \\(2x - 5 = 0\\) we get \\(x = \\tfrac{5}{2}\\).",
+        "Among the choices, only \\(-\\tfrac{4}{5}\\) appears."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "zero_product_property"
+    },
+    {
+      "question_number": 20,
+      "topic": "problem_solving",
+      "subskill": "linear_models",
+      "difficulty": "easy",
+      "question": "Keenan made 32 cups of vegetable broth. He filled \\(x\\) small jars that hold 3 cups each and \\(y\\) large jars that hold 5 cups each, giving the equation \\(3x + 5y = 32\\). What does \\(5y\\) represent?",
+      "options": {
+        "A": "The number of large jars Keenan filled",
+        "B": "The number of small jars Keenan filled",
+        "C": "The total cups of broth in the large jars",
+        "D": "The total cups of broth in the small jars"
+      },
+      "correct_option": "C",
+      "hint": "Multiply the volume per large jar by the number of large jars.",
+      "solution": [
+        "Each large jar holds 5 cups, so \\(5y\\) counts the total cups placed in the \\(y\\) large jars."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations"
+    },
+    {
+      "question_number": 21,
+      "topic": "geometry",
+      "subskill": "area",
+      "difficulty": "easy",
+      "question": "The area \\(A\\) of a rectangular cutting board is given by \\(A = w(w + 9)\\), where \\(w\\) is the width in centimeters. Which expression represents the length of the board?",
+      "options": {
+        "A": "\\(w(w + 9)\\)",
+        "B": "\\(w\\)",
+        "C": "9",
+        "D": "\\(w + 9\\)"
+      },
+      "correct_option": "D",
+      "hint": "Area equals width times length.",
+      "solution": [
+        "Since \\(A = \\text{width} \\times \\text{length}\\), divide \\(A\\) by \\(w\\) to get the length: \\(\\tfrac{w(w + 9)}{w} = w + 9\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "area_rectangles"
+    },
+    {
+      "question_number": 22,
+      "topic": "geometry",
+      "subskill": "angles",
+      "difficulty": "easy",
+      "question": "Angle \\(R\\) measures \\(\\tfrac{2\\pi}{3}\\) radians and angle \\(T\\) is \\(\\tfrac{5\\pi}{12}\\) radians greater than angle \\(R\\). What is the measure of angle \\(T\\) in degrees?",
+      "options": {
+        "A": "75",
+        "B": "120",
+        "C": "195",
+        "D": "390"
+      },
+      "correct_option": "C",
+      "hint": "Convert each radian measure to degrees (multiply by \\(180/\\pi\\)).",
+      "solution": [
+        "Angle \\(R\\) is \\(\\tfrac{2\\pi}{3}\\times\\tfrac{180}{\\pi}=120^{\\circ}\\).",
+        "The increase is \\(\\tfrac{5\\pi}{12}\\times\\tfrac{180}{\\pi}=75^{\\circ}\\).",
+        "So \\(T = 120^{\\circ}+75^{\\circ}=195^{\\circ}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "radian_degree_conversion"
+    }
+  ],
+  "module_2_hard": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "linear_functions",
+      "difficulty": "hard",
+      "question": "For the linear function \\(g\\), the graph of \\(y = g(x)\\) has slope 5 and passes through the point \\((2, 47)\\). Which equation defines \\(g\\)?",
+      "options": {
+        "A": "\\(g(x) = 37x\\)",
+        "B": "\\(g(x) = 37x + 5\\)",
+        "C": "\\(g(x) = 5x\\)",
+        "D": "\\(g(x) = 5x + 37\\)"
+      },
+      "correct_option": "D",
+      "hint": "Use \\(y = mx + b\\). Substitute the slope and the point to solve for \\(b\\).",
+      "solution": [
+        "Start with \\(y = 5x + b\\).",
+        "Plug in \\((2,47)\\): \\(47 = 5(2) + b \\Rightarrow b = 37\\).",
+        "So \\(g(x) = 5x + 37\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "point_slope_form"
+    },
+    {
+      "question_number": 2,
+      "topic": "problem_solving",
+      "subskill": "linear_models",
+      "difficulty": "hard",
+      "question": "A plumber charges according to a linear function \\(f(h)\\), where \\(h\\) is the number of hours worked. The table shows two jobs.\n\n\\[\\begin{array}{c|c}\n h & f(h) \\\\\\hline\n 1 & 140 \\\\\n 3 & 250 \\\\\n\\end{array}\\]\n\nWhich equation represents \\(f(h)\\)?",
+      "options": {
+        "A": "\\(f(h) = 85h + 55\\)",
+        "B": "\\(f(h) = 55h + 85\\)",
+        "C": "\\(f(h) = 110h + 30\\)",
+        "D": "\\(f(h) = 30h + 110\\)"
+      },
+      "correct_option": "B",
+      "hint": "Find the slope using the two points, then solve for the intercept.",
+      "solution": [
+        "Slope: \\(\\frac{250 - 140}{3 - 1} = \\frac{110}{2} = 55\\).",
+        "Using \\((1, 140)\\): \\(140 = 55(1) + b \\Rightarrow b = 85\\).",
+        "Therefore, \\(f(h) = 55h + 85\\)."
+      ],
+      "representation": "table",
+      "format": "multiple_choice",
+      "structure": "two_point_linear_model"
+    },
+    {
+      "question_number": 3,
+      "topic": "advanced_math",
+      "subskill": "polynomial_functions",
+      "difficulty": "hard",
+      "question": "Exactly how many \\(x\\)-intercepts does the graph of \\(f(x) = x(x - 10)^2 (x - 11)^3\\) have?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "correct_option": "D",
+      "hint": "Each distinct factor \\((x - a)\\) provides an \\(x\\)-intercept at \\(x = a\\), regardless of multiplicity.",
+      "solution": [
+        "The polynomial has zeros at \\(x = 0\\), \\(x = 10\\), and \\(x = 11\\).",
+        "Although some roots have higher multiplicity, each distinct root corresponds to an \\(x\\)-intercept.",
+        "Therefore there are 3 distinct \\(x\\)-intercepts."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "counting_roots"
+    },
+    {
+      "question_number": 4,
+      "topic": "geometry",
+      "subskill": "circles",
+      "difficulty": "hard",
+      "question": "The equation \\(2x^2 + 2y^2 + tx + ty - 78 = 0\\), where \\(t > 0\\), defines a circle whose radius is \\(\\sqrt{41}\\). What is the value of \\(t\\)?",
+      "options": {},
+      "correct_option": "4",
+      "hint": "Divide the equation by 2 and complete the square for both variables to identify the radius.",
+      "solution": [
+        "Divide by 2: \\(x^2 + y^2 + \\tfrac{t}{2}x + \\tfrac{t}{2}y - 39 = 0\\).",
+        "Complete squares: \\((x + \\tfrac{t}{4})^2 + (y + \\tfrac{t}{4})^2 = 39 + \\tfrac{t^2}{8}\\).",
+        "Radius squared is \\(39 + \\tfrac{t^2}{8}\\). Set equal to 41: \\(39 + \\tfrac{t^2}{8} = 41\\).",
+        "Solve: \\(\\tfrac{t^2}{8} = 2 \\Rightarrow t^2 = 16 \\Rightarrow t = 4\\) (positive)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "complete_the_square"
+    },
+    {
+      "question_number": 5,
+      "topic": "geometry",
+      "subskill": "triangle_properties",
+      "difficulty": "hard",
+      "question": "In triangle \\(RST\\), \\(m\\angle R = 29^{\\circ}\\). Which of the following statements is sufficient to prove that triangle \\(RST\\) is isosceles?",
+      "options": {
+        "A": "\\(m\\angle S = 151^{\\circ}\\)",
+        "B": "\\(m\\angle S = 61^{\\circ}\\)",
+        "C": "\\(m\\angle S = 58^{\\circ}\\)",
+        "D": "\\(m\\angle S = 29^{\\circ}\\)"
+      },
+      "correct_option": "D",
+      "hint": "A triangle is isosceles if it has at least two equal angles (or sides).",
+      "solution": [
+        "If \\(m\\angle S = 29^{\\circ}\\), then two angles (\\(R\\) and \\(S\\)) are congruent.",
+        "Equal angles imply the opposite sides are equal, proving the triangle is isosceles.",
+        "The other statements give no repeated angle measure with \\(29^{\\circ}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "angle_properties"
+    },
+    {
+      "question_number": 6,
+      "topic": "problem_solving",
+      "subskill": "linear_functions",
+      "difficulty": "hard",
+      "question": "A polygonal chain has initial length 33 cm. Each new segment added has length \\(8 - r\\) cm. Which function gives the total length \\(f(x)\\), in cm, after \\(x\\) segments are added?",
+      "options": {
+        "A": "\\(f(x) = 33(8 - r) + x\\)",
+        "B": "\\(f(x) = 8x - rx + 33\\)",
+        "C": "\\(f(x) = 8x - r + 33\\)",
+        "D": "\\(f(x) = (41 - r)x\\)"
+      },
+      "correct_option": "B",
+      "hint": "Each added segment contributes \\(8 - r\\) to the length, so add \\(x(8 - r)\\) to the initial 33 cm.",
+      "solution": [
+        "Total length = initial 33 cm + \\(x\\) times the added length \\(8 - r\\).",
+        "Thus \\(f(x) = 33 + x(8 - r) = 33 + 8x - rx = 8x - rx + 33\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "function_modeling"
+    },
+    {
+      "question_number": 7,
+      "topic": "algebra",
+      "subskill": "solving_linear_equations",
+      "difficulty": "hard",
+      "question": "If \\(\\tfrac{9}{6}(x - 5) - 36 = \\tfrac{7}{6}(x - 5) + 28\\), what is the value of \\(x - 5\\)?",
+      "options": {},
+      "correct_option": "192",
+      "hint": "Collect the \\((x - 5)\\) terms on one side and constants on the other.",
+      "solution": [
+        "Subtract \\(\\tfrac{7}{6}(x - 5)\\) from both sides: \\(\\tfrac{2}{6}(x - 5) - 36 = 28\\).",
+        "Add 36: \\(\\tfrac{1}{3}(x - 5) = 64\\).",
+        "Multiply by 3: \\(x - 5 = 192\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "one_variable_linear_equations"
+    },
+    {
+      "question_number": 8,
+      "topic": "problem_solving",
+      "subskill": "basic_equations",
+      "difficulty": "hard",
+      "question": "A chemist combines 30 grams of compound \\(A\\), 45 grams of compound \\(B\\), and \\(x\\) grams of compound \\(C\\). The resulting mixture has a mass of 135 grams. What is the value of \\(x\\)?",
+      "options": {
+        "A": "15",
+        "B": "30",
+        "C": "45",
+        "D": "60"
+      },
+      "correct_option": "D",
+      "hint": "Sum the masses of all components and set equal to 135 grams.",
+      "solution": [
+        "Total mass: \\(30 + 45 + x = 135\\).",
+        "Add the known masses: \\(75 + x = 135\\).",
+        "Subtract 75: \\(x = 60\\) grams."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "single_variable_equations"
+    },
+    {
+      "question_number": 9,
+      "topic": "algebra",
+      "subskill": "systems_of_inequalities",
+      "difficulty": "hard",
+      "question": "Which point \\((x, y)\\) satisfies the system \\(y \\le x + 15\\) and \\(y \\ge -4x - 15\\)?",
+      "options": {
+        "A": "\\((-7, 0)\\)",
+        "B": "\\((0, 16)\\)",
+        "C": "\\((0, -16)\\)",
+        "D": "\\((7, 0)\\)"
+      },
+      "correct_option": "D",
+      "hint": "A solution must satisfy both inequalities simultaneously.",
+      "solution": [
+        "Test \\((7, 0)\\): \\(0 \\le 7 + 15 = 22\\) (true) and \\(0 \\ge -4(7) - 15 = -43\\) (true).",
+        "The other points fail at least one inequality.",
+        "Therefore \\((7, 0)\\) is in the solution region."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "testing_systems"
+    },
+    {
+      "question_number": 10,
+      "topic": "geometry",
+      "subskill": "triangle_properties",
+      "difficulty": "hard",
+      "question": "An equilateral triangle has a height of \\(47\\sqrt{3}\\) units. What is the length of one side of the triangle?",
+      "options": {
+        "A": "\\(94\\sqrt{3}\\)",
+        "B": "94",
+        "C": "\\(47\\sqrt{3}\\)",
+        "D": "47"
+      },
+      "correct_option": "B",
+      "hint": "In an equilateral triangle, the height equals \\(\\tfrac{\\sqrt{3}}{2}\\) times the side length.",
+      "solution": [
+        "Let side length be \\(s\\). Then \\(\\tfrac{\\sqrt{3}}{2}s = 47\\sqrt{3}\\).",
+        "Divide both sides by \\(\\sqrt{3}\\): \\(\\tfrac{1}{2}s = 47\\).",
+        "Multiply by 2: \\(s = 94\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "special_triangles"
+    },
+    {
+      "question_number": 11,
+      "topic": "algebra",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "For the equation \\((x + k)^2 + 37 = 37\\), where \\(k\\) is a constant, how many distinct real solutions does the equation have?",
+      "options": {
+        "A": "Zero",
+        "B": "Exactly one",
+        "C": "Exactly two",
+        "D": "Infinitely many"
+      },
+      "correct_option": "B",
+      "hint": "Simplify the equation to determine the condition on \\(x + k\\).",
+      "solution": [
+        "Subtract 37: \\((x + k)^2 = 0\\).",
+        "This implies \\(x + k = 0\\).",
+        "Only one real value satisfies this, so there is exactly one solution."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "quadratic_roots"
+    },
+    {
+      "question_number": 12,
+      "topic": "geometry",
+      "subskill": "circles",
+      "difficulty": "hard",
+      "question": "A circle is inscribed in a square so that it touches the midpoint of each side. If the diagonal of the square is 228 units, what is the area of the circle?",
+      "options": {
+        "A": "6{,}498\\pi",
+        "B": "12{,}996\\pi",
+        "C": "25{,}992\\pi",
+        "D": "51{,}984\\pi"
+      },
+      "correct_option": "A",
+      "hint": "Find the square's side length from its diagonal, then use half the side as the circle's radius.",
+      "solution": [
+        "Side length: \\(s = \\tfrac{228}{\\sqrt{2}} = 114\\sqrt{2}\\).",
+        "Radius: \\(r = \\tfrac{s}{2} = 57\\sqrt{2}\\).",
+        "Area: \\(\\pi r^2 = \\pi (57\\sqrt{2})^2 = 6{,}498\\pi\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "circle_in_square"
+    },
+    {
+      "question_number": 13,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "In 2005 there were 6.22 pheasants per mile of road. Each year from 2005 to 2015 the number decreased by 3.5% of the previous year's value. Which expression best approximates the number of pheasants per mile in 2015?",
+      "options": {
+        "A": "0.965(6.22)^{10}",
+        "B": "1.035(6.22)^{10}",
+        "C": "6.22(0.035)^{10}",
+        "D": "6.22(0.965)^{10}"
+      },
+      "correct_option": "D",
+      "hint": "A 3.5% decrease corresponds to multiplying by 0.965 each year for 10 years.",
+      "solution": [
+        "After one year: \\(6.22 \\times 0.965\\).",
+        "After 10 years: \\(6.22 \\times (0.965)^{10}\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "compound_decay"
+    },
+    {
+      "question_number": 14,
+      "topic": "problem_solving",
+      "subskill": "percentages",
+      "difficulty": "hard",
+      "question": "The expression \\(kx\\) represents decreasing a positive force \\(x\\) by 0.34%. What is the value of \\(k\\)?",
+      "options": {},
+      "correct_option": "0.9966",
+      "hint": "A decrease of 0.34% means multiply by the remaining 99.66%.",
+      "solution": [
+        "Remaining proportion: \\(1 - 0.0034 = 0.9966\\).",
+        "Therefore \\(k = 0.9966\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "percentage_change"
+    },
+    {
+      "question_number": 15,
+      "topic": "problem_solving",
+      "subskill": "scale_models",
+      "difficulty": "hard",
+      "question": "A square map has side length 35 inches and a scale of 1 inch to 13 miles. A smaller version is printed with side length 70% shorter. On the smaller map, what actual distance (in miles) does 1 inch represent?",
+      "options": {
+        "A": "3.90",
+        "B": "7.65",
+        "C": "24.50",
+        "D": "43.33"
+      },
+      "correct_option": "D",
+      "hint": "Find the new side length and the corresponding scale factor relative to the original map.",
+      "solution": [
+        "New side length: \\(35 \\times 0.30 = 10.5\\) inches (since it is 70% shorter).",
+        "Linear scale factor between maps: \\(10.5/35 = 0.3\\).",
+        "Distances on the smaller map shrink by 0.3, so 1 inch corresponds to \\(13 / 0.3 \\approx 43.33\\) miles."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "scaling_proportions"
+    },
+    {
+      "question_number": 16,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "The function \\(f(x) = a^x + b\\) has a y-intercept at \\((0, -20)\\) and passes through \\((2, 43)\\). With \\(a > 0\\), what is the value of \\(a - b\\)?",
+      "options": {},
+      "correct_option": "29",
+      "hint": "Use the two given points to solve for \\(a\\) and \\(b\\).",
+      "solution": [
+        "From \\((0, -20)\\): \\(1 + b = -20 \\Rightarrow b = -21\\).",
+        "From \\((2, 43)\\): \\(a^2 - 21 = 43 \\Rightarrow a^2 = 64 \\Rightarrow a = 8\\).",
+        "Compute \\(a - b = 8 - (-21) = 29\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "solving_exponential_parameters"
+    },
+    {
+      "question_number": 17,
+      "topic": "problem_solving",
+      "subskill": "unit_rates",
+      "difficulty": "hard",
+      "question": "One gallon of sealant costs $23 and covers 250 square feet. If a deck has area \\(d\\) and must be coated twice, which equation gives the total cost \\(c\\)?",
+      "options": {
+        "A": "\\(c = \\tfrac{250d}{23}\\)",
+        "B": "\\(c = \\tfrac{500d}{23}\\)",
+        "C": "\\(c = 23\\left(\\tfrac{d}{125}\\right)\\)",
+        "D": "\\(c = 23\\left(\\tfrac{d}{250}\\right)\\)"
+      },
+      "correct_option": "C",
+      "hint": "You need enough sealant for \\(2d\\) square feet; divide by 250 to find gallons and multiply by 23.",
+      "solution": [
+        "Area to cover: \\(2d\\).",
+        "Gallons needed: \\(\\tfrac{2d}{250} = \\tfrac{d}{125}\\).",
+        "Cost: \\(23 \\times \\tfrac{d}{125}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "unit_rate_applications"
+    },
+    {
+      "question_number": 18,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "A bacterial culture starts with 66,000 bacteria and doubles every hour. Which expression gives the number of bacteria \\(y\\) after \\(t\\) hours?",
+      "options": {
+        "A": "\\(y = \\tfrac{1}{2}(66{,}000)^t\\)",
+        "B": "\\(y = 2(66{,}000)^t\\)",
+        "C": "\\(y = 66{,}000\\left(\\tfrac{1}{2}\\right)^t\\)",
+        "D": "\\(y = 66{,}000(2)^t\\)"
+      },
+      "correct_option": "D",
+      "hint": "Exponential growth with doubling every hour uses base 2 with initial value as the coefficient.",
+      "solution": [
+        "General form: \\(y = y_0 \\cdot 2^t\\).",
+        "Here \\(y_0 = 66{,}000\\), so \\(y = 66{,}000(2)^t\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "exponential_growth_models"
+    },
+    {
+      "question_number": 19,
+      "topic": "geometry",
+      "subskill": "triangle_properties",
+      "difficulty": "hard",
+      "question": "An equilateral triangle has perimeter 876 centimeters, and its vertices lie on a circle of radius \\(w\\sqrt{3}\\) centimeters. What is \\(w\\)?",
+      "options": {
+        "A": "292",
+        "B": "146",
+        "C": "\\(\\tfrac{292}{3}\\)",
+        "D": "97"
+      },
+      "correct_option": "C",
+      "hint": "Find the side length, then use the fact that the circumradius of an equilateral triangle is \\(\\tfrac{s}{\\sqrt{3}}\\).",
+      "solution": [
+        "Side length: \\(s = \\tfrac{876}{3} = 292\\) cm.",
+        "Circumradius: \\(R = \\tfrac{s}{\\sqrt{3}} = \\tfrac{292}{\\sqrt{3}}\\).",
+        "Given \\(R = w\\sqrt{3}\\), so \\(w\\sqrt{3} = \\tfrac{292}{\\sqrt{3}}\\).",
+        "Multiply both sides by \\(\\sqrt{3}\\): \\(3w = 292 \\Rightarrow w = \\tfrac{292}{3}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "circumradius_equilateral"
+    },
+    {
+      "question_number": 20,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "The function \\(f(x) = a b^{x/n}\\) has \\(f(5) = 7\\) and \\(f(8) = 189\\), where \\(a\\), \\(b\\), and \\(n\\) are constants with \\(b,n\\) integers. What is \\(f(10)\\)?",
+      "options": {},
+      "correct_option": "1701",
+      "hint": "Use the ratio \\(f(8)/f(5)\\) to find \\(b^{3/n}\\), then determine \\(f(10)\\).",
+      "solution": [
+        "Compute \\(\\frac{f(8)}{f(5)} = \\frac{189}{7} = 27 = b^{3/n}\\).",
+        "Thus \\(b^{3/n} = 27 = 3^3\\), so \\(b^{3/n} = 3^3\\) and \\(b^{10/n} = 3^{10}\\).",
+        "Now \\(\\frac{f(10)}{f(5)} = b^{5/n} = 3^5 = 243\\).",
+        "Therefore \\(f(10) = 243 \\times f(5) = 243 \\times 7 = 1701\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "exponential_equations"
+    },
+    {
+      "question_number": 21,
+      "topic": "algebra",
+      "subskill": "absolute_value_functions",
+      "difficulty": "hard",
+      "question": "Let \\(f(x) = \\tfrac{|x|}{a} - 16\\) with \\(a < 0\\). What is the product \\(f(17a) \\cdot f(8a)\\)?",
+      "options": {},
+      "correct_option": "792",
+      "hint": "Use \\(|ka| = -ka\\) when \\(a < 0\\) and \\(k > 0\\).",
+      "solution": [
+        "Since \\(a < 0\\), \\(|17a| = -17a\\) and \\(|8a| = -8a\\).",
+        "Thus \\(f(17a) = \\tfrac{-17a}{a} - 16 = -17 - 16 = -33\\).",
+        "Similarly, \\(f(8a) = \\tfrac{-8a}{a} - 16 = -8 - 16 = -24\\).",
+        "Product: \\((-33)(-24) = 792\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "absolute_value_properties"
+    },
+    {
+      "question_number": 22,
+      "topic": "algebra",
+      "subskill": "factoring_polynomials",
+      "difficulty": "hard",
+      "question": "The polynomial \\(6x^4 + 17x^2 + 7\\) can be factored as \\((3x^2 + a)(2x^2 + b)\\), where \\(a\\) and \\(b\\) are positive integers, and also as \\((3x^2 + c)(2x^2 + d)\\), where \\(c\\) and \\(d\\) are positive nonintegers. What is the value of \\(a + c\\)?",
+      "options": {},
+      "correct_option": "8.5",
+      "hint": "Match coefficients to find \\(a,b\\) and solve a system for \\(c,d\\) with \\(cd = 7\\) and \\(3d + 2c = 17\\).",
+      "solution": [
+        "For integer factors: \\(ab = 7\\) and \\(3b + 2a = 17\\). Taking \\(a = 7\\), \\(b = 1\\) satisfies both.",
+        "For noninteger factors: \\(cd = 7\\) and \\(3d + 2c = 17\\).",
+        "Solve: \\(3d + 2c = 17\\) with \\(c = (17 - 3d)/2\\) and substitute into \\(cd = 7\\).",
+        "This yields \\(d = 14/3\\) and \\(c = 3/2\\).",
+        "Therefore \\(a + c = 7 + \\tfrac{3}{2} = \\tfrac{17}{2} = 8.5\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "factoring_quartics"
+    }
+  ]
+}
+
