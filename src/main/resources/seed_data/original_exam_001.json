@@ -24,7 +24,7 @@
       "topic": "problem_solving",
       "subskill": "data_analysis",
       "difficulty": "easy",
-      "question": "A data set containing only the values 2, 2, 9, 9, 9, 16, 16, 16, 16, 26, 26, and 26 is represented by a frequency table. Which of the following is the correct representation of this data set?\n\n\\[\\begin{array}{c|c}\n\\text{Number} & \\text{Frequency} \\\\\\hline\n2 & 2 \\\\\n9 & 3 \\\\\n16 & 4 \\\\\n26 & 3\n\\end{array}\\]",
+      "question": "A data set contains the values 2, 2, 9, 9, 9, 16, 16, 16, 16, 26, 26, and 26. Which of the following frequency tables correctly represents this data set?",
       "options": {
         "A": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 2 & 4 \\\\ 9 & 27 \\\\ 16 & 64 \\\\ 26 & 78 \\end{array}\\]",
         "B": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 2 & 2 \\\\ 9 & 3 \\\\ 16 & 4 \\\\ 26 & 3 \\end{array}\\]",
@@ -132,6 +132,26 @@
         "Therefore, the y-intercept represents the initial amount of plastic to be recycled"
       ],
       "representation": "graph",
+      "figure": {
+        "type": "lines",
+        "lines": [
+          {
+            "thick": true,
+            "arrow": false,
+            "through": [[0, 42], [8, 0]]
+          }
+        ],
+        "points": [
+          { "coords": [0, 42], "label": "Start", "position": "left" },
+          { "coords": [8, 0], "label": "Finish", "position": "right" }
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "tickStep": 1,
+        "xRange": [-1, 10],
+        "yRange": [-5, 45]
+      },
       "format": "multiple_choice",
       "structure": "interpreting_intercepts"
     },

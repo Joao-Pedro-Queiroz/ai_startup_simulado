@@ -87,6 +87,8 @@ public class OriginalExam {
         private String representation;
         private String format;
         private String structure;
+        
+        private Map<String, Object> figure;
     }
 }
 
