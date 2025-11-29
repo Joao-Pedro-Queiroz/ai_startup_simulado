@@ -124,6 +124,18 @@ public class CustomPracticeService {
             }
 
             log.info("[CUSTOM] Total de questões geradas: {}", questoesGeradas.size());
+            
+            // Debug: verificar se as questões têm hint/solution
+            if (!questoesGeradas.isEmpty()) {
+                Map<String, Object> primeiraQuestao = questoesGeradas.get(0);
+                log.info("[CUSTOM] 🔍 DEBUG - Primeira questão do approva-descartes:");
+                log.info("[CUSTOM]   - Tem 'hint': {}", primeiraQuestao.containsKey("hint"));
+                log.info("[CUSTOM]   - Valor de 'hint': {}", primeiraQuestao.get("hint"));
+                log.info("[CUSTOM]   - Tem 'solution': {}", primeiraQuestao.containsKey("solution"));
+                log.info("[CUSTOM]   - Valor de 'solution': {}", primeiraQuestao.get("solution"));
+                log.info("[CUSTOM]   - Tem 'hint_english': {}", primeiraQuestao.containsKey("hint_english"));
+                log.info("[CUSTOM]   - Tem 'solution_english': {}", primeiraQuestao.containsKey("solution_english"));
+            }
 
             // 8. Criar simulado no MongoDB
             Simulado simulado = Simulado.builder()
@@ -145,9 +157,30 @@ public class CustomPracticeService {
             log.info("[CUSTOM] ✅ {} questões salvas no banco de questões", 
                 questoesParaSalvar.size());
 
-            // 10. Retornar simulado com questões
+            // 10. Buscar questões salvas do banco (para garantir que têm todos os campos, incluindo hint/solution)
+            List<Map<String, Object>> questoesSalvas = questaoClient.listarPorSimulado(
+                authorizationHeader, 
+                simuladoSalvo.getId()
+            );
+            log.info("[CUSTOM] ✅ {} questões recuperadas do banco", questoesSalvas.size());
+            
+            // Debug: verificar se as questões do banco têm hint/solution
+            if (!questoesSalvas.isEmpty()) {
+                Map<String, Object> primeiraQuestao = questoesSalvas.get(0);
+                log.info("[CUSTOM] 🔍 DEBUG - Primeira questão do banco:");
+                log.info("[CUSTOM]   - Tem 'hint': {}", primeiraQuestao.containsKey("hint"));
+                log.info("[CUSTOM]   - Valor de 'hint': {}", primeiraQuestao.get("hint"));
+                log.info("[CUSTOM]   - Tem 'solution': {}", primeiraQuestao.containsKey("solution"));
+                log.info("[CUSTOM]   - Valor de 'solution': {}", primeiraQuestao.get("solution"));
+                log.info("[CUSTOM]   - Tem 'hint_english': {}", primeiraQuestao.containsKey("hint_english"));
+                log.info("[CUSTOM]   - Valor de 'hint_english': {}", primeiraQuestao.get("hint_english"));
+                log.info("[CUSTOM]   - Tem 'solution_english': {}", primeiraQuestao.containsKey("solution_english"));
+                log.info("[CUSTOM]   - Valor de 'solution_english': {}", primeiraQuestao.get("solution_english"));
+            }
+
+            // 11. Retornar simulado com questões do banco (não as geradas diretamente)
             SimuladoDTO simuladoDTO = toDTO(simuladoSalvo);
-            SimuladoComQuestoesDTO resultado = new SimuladoComQuestoesDTO(simuladoDTO, questoesGeradas);
+            SimuladoComQuestoesDTO resultado = new SimuladoComQuestoesDTO(simuladoDTO, questoesSalvas);
 
             log.info("[CUSTOM] ========== FIM CUSTOM PRACTICE ==========");
             return resultado;
@@ -333,6 +366,7 @@ public class CustomPracticeService {
             String simuladoId,
             String usuarioId
     ) {
+        final List<Map<String, Object>> questoesGeradasFinal = questoesGeradas;
         return questoesGeradas.stream().map(q -> {
             // Extrair valores do Map
             String topic = (String) q.get("topic");
@@ -346,12 +380,77 @@ public class CustomPracticeService {
             String format = (String) q.get("format");
             String representation = (String) q.get("representation");
             String source = (String) q.get("source");
+            
+            // Approva-descartes retorna apenas "hint" e "solution", não os campos bilíngues
+            // Vamos usar esses campos e mapeá-los para ambos os idiomas
+            @SuppressWarnings("unchecked")
+            List<String> solutionRaw = (List<String>) q.get("solution");
+            Object hintRawObj = q.get("hint");
+            String hintRaw = hintRawObj != null ? String.valueOf(hintRawObj) : null;
+            
+            // Log detalhado para debug (apenas primeira questão)
+            boolean isFirstQuestion = questoesGeradasFinal != null && !questoesGeradasFinal.isEmpty() && questoesGeradasFinal.get(0) == q;
+            if (isFirstQuestion) {
+                log.info("[CUSTOM] 🔍 DEBUG montarQuestoesDTO - Primeira questão: {}", q.get("id"));
+                log.info("[CUSTOM]   - hintRaw (tipo: {}): {}", 
+                    hintRawObj != null ? hintRawObj.getClass().getSimpleName() : "null", 
+                    hintRaw);
+                log.info("[CUSTOM]   - solutionRaw (tipo: {}): {}", 
+                    solutionRaw != null ? solutionRaw.getClass().getSimpleName() : "null", 
+                    solutionRaw);
+            }
+            
+            // Se não vier solution_english/solution_portugues, usa solution para ambos
             @SuppressWarnings("unchecked")
             List<String> solutionEnglish = (List<String>) q.get("solution_english");
             @SuppressWarnings("unchecked")
             List<String> solutionPortugues = (List<String>) q.get("solution_portugues");
+            
+            // Mapear solution: se não vier os campos bilíngues, usa solution para ambos
+            if (solutionEnglish == null || solutionEnglish.isEmpty()) {
+                if (solutionRaw != null && !solutionRaw.isEmpty()) {
+                    solutionEnglish = solutionRaw;
+                } else {
+                    solutionEnglish = new ArrayList<>();
+                }
+            }
+            if (solutionPortugues == null || solutionPortugues.isEmpty()) {
+                if (solutionRaw != null && !solutionRaw.isEmpty()) {
+                    solutionPortugues = solutionRaw;
+                } else {
+                    solutionPortugues = new ArrayList<>();
+                }
+            }
+            
+            // Se não vier hint_english/hint_portugues, usa hint para ambos
             String hintEnglish = (String) q.get("hint_english");
             String hintPortugues = (String) q.get("hint_portugues");
+            
+            // Mapear hint: se não vier os campos bilíngues, usa hint para ambos
+            if (hintEnglish == null || hintEnglish.trim().isEmpty()) {
+                if (hintRaw != null && !hintRaw.trim().isEmpty()) {
+                    hintEnglish = hintRaw;
+                } else {
+                    hintEnglish = null;
+                }
+            }
+            if (hintPortugues == null || hintPortugues.trim().isEmpty()) {
+                if (hintRaw != null && !hintRaw.trim().isEmpty()) {
+                    hintPortugues = hintRaw;
+                } else {
+                    hintPortugues = null;
+                }
+            }
+            
+            // Log do resultado final (apenas primeira questão)
+            if (isFirstQuestion) {
+                log.info("[CUSTOM] 🔍 DEBUG montarQuestoesDTO - Após mapeamento:");
+                log.info("[CUSTOM]   - hintEnglish: {}", hintEnglish);
+                log.info("[CUSTOM]   - hintPortugues: {}", hintPortugues);
+                log.info("[CUSTOM]   - solutionEnglish size: {}", solutionEnglish != null ? solutionEnglish.size() : 0);
+                log.info("[CUSTOM]   - solutionPortugues size: {}", solutionPortugues != null ? solutionPortugues.size() : 0);
+            }
+            
             @SuppressWarnings("unchecked")
             List<String> targetMistakes = (List<String>) q.get("target_mistakes");
             @SuppressWarnings("unchecked")

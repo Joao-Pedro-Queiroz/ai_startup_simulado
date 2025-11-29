@@ -14,15 +14,15 @@
       "topics_distribution": {
         "algebra": 11,
         "advanced_math": 13,
-        "problem_solving": 15,
-        "geometry": 5
+        "problem_solving_and_data_analysis": 15,
+        "geoemtry_and_trigonometry": 5
       }
     },
   "module_1": [
       {
         "question_number": 1,
-      "topic": "problem_solving",
-      "subskill": "data_analysis",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistics",
       "difficulty": "easy",
       "question": "A data set contains the values 2, 2, 9, 9, 9, 16, 16, 16, 16, 26, 26, and 26. Which of the following frequency tables correctly represents this data set?",
       "options": {
@@ -37,14 +37,14 @@
         "Count occurrences: 2 appears 2 times, 9 appears 3 times, 16 appears 4 times, 26 appears 3 times",
         "Option B correctly shows these frequencies"
       ],
-      "representation": "table",
-      "format": "multiple_choice",
-      "structure": "frequency_distribution"
+      "representation": "",
+      "format": "MCQ",
+      "structure": "mean_median_mode_range"
     },
     {
       "question_number": 2,
-      "topic": "algebra",
-      "subskill": "quadratic_equations",
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
       "difficulty": "medium",
       "question": "Which expression is equivalent to \\(x^2 - x - 56\\)?",
       "options": {
@@ -62,8 +62,8 @@
         "Verify: \\((x-8)(x+7) = x^2 + 7x - 8x - 56 = x^2 - x - 56\\) ✓"
       ],
       "representation": "",
-      "format": "multiple_choice",
-      "structure": "factoring_quadratics"
+      "format": "MCQ",
+      "structure": "multiplying_and_dividing_exponents"
     },
     {
       "question_number": 3,
@@ -85,13 +85,13 @@
         "Total nails and screws: \\(10x + 7y = 200\\)"
       ],
       "representation": "",
-      "format": "multiple_choice",
-      "structure": "linear_equation_application"
+      "format": "MCQ",
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 4,
-      "topic": "geometry",
-      "subskill": "triangle_properties",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
       "question": "What is the measure of angle F in the triangle DEF, where angle D is \\(73°\\) and angle E is \\(35°\\)?",
       "options": {
@@ -109,13 +109,13 @@
         "Solve: \\(F = 180° - 108° = 72°\\)"
       ],
       "representation": "",
-      "format": "multiple_choice",
-      "structure": "angle_sum_triangle"
+      "format": "MCQ",
+      "structure": "identifying_angle_relationships"
     },
     {
       "question_number": 5,
-      "topic": "problem_solving",
-      "subskill": "interpreting_graphs",
+      "topic": "algebra",
+      "subskill": "linear_equations",
       "difficulty": "medium",
       "question": "The total amount of plastic remaining to be recycled in a facility over \\(x\\) shifts is represented by the graph. The graph shows a line starting from a point on the positive y-axis and decreasing linearly to a point on the positive x-axis. Which of the following represents the y-intercept of the graph?",
       "options": {
@@ -152,12 +152,12 @@
         "xRange": [-1, 10],
         "yRange": [-5, 45]
       },
-      "format": "multiple_choice",
-      "structure": "interpreting_intercepts"
+      "format": "MCQ",
+      "structure": "identifying_intercept"
     },
     {
       "question_number": 6,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "probability",
       "difficulty": "easy",
       "question": "The table below shows the condition and subject type for 200 textbooks at a bookstore.\n\n\\[\\begin{array}{|c|c|c|c|c|c|}\n\\hline\n & \\text{Biology} & \\text{Chemistry} & \\text{Physics} & \\text{Anatomy} & \\text{Total} \\\\\\hline\n\\text{Used} & 10 & 25 & 30 & 15 & 80 \\\\\\hline\n\\text{New} & 30 & 25 & 10 & 55 & 120 \\\\\\hline\n\\text{Total} & 40 & 50 & 40 & 70 & 200 \\\\\\hline\n\\end{array}\\]\n\nWhat is the probability that a textbook chosen at random will be a new textbook? (Express your answer as a decimal or fraction, not as a percent.)",
@@ -171,12 +171,12 @@
       ],
       "representation": "table",
       "format": "free_response",
-      "structure": "basic_probability"
+      "structure": "evaluating_probability"
     },
     {
       "question_number": 7,
-      "topic": "problem_solving",
-      "subskill": "percentages",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistics",
       "difficulty": "medium",
       "question": "A random sample of 5,000 students out of 60,000 undergraduate students at a university were surveyed about a potential change to the registration system. According to the survey results, 75% of the respondents did not support the existing registration system, with a 4% margin of error. Which of the following represents a reasonable total number of students who did not support the existing registration system?",
       "options": {
@@ -197,12 +197,12 @@
         "Option D (43,800) falls within this reasonable range"
       ],
       "representation": "",
-      "format": "multiple_choice",
+      "format": "MCQ",
       "structure": "margin_of_error"
     },
     {
       "question_number": 8,
-      "topic": "algebra",
+      "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "medium",
       "question": "What is the negative solution to the equation \\(\\frac{32}{a} = a - 4\\)?",
@@ -219,12 +219,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "rational_equations"
+      "structure": "evaluating_solutions_of_quadratics"
     },
     {
       "question_number": 9,
       "topic": "algebra",
-      "subskill": "linear_functions",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "After a hot air balloon is launched from a plateau 1,000 meters above sea level, it rises at a constant rate of 750 meters per minute. Which of the following best describes the function used to model the balloon's distance above sea level over time?",
       "options": {
@@ -242,12 +242,12 @@
         "Therefore: Increasing linear function"
       ],
       "representation": "",
-      "format": "multiple_choice",
-      "structure": "function_classification"
+      "format": "MCQ",
+      "structure": "interpreting_linear_word_problems"
     },
     {
       "question_number": 10,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "medium",
       "question": "What is the x-intercept of the function \\(f(x) = (22)^x - 1\\) when it is graphed in the xy-plane, where \\(y = f(x)\\)?",
@@ -267,12 +267,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "finding_intercepts"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 11,
-      "topic": "geometry",
-      "subskill": "perimeter",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "medium",
       "question": "In parallelogram ABCD, the length of AB is one-third the length of AD. The perimeter of the parallelogram is 64. What is the length of AB?",
       "options": {
