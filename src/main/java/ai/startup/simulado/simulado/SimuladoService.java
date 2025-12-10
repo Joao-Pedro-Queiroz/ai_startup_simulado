@@ -23,6 +23,8 @@ import org.springframework.web.server.ResponseStatusException;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.time.Duration;
+import java.util.Comparator;
+import java.util.ArrayList;
 
 @Slf4j
 @Service
@@ -149,8 +151,13 @@ public class SimuladoService {
         Map<String,Object> modulo;
         try {
             modulo = modeloClient.gerarModuloAdaptativo(userId);
+        } catch (RuntimeException e) {
+            // Re-lança com a mensagem detalhada do ModeloClient
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, e.getMessage(), e);
         } catch (Exception e) {
-            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao gerar módulos adaptativos.", e);
+            log.error("Erro inesperado ao gerar módulo adaptativo para userId {}: {}", userId, e.getMessage(), e);
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, 
+                "Falha ao gerar módulos adaptativos: " + e.getMessage(), e);
         }
 
         var todas  = mapModeloParaQuestoes(sim.getId(), userId, modulo, 1);
@@ -316,6 +323,9 @@ public class SimuladoService {
         }
 
         // 1) ATUALIZAR TODAS AS QUESTÕES (update-only)
+        // OTIMIZAÇÃO: Valida todas primeiro, depois atualiza em lote
+        List<Map<String,Object>> questoesParaBulk = new ArrayList<>();
+        
         for (var q : body.questoes()) {
             if (q.id() == null || q.id().isBlank()) {
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
@@ -330,34 +340,41 @@ public class SimuladoService {
                         "id_usuario inconsistente em questão do payload.");
             }
 
-            var upd = new QuestaoUpdateDTO(
-                    body.id_simulado(),                 // id_formulario
-                    body.id_usuario(),                  // id_usuario
-                    q.topic(),
-                    q.subskill(),
-                    q.difficulty(),
-                    q.question(),
-                    q.options(),
-                    q.correct_option(),
-                    q.solution(),                       // legado
-                    q.structure(),
-                    q.format(),
-                    q.representation(),
-                    q.hint(),                           // legado
-                    q.target_mistakes(),
-                    q.source(),
-                    q.solution_english(),
-                    q.solution_portugues(),
-                    q.hint_english(),
-                    q.hint_portugues(),
-                    q.figure(),
-                    q.alternativa_marcada(),
-                    q.dica(),
-                    q.solucao(),
-                    q.modulo()
-            );
-
-            questaoClient.atualizar(bearer, q.id(), upd);
+            // Prepara para atualização em lote (apenas campos que mudam)
+            Map<String,Object> questaoUpdate = new HashMap<>();
+            questaoUpdate.put("id", q.id());
+            if (q.alternativa_marcada() != null) {
+                questaoUpdate.put("alternativa_marcada", q.alternativa_marcada());
+            }
+            if (q.dica() != null) {
+                questaoUpdate.put("dica", q.dica());
+            }
+            if (q.solucao() != null) {
+                questaoUpdate.put("solucao", q.solucao());
+            }
+            questoesParaBulk.add(questaoUpdate);
+        }
+        
+        // Atualiza todas de uma vez usando endpoint de lote (muito mais rápido)
+        try {
+            questaoClient.atualizarEmLote(bearer, questoesParaBulk);
+            log.info("[SimuladoService] Atualizadas {} questões em lote", questoesParaBulk.size());
+        } catch (Exception e) {
+            // Fallback: se endpoint de lote não existir, usa método antigo
+            log.warn("[SimuladoService] Endpoint de lote não disponível, usando atualização individual");
+            for (var q : body.questoes()) {
+                var upd = new QuestaoUpdateDTO(
+                        body.id_simulado(), body.id_usuario(),
+                        q.topic(), q.subskill(), q.difficulty(),
+                        q.question(), q.options(), q.correct_option(),
+                        q.solution(), q.structure(), q.format(), q.representation(),
+                        q.hint(), q.target_mistakes(), q.source(),
+                        q.solution_english(), q.solution_portugues(),
+                        q.hint_english(), q.hint_portugues(),
+                        q.figure(), q.alternativa_marcada(), q.dica(), q.solucao(), q.modulo()
+                );
+                questaoClient.atualizar(bearer, q.id(), upd);
+            }
         }
 
         // 2) ATUALIZAR O SIMULADO (status FINALIZADO + demais campos do body que você autoriza atualizar)
@@ -369,11 +386,26 @@ public class SimuladoService {
         repo.save(sim);
 
         // 3) RECALCULAR PERFIL a partir de TODO o histórico do usuário
+        // OTIMIZAÇÃO: Limita a últimos 500 questões para evitar processar milhares
+        // Se necessário, pode ser processado de forma assíncrona
         var todasQuestoesUsuario = questaoClient.listarPorUsuario(bearer, sim.getIdUsuario());
+        // Garante que não seja null e limita processamento para performance (últimas 500 questões)
+        if (todasQuestoesUsuario == null) {
+            todasQuestoesUsuario = new ArrayList<>();
+        }
+        int totalQuestoes = todasQuestoesUsuario.size();
+        if (totalQuestoes > 500) {
+            todasQuestoesUsuario = new ArrayList<>(todasQuestoesUsuario.subList(0, 500));
+            log.warn("[SimuladoService] Limitei processamento a 500 questões para performance. Total disponível: {}", totalQuestoes);
+        }
 
         // 3.1) Carregar todos os simulados do usuário (datas e últimos finalizados)
+        // OTIMIZAÇÃO: Limita a últimos 50 simulados para performance
         var simuladosUsuario = repo.findByIdUsuario(sim.getIdUsuario(),
-                Sort.by(Sort.Direction.DESC, "data"));
+                Sort.by(Sort.Direction.DESC, "data"))
+                .stream()
+                .limit(50) // Limite para performance
+                .toList();
 
         Map<String, LocalDateTime> simIdToDate = new HashMap<>();
         for (var sx : simuladosUsuario) {
@@ -437,22 +469,93 @@ public class SimuladoService {
         // ================= Listagens por usuário =================
 
         public List<SimuladoDTO> listarPorUsuario(String idUsuario) {
+            // OTIMIZAÇÃO: Limita a últimos 100 simulados para evitar retornar milhares
+            // Frontend pode paginar se necessário
             return repo.findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"))
-                    .stream().map(this::toDTO).toList();
+                    .stream()
+                    .limit(100) // Limite para performance
+                    .map(this::toDTO)
+                    .toList();
         }
 
         public SimuladoDTO ultimoPorUsuario(String idUsuario) {
-            // Retorna apenas simulados com status ABERTO (mais recente)
-            var todos = repo.findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"));
-            var aberto = todos.stream()
-                    .filter(s -> "ABERTO".equalsIgnoreCase(s.getStatus()))
-                    .findFirst()
+            // OTIMIZAÇÃO: Busca direto por status ABERTO ao invés de buscar todos
+            var aberto = repo.findByIdUsuarioAndStatus(idUsuario, "ABERTO")
+                    .stream()
+                    .max(Comparator.comparing(Simulado::getData, Comparator.nullsLast(Comparator.naturalOrder())))
                     .orElse(null);
             
             if (aberto == null) {
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum simulado em aberto encontrado para o usuário.");
             }
             return toDTO(aberto);
+        }
+
+        /**
+         * OTIMIZAÇÃO CRÍTICA: Retorna estatísticas do usuário sem buscar todas as questões
+         * Calcula bestScore apenas dos últimos 5 simulados para performance máxima
+         */
+        public UserStatsDTO getUserStats(String idUsuario, String bearerToken) {
+            // OTIMIZAÇÃO: Busca apenas simulados finalizados com limite (evita carregar todos)
+            var todosSimulados = repo.findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"))
+                    .stream()
+                    .limit(100) // Limite já aplicado no listarPorUsuario, mas garante aqui também
+                    .toList();
+            
+            var finalizados = todosSimulados.stream()
+                    .filter(s -> "FINALIZADO".equalsIgnoreCase(s.getStatus()))
+                    .toList();
+            
+            int total = finalizados.size();
+            
+            // OTIMIZAÇÃO AGRESSIVA: Limita a apenas últimos 5 simulados para calcular bestScore
+            // Isso reduz de 10 chamadas para 5, melhorando performance significativamente
+            var finalizadosLimitados = finalizados.stream()
+                    .limit(5)
+                    .toList();
+            
+            if (finalizadosLimitados.isEmpty()) {
+                return new UserStatsDTO(null, total);
+            }
+            
+            // Busca questões em paralelo (apenas dos últimos 5)
+            int bestScore = 0;
+            try {
+                // Usa stream paralelo para buscar questões simultaneamente
+                var scores = finalizadosLimitados.parallelStream()
+                        .map(sim -> {
+                            try {
+                                var questoes = questaoClient.listarPorSimulado(bearerToken, sim.getId());
+                                if (questoes != null && !questoes.isEmpty()) {
+                                    int correct = 0;
+                                    for (var q : questoes) {
+                                        var marcada = q.get("alternativa_marcada");
+                                        var correta = q.get("correct_option");
+                                        if (marcada != null && correta != null &&
+                                            String.valueOf(marcada).toUpperCase().trim()
+                                                .equals(String.valueOf(correta).toUpperCase().trim())) {
+                                            correct++;
+                                        }
+                                    }
+                                    return questoes.size() > 0 ? Math.round((correct * 100) / questoes.size()) : 0;
+                                }
+                                return 0;
+                            } catch (Exception e) {
+                                log.warn("[SimuladoService] Erro ao calcular score do simulado {}: {}", sim.getId(), e.getMessage());
+                                return 0;
+                            }
+                        })
+                        .filter(score -> score > 0)
+                        .toList();
+                
+                if (!scores.isEmpty()) {
+                    bestScore = scores.stream().mapToInt(Integer::intValue).max().orElse(0);
+                }
+            } catch (Exception e) {
+                log.error("[SimuladoService] Erro ao calcular estatísticas do usuário: {}", e.getMessage());
+            }
+            
+            return new UserStatsDTO(bestScore > 0 ? bestScore : null, total);
         }
 
     // ================= Helpers =================

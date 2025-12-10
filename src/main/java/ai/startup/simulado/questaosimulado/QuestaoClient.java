@@ -90,6 +90,23 @@ public class QuestaoClient {
         return resp.getBody();
     }
 
+    /** Atualização em lote de questões (PUT /questoes/bulk-update) - OTIMIZAÇÃO */
+    public List<Map<String,Object>> atualizarEmLote(String bearerToken, List<Map<String,Object>> questoes) {
+        var url = base + "/questoes/bulk-update";
+        var headers = jsonBearerHeaders(bearerToken);
+        var payload = Map.of("questoes", questoes);
+        var resp = rt.exchange(
+                url,
+                HttpMethod.PUT,
+                new HttpEntity<>(payload, headers),
+                new ParameterizedTypeReference<List<Map<String,Object>>>() {}
+        );
+        if (!resp.getStatusCode().is2xxSuccessful()) {
+            throw new ResponseStatusException(resp.getStatusCode(), "Falha ao atualizar questões em lote.");
+        }
+        return resp.getBody();
+    }
+
     /** Lista todas as questões de um usuário (GET /questoes/by-usuario/{idUsuario}) */
     public List<Map<String,Object>> listarPorUsuario(String bearerToken, String idUsuario) {
         var url = base + "/questoes/by-usuario/" + idUsuario;

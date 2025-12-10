@@ -372,9 +372,9 @@ public class CustomPracticeService {
             String topic = (String) q.get("topic");
             String subskill = (String) q.get("subskill");
             String difficulty = (String) q.get("difficulty");
-            String question = (String) q.get("question");
+            String question = ai.startup.simulado.utils.TextCleaner.cleanText((String) q.get("question"));
             @SuppressWarnings("unchecked")
-            Map<String, String> options = (Map<String, String>) q.get("options");
+            Map<String, String> options = ai.startup.simulado.utils.TextCleaner.cleanOptions((Map<String, String>) q.get("options"));
             Object correctOption = q.get("correct_option");
             String structure = (String) q.get("structure");
             String format = (String) q.get("format");
@@ -409,17 +409,21 @@ public class CustomPracticeService {
             // Mapear solution: se não vier os campos bilíngues, usa solution para ambos
             if (solutionEnglish == null || solutionEnglish.isEmpty()) {
                 if (solutionRaw != null && !solutionRaw.isEmpty()) {
-                    solutionEnglish = solutionRaw;
+                    solutionEnglish = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionRaw);
                 } else {
                     solutionEnglish = new ArrayList<>();
                 }
+            } else {
+                solutionEnglish = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionEnglish);
             }
             if (solutionPortugues == null || solutionPortugues.isEmpty()) {
                 if (solutionRaw != null && !solutionRaw.isEmpty()) {
-                    solutionPortugues = solutionRaw;
+                    solutionPortugues = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionRaw);
                 } else {
                     solutionPortugues = new ArrayList<>();
                 }
+            } else {
+                solutionPortugues = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionPortugues);
             }
             
             // Se não vier hint_english/hint_portugues, usa hint para ambos
@@ -429,17 +433,21 @@ public class CustomPracticeService {
             // Mapear hint: se não vier os campos bilíngues, usa hint para ambos
             if (hintEnglish == null || hintEnglish.trim().isEmpty()) {
                 if (hintRaw != null && !hintRaw.trim().isEmpty()) {
-                    hintEnglish = hintRaw;
+                    hintEnglish = ai.startup.simulado.utils.TextCleaner.cleanText(hintRaw);
                 } else {
                     hintEnglish = null;
                 }
+            } else {
+                hintEnglish = ai.startup.simulado.utils.TextCleaner.cleanText(hintEnglish);
             }
             if (hintPortugues == null || hintPortugues.trim().isEmpty()) {
                 if (hintRaw != null && !hintRaw.trim().isEmpty()) {
-                    hintPortugues = hintRaw;
+                    hintPortugues = ai.startup.simulado.utils.TextCleaner.cleanText(hintRaw);
                 } else {
                     hintPortugues = null;
                 }
+            } else {
+                hintPortugues = ai.startup.simulado.utils.TextCleaner.cleanText(hintPortugues);
             }
             
             // Log do resultado final (apenas primeira questão)

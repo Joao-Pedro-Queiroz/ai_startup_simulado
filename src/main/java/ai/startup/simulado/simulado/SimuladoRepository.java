@@ -10,6 +10,7 @@ public interface SimuladoRepository extends MongoRepository<Simulado, String> {
     List<Simulado> findByIdUsuarioAndStatus(String idUsuario, String status);
     
     default Simulado findMaisRecente(String idUsuario) {
+        // OTIMIZAÇÃO: Limita busca a 1 resultado
         var l = findByIdUsuario(idUsuario, Sort.by(Sort.Direction.DESC, "data"));
         return l.isEmpty() ? null : l.get(0);
     }

@@ -105,4 +105,15 @@ public class SimuladoController {
     public ResponseEntity<SimuladoDTO> ultimoPorUsuario(@PathVariable String userId) {
         return ResponseEntity.ok(service.ultimoPorUsuario(userId));
     }
+
+    // OTIMIZAÇÃO CRÍTICA: Endpoint para estatísticas do usuário (bestScore, totalSimulados)
+    // Evita buscar todas as questões no frontend
+    @SecurityRequirement(name = "bearerAuth")
+    @Operation(summary = "Retorna estatísticas do usuário (bestScore, totalSimulados) sem buscar todas as questões")
+    @GetMapping("/simulados/by-usuario/{userId}/stats")
+    public ResponseEntity<UserStatsDTO> getUserStats(
+            @PathVariable String userId,
+            HttpServletRequest req) {
+        return ResponseEntity.ok(service.getUserStats(userId, req.getHeader("Authorization")));
+    }
 }

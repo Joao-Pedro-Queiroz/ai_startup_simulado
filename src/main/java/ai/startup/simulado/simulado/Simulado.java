@@ -8,6 +8,10 @@ import java.time.LocalDateTime;
 
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
 @Document("simulados")
+@org.springframework.data.mongodb.core.index.CompoundIndexes({
+    @org.springframework.data.mongodb.core.index.CompoundIndex(name = "usuario_data_idx", def = "{'idUsuario': 1, 'data': -1}"),
+    @org.springframework.data.mongodb.core.index.CompoundIndex(name = "usuario_status_idx", def = "{'idUsuario': 1, 'status': 1}")
+})
 public class Simulado {
     @Id
     private String id;
