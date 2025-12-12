@@ -22,7 +22,7 @@
       {
         "question_number": 1,
       "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistics",
+      "subskill": "statistcs",
       "difficulty": "easy",
       "question": "A data set contains the values 2, 2, 9, 9, 9, 16, 16, 16, 16, 26, 26, and 26. Which of the following frequency tables correctly represents this data set?",
       "options": {
@@ -176,7 +176,7 @@
     {
       "question_number": 7,
       "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistics",
+      "subskill": "statistcs",
       "difficulty": "medium",
       "question": "A random sample of 5,000 students out of 60,000 undergraduate students at a university were surveyed about a potential change to the registration system. According to the survey results, 75% of the respondents did not support the existing registration system, with a 4% margin of error. Which of the following represents a reasonable total number of students who did not support the existing registration system?",
       "options": {
@@ -243,7 +243,7 @@
       ],
       "representation": "",
       "format": "MCQ",
-      "structure": "interpreting_linear_word_problems"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 10,
@@ -296,12 +296,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "parallelogram_properties"
+      "structure": "area_of_2d_figures"
     },
     {
       "question_number": 12,
-      "topic": "geometry",
-      "subskill": "area",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "medium",
       "question": "A triangle with an area of 18 square units has a base of \\((m + 5)\\) units and a height of \\(m\\) units. What is the value of \\(m\\)?",
       "options": {
@@ -324,12 +324,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "area_formula_application"
+      "structure": "area_of_2d_figures"
     },
     {
       "question_number": 13,
-      "topic": "advanced_math",
-      "subskill": "exponential_growth",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
       "difficulty": "medium",
       "question": "The table shows the exponential growth of a type of yeast over time \\(s\\), in seconds. There are \\(c\\) total yeast colonies on the count plate. What is the equation that represents this relationship, assuming that no yeast was added or removed after counting began?\n\n\\[\\begin{array}{c|c}\n\\text{Time (seconds)} & \\text{Number of colonies} \\\\\\hline\n0 & 5 \\\\\n1 & 20 \\\\\n2 & 80 \\\\\n3 & 320\n\\end{array}\\]",
       "options": {
@@ -349,7 +349,7 @@
       ],
       "representation": "table",
       "format": "multiple_choice",
-      "structure": "exponential_model"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 14,
@@ -375,12 +375,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "parallel_lines"
+      "structure": "classifying_system_of_linear_equations"
     },
     {
       "question_number": 15,
       "topic": "algebra",
-      "subskill": "linear_equations",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "Several tiles labeled with either an A or a B are placed in a bag, and tiles are worth a different point value depending on the label. The equation \\(15a + 10b = 100\\) represents the situation when \\(a\\) of the A tiles and \\(b\\) of the B tiles are drawn from the bag for a total of 100 points. How many points would be earned by drawing one A tile and one B tile from the bag?",
       "options": {},
@@ -392,12 +392,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "interpreting_coefficients"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 16,
-      "topic": "advanced_math",
-      "subskill": "exponential_decay",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
       "difficulty": "medium",
       "question": "The amount of money remaining in a scholarship fund is reduced by one-fourth every year. The amount of money in the fund is represented by \\(d\\) and the number of years by \\(y\\). If the fund starts with $10,000, which equation below represents this situation after \\(y\\) years?",
       "options": {
@@ -417,12 +417,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "exponential_decay_model"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 17,
-      "topic": "geometry",
-      "subskill": "volume",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "medium",
       "question": "What is the diameter, in millimeters (mm), of a cylinder with a volume of \\(144\\pi\\) mm³ and a height of 4 mm?",
       "options": {
@@ -443,7 +443,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "volume_formula_application"
+      "structure": "volume_of_3d_figures"
     },
     {
       "question_number": 18,
@@ -467,11 +467,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "system_solving"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 19,
-      "topic": "geometry",
+      "topic": "geoemtry_and_trigonometry",
       "subskill": "right_triangles_and_trigonometry",
       "difficulty": "medium",
       "question": "The longest side of right triangle ABC is opposite angle B. If \\(\\sin(A) = \\frac{9}{41}\\), what is the value of \\(\\sin(C)\\)?",
@@ -488,12 +488,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "complementary_angles"
+      "structure": "trig_ratios"
     },
     {
       "question_number": 20,
       "topic": "advanced_math",
-      "subskill": "quadratic_functions",
+      "subskill": "quadratic_equations",
       "difficulty": "medium",
       "question": "Function \\(g\\) reaches its maximum value when \\(x = a\\). If \\(g(x) = -6x^2 - 30x - 24\\), what is the value of \\(a\\)?",
       "options": {},
@@ -507,12 +507,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "vertex_formula"
+      "structure": "evaluating_maximum_and_minimumm"
     },
     {
       "question_number": 21,
       "topic": "algebra",
-      "subskill": "linear_functions",
+      "subskill": "linear_equations",
       "difficulty": "hard",
       "question": "\\(f(x) = -\\frac{1}{5}x - 3\\)\n\nThe linear function \\(f(x)\\), given above, is perpendicular to \\(g(x)\\) when graphed in the xy-plane. If \\(g(0) = 0\\), what is the value of \\(g(2)\\)?",
       "options": {},
@@ -526,12 +526,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "perpendicular_lines"
+      "structure": "properties_of_a_line"
     },
     {
       "question_number": 22,
       "topic": "advanced_math",
-      "subskill": "quadratic_systems",
+      "subskill": "linear_and_quadratic",
       "difficulty": "hard",
       "question": "\\[\n\\begin{align}\ny &= 5kx^2 + 2x + 3 \\\\\n\\frac{y}{10} &= -x\n\\end{align}\n\\]\n\nThe system of equations above has exactly one solution. If \\(k\\) is a positive constant, what is the value of \\(k\\)?",
       "options": {},
@@ -549,7 +549,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "discriminant_condition"
+      "structure": "identifying_solution"
     }
   ],
   "module_2_easy": [
@@ -578,8 +578,8 @@
     },
     {
       "question_number": 24,
-      "topic": "problem_solving",
-      "subskill": "statistics",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
       "difficulty": "medium",
       "question": "Twenty students were asked the combined total number of servings of fruits and vegetables they have each day. The results show: 1 student had 1 serving, 1 student had 2 servings, 2 students had 3 servings, 3 students had 4 servings, 2 students had 5 servings, 4 students had 6 servings, 4 students had 7 servings, 2 students had 8 servings, and 1 student had 10 servings. What is the median number of servings of fruits and vegetables consumed each day?",
       "options": {
@@ -599,12 +599,12 @@
       ],
       "representation": "histogram",
       "format": "multiple_choice",
-      "structure": "median_calculation"
+      "structure": "mean_median_mode_range"
     },
     {
       "question_number": 25,
-      "topic": "algebra",
-      "subskill": "rational_expressions",
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
       "difficulty": "easy",
       "question": "Which of the following is equivalent to \\(\\frac{x^2 - 81}{x + 9}\\)?",
       "options": {
@@ -623,7 +623,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "simplifying_rational_expressions"
+      "structure": "multiplying_and_dividing_exponents"
     },
     {
       "question_number": 26,
@@ -646,11 +646,11 @@
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "calculating_slope"
+      "structure": "properties_of_a_line"
     },
     {
       "question_number": 27,
-      "topic": "problem_solving",
+      "topic": "algebra",
       "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "Walter is going backpacking on a trail. The total distance of the trail is 300 miles. If he has already traveled 100 miles on the trail, how many miles per day, \\(m\\), will he need to travel in order to complete his journey in \\(D\\) days?",
@@ -670,11 +670,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "rate_calculation"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 28,
-      "topic": "algebra",
+      "topic": "advanced_math",
       "subskill": "equivalent_expressions",
       "difficulty": "easy",
       "question": "Which of the following expressions is equivalent to \\(2(x - 4) + 4\\)?",
@@ -692,12 +692,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "distributive_property"
+      "structure": "adding_and_subtracting_exponents"
     },
     {
       "question_number": 29,
-      "topic": "problem_solving",
-      "subskill": "interpreting_functions",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "The number of dollars, \\(C\\), it costs for Halle to run a restaurant is modeled by the function \\(C(m) = 10m + 10{,}000\\) in which \\(m\\) is the number of meals served. What is the meaning of the 10 in this function?",
       "options": {
@@ -716,12 +716,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "function_interpretation"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 30,
       "topic": "algebra",
-      "subskill": "graphing_linear_equations",
+      "subskill": "linear_equations",
       "difficulty": "medium",
       "question": "Which of the following represents the graph of \\(\\frac{1}{2}y + 2 = -x\\)?",
       "options": {
@@ -740,11 +740,11 @@
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "identifying_graph"
+      "structure": "identifying_intercept"
     },
     {
       "question_number": 31,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "probability",
       "difficulty": "easy",
       "question": "In a survey of 1,000 likely voters, \\(\\frac{1}{2}\\) like Candidate A, \\(\\frac{1}{3}\\) like Candidate B, and the remainder like neither candidate. If a likely voter is selected at random, what is the probability that they will like neither candidate?",
@@ -764,12 +764,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "complementary_probability"
+      "structure": "evaluating_probability"
     },
     {
       "question_number": 32,
-      "topic": "problem_solving",
-      "subskill": "ratios",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "medium",
       "question": "A silverware drawer has a total of 80 forks and spoons. If there are 5 forks for every 3 spoons, how many forks are there in the drawer?",
       "options": {},
@@ -783,12 +783,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "ratio_problem"
+      "structure": "converting_units"
     },
     {
       "question_number": 33,
-      "topic": "problem_solving",
-      "subskill": "interpreting_graphs",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
       "difficulty": "medium",
       "question": "A bar graph shows traffic density (in vehicles per mile per lane) over time. The densities are: 7:00 AM (20), 9:00 AM (40), 11:00 AM (30), 1:00 PM (25), 3:00 PM (30), 5:00 PM (42), 7:00 PM (44), 9:00 PM (28). Between what two hours does the traffic density increase the most?",
       "options": {
@@ -809,12 +809,12 @@
       ],
       "representation": "bar_graph",
       "format": "multiple_choice",
-      "structure": "rate_of_change"
+      "structure": "evaluating_scatterplot"
     },
     {
       "question_number": 34,
       "topic": "algebra",
-      "subskill": "system_of_inequalities",
+      "subskill": "linear_inequality",
       "difficulty": "hard",
       "question": "In the system of inequalities \\(y + 10 \\leq 3x\\) and \\(x \\leq -y - 2\\), what is the maximum value of \\(y\\)?",
       "options": {
@@ -836,11 +836,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "system_of_inequalities"
+      "structure": "identifying_solutions_of_linear_inequalities"
     },
     {
       "question_number": 35,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "medium",
       "question": "A meal costs \\(x\\) dollars. The sales tax on the meal is 7%. If the cashier accidentally subtracted the sales tax from the price of the meal instead of adding it, what would the price be in terms of \\(x\\)?",
@@ -859,12 +859,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "percentage_application"
+      "structure": "applying_percentages"
     },
     {
       "question_number": 36,
         "topic": "algebra",
-        "subskill": "linear_equations",
+        "subskill": "linear_word_problems",
         "difficulty": "easy",
       "question": "Ken's commute takes 25 more minutes in the evening than it does in the morning. If his total daily commute takes 95 minutes, how long does his morning commute take in minutes?",
       "options": {},
@@ -880,12 +880,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "word_problem_linear"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 37,
       "topic": "advanced_math",
-      "subskill": "function_evaluation",
+      "subskill": "polynomials",
       "difficulty": "easy",
       "question": "The function \\(f\\) is determined by \\(f(x) = \\frac{x^3}{4} + 3\\). What is the value of \\(f(2)\\)?",
         "options": {
@@ -903,12 +903,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "function_evaluation"
+      "structure": "evaluating_polynomials"
     },
     {
       "question_number": 38,
-      "topic": "geometry",
-      "subskill": "volume",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "easy",
       "question": "If the volume of a right rectangular prism is 90 cubic inches, and the product of the length and width of the prism is 30 square inches, what is the height of the prism?",
       "options": {},
@@ -922,7 +922,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "volume_calculation"
+      "structure": "volume_of_3d_figures"
     },
     {
       "question_number": 39,
@@ -946,8 +946,8 @@
     },
     {
       "question_number": 40,
-      "topic": "problem_solving",
-      "subskill": "circle_graphs",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
       "difficulty": "medium",
       "question": "A circle graph shows votes in favor of a tax levy. Of 800 city residents who voted, the central angle formed by the portion allocated to \"NO\" is \\(45°\\). How many of the residents voted \"NO\"?",
       "options": {
@@ -965,12 +965,12 @@
       ],
       "representation": "pie_chart",
       "format": "multiple_choice",
-      "structure": "circle_graph_interpretation"
+      "structure": "evaluating_scatterplot"
     },
     {
       "question_number": 41,
-      "topic": "problem_solving",
-      "subskill": "formula_application",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "easy",
       "question": "Density, mass, and volume are related by this formula: \\(\\text{Density} = \\frac{\\text{Mass}}{\\text{Volume}}\\)\n\nIf the mass of an object is 2 kilograms and its volume is 8 liters, what is the object's density in kg/L?",
       "options": {
@@ -989,11 +989,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "formula_substitution"
+      "structure": "converting_units"
     },
     {
       "question_number": 42,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "easy",
       "question": "What percentage of 70 is 35?",
@@ -1011,12 +1011,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "percentage_calculation"
+      "structure": "applying_percentages"
     },
     {
       "question_number": 43,
       "topic": "algebra",
-      "subskill": "perpendicular_lines",
+      "subskill": "linear_equations",
       "difficulty": "medium",
       "question": "A line that is perpendicular to the line with the equation \\(y = -3x + 5\\) has a y-intercept of 4. What is the y-value of a point in this perpendicular line when its x-value is 3?",
       "options": {},
@@ -1030,11 +1030,11 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "perpendicular_lines"
+      "structure": "properties_of_a_line"
     },
     {
       "question_number": 44,
-      "topic": "geometry",
+      "topic": "geoemtry_and_trigonometry",
       "subskill": "right_triangles_and_trigonometry",
       "difficulty": "medium",
       "question": "In triangle ABC, angle C is a right angle. AC is 24 units long and BC is 7 units long. What is the cosine of \\(\\angle ABC\\)?",
@@ -1055,14 +1055,14 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "cosine_ratio"
+      "structure": "trig_ratios"
     }
   ],
   "module_2_hard": [
     {
       "question_number": 23,
-      "topic": "problem_solving",
-      "subskill": "margin_of_error",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
       "difficulty": "medium",
       "question": "Hoping to gauge public support for an upcoming local referendum, a political pollster surveys a random sample of 560 registered voters within the municipality in question. Based on the results of the survey, the pollster predicts, with a 4.4% margin of error, that 60% of registered voters will support the referendum. Based on this information, which conclusion can most reasonably be drawn with respect to the upcoming referendum?",
       "options": {
@@ -1082,12 +1082,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "confidence_interval"
+      "structure": "margin_of_error"
     },
     {
       "question_number": 24,
-      "topic": "geometry",
-      "subskill": "pythagorean_theorem",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
       "difficulty": "easy",
       "question": "What is the length of one side of a right triangle, in inches, if the length of the hypotenuse of the triangle is 12 inches and the length of the other side is 7 inches?",
       "options": {
@@ -1107,12 +1107,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "pythagorean_theorem"
+      "structure": "applying_pythagorean_theorem"
     },
     {
       "question_number": 25,
       "topic": "algebra",
-      "subskill": "linear_functions",
+      "subskill": "linear_equations",
       "difficulty": "medium",
       "question": "In the xy-plane, the graph of \\(y = f(x)\\) for the linear function \\(f\\) passes through the points \\((6, 26)\\) and \\((12, 28)\\). Which of the following equations defines function \\(f\\)?",
       "options": {
@@ -1132,12 +1132,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "finding_linear_equation"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 26,
-      "topic": "problem_solving",
-      "subskill": "statistics",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
       "difficulty": "easy",
       "question": "The ages of six children are: 7, 7, 8, 10, 12, 12. What is the median of these ages?",
       "options": {},
@@ -1151,12 +1151,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "median_calculation"
+      "structure": "mean_median_mode_range"
     },
     {
       "question_number": 27,
       "topic": "algebra",
-      "subskill": "inequalities",
+      "subskill": "linear_inequality",
       "difficulty": "medium",
       "question": "A baker can bake a maximum of 50 layers of cake in one day. This includes 10-layer wedding cakes and birthday cakes with either 2 layers or 3 layers. Which of the following inequalities represents the possible combinations of 2-layer birthday cakes (\\(b\\)) and 3-layer birthday cakes (\\(c\\)) that the baker can bake in one day, given that the baker bakes 1 wedding cake, \\(b\\) 2-layer birthday cakes, \\(c\\) 3-layer birthday cakes, and no other items that day?",
       "options": {
@@ -1177,7 +1177,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "word_problem_inequality"
+      "structure": "identifying_solutions_of_linear_inequalities"
     },
     {
       "question_number": 28,
@@ -1203,12 +1203,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "system_solving"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 29,
       "topic": "advanced_math",
-      "subskill": "quadratic_systems",
+      "subskill": "linear_and_quadratic",
       "difficulty": "hard",
       "question": "\\[\n\\begin{align}\ny &= x^2 - 6x - 18 \\\\\ny &= -x + 6\n\\end{align}\n\\]\n\nA solution to the given system of equations can be expressed as \\((a, b)\\). If \\(a < 0\\), what is the value of \\(a\\)?",
       "options": {
@@ -1229,7 +1229,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "quadratic_system"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 30,
@@ -1258,12 +1258,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "system_word_problem"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 31,
       "topic": "advanced_math",
-      "subskill": "quadratic_functions",
+      "subskill": "linear_and_quadratic",
       "difficulty": "medium",
       "question": "\\[\n\\begin{align}\ny &= 7(x + 13)^2 - 19 \\\\\ny &= -13\n\\end{align}\n\\]\n\nAt how many points do the graphs of the given equations intersect in the xy-plane?",
       "options": {
@@ -1284,12 +1284,12 @@
         ],
         "representation": "",
         "format": "multiple_choice",
-      "structure": "intersection_points"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 32,
       "topic": "algebra",
-      "subskill": "interpreting_equations",
+      "subskill": "linear_word_problems",
       "difficulty": "medium",
       "question": "An opening-day promotion at a hobby shop gave a consistent number of free trading cards to each customer who visited between 10:00 A.M. and 11:00 A.M. The relationship between \\(t\\), the total number of trading cards the store started with, and \\(c\\), the number of customers who entered the store between 10:00 A.M. and 11:00 A.M., is given by the equation \\(t - 3c = 132\\). What is the best interpretation of the number 3 in this equation?",
       "options": {
@@ -1308,7 +1308,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "interpreting_coefficients"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 33,
@@ -1327,7 +1327,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "finding_intercepts"
+      "structure": "identifying_intercept"
     },
     {
       "question_number": 34,
@@ -1353,7 +1353,7 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "no_solution_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 35,
@@ -1374,7 +1374,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "infinite_solutions"
+      "structure": "classifying_system_of_linear_equations"
     },
     {
       "question_number": 36,
@@ -1399,11 +1399,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "discriminant_analysis"
+      "structure": "evaluating_solutions_of_quadratics"
     },
     {
       "question_number": 37,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
       "question": "\\(g(x) = (0.35)^{x/5}\\)\n\nThe function \\(g\\) is defined by the given equation, which can be rewritten as \\(g(x) = \\left(1 - \\frac{n}{100}\\right)^x\\) where \\(n\\) is a constant. Which of the following is closest to the value of \\(n\\)?",
@@ -1424,12 +1424,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "exponential_rewriting"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 38,
-      "topic": "geometry",
-      "subskill": "similar_triangles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "hard",
       "question": "In the figure, triangles VWX and VYZ are similar. Given that \\(VW = 6\\) units, \\(YZ = 15\\) units, and \\(VZ = \\sqrt{549}\\) units, what is the area, in square units, of triangle VWX?",
       "options": {},
@@ -1452,12 +1452,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "similar_triangles_area"
+      "structure": "triangle_similarity_and_congruence"
     },
     {
       "question_number": 39,
       "topic": "advanced_math",
-      "subskill": "quadratic_functions",
+      "subskill": "quadratic_equations",
       "difficulty": "hard",
       "question": "The graph of \\(y = -x^2 + bx + c\\) is shown. The parabola has a vertex at \\((1, 4)\\) and passes through \\((0, 3)\\). If \\(b\\) and \\(c\\) are constants, what is the value of \\(b - c\\)?",
       "options": {},
@@ -1472,12 +1472,12 @@
       ],
       "representation": "graph",
       "format": "free_response",
-      "structure": "quadratic_from_graph"
+      "structure": "evaluating_quadratic_functions"
     },
     {
       "question_number": 40,
       "topic": "advanced_math",
-      "subskill": "function_transformations",
+      "subskill": "equivalent_expressions",
       "difficulty": "hard",
       "question": "The graph of \\(y = g(x) - 14\\) is shown as a line passing through \\((0, -6)\\) with slope 3. If \\(a\\) is a positive constant and \\(b\\) is a negative constant, the function \\(g\\) could be defined by which of the following equations?",
       "options": {
@@ -1498,12 +1498,12 @@
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "function_transformations"
+      "structure": "multiplying_and_dividing_exponents"
     },
     {
       "question_number": 41,
-      "topic": "geometry",
-      "subskill": "circles_and_angles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
       "difficulty": "hard",
       "question": "A circle has center O with coordinates \\((h, k)\\) when graphed in the xy-plane. Point Y lies on the circle and has coordinates \\((h + \\sqrt{111}, k - 2)\\). If point X also lies on the circle, and the measure of angle XOY is \\(90°\\), what is the length of XY?",
       "options": {
@@ -1523,11 +1523,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "circle_geometry"
+      "structure": "central_and_inscribed_angles"
     },
     {
       "question_number": 42,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "hard",
       "question": "When the quantity \\(n\\) is decreased by 150%, the result is \\(-90\\). What is the value of \\(n\\)?",
@@ -1546,12 +1546,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "percentage_decrease"
+      "structure": "percentage_increase_decrease"
     },
     {
       "question_number": 43,
-      "topic": "problem_solving",
-      "subskill": "data_transformations",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
       "difficulty": "hard",
       "question": "For data set A, a scatterplot shows the relationship between two variables, \\(x\\) and \\(y\\). A line of best fit is also shown with equation approximately \\(y = 71.8 - 0.9x\\). Data set B is created by dividing the y-coordinate of each data point from data set A by 5.2. Which of the following is closest to the equation of a line of best fit for data set B?",
       "options": {
@@ -1572,12 +1572,12 @@
       ],
       "representation": "scatterplot",
       "format": "multiple_choice",
-      "structure": "data_transformation"
+      "structure": "evaluating_scatterplot"
     },
     {
       "question_number": 44,
-      "topic": "problem_solving",
-      "subskill": "physics_application",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "hard",
       "question": "Pressure is defined in physics as the amount of force applied perpendicular to the surface of an object divided by the area over which that force is distributed. As part of the design test for an automotive part, two flat circular discs are placed on a flat surface. A constant pressure of 50 pascals is applied simultaneously straight down onto the surface of the two discs. The smaller disc has a radius that is \\(\\frac{1}{4}\\) of the radius of the larger disc. If the amount of force on the two circular discs combined is \\(3{,}400\\pi\\) newtons, what is the amount of force, in newtons, on the smaller circular disc, to the nearest integer?",
       "options": {},
@@ -1596,7 +1596,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "pressure_force_area"
+      "structure": "converting_units"
     }
   ]
 }

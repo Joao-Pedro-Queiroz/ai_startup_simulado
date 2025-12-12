@@ -1,0 +1,1223 @@
+{
+  "exam_id": "SAT_ORIGINAL_003",
+  "version": 1,
+  "name": "SAT Practice Test #3",
+  "difficulty_level": "standard",
+  "is_active": true,
+  "is_adaptive": true,
+  "metadata": {
+    "total_questions": 66,
+    "module_1_questions": 22,
+    "module_2_questions": 22,
+    "threshold": 16,
+    "duration_minutes": 70,
+    "topics_distribution": {
+      "algebra": 12,
+      "advanced_math": 14,
+      "problem_solving_and_data_analysis": 15,
+      "geoemtry_and_trigonometry": 7
+    }
+  },
+  "module_1": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "If \\(9x + 4 = 67\\), what is the value of \\(90x + 40\\)?",
+      "options": {
+        "A": "7",
+        "B": "70",
+        "C": "130",
+        "D": "670"
+      },
+      "correct_option": "D",
+      "hint": "First solve for \\(x\\), then substitute into \\(90x + 40\\). Alternatively, notice that \\(90x + 40 = 10(9x + 4)\\).",
+      "solution": [
+        "Solve the equation: \\(9x + 4 = 67\\).",
+        "Subtract 4 from both sides: \\(9x = 63\\).",
+        "Divide by 9: \\(x = 7\\).",
+        "Substitute into \\(90x + 40\\): \\(90(7) + 40 = 630 + 40 = 670\\).",
+        "Alternatively, notice that \\(90x + 40 = 10(9x + 4) = 10(67) = 670\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_linear_functions"
+    },
+    {
+      "question_number": 2,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "A number \\(x\\) is at least twice the value of a number \\(y\\). If the value of \\(y\\) is 51, which inequality represents the possible values of \\(x\\)?",
+      "options": {
+        "A": "\\(x \\geq 49\\)",
+        "B": "\\(x \\geq 53\\)",
+        "C": "\\(x \\geq 102\\)",
+        "D": "\\(x \\geq 104\\)"
+      },
+      "correct_option": "C",
+      "hint": "Translate 'at least twice' into an inequality. 'At least' means greater than or equal to, and 'twice' means multiply by 2.",
+      "solution": [
+        "Translate the statement: 'A number \\(x\\) is at least twice the value of a number \\(y\\)'.",
+        "This means: \\(x \\geq 2y\\).",
+        "Substitute \\(y = 51\\): \\(x \\geq 2(51)\\).",
+        "Simplify: \\(x \\geq 102\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "linear_inequality_word_problem"
+    },
+    {
+      "question_number": 3,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "easy",
+      "question": "A length of 450 meters is equal to how many decimeters? (1 meter = 10 decimeters)",
+      "options": {},
+      "correct_option": "4500",
+      "hint": "Multiply the number of meters by the conversion factor (10 decimeters per meter).",
+      "solution": [
+        "Since 1 meter = 10 decimeters, multiply 450 meters by 10.",
+        "450 meters × 10 decimeters/meter = 4,500 decimeters."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "converting_units"
+    },
+    {
+      "question_number": 4,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "The equation \\(58 = 2x + 2y\\) gives the perimeter of a rectangular garden that has length \\(x\\), in feet, and width \\(y\\), in feet. The width of the garden is 14 feet. What is the length, in feet, of the garden?",
+      "options": {},
+      "correct_option": "15",
+      "hint": "Substitute \\(y = 14\\) into the perimeter equation and solve for \\(x\\).",
+      "solution": [
+        "Substitute \\(y = 14\\) into the equation: \\(58 = 2x + 2(14)\\).",
+        "Simplify: \\(58 = 2x + 28\\).",
+        "Subtract 28 from both sides: \\(2x = 30\\).",
+        "Divide by 2: \\(x = 15\\) feet."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "geometry_linear_word_problem"
+    },
+    {
+      "question_number": 5,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "easy",
+      "question": "The relationship between the variables \\(x\\) and \\(y\\) is defined by an exponential equation. When \\(x = 0\\), the value of \\(y\\) is 40, and for every increase in the value of \\(x\\) by 1, the corresponding value of \\(y\\) increases by 50% of its previous value. Which equation represents this relationship?",
+      "options": {
+        "A": "\\(y = 40(1.50)^x\\)",
+        "B": "\\(y = 40(1.05)^x\\)",
+        "C": "\\(y = 50(1.40)^x\\)",
+        "D": "\\(y = 50(1.04)^x\\)"
+      },
+      "correct_option": "A",
+      "hint": "An exponential function has the form \\(y = a \\cdot b^x\\), where \\(a\\) is the initial value (when \\(x = 0\\)) and \\(b\\) is the growth factor (1 + growth rate).",
+      "solution": [
+        "When \\(x = 0\\), \\(y = 40\\), so the initial value is 40.",
+        "A 50% increase means the growth factor is \\(1 + 0.50 = 1.50\\).",
+        "The exponential equation is \\(y = 40(1.50)^x\\).",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "exponential_function_word_problem"
+    },
+    {
+      "question_number": 6,
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
+      "difficulty": "easy",
+      "question": "The function \\(f\\) is defined by \\(f(x) = \\tfrac{1}{8x}\\). What is the value of \\(f(x)\\) when \\(x = 9\\)?",
+      "options": {},
+      "correct_option": "1/72",
+      "hint": "Substitute \\(x = 9\\) into the function and simplify.",
+      "solution": [
+        "Substitute \\(x = 9\\) into \\(f(x) = \\tfrac{1}{8x}\\).",
+        "Compute: \\(f(9) = \\tfrac{1}{8(9)} = \\tfrac{1}{72}\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "multiplying_and_dividing_exponents"
+    },
+    {
+      "question_number": 7,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "The function \\(f\\) is defined by \\(f(x) = 3x - \\tfrac{1}{4}\\). What is the y-intercept of the graph of \\(y = f(x)\\) in the xy-plane?",
+      "options": {
+        "A": "\\((0, -\\tfrac{1}{4})\\)",
+        "B": "\\((0, -3)\\)",
+        "C": "\\((0, 3)\\)",
+        "D": "\\((0, 4)\\)"
+      },
+      "correct_option": "A",
+      "hint": "The y-intercept occurs when \\(x = 0\\). Evaluate \\(f(0)\\).",
+      "solution": [
+        "The y-intercept is the point where \\(x = 0\\).",
+        "Evaluate \\(f(0) = 3(0) - \\tfrac{1}{4} = -\\tfrac{1}{4}\\).",
+        "Therefore, the y-intercept is \\((0, -\\tfrac{1}{4})\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "identifying_intercept"
+    },
+    {
+      "question_number": 8,
+      "topic": "algebra",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "easy",
+      "question": "\\[\\begin{aligned} x + 6y &= 28 \\\\ 6y &= 14 \\end{aligned}\\]\n\nThe solution to the given system of equations is \\((x, y)\\). What is the value of \\(x\\)?",
+      "options": {},
+      "correct_option": "14",
+      "hint": "From the second equation, solve for \\(y\\), then substitute into the first equation to find \\(x\\).",
+      "solution": [
+        "From the second equation: \\(6y = 14\\), so \\(y = \\tfrac{14}{6} = \\tfrac{7}{3}\\).",
+        "Substitute into the first equation: \\(x + 6(\\tfrac{7}{3}) = 28\\).",
+        "Simplify: \\(x + 14 = 28\\).",
+        "Subtract 14: \\(x = 14\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "identifying_solution"
+    },
+    {
+      "question_number": 9,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
+      "difficulty": "easy",
+      "question": "The length of a side of square X is 9 centimeters. The area of rectangle Y is 32 square centimeters. What is the total area, in square centimeters, of square X and rectangle Y?",
+      "options": {
+        "A": "145",
+        "B": "113",
+        "C": "82",
+        "D": "81"
+      },
+      "correct_option": "B",
+      "hint": "Find the area of square X (side length squared), then add it to the area of rectangle Y.",
+      "solution": [
+        "Area of square X: \\(9^2 = 81\\) square centimeters.",
+        "Area of rectangle Y: 32 square centimeters.",
+        "Total area: \\(81 + 32 = 113\\) square centimeters."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "area_of_2d_figures"
+    },
+    {
+      "question_number": 10,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "During hibernation, American black bears do not eat or replenish calories. A certain black bear weighed 293 pounds when entering hibernation and lost weight at a mean rate of 0.9 pounds per day. At this rate, how many days after entering hibernation would the black bear weigh 230 pounds?",
+      "options": {
+        "A": "57",
+        "B": "63",
+        "C": "70",
+        "D": "207"
+      },
+      "correct_option": "C",
+      "hint": "Set up a linear equation: initial weight minus (rate × days) equals final weight. Solve for the number of days.",
+      "solution": [
+        "Let \\(d\\) be the number of days.",
+        "The weight after \\(d\\) days is: \\(293 - 0.9d\\).",
+        "Set equal to 230: \\(293 - 0.9d = 230\\).",
+        "Subtract 293: \\(-0.9d = -63\\).",
+        "Divide by -0.9: \\(d = 70\\) days."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations"
+    },
+    {
+      "question_number": 11,
+      "topic": "advanced_math",
+      "subskill": "polynomials",
+      "difficulty": "easy",
+      "question": "The complete graph of \\(y = f(x)\\) is shown. For how many values of \\(x\\) does \\(f(x) = 0\\)?",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Three",
+        "D": "Four"
+      },
+      "correct_option": "C",
+      "hint": "Count the number of times the graph intersects or touches the x-axis. These are the x-intercepts (zeros) of the function.",
+      "solution": [
+        "The values of \\(x\\) for which \\(f(x) = 0\\) correspond to the x-intercepts of the graph.",
+        "Looking at the graph, the curve intersects the x-axis at three distinct points.",
+        "Therefore, there are three values of \\(x\\) for which \\(f(x) = 0\\)."
+      ],
+      "representation": "graph",
+      "format": "multiple_choice",
+      "structure": "evaluating_polynomials"
+    },
+    {
+      "question_number": 12,
+      "topic": "algebra",
+      "subskill": "isolating_constants",
+      "difficulty": "easy",
+      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{4}{7}c\\).\n\n\\[b^2 + 4c = 7d\\]\n\nWhich equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?",
+      "options": {
+        "A": "\\(b = \\tfrac{7d + 4c}{2}\\)",
+        "B": "\\(b = \\tfrac{7d - 4c}{2}\\)",
+        "C": "\\(b = \\pm\\sqrt{7d + 4c}\\)",
+        "D": "\\(b = \\pm\\sqrt{7d - 4c}\\)"
+      },
+      "correct_option": "D",
+      "hint": "Isolate \\(b^2\\) by subtracting \\(4c\\) from both sides, then take the square root of both sides.",
+      "solution": [
+        "Start with: \\(b^2 + 4c = 7d\\).",
+        "Subtract \\(4c\\) from both sides: \\(b^2 = 7d - 4c\\).",
+        "Take the square root of both sides: \\(b = \\pm\\sqrt{7d - 4c}\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "rearranging_equations"
+    },
+    {
+      "question_number": 13,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "\\[x^2 - \\tfrac{81}{16} = 0\\]\n\nHow many distinct real solutions does the given equation have?",
+      "options": {
+        "A": "Zero",
+        "B": "Exactly one",
+        "C": "Exactly two",
+        "D": "Infinitely many"
+      },
+      "correct_option": "C",
+      "hint": "Solve the quadratic equation by adding \\(\\tfrac{81}{16}\\) to both sides, then taking the square root.",
+      "solution": [
+        "Add \\(\\tfrac{81}{16}\\) to both sides: \\(x^2 = \\tfrac{81}{16}\\).",
+        "Take the square root: \\(x = \\pm\\sqrt{\\tfrac{81}{16}} = \\pm\\tfrac{9}{4}\\).",
+        "The equation has two distinct real solutions: \\(x = \\tfrac{9}{4}\\) and \\(x = -\\tfrac{9}{4}\\)."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_solutions_of_quadratics"
+    },
+    {
+      "question_number": 14,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
+      "difficulty": "easy",
+      "question": "Triangles \\(ABC\\) and \\(A'B'C'\\) are shown. Triangle \\(ABC\\) is dilated by a scale factor of 6 to form triangle \\(A'B'C'\\). If the length of \\(AB\\) is 18, what is the length of \\(A'B'\\)?\n\nNote: Figures not drawn to scale.",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "24",
+        "D": "108"
+      },
+      "correct_option": "D",
+      "hint": "In a dilation, all lengths are multiplied by the scale factor.",
+      "solution": [
+        "Under a dilation with scale factor 6, all lengths are multiplied by 6.",
+        "If \\(AB = 18\\), then \\(A'B' = 6 \\times 18 = 108\\)."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "triangle_similarity_and_congruence"
+    },
+    {
+      "question_number": 15,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
+      "difficulty": "easy",
+      "question": "What is the radius of the circle in the xy-plane defined by\n\n\\[(x + 3)^2 + (y + 9)^2 = 361\\]?",
+      "options": {},
+      "correct_option": "19",
+      "hint": "The standard form of a circle is \\((x - h)^2 + (y - k)^2 = r^2\\), where \\(r\\) is the radius.",
+      "solution": [
+        "The equation is in standard form: \\((x + 3)^2 + (y + 9)^2 = 361\\).",
+        "Comparing with \\((x - h)^2 + (y - k)^2 = r^2\\), we have \\(r^2 = 361\\).",
+        "Taking the square root: \\(r = \\sqrt{361} = 19\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "circle_equations_xy_plane"
+    },
+    {
+      "question_number": 16,
+      "topic": "algebra",
+      "subskill": "linear_inequality",
+      "difficulty": "easy",
+      "question": "In the xy-plane, which of the following does NOT contain any points that are part of the solution set to \\(5x - 7y > 35\\)?",
+      "options": {
+        "A": "The x-axis",
+        "B": "The region where \\(x > 0\\) and \\(y > 0\\)",
+        "C": "The region where \\(x < 0\\) and \\(y < 0\\)",
+        "D": "The region where \\(x < 0\\) and \\(y > 0\\)"
+      },
+      "correct_option": "D",
+      "hint": "Rewrite the inequality as \\(y < \\tfrac{5x - 35}{7}\\) and test points in each region. For \\(x < 0\\) and \\(y > 0\\), check if any points satisfy the inequality.",
+      "solution": [
+        "Rewrite: \\(5x - 7y > 35\\) becomes \\(-7y > 35 - 5x\\), so \\(y < \\tfrac{5x - 35}{7}\\).",
+        "For \\(x < 0\\) and \\(y > 0\\): If \\(x = -1\\), then \\(y < \\tfrac{-5 - 35}{7} = -\\tfrac{40}{7} < 0\\).",
+        "Since \\(y\\) must be positive in this region but the inequality requires \\(y < \\text{negative number}\\), no points in this region satisfy the inequality.",
+        "The other regions can contain solution points."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "identifying_solutions_of_linear_inequalities"
+    },
+    {
+      "question_number": 17,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "probability",
+      "difficulty": "easy",
+      "question": "The table shows the distribution of people in a certain city by age group.\n\n| Age group | Proportion |\n|-----------|------------|\n| Less than 18 years old | 26% |\n| 18-40 years old | 21% |\n| 41-65 years old | 29% |\n| Greater than 65 years old | 24% |\n\nIf a person in this city is selected at random, which of the following is closest to the probability of selecting a person who is greater than 65 years old, given that the person is at least 18 years old?",
+      "options": {
+        "A": "0.24",
+        "B": "0.32",
+        "C": "0.50",
+        "D": "0.92"
+      },
+      "correct_option": "B",
+      "hint": "Use conditional probability: P(A|B) = P(A and B) / P(B). First find the probability that a person is at least 18 years old, then find the probability of being both greater than 65 and at least 18.",
+      "solution": [
+        "Let A be the event that a person is greater than 65 years old.",
+        "Let B be the event that a person is at least 18 years old.",
+        "From the table:",
+        "P(Greater than 65 years old) = 24% = 0.24",
+        "P(18-40 years old) = 21% = 0.21",
+        "P(41-65 years old) = 29% = 0.29",
+        "P(Less than 18 years old) = 26% = 0.26",
+        "The probability that a person is at least 18 years old (Event B) is:",
+        "P(B) = 0.21 + 0.29 + 0.24 = 0.74",
+        "Alternatively, P(B) = 1 - P(Less than 18 years old) = 1 - 0.26 = 0.74.",
+        "The probability that a person is both greater than 65 years old AND at least 18 years old (Event A and B) is:",
+        "P(A and B) = P(Greater than 65 years old) = 0.24",
+        "Now, calculate the conditional probability P(A|B) = P(A and B) / P(B):",
+        "P(A|B) = 0.24 / 0.74 \\(\\approx\\) 0.324",
+        "The value closest to 0.324 among the options is 0.32.",
+        "This matches option B."
+      ],
+      "representation": "table",
+      "format": "multiple_choice",
+      "structure": "evaluating_conditional_probability"
+    },
+    {
+      "question_number": 18,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "Line \\(h\\) is defined by \\(\\tfrac{1}{2}x + \\tfrac{1}{9}y - 54 = 0\\). Line \\(j\\) is perpendicular to line \\(h\\) in the xy-plane. What is the slope of line \\(j\\)?",
+      "options": {
+        "A": "\\(-\\tfrac{9}{2}\\)",
+        "B": "\\(-\\tfrac{2}{9}\\)",
+        "C": "\\(\\tfrac{2}{9}\\)",
+        "D": "\\(\\tfrac{9}{2}\\)"
+      },
+      "correct_option": "C",
+      "hint": "First, find the slope of line \\(h\\) by rewriting it in slope-intercept form. Then, use the fact that perpendicular lines have slopes that are negative reciprocals.",
+      "solution": [
+        "Rewrite line \\(h\\) in slope-intercept form:",
+        "\\(\\tfrac{1}{2}x + \\tfrac{1}{9}y - 54 = 0\\)",
+        "Add 54 to both sides: \\(\\tfrac{1}{2}x + \\tfrac{1}{9}y = 54\\)",
+        "Subtract \\(\\tfrac{1}{2}x\\) from both sides: \\(\\tfrac{1}{9}y = -\\tfrac{1}{2}x + 54\\)",
+        "Multiply both sides by 9: \\(y = -\\tfrac{9}{2}x + 486\\)",
+        "The slope of line \\(h\\) is \\(-\\tfrac{9}{2}\\).",
+        "For perpendicular lines, the slopes are negative reciprocals.",
+        "The negative reciprocal of \\(-\\tfrac{9}{2}\\) is \\(\\tfrac{2}{9}\\).",
+        "Therefore, the slope of line \\(j\\) is \\(\\tfrac{2}{9}\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "properties_of_a_line"
+    },
+    {
+      "question_number": 19,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
+      "difficulty": "easy",
+      "question": "The data values \\(a\\), 26, 29, \\(b\\), 31, 47, \\(c\\) are listed in ascending order, and \\(a\\), \\(b\\), and \\(c\\) are constants. The mean of the data is 36, the median is 29, and the range is 72. What is the value of \\(c\\)?",
+      "options": {
+        "A": "54",
+        "B": "72",
+        "C": "81",
+        "D": "98"
+      },
+      "correct_option": "C",
+      "hint": "Use the median to find \\(b\\), then use the mean and range to set up a system of equations to solve for \\(a\\) and \\(c\\).",
+      "solution": [
+        "Since there are 7 data points in ascending order, the median is the 4th term, which is \\(b\\).",
+        "Given that the median is 29, we have \\(b = 29\\).",
+        "The range is the difference between the maximum and minimum:",
+        "Range = \\(c - a = 72\\), so \\(c = a + 72\\).",
+        "The mean is the sum of all values divided by 7:",
+        "Mean = \\(\\tfrac{a + 26 + 29 + b + 31 + 47 + c}{7} = 36\\)",
+        "Substitute \\(b = 29\\): \\(\\tfrac{a + 26 + 29 + 29 + 31 + 47 + c}{7} = 36\\)",
+        "Simplify: \\(\\tfrac{a + c + 162}{7} = 36\\)",
+        "Multiply both sides by 7: \\(a + c + 162 = 252\\)",
+        "Subtract 162: \\(a + c = 90\\)",
+        "Now we have two equations:",
+        "1) \\(c = a + 72\\)",
+        "2) \\(a + c = 90\\)",
+        "Substitute equation (1) into equation (2):",
+        "\\(a + (a + 72) = 90\\)",
+        "\\(2a + 72 = 90\\)",
+        "\\(2a = 18\\)",
+        "\\(a = 9\\)",
+        "Substitute back: \\(c = 9 + 72 = 81\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range"
+    },
+    {
+      "question_number": 20,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
+      "difficulty": "easy",
+      "question": "In triangle \\(QRS\\) shown, \\(QR < RS\\). Which expression represents the length of \\(QS\\)?\n\nNote: Figure not drawn to scale.",
+      "options": {
+        "A": "\\(37 \\cos Q\\)",
+        "B": "\\(37 \\sin Q\\)",
+        "C": "\\(\\tfrac{37}{\\cos Q}\\)",
+        "D": "\\(\\tfrac{37}{\\sin Q}\\)"
+      },
+      "correct_option": "D",
+      "hint": "In a right triangle, use the sine function: \\(\\sin(\\text{angle}) = \\tfrac{\\text{opposite}}{\\text{hypotenuse}}\\). Identify which side is opposite to angle \\(Q\\) and which is the hypotenuse.",
+      "solution": [
+        "In triangle \\(QRS\\), the right angle is at \\(R\\), so \\(QS\\) is the hypotenuse.",
+        "Angle \\(Q\\) is at vertex \\(Q\\), and side \\(SR\\) (length 37) is opposite to angle \\(Q\\).",
+        "Using the sine function: \\(\\sin Q = \\tfrac{\\text{opposite}}{\\text{hypotenuse}} = \\tfrac{SR}{QS} = \\tfrac{37}{QS}\\).",
+        "Solving for \\(QS\\):",
+        "\\(\\sin Q = \\tfrac{37}{QS}\\)",
+        "Multiply both sides by \\(QS\\): \\(QS \\cdot \\sin Q = 37\\)",
+        "Divide both sides by \\(\\sin Q\\): \\(QS = \\tfrac{37}{\\sin Q}\\).",
+        "This matches option D."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "trig_ratios"
+    },
+    {
+      "question_number": 21,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "easy",
+      "question": "How many times does the graph of the given equation in the xy-plane cross the x-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 7\\) and \\(b > c\\)?\n\n\\[y = 9\\left(\\frac{a}{7}\\right)^{x+c} - b\\]",
+      "options": {
+        "A": "Zero",
+        "B": "One",
+        "C": "Two",
+        "D": "Three"
+      },
+      "correct_option": "B",
+      "hint": "Consider the range of the exponential function. Since \\(a > 7\\), the base \\(\\tfrac{a}{7} > 1\\), so the function is always increasing. The term \\(9\\left(\\tfrac{a}{7}\\right)^{x+c}\\) is always positive, and subtracting \\(b\\) shifts the graph down.",
+      "solution": [
+        "The function is \\(y = 9\\left(\\tfrac{a}{7}\\right)^{x+c} - b\\).",
+        "Since \\(a > 7\\), we have \\(\\tfrac{a}{7} > 1\\), so this is an exponential growth function.",
+        "The term \\(9\\left(\\tfrac{a}{7}\\right)^{x+c}\\) is always positive for all real values of \\(x\\).",
+        "The function has a horizontal asymptote at \\(y = -b\\) (as \\(x\\) approaches \\(-\\infty\\)).",
+        "As \\(x\\) increases, \\(y\\) increases without bound (approaches \\(+\\infty\\)).",
+        "Since the function is continuous and strictly increasing, and its range is \\((-b, \\infty)\\),",
+        "it must cross the x-axis (where \\(y = 0\\)) exactly once.",
+        "Therefore, the graph crosses the x-axis one time.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_exponential_functions"
+    },
+    {
+      "question_number": 22,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "easy",
+      "question": "A certain town has an area of 4.29 square miles. What is the area, in square yards, of this town? (1 mile = 1,760 yards)",
+      "options": {
+        "A": "410",
+        "B": "7,550",
+        "C": "722,051",
+        "D": "13,288,704"
+      },
+      "correct_option": "D",
+      "hint": "To convert square miles to square yards, you must square the linear conversion factor. First find how many yards are in one mile, then square that number to get the conversion factor for square units.",
+      "solution": [
+        "Given: 1 mile = 1,760 yards",
+        "To convert square miles to square yards, we need to square the conversion factor:",
+        "1 square mile = (1,760 yards) × (1,760 yards) = 3,097,600 square yards",
+        "Now multiply the area in square miles by the conversion factor:",
+        "Area in square yards = 4.29 square miles × 3,097,600 square yards/square mile",
+        "Area in square yards = 13,288,704 square yards",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "converting_square_units"
+    }
+  ],
+  "module_2_easy": [],
+  "module_2_hard": [
+    {
+      "question_number": 23,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "hard",
+      "question": "The equation \\(d = 20w + 100\\) gives the total amount of money \\(d\\), in dollars, that Janna plans to save \\(w\\) weeks after she starts to save. What is the total amount of money, in dollars, she plans to save in 10 weeks?",
+      "options": {
+        "A": "250",
+        "B": "300",
+        "C": "350",
+        "D": "400"
+      },
+      "correct_option": "B",
+      "hint": "Substitute the number of weeks into the given equation to find the total amount of money saved.",
+      "solution": [
+        "The given equation is \\(d = 20w + 100\\).",
+        "We need to find the amount of money saved after 10 weeks, so substitute \\(w = 10\\) into the equation.",
+        "\\(d = 20(10) + 100\\)",
+        "\\(d = 200 + 100\\)",
+        "\\(d = 300\\)",
+        "Therefore, Janna plans to save $300 in 10 weeks.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations"
+    },
+    {
+      "question_number": 24,
+      "topic": "algebra",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "hard",
+      "question": "The solution to the given system of equations is \\((x, y)\\). What is the value of \\(x\\)?\n\n\\[x + 2y = 28\\]\n\\[2y = 15\\]",
+      "options": {},
+      "correct_option": "13",
+      "hint": "Substitute the value of \\(2y\\) from the second equation into the first equation.",
+      "solution": [
+        "Given the system of equations:",
+        "1) \\(x + 2y = 28\\)",
+        "2) \\(2y = 15\\)",
+        "Substitute the value of \\(2y\\) from equation (2) into equation (1):",
+        "\\(x + 15 = 28\\)",
+        "Subtract 15 from both sides:",
+        "\\(x = 28 - 15\\)",
+        "\\(x = 13\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "identifying_solution"
+    },
+    {
+      "question_number": 25,
+      "topic": "algebra",
+      "subskill": "isolating_constants",
+      "difficulty": "hard",
+      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{5}{6}c\\). Which equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?\n\n\\[b^2 + 5c = 6d\\]",
+      "options": {
+        "A": "\\(b = \\tfrac{6d - 5c}{2}\\)",
+        "B": "\\(b = \\tfrac{6d + 5c}{2}\\)",
+        "C": "\\(b = \\pm\\sqrt{6d - 5c}\\)",
+        "D": "\\(b = \\pm\\sqrt{6d + 5c}\\)"
+      },
+      "correct_option": "C",
+      "hint": "Isolate \\(b^2\\) by subtracting \\(5c\\) from both sides, then take the square root of both sides. Remember to include both positive and negative roots.",
+      "solution": [
+        "Start with: \\(b^2 + 5c = 6d\\).",
+        "Subtract \\(5c\\) from both sides: \\(b^2 = 6d - 5c\\).",
+        "Take the square root of both sides: \\(b = \\pm\\sqrt{6d - 5c}\\).",
+        "The condition \\(d > \\tfrac{5}{6}c\\) ensures that \\(6d - 5c > 0\\), so the expression under the square root is positive.",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "rearranging_equations"
+    },
+    {
+      "question_number": 26,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
+      "difficulty": "hard",
+      "question": "The area of triangle \\(ABC\\) is 210 square centimeters. What is the height \\(h\\), in centimeters, of this triangle?\n\nNote: Figure not drawn to scale.",
+      "options": {
+        "A": "10",
+        "B": "21",
+        "C": "42",
+        "D": "84"
+      },
+      "correct_option": "C",
+      "hint": "The area of a triangle is calculated using the formula: Area = (1/2) × base × height. You are given the area and the base, and need to find the height.",
+      "solution": [
+        "The formula for the area of a triangle is \\(A = \\tfrac{1}{2}bh\\), where \\(A\\) is the area, \\(b\\) is the base, and \\(h\\) is the height.",
+        "Given: Area \\(A = 210\\) square centimeters, and base \\(b = 10\\) centimeters.",
+        "Substitute these values into the formula: \\(210 = \\tfrac{1}{2}(10)h\\).",
+        "Simplify the equation: \\(210 = 5h\\).",
+        "To find \\(h\\), divide both sides by 5: \\(h = \\tfrac{210}{5}\\).",
+        "Calculate the value: \\(h = 42\\) centimeters.",
+        "Therefore, the height \\(h\\) of the triangle is 42 centimeters, which corresponds to option C."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "area_of_2d_figures"
+    },
+    {
+      "question_number": 27,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "The function \\(g\\) is defined by \\(g(x) = 2(14x - 15)\\). What is the y-coordinate of the y-intercept of the graph of \\(y = g(x) - 5\\) in the xy-plane?",
+      "options": {
+        "A": "-35",
+        "B": "-30",
+        "C": "-20",
+        "D": "-15"
+      },
+      "correct_option": "A",
+      "hint": "First simplify \\(g(x) - 5\\), then find the y-intercept by evaluating the function when \\(x = 0\\).",
+      "solution": [
+        "Given: \\(g(x) = 2(14x - 15)\\).",
+        "We need to find the y-intercept of \\(y = g(x) - 5\\).",
+        "First, simplify: \\(g(x) - 5 = 2(14x - 15) - 5 = 28x - 30 - 5 = 28x - 35\\).",
+        "The y-intercept occurs when \\(x = 0\\).",
+        "Substitute \\(x = 0\\): \\(y = 28(0) - 35 = -35\\).",
+        "Therefore, the y-coordinate of the y-intercept is \\(-35\\).",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "identifying_intercept"
+    },
+    {
+      "question_number": 28,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "probability",
+      "difficulty": "hard",
+      "question": "The table shows the distribution of people in a certain city by age group.\n\n| Age group | Proportion |\n|-----------|------------|\n| Less than 18 years old | 28% |\n| 18-40 years old | 24% |\n| 41-65 years old | 22% |\n| Greater than 65 years old | 26% |\n\nIf a person in this city is selected at random, which of the following is closest to the probability of selecting a person who is greater than 65 years old, given that the person is at least 18 years old?",
+      "options": {
+        "A": "0.26",
+        "B": "0.36",
+        "C": "0.46",
+        "D": "0.93"
+      },
+      "correct_option": "B",
+      "hint": "Use conditional probability: P(A|B) = P(A and B) / P(B). First find the probability that a person is at least 18 years old, then find the probability of being both greater than 65 and at least 18.",
+      "solution": [
+        "Let A be the event that a person is greater than 65 years old.",
+        "Let B be the event that a person is at least 18 years old.",
+        "From the table:",
+        "P(Greater than 65 years old) = 26% = 0.26",
+        "P(18-40 years old) = 24% = 0.24",
+        "P(41-65 years old) = 22% = 0.22",
+        "P(Less than 18 years old) = 28% = 0.28",
+        "The probability that a person is at least 18 years old (Event B) is:",
+        "P(B) = 0.24 + 0.22 + 0.26 = 0.72",
+        "Alternatively, P(B) = 1 - P(Less than 18 years old) = 1 - 0.28 = 0.72.",
+        "The probability that a person is both greater than 65 years old AND at least 18 years old (Event A and B) is:",
+        "P(A and B) = P(Greater than 65 years old) = 0.26",
+        "Now, calculate the conditional probability P(A|B) = P(A and B) / P(B):",
+        "P(A|B) = 0.26 / 0.72 \\(\\approx\\) 0.361",
+        "The value closest to 0.361 among the options is 0.36.",
+        "This matches option B."
+      ],
+      "representation": "table",
+      "format": "multiple_choice",
+      "structure": "evaluating_conditional_probability"
+    },
+    {
+      "question_number": 29,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "The function \\(h\\) estimates an object's height, in feet, above the ground \\(t\\) seconds after the object is dropped, where \\(b\\) is a constant.\n\n\\[h(t) = -16t^2 + b\\]\n\nThe function estimates that the object is 23.04 feet above the ground when it is dropped at \\(t = 0\\). How many seconds after being dropped does the function estimate the object will hit the ground?",
+      "options": {},
+      "correct_option": "1.2",
+      "hint": "First use the initial condition to find \\(b\\), then set \\(h(t) = 0\\) to find when the object hits the ground.",
+      "solution": [
+        "Given: \\(h(t) = -16t^2 + b\\).",
+        "When \\(t = 0\\), the object is 23.04 feet above the ground:",
+        "\\(h(0) = -16(0)^2 + b = 23.04\\)",
+        "\\(b = 23.04\\)",
+        "The function becomes: \\(h(t) = -16t^2 + 23.04\\).",
+        "The object hits the ground when \\(h(t) = 0\\):",
+        "\\(0 = -16t^2 + 23.04\\)",
+        "Add \\(16t^2\\) to both sides: \\(16t^2 = 23.04\\)",
+        "Divide by 16: \\(t^2 = \\tfrac{23.04}{16} = 1.44\\)",
+        "Take the square root: \\(t = \\sqrt{1.44} = 1.2\\) seconds.",
+        "Since time must be positive, \\(t = 1.2\\) seconds."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "quadratic_word_problem"
+    },
+    {
+      "question_number": 30,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
+      "difficulty": "hard",
+      "question": "The length of a rectangle's diagonal is \\(\\sqrt{106}\\), and the length of one of the rectangle's sides is 9. What is the perimeter of the rectangle?",
+      "options": {
+        "A": "106",
+        "B": "45",
+        "C": "28",
+        "D": "14"
+      },
+      "correct_option": "C",
+      "hint": "Use the Pythagorean theorem to find the other side of the rectangle, then calculate the perimeter.",
+      "solution": [
+        "Let the rectangle have sides of length 9 and \\(w\\), with diagonal \\(d = \\sqrt{106}\\).",
+        "Using the Pythagorean theorem: \\(9^2 + w^2 = d^2\\)",
+        "Substitute \\(d = \\sqrt{106}\\): \\(81 + w^2 = (\\sqrt{106})^2\\)",
+        "Simplify: \\(81 + w^2 = 106\\)",
+        "Subtract 81: \\(w^2 = 25\\)",
+        "Take the square root: \\(w = 5\\) (since length is positive).",
+        "The perimeter of a rectangle is \\(P = 2(\\text{length} + \\text{width}) = 2(9 + 5) = 2(14) = 28\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "applying_pythagorean_theorem"
+    },
+    {
+      "question_number": 31,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
+      "difficulty": "hard",
+      "question": "Circle A: \\((x - 7)^2 + (y - p)^2 = 21\\)\n\nCircle B: \\((x + 7)^2 + (y - p)^2 = 21\\)\n\nIn the given equations, \\(p\\) is a positive constant. Which statement correctly compares the graphs of circles A and B in the xy-plane?",
+      "options": {
+        "A": "Circle B is the reflection of circle A across the x-axis.",
+        "B": "Circle B is the reflection of circle A across the y-axis.",
+        "C": "Circle B is the translation of circle A 14 units up.",
+        "D": "Circle B is the translation of circle A 14 units to the right."
+      },
+      "correct_option": "B",
+      "hint": "Compare the centers of the two circles. The standard form of a circle's equation is \\((x - h)^2 + (y - k)^2 = r^2\\), where \\((h, k)\\) is the center.",
+      "solution": [
+        "The equation of Circle A is \\((x - 7)^2 + (y - p)^2 = 21\\).",
+        "In standard form, this is \\((x - 7)^2 + (y - p)^2 = 21\\), so the center is \\((7, p)\\) and the radius squared is 21.",
+        "The equation of Circle B is \\((x + 7)^2 + (y - p)^2 = 21\\).",
+        "This can be written as \\((x - (-7))^2 + (y - p)^2 = 21\\), so the center is \\((-7, p)\\) and the radius squared is 21.",
+        "Both circles have the same radius squared (21), meaning they have the same size.",
+        "The y-coordinate of the center is the same for both circles (\\(p\\)).",
+        "The x-coordinate of the center changes from 7 for Circle A to -7 for Circle B.",
+        "A reflection across the y-axis transforms a point \\((x, y)\\) to \\((-x, y)\\).",
+        "Applying this transformation to the center of Circle A, \\((7, p)\\) becomes \\((-7, p)\\), which is the center of Circle B.",
+        "Therefore, Circle B is the reflection of Circle A across the y-axis.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "circle_equations_xy_plane"
+    },
+    {
+      "question_number": 32,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "In the given equation, \\(a\\) is a constant. The equation has exactly one solution. Which of the following CANNOT be the value of \\(a\\)?\n\n\\[a(9-x) = 36-4x\\]",
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "9",
+        "D": "36"
+      },
+      "correct_option": "B",
+      "hint": "Solve the equation for \\(x\\) in terms of \\(a\\). For the equation to have exactly one solution, the coefficient of \\(x\\) must not be zero.",
+      "solution": [
+        "Start with: \\(a(9-x) = 36-4x\\).",
+        "Expand the left side: \\(9a - ax = 36 - 4x\\).",
+        "Rearrange to collect like terms: \\(9a - 36 = ax - 4x\\).",
+        "Factor out \\(x\\) on the right: \\(9a - 36 = x(a - 4)\\).",
+        "For the equation to have exactly one solution, we need \\(a - 4 \\neq 0\\), so \\(a \\neq 4\\).",
+        "If \\(a = 4\\), then \\(9(4) - 36 = x(4 - 4)\\), which gives \\(0 = 0\\), meaning the equation is true for all values of \\(x\\) (infinitely many solutions).",
+        "For any other value of \\(a\\), we can solve: \\(x = \\tfrac{9a - 36}{a - 4}\\), which gives exactly one solution.",
+        "Therefore, \\(a = 4\\) CANNOT be the value of \\(a\\) if the equation has exactly one solution.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "properties_of_a_line"
+    },
+    {
+      "question_number": 33,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
+      "difficulty": "hard",
+      "question": "The data values \\(a\\), 26, 29, \\(b\\), 33, 49, \\(c\\) are listed in ascending order, where \\(a\\), \\(b\\), and \\(c\\) are constants. The mean of the data is 36, the median is 29, and the range is 72. What is the value of \\(c\\)?",
+      "options": {
+        "A": "53",
+        "B": "72",
+        "C": "79",
+        "D": "98"
+      },
+      "correct_option": "C",
+      "hint": "Use the median to find \\(b\\), then use the mean and range to set up a system of equations to solve for \\(a\\) and \\(c\\).",
+      "solution": [
+        "Since there are 7 data points in ascending order, the median is the 4th term, which is \\(b\\).",
+        "Given that the median is 29, we have \\(b = 29\\).",
+        "The range is the difference between the maximum and minimum:",
+        "Range = \\(c - a = 72\\), so \\(c = a + 72\\).",
+        "The mean is the sum of all values divided by 7:",
+        "Mean = \\(\\tfrac{a + 26 + 29 + b + 33 + 49 + c}{7} = 36\\)",
+        "Substitute \\(b = 29\\): \\(\\tfrac{a + 26 + 29 + 29 + 33 + 49 + c}{7} = 36\\)",
+        "Simplify: \\(\\tfrac{a + c + 166}{7} = 36\\)",
+        "Multiply both sides by 7: \\(a + c + 166 = 252\\)",
+        "Subtract 166: \\(a + c = 86\\)",
+        "Now we have two equations:",
+        "1) \\(c = a + 72\\)",
+        "2) \\(a + c = 86\\)",
+        "Substitute equation (1) into equation (2):",
+        "\\(a + (a + 72) = 86\\)",
+        "\\(2a + 72 = 86\\)",
+        "\\(2a = 14\\)",
+        "\\(a = 7\\)",
+        "Substitute back: \\(c = 7 + 72 = 79\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range"
+    },
+    {
+      "question_number": 34,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "How many times does the graph of the given equation in the xy-plane cross the x-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 6\\) and \\(b > c\\)?\n\n\\[by = 3\\left(\\frac{a}{6}\\right)^{x+c} - b\\]",
+      "options": {
+        "A": "Zero",
+        "B": "One",
+        "C": "Two",
+        "D": "Three"
+      },
+      "correct_option": "B",
+      "hint": "To find x-intercepts, set \\(y = 0\\) and solve for \\(x\\). Consider the range of the exponential function and the constraints on the constants.",
+      "solution": [
+        "To find where the graph crosses the x-axis, set \\(y = 0\\):",
+        "\\(b(0) = 3\\left(\\frac{a}{6}\\right)^{x+c} - b\\)",
+        "\\(0 = 3\\left(\\frac{a}{6}\\right)^{x+c} - b\\)",
+        "Add \\(b\\) to both sides: \\(b = 3\\left(\\frac{a}{6}\\right)^{x+c}\\)",
+        "Divide by 3: \\(\\frac{b}{3} = \\left(\\frac{a}{6}\\right)^{x+c}\\)",
+        "Since \\(a > 6\\), we have \\(\\frac{a}{6} > 1\\), so this is an exponential growth function.",
+        "The term \\(\\left(\\frac{a}{6}\\right)^{x+c}\\) is always positive and can take on any positive value exactly once as \\(x\\) varies.",
+        "Since \\(b\\) and \\(c\\) are positive constants, \\(\\frac{b}{3}\\) is a positive constant.",
+        "Therefore, there is exactly one value of \\(x + c\\) (and thus exactly one value of \\(x\\)) for which \\(\\left(\\frac{a}{6}\\right)^{x+c} = \\frac{b}{3}\\).",
+        "This means the graph crosses the x-axis exactly once.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_exponential_functions"
+    },
+    {
+      "question_number": 35,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "A linear function \\(g\\) is defined by \\(g(x) = ax + b\\), where \\(a\\) and \\(b\\) are constants. If \\(g(-2) = -7\\) and \\(g(1) = 5\\), what is the value of \\(a\\)?",
+      "options": {},
+      "correct_option": "4",
+      "hint": "Substitute the given values into the function to create a system of two equations, then solve for \\(a\\).",
+      "solution": [
+        "Given: \\(g(x) = ax + b\\).",
+        "From \\(g(-2) = -7\\): \\(a(-2) + b = -7\\), so \\(-2a + b = -7\\).",
+        "From \\(g(1) = 5\\): \\(a(1) + b = 5\\), so \\(a + b = 5\\).",
+        "We have the system:",
+        "1) \\(-2a + b = -7\\)",
+        "2) \\(a + b = 5\\)",
+        "Subtract equation (2) from equation (1):",
+        "\\((-2a + b) - (a + b) = -7 - 5\\)",
+        "\\(-2a + b - a - b = -12\\)",
+        "\\(-3a = -12\\)",
+        "Divide by -3: \\(a = 4\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "evaluating_linear_functions"
+    },
+    {
+      "question_number": 36,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "One solution to the given equation can be written as \\(x = h - \\tfrac{1}{2}\\sqrt{k}\\), where \\(h\\) and \\(k\\) are integer constants. What is the value of \\(h + k\\)?\n\n\\[2x^2 - 8x - 21 = 0\\]",
+      "options": {
+        "A": "-24",
+        "B": "10",
+        "C": "29",
+        "D": "60"
+      },
+      "correct_option": "D",
+      "hint": "Use the quadratic formula to find the solutions, then simplify the radical to match the given form \\(x = h - \\tfrac{1}{2}\\sqrt{k}\\).",
+      "solution": [
+        "Given: \\(2x^2 - 8x - 21 = 0\\).",
+        "Using the quadratic formula: \\(x = \\tfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\), where \\(a = 2\\), \\(b = -8\\), \\(c = -21\\).",
+        "Substitute: \\(x = \\tfrac{-(-8) \\pm \\sqrt{(-8)^2 - 4(2)(-21)}}{2(2)}\\)",
+        "Simplify: \\(x = \\tfrac{8 \\pm \\sqrt{64 + 168}}{4} = \\tfrac{8 \\pm \\sqrt{232}}{4}\\)",
+        "Simplify the radical: \\(\\sqrt{232} = \\sqrt{4 \\times 58} = 2\\sqrt{58}\\)",
+        "Substitute back: \\(x = \\tfrac{8 \\pm 2\\sqrt{58}}{4}\\)",
+        "Divide: \\(x = 2 \\pm \\tfrac{1}{2}\\sqrt{58}\\)",
+        "The two solutions are: \\(x = 2 + \\tfrac{1}{2}\\sqrt{58}\\) and \\(x = 2 - \\tfrac{1}{2}\\sqrt{58}\\).",
+        "Comparing \\(x = 2 - \\tfrac{1}{2}\\sqrt{58}\\) with \\(x = h - \\tfrac{1}{2}\\sqrt{k}\\), we get \\(h = 2\\) and \\(k = 58\\).",
+        "Therefore, \\(h + k = 2 + 58 = 60\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_solutions_of_quadratics"
+    },
+    {
+      "question_number": 37,
+      "topic": "advanced_math",
+      "subskill": "polynomials",
+      "difficulty": "hard",
+      "question": "The functions \\(r\\) and \\(s\\) are defined by \\(r(x) = 9(x - 3)\\) and \\(s(x) = x^3 + nx^2 + 3nx + 27\\), where \\(n\\) is a constant. If \\(r(x) \\cdot s(x) = 9(x^4 - 81)\\), what is the value of \\(n\\)?",
+      "options": {},
+      "correct_option": "3",
+      "hint": "Expand \\(r(x) \\cdot s(x)\\) and compare coefficients with \\(9(x^4 - 81)\\) to find \\(n\\).",
+      "solution": [
+        "Given: \\(r(x) = 9(x - 3) = 9x - 27\\)",
+        "Given: \\(s(x) = x^3 + nx^2 + 3nx + 27\\)",
+        "We need: \\(r(x) \\cdot s(x) = 9(x^4 - 81) = 9x^4 - 729\\)",
+        "Expand \\(r(x) \\cdot s(x)\\):",
+        "\\((9x - 27)(x^3 + nx^2 + 3nx + 27)\\)",
+        "\\(= 9x(x^3 + nx^2 + 3nx + 27) - 27(x^3 + nx^2 + 3nx + 27)\\)",
+        "\\(= 9x^4 + 9nx^3 + 27nx^2 + 243x - 27x^3 - 27nx^2 - 81nx - 729\\)",
+        "Combine like terms:",
+        "\\(= 9x^4 + (9n - 27)x^3 + (27n - 27n)x^2 + (243 - 81n)x - 729\\)",
+        "\\(= 9x^4 + (9n - 27)x^3 + (243 - 81n)x - 729\\)",
+        "For this to equal \\(9x^4 - 729\\), the coefficients of \\(x^3\\) and \\(x\\) must be zero:",
+        "Coefficient of \\(x^3\\): \\(9n - 27 = 0\\), so \\(9n = 27\\), \\(n = 3\\).",
+        "Coefficient of \\(x\\): \\(243 - 81n = 243 - 81(3) = 243 - 243 = 0\\).",
+        "Therefore, \\(n = 3\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "evaluating_polynomials"
+    },
+    {
+      "question_number": 38,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "At different times on a certain day, a manager at a theme park recorded the number of visitors. An exponential model gives the estimated number of visitors, \\(V\\), at the theme park \\(t\\) hours after the theme park opened, where \\(t \\leq 3\\). Based on the model, 85 visitors were estimated to be at the theme park when it opened, and every 30 minutes the estimated number of visitors increased by 140% of the estimated number of visitors 30 minutes earlier. Which of the following equations best represents this model?",
+      "options": {
+        "A": "\\(V = 85(1.40)^{t/30}\\)",
+        "B": "\\(V = 85(1.40)^{2t}\\)",
+        "C": "\\(V = 85(2.40)^{t/30}\\)",
+        "D": "\\(V = 85(2.40)^{2t}\\)"
+      },
+      "correct_option": "D",
+      "hint": "An increase by 140% means the new value is 240% (or 2.40 times) the previous value. Since the growth occurs every 30 minutes and \\(t\\) is in hours, convert the time period.",
+      "solution": [
+        "When the theme park opened (\\(t = 0\\)), there were 85 visitors, so the initial value is 85.",
+        "An increase by 140% means the new value is 100% + 140% = 240% of the previous value.",
+        "As a decimal, this is 2.40, so the growth factor is 2.40.",
+        "The growth occurs every 30 minutes, which is 0.5 hours.",
+        "In \\(t\\) hours, there are \\(\\tfrac{t}{0.5} = 2t\\) intervals of 30 minutes.",
+        "Therefore, the exponential model is \\(V = 85(2.40)^{2t}\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "exponential_function_word_problem"
+    },
+    {
+      "question_number": 39,
+      "topic": "advanced_math",
+      "subskill": "polynomials",
+      "difficulty": "hard",
+      "question": "The function \\(v\\) is defined by the equation \\(v(x) = \\tfrac{x^2 + bx + c}{(x + 5)(x - 19)}\\), where \\(b\\) and \\(c\\) are constants. In the xy-plane, the graph of \\(y = v(x)\\) passes through the points \\((0, \\tfrac{66}{95})\\) and \\((11, 0)\\). If \\(v(q) = 0\\), which of the following could be the value of \\(q\\)?",
+      "options": {
+        "A": "-6",
+        "B": "-5",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_option": "A",
+      "hint": "Use the given points to find the values of \\(b\\) and \\(c\\). Then find the zeros of the numerator (where \\(v(x) = 0\\)) while avoiding the vertical asymptotes.",
+      "solution": [
+        "Given: \\(v(x) = \\tfrac{x^2 + bx + c}{(x + 5)(x - 19)}\\).",
+        "The graph passes through \\((0, \\tfrac{66}{95})\\):",
+        "\\(v(0) = \\tfrac{0^2 + b(0) + c}{(0 + 5)(0 - 19)} = \\tfrac{c}{-95} = \\tfrac{66}{95}\\)",
+        "So \\(\\tfrac{c}{-95} = \\tfrac{66}{95}\\), which gives \\(c = -66\\).",
+        "The graph passes through \\((11, 0)\\):",
+        "\\(v(11) = \\tfrac{11^2 + 11b + c}{(11 + 5)(11 - 19)} = \\tfrac{121 + 11b + c}{16(-8)} = 0\\)",
+        "Since the denominator is not zero, the numerator must be zero:",
+        "\\(121 + 11b + c = 0\\)",
+        "Substitute \\(c = -66\\): \\(121 + 11b - 66 = 0\\)",
+        "\\(11b = -55\\), so \\(b = -5\\).",
+        "The numerator is \\(x^2 - 5x - 66\\).",
+        "Factor: \\(x^2 - 5x - 66 = (x - 11)(x + 6)\\).",
+        "The zeros of the numerator are \\(x = 11\\) and \\(x = -6\\).",
+        "The vertical asymptotes are at \\(x = -5\\) and \\(x = 19\\) (where the denominator is zero).",
+        "Therefore, \\(v(q) = 0\\) when \\(q = 11\\) or \\(q = -6\\).",
+        "Among the options, \\(q = -6\\) is a valid answer.",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_polynomials"
+    },
+    {
+      "question_number": 40,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "Line \\(s\\) is defined by \\(x - 4y = 24\\). Line \\(t\\) is perpendicular to line \\(s\\) in the xy-plane and passes through the points \\((k, 0)\\) and \\((60, -k)\\). What is the value of \\(k\\)?",
+      "options": {},
+      "correct_option": "48",
+      "hint": "First find the slope of line \\(s\\), then find the slope of the perpendicular line \\(t\\). Use the two given points on line \\(t\\) to set up an equation for \\(k\\).",
+      "solution": [
+        "Line \\(s\\): \\(x - 4y = 24\\).",
+        "Rewrite in slope-intercept form: \\(-4y = -x + 24\\), so \\(y = \\tfrac{1}{4}x - 6\\).",
+        "The slope of line \\(s\\) is \\(\\tfrac{1}{4}\\).",
+        "Since line \\(t\\) is perpendicular to line \\(s\\), the slope of line \\(t\\) is the negative reciprocal: \\(-4\\).",
+        "Line \\(t\\) passes through \\((k, 0)\\) and \\((60, -k)\\).",
+        "The slope of line \\(t\\) is: \\(\\tfrac{-k - 0}{60 - k} = \\tfrac{-k}{60 - k}\\).",
+        "Set this equal to \\(-4\\):",
+        "\\(\\tfrac{-k}{60 - k} = -4\\)",
+        "Multiply both sides by \\((60 - k)\\): \\(-k = -4(60 - k)\\)",
+        "Expand: \\(-k = -240 + 4k\\)",
+        "Add \\(k\\) to both sides: \\(0 = -240 + 5k\\)",
+        "Add 240: \\(5k = 240\\)",
+        "Divide by 5: \\(k = 48\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "properties_of_a_line"
+    },
+    {
+      "question_number": 41,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "hard",
+      "question": "An engineer connects resistors in series, where the resistors in the series have a total resistance of \\(\\tfrac{41}{35}\\) ohms. In this series, there are \\(x\\) resistors of type A, which each have a resistance of \\(a\\) ohms, and \\(y\\) resistors of type B, which each have a resistance of \\(b\\) ohms. The given equation represents this situation.\n\n\\[\\frac{x}{7} + \\frac{y}{5} = \\frac{41}{35}\\]\n\nAccording to this equation, what is the positive difference between the value of \\(a\\) and the value of \\(b\\)?",
+      "options": {
+        "A": "41",
+        "B": "2",
+        "C": "\\tfrac{41}{35}",
+        "D": "\\tfrac{2}{35}"
+      },
+      "correct_option": "D",
+      "hint": "Compare the equation \\(\\tfrac{x}{7} + \\tfrac{y}{5} = \\tfrac{41}{35}\\) with the general form for resistors in series: \\(xa + yb = \\text{total}\\). Identify the values of \\(a\\) and \\(b\\) from the coefficients.",
+      "solution": [
+        "The total resistance is \\(xa + yb = \\tfrac{41}{35}\\).",
+        "The given equation is \\(\\tfrac{x}{7} + \\tfrac{y}{5} = \\tfrac{41}{35}\\).",
+        "Comparing the forms, we can see that:",
+        "\\(xa = \\tfrac{x}{7}\\), so \\(a = \\tfrac{1}{7}\\)",
+        "\\(yb = \\tfrac{y}{5}\\), so \\(b = \\tfrac{1}{5}\\)",
+        "The positive difference between \\(a\\) and \\(b\\) is:",
+        "\\(b - a = \\tfrac{1}{5} - \\tfrac{1}{7} = \\tfrac{7}{35} - \\tfrac{5}{35} = \\tfrac{2}{35}\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "converting_units"
+    },
+    {
+      "question_number": 42,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "The functions \\(f\\) and \\(g\\) are defined by the given equations, where \\(x \\geq 0\\), \\(a\\) and \\(b\\) are integer constants, \\(a < b\\), and \\(a > 1\\). If \\(y = f(x)\\) and \\(y = g(x)\\) are graphed in the xy-plane, which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where \\(x \\geq 0\\)?\n\nI. \\(f(x) = a(0.63)^{-bx}\\)\n\nII. \\(g(x) = a(1.37)^{x+2} + b\\)",
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and II",
+        "D": "Neither I nor II"
+      },
+      "correct_option": "C",
+      "hint": "For each function, determine where the minimum occurs (when \\(x \\geq 0\\)) and check if that minimum value appears as a constant or coefficient in the equation.",
+      "solution": [
+        "For function I: \\(f(x) = a(0.63)^{-bx}\\).",
+        "Since \\(0.63 < 1\\) and \\(-bx \\leq 0\\) when \\(x \\geq 0\\) and \\(b > 0\\), we have \\((0.63)^{-bx} = \\left(\\tfrac{1}{0.63}\\right)^{bx} > 1\\).",
+        "As \\(x\\) increases, \\(-bx\\) becomes more negative, so \\((0.63)^{-bx}\\) increases.",
+        "The minimum occurs at \\(x = 0\\): \\(f(0) = a(0.63)^0 = a(1) = a\\).",
+        "The minimum value \\(a\\) appears as a coefficient in the equation.",
+        "For function II: \\(g(x) = a(1.37)^{x+2} + b\\).",
+        "Since \\(1.37 > 1\\), \\((1.37)^{x+2}\\) is an exponential growth function.",
+        "As \\(x\\) increases, \\((1.37)^{x+2}\\) increases, so \\(g(x)\\) increases.",
+        "The minimum occurs at \\(x = 0\\): \\(g(0) = a(1.37)^2 + b\\).",
+        "The minimum value includes \\(b\\), which appears as a constant term in the equation.",
+        "Therefore, both functions display their minimum values as constants or coefficients.",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_exponential_functions"
+    },
+    {
+      "question_number": 43,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
+      "difficulty": "hard",
+      "question": "In triangle \\(XYZ\\), the measure of angle \\(X\\) is \\(x°\\), the measure of angle \\(Y\\) is \\(y°\\), and the measure of angle \\(Z\\) is \\(31°\\). If \\(x > y > 31\\), which of the following additional pieces of information is NOT sufficient to determine the values of \\(x\\) and \\(y\\)?",
+      "options": {
+        "A": "The value of \\(31 - x - 3y\\)",
+        "B": "The value of \\(31 + 3x + y\\)",
+        "C": "The value of \\(31 - 3x + 3y\\)",
+        "D": "The value of \\(31 - 3x - 3y\\)"
+      },
+      "correct_option": "D",
+      "hint": "Use the property that the sum of angles in a triangle is 180 degrees to form an initial equation. Then, for each option, consider if it forms an independent linear equation with the initial equation to create a system with a unique solution for \\(x\\) and \\(y\\).",
+      "solution": [
+        "In triangle \\(XYZ\\), the sum of the angles is 180 degrees. So, \\(x + y + 31 = 180\\).",
+        "This simplifies to \\(x + y = 149\\).",
+        "We need to find which additional piece of information is NOT sufficient to determine the values of \\(x\\) and \\(y\\).",
+        "An additional piece of information is not sufficient if it leads to an equation that is either dependent on (a multiple of) the equation \\(x + y = 149\\) or inconsistent with it.",
+        "Let's analyze Option D: 'The value of \\(31 - 3x - 3y\\)'. Let this value be \\(k\\).",
+        "So, \\(31 - 3x - 3y = k\\).",
+        "Rearranging, we get \\(3x + 3y = 31 - k\\).",
+        "Factoring out 3, we have \\(3(x + y) = 31 - k\\).",
+        "Substitute \\(x + y = 149\\) into this equation: \\(3(149) = 31 - k\\).",
+        "This gives \\(447 = 31 - k\\), which means \\(k = 31 - 447 = -416\\).",
+        "If the given value of \\(31 - 3x - 3y\\) is \\(-416\\), then the equation becomes \\(3x + 3y = 447\\), which simplifies back to \\(x + y = 149\\). This is the same as our initial equation, providing no new information to uniquely solve for \\(x\\) and \\(y\\).",
+        "If the given value of \\(31 - 3x - 3y\\) is any other number, say \\(k' \\neq -416\\), then the system would be \\(x + y = 149\\) and \\(x + y = \\tfrac{31 - k'}{3}\\). Since \\(\\tfrac{31 - k'}{3} \\neq 149\\), this system would be inconsistent and have no solution.",
+        "In both cases (dependent or inconsistent), Option D is NOT sufficient to determine unique values for \\(x\\) and \\(y\\).",
+        "Options A, B, and C would each provide a second linear equation that is independent of \\(x + y = 149\\), thus forming a system with a unique solution for \\(x\\) and \\(y\\).",
+        "Therefore, the correct answer is D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "triangle_angle_sum_and_exterior_angles"
+    },
+    {
+      "question_number": 44,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "percentages",
+      "difficulty": "hard",
+      "question": "In 2013, Chloe earned 11% more than in 2012, and in 2014 Chloe earned 6% more than in 2013. If Chloe earned \\(y\\) times as much in 2012 as in 2014, which of the following is closest to the value of \\(y\\)?",
+      "options": {
+        "A": "0.5455",
+        "B": "0.6600",
+        "C": "0.8499",
+        "D": "1.1766"
+      },
+      "correct_option": "C",
+      "hint": "Let Chloe's earnings in 2012 be \\(E\\). Calculate her earnings in 2013 based on an 11% increase from 2012. Then, calculate her earnings in 2014 based on a 6% increase from 2013. Finally, set up the equation \\(E_{2012} = y \\cdot E_{2014}\\) and solve for \\(y\\).",
+      "solution": [
+        "Let \\(E_{2012}\\) represent Chloe's earnings in 2012.",
+        "In 2013, Chloe earned 11% more than in 2012. So, \\(E_{2013} = E_{2012} \\times (1 + 0.11) = 1.11 \\times E_{2012}\\).",
+        "In 2014, Chloe earned 6% more than in 2013. So, \\(E_{2014} = E_{2013} \\times (1 + 0.06) = 1.06 \\times E_{2013}\\).",
+        "Substitute the expression for \\(E_{2013}\\) into the equation for \\(E_{2014}\\):",
+        "\\(E_{2014} = 1.06 \\times (1.11 \\times E_{2012}) = (1.06 \\times 1.11) \\times E_{2012} = 1.1766 \\times E_{2012}\\).",
+        "The problem states that Chloe earned \\(y\\) times as much in 2012 as in 2014, which can be written as \\(E_{2012} = y \\times E_{2014}\\).",
+        "To find \\(y\\), we can rearrange the equation \\(E_{2014} = 1.1766 \\times E_{2012}\\) to express \\(E_{2012}\\) in terms of \\(E_{2014}\\):",
+        "\\(E_{2012} = \\tfrac{E_{2014}}{1.1766}\\).",
+        "Comparing this with \\(E_{2012} = y \\times E_{2014}\\), we find \\(y = \\tfrac{1}{1.1766}\\).",
+        "Calculate the value: \\(y \\approx 0.8499915\\).",
+        "The closest option is 0.8499.",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "percentage_increase_decrease"
+    }
+  ]
+}
+

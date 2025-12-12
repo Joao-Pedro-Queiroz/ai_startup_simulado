@@ -125,9 +125,20 @@ public class SimuladoService {
             throw new ResponseStatusException(HttpStatus.PAYMENT_REQUIRED, "Saldo insuficiente de wins (mínimo 5).");
         }
 
-        var ultimo = repo.findMaisRecente(userId);
-        if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
+        // Verificar se há algum simulado em aberto (adaptativo, original ou custom practice)
+        List<Simulado> abertos = repo.findByIdUsuarioAndStatus(userId, "ABERTO");
+        if (!abertos.isEmpty()) {
+            Simulado aberto = abertos.get(0);
+            String tipoSimulado = aberto.getTipo();
+            String tipoFormatado = tipoSimulado.equals("ADAPTATIVO") ? "adaptativo" 
+                                  : tipoSimulado.equals("ORIGINAL") ? "original" 
+                                  : tipoSimulado.equals("CUSTOM_PRACTICE") ? "custom practice" 
+                                  : "simulado";
+            throw new ResponseStatusException(
+                HttpStatus.CONFLICT, 
+                String.format("Você já tem um %s em aberto. Finalize-o antes de começar outro practice.", tipoFormatado)
+            );
+        }
 
         long novoSaldo = Math.max(0L, user.wins() - 5L);
         UsuarioUpdateDTO debitoWins = new UsuarioUpdateDTO(
@@ -183,9 +194,20 @@ public class SimuladoService {
             throw new ResponseStatusException(HttpStatus.PAYMENT_REQUIRED, "Saldo insuficiente de wins (mínimo 5).");
         }
 
-        var ultimo = repo.findMaisRecente(userId);
-        if (ultimo != null && "ABERTO".equalsIgnoreCase(ultimo.getStatus()))
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Há um simulado em aberto. Finalize-o antes de criar outro.");
+        // Verificar se há algum simulado em aberto (adaptativo, original ou custom practice)
+        List<Simulado> abertos = repo.findByIdUsuarioAndStatus(userId, "ABERTO");
+        if (!abertos.isEmpty()) {
+            Simulado aberto = abertos.get(0);
+            String tipoSimulado = aberto.getTipo();
+            String tipoFormatado = tipoSimulado.equals("ADAPTATIVO") ? "adaptativo" 
+                                  : tipoSimulado.equals("ORIGINAL") ? "original" 
+                                  : tipoSimulado.equals("CUSTOM_PRACTICE") ? "custom practice" 
+                                  : "simulado";
+            throw new ResponseStatusException(
+                HttpStatus.CONFLICT, 
+                String.format("Você já tem um %s em aberto. Finalize-o antes de começar outro practice.", tipoFormatado)
+            );
+        }
 
         long novoSaldo = Math.max(0L, user.wins() - 5L);
         UsuarioUpdateDTO debitoWins = new UsuarioUpdateDTO(
@@ -866,8 +888,8 @@ public class SimuladoService {
             // ===== P_sc heurístico
             int p = stDTO.P_sc() == null ? 50 : stDTO.P_sc();
             double acc = attempts_sc == 0 ? 0.0 : (correct_sc * 1.0 / attempts_sc);
-            if (acc >= 0.8) p += 5;
-            if (hardExp >= 2 && acc >= 0.6) p += 3;
+            if (acc >= 0.85) p += 3;
+            if (hardExp >= 2 && acc >= 0.7) p += 2;
             if (hintsRate >= 0.5) p -= 4;
             if (solutionsRate >= 0.3) p -= 6;
             p = Math.max(0, Math.min(100, p));

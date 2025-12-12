@@ -82,14 +82,26 @@ public class TextCleaner {
             String fullMatch = matcher.group(0);
 
             // Normaliza para comparação
-            String norm1 = p1.replaceAll("\\\\[()\\[\\]{}]", "").replaceAll("\\s+", "").toLowerCase();
-            String norm2 = p2.replaceAll("\\\\[()\\[\\]{}]", "").replaceAll("\\s+", "").toLowerCase();
+            // Remover sequências LaTeX como \(, \[, \{, etc. de forma segura
+            // Usar replace simples para evitar problemas com classes de caracteres regex
+            String temp1 = p1.replace("\\(", "").replace("\\)", "").replace("\\[", "").replace("\\]", "")
+                    .replace("\\{", "").replace("\\}", "");
+            String temp2 = p2.replace("\\(", "").replace("\\)", "").replace("\\[", "").replace("\\]", "")
+                    .replace("\\{", "").replace("\\}", "");
+            String norm1 = temp1.replaceAll("\\s+", "").toLowerCase();
+            String norm2 = temp2.replaceAll("\\s+", "").toLowerCase();
             
             // Remove caracteres LaTeX e matemáticos para comparação
             // Também normaliza números que podem estar em formatos diferentes (ex: "53" vs "5" seguido de "3")
-            String clean1 = norm1.replaceAll("[(){}[\\]\\\\]", "").replaceAll("[+\\-*/=]", "").replaceAll("frac", "")
+            // Corrigido: remover caracteres especiais de forma segura usando múltiplos replaceAll
+            // para evitar problemas com classes de caracteres regex
+            String clean1 = norm1.replace("(", "").replace(")", "").replace("{", "").replace("}", "")
+                    .replace("[", "").replace("]", "").replace("\\", "")
+                    .replaceAll("[+\\-*/=]", "").replaceAll("frac", "")
                     .replaceAll("\\d+", "N"); // Normaliza números para "N"
-            String clean2 = norm2.replaceAll("[(){}[\\]\\\\]", "").replaceAll("[+\\-*/=]", "").replaceAll("frac", "")
+            String clean2 = norm2.replace("(", "").replace(")", "").replace("{", "").replace("}", "")
+                    .replace("[", "").replace("]", "").replace("\\", "")
+                    .replaceAll("[+\\-*/=]", "").replaceAll("frac", "")
                     .replaceAll("\\d+", "N"); // Normaliza números para "N"
             
             // Se são muito similares (70%+), é duplicação
@@ -138,8 +150,13 @@ public class TextCleaner {
             String norm2 = p2.replaceAll("\\s+", "").toLowerCase();
 
             // Remove caracteres especiais para comparação mais flexível
-            String clean1 = norm1.replaceAll("[(){}[\\]]", "").replaceAll("[+\\-*/]", "");
-            String clean2 = norm2.replaceAll("[(){}[\\]]", "").replaceAll("[+\\-*/]", "");
+            // Corrigido: remover caracteres de forma segura usando replace simples
+            String clean1 = norm1.replace("(", "").replace(")", "").replace("{", "").replace("}", "")
+                    .replace("[", "").replace("]", "")
+                    .replaceAll("[+\\-*/]", "");
+            String clean2 = norm2.replace("(", "").replace(")", "").replace("{", "").replace("}", "")
+                    .replace("[", "").replace("]", "")
+                    .replaceAll("[+\\-*/]", "");
 
             // Compara os primeiros caracteres (mínimo 8 para evitar falsos positivos)
             if (clean1.length() >= 8 && clean2.length() >= 8) {

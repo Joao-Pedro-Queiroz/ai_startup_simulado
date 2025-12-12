@@ -21,7 +21,7 @@
   "module_1": [
     {
       "question_number": 1,
-      "topic": "algebra",
+      "topic": "advanced_math",
       "subskill": "equivalent_expressions",
       "difficulty": "easy",
       "question": "Which expression is equivalent to \\(13(x^2 - 7)\\)?",
@@ -40,12 +40,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "distributive_property"
+      "structure": "adding_and_subtracting_exponents"
     },
     {
       "question_number": 2,
-      "topic": "problem_solving",
-      "subskill": "interpreting_graphs",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
       "difficulty": "medium",
       "question": "The scatterplot shows 5 measurements of the body length, in centimeters, of a New Zealand fur seal from ages 1 to 6 years, along with a line of best fit. According to the line of best fit, what is the predicted body length, to the nearest 10 cm, of a seal that is 3 years old?",
       "options": {},
@@ -80,12 +80,12 @@
         "yLabel": "Body length (cm)"
       },
       "format": "free_response",
-      "structure": "reading_lines_of_best_fit"
+      "structure": "evaluating_scatterplot"
     },
     {
       "question_number": 3,
       "topic": "algebra",
-      "subskill": "one_variable_linear_equations",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "If \\(6a + 36 = 54\\), what is the value of \\(a + 6\\)?",
       "options": {
@@ -103,11 +103,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "solving_linear_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 4,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "probability",
       "difficulty": "easy",
       "question": "A sleep study consisted of 59 participants, and 53 of them averaged more than 120 minutes of REM sleep per night. If a participant is selected at random, what is the probability that the participant averaged more than 120 minutes of REM sleep per night?",
@@ -126,12 +126,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "basic_probability"
+      "structure": "evaluating_probability"
     },
     {
       "question_number": 5,
       "topic": "algebra",
-      "subskill": "linear_inequalities",
+      "subskill": "linear_inequality",
       "difficulty": "easy",
       "question": "A soccer team wants to earn at least $1{,}320 by selling coupon books. The team earns $12 per coupon book. Which inequality describes all possible values of the number of coupon books, \\(n\\), the team can sell to meet the goal?",
       "options": {
@@ -149,12 +149,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "writing_inequalities"
+      "structure": "identifying_solutions_of_linear_inequalities"
     },
     {
       "question_number": 6,
-      "topic": "geometry",
-      "subskill": "triangle_inequalities",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "medium",
       "question": "The perimeter of an obtuse triangle is 32 meters. Two sides measure 8 meters and 9 meters. What is the length, in meters, of the third side?",
       "options": {
@@ -172,12 +172,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "triangle_properties"
+      "structure": "triangle_angle_sum_and_exterior_angles"
     },
     {
       "question_number": 7,
-      "topic": "problem_solving",
-      "subskill": "linear_models",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "medium",
       "question": "An event planner pays a one-time fee of $30 to rent a skating rink plus $10.25 per attendee. If the budget is $250, what is the greatest number of attendees possible without exceeding the budget?",
       "options": {},
@@ -191,12 +191,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "two_step_linear_inequalities"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 8,
-      "topic": "algebra",
-      "subskill": "polynomial_operations",
+      "topic": "advanced_math",
+      "subskill": "polynomials",
       "difficulty": "medium",
       "question": "Which expression is equivalent to \\((5x^3 - 3x + 8) - (9x^6 + 5x - 3)\\)?",
       "options": {
@@ -214,12 +214,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "subtracting_polynomials"
+      "structure": "evaluating_polynomials"
     },
     {
       "question_number": 9,
-      "topic": "geometry",
-      "subskill": "polygons",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
       "question": "The function \\(f(x) = 180(x - 2)\\) gives the sum of the interior angles, in degrees, of a polygon with \\(x\\) sides. What is the sum of the interior angles of a polygon with 25 sides?",
       "options": {},
@@ -232,12 +232,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "polygon_angle_sums"
+      "structure": "identifying_angle_relationships"
     },
     {
       "question_number": 10,
-      "topic": "algebra",
-      "subskill": "functions_from_tables",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
       "difficulty": "easy",
       "question": "For the function \\(h\\), the table shows three values of \\(x\\) and their corresponding values of \\(h(x)\\). Which equation could define \\(h\\)?",
       "options": {
@@ -267,12 +267,12 @@
         ]
       },
       "format": "multiple_choice",
-      "structure": "matching_function_rules"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 11,
       "topic": "algebra",
-      "subskill": "systems_of_linear_equations",
+      "subskill": "system_of_linear_equations",
       "difficulty": "medium",
       "question": "The system \\(x + 2y = 19\\) and \\(5x + y = 2\\) has solution \\((x, y)\\). What is the value of \\(6x + 3y\\)?",
       "options": {
@@ -291,12 +291,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "solving_linear_systems"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 12,
-      "topic": "problem_solving",
-      "subskill": "interpreting_linear_functions",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "The function \\(W(x) = 4x + 80\\) gives the total time, in minutes, it takes a gardener to water \\(x\\) plants and mow the grass. According to the function, how many minutes does it take the gardener to mow the grass?",
       "options": {},
@@ -309,12 +309,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "interpret_linear_models"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 13,
-      "topic": "algebra",
-      "subskill": "systems_non_linear",
+      "topic": "advanced_math",
+      "subskill": "linear_and_quadratic",
       "difficulty": "medium",
       "question": "Consider the system \\(x^2 + y = 111\\) and \\(-3x + y = 3\\). The solutions are of the form \\((x, y)\\). Which of the following is a possible value of \\(x\\)?",
       "options": {
@@ -333,12 +333,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "solving_nonlinear_systems"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 14,
-      "topic": "geometry",
-      "subskill": "similarity_and_dilation",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
       "question": "Triangle \\(ABC\\) has \\(\\angle A = 60^{\\circ}\\). The triangle is dilated by a scale factor of 5 to obtain triangle \\(XYZ\\), where vertex \\(X\\) corresponds to vertex \\(A\\). What is the measure, in degrees, of \\(\\angle X\\)?",
       "options": {
@@ -355,12 +355,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "angle_preservation_dilation"
+      "structure": "triangle_similarity_and_congruence"
     },
     {
       "question_number": 15,
-      "topic": "geometry",
-      "subskill": "circles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
       "difficulty": "medium",
       "question": "In the \\(xy\\)-plane, the graph of \\(x^2 - 16x + y^2 - 10y - 55 = 0\\) is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
       "options": {
@@ -378,12 +378,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "circle_geometry"
+      "structure": "circle_equations_xy_plane"
     },
     {
       "question_number": 16,
-      "topic": "geometry",
-      "subskill": "right_triangle_trigonometry",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
       "difficulty": "easy",
       "question": "In a right triangle, the leg adjacent to angle \\(x\\) measures 39 units, the leg opposite \\(x\\) measures 40 units, and the hypotenuse connects the endpoints of those legs. If \\(\\tan x^{\\circ} = \\tfrac{c}{39}\\), what is the value of \\(c\\)?",
       "options": {
@@ -401,11 +401,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "basic_trig_ratios"
+      "structure": "trig_ratios"
     },
     {
       "question_number": 17,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "medium",
       "question": "The function \\(C(t) = 240\\left(\\tfrac{53}{52}\\right)^{t - 15} + 7\\) models the estimated number of cephalopods in an area, where \\(t\\) is the number of months since a study began. After how many months was the population estimated to be 247?",
@@ -420,11 +420,11 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "solving_exponential_equations"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 18,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "medium",
       "question": "An object weighs 220.00 pounds on Earth and 234.52 pounds on Saturn. Its weight on Jupiter is 252.8\\% of its Earth weight. If the object's weight on Saturn is \\(x\\)% of its weight on Jupiter, which value is closest to \\(x\\)?",
@@ -442,12 +442,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "multi_step_percent"
+      "structure": "applying_percentages"
     },
     {
       "question_number": 19,
-      "topic": "advanced_math",
-      "subskill": "trigonometric_functions",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
       "difficulty": "easy",
       "question": "What is the value of \\(\\sin(18\\pi)\\)?",
       "options": {
@@ -464,12 +464,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "evaluating_trig_functions"
+      "structure": "trig_ratios"
     },
     {
       "question_number": 20,
-      "topic": "geometry",
-      "subskill": "similar_figures",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "easy",
       "question": "Rectangles \\(ABCD\\) and \\(EFGH\\) are similar. Each side of \\(EFGH\\) is 7 times the length of the corresponding side of \\(ABCD\\). If the area of \\(ABCD\\) is 68 square units, what is the area of \\(EFGH\\), in square units?",
       "options": {},
@@ -482,12 +482,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "area_scale_factor"
+      "structure": "area_of_2d_figures"
     },
     {
       "question_number": 21,
-      "topic": "geometry",
-      "subskill": "angles_and_units",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "medium",
       "question": "Angle \\(S\\) measures \\(\\tfrac{8\\pi}{13}\\) radians. Angle \\(T\\) measures three times as much as angle \\(S\\). Which expression represents the measure, in degrees, of angle \\(T\\)?",
       "options": {
@@ -505,12 +505,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "radian_degree_conversion"
+      "structure": "identifying_angle_relationships"
     },
     {
       "question_number": 22,
       "topic": "advanced_math",
-      "subskill": "quadratic_functions",
+      "subskill": "quadratic_equations",
       "difficulty": "hard",
       "question": "A quadratic function \\(f\\) has vertex at \\((1,7)\\) and passes through the points \\((2,53)\\) and \\((-1,191)\\). What is the value of \\(f(-2) - f(0)\\)?",
       "options": {
@@ -529,14 +529,14 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "vertex_form_applications"
+      "structure": "evaluating_quadratic_functions"
     }
   ],
   "module_2_easy": [
     {
       "question_number": 1,
       "topic": "algebra",
-      "subskill": "one_variable_linear_equations",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "What is the solution to \\(k + 12 = 336\\)?",
       "options": {
@@ -553,12 +553,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "solving_linear_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 2,
-      "topic": "problem_solving",
-      "subskill": "unit_conversions",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "easy",
       "question": "What length, in centimeters, is equivalent to 51 meters? (1 meter = 100 centimeters)",
       "options": {
@@ -574,12 +574,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "metric_conversions"
+      "structure": "converting_units"
     },
     {
       "question_number": 3,
       "topic": "algebra",
-      "subskill": "systems_of_linear_equations",
+      "subskill": "system_of_linear_equations",
       "difficulty": "easy",
       "question": "The graph of a system of two linear equations is shown. What is the solution \\((x, y)\\) to the system?",
       "options": {
@@ -592,16 +592,16 @@
       "hint": "Look for the point where the two lines intersect.",
       "solution": [
         "The lines cross at \\((2, 2)\\).",
-        "Therefore the system’s solution is \\((2, 2)\\)."
+        "Therefore the system's solution is \\((2, 2)\\)."
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "reading_line_intersections"
+      "structure": "identifying_solution"
     },
     {
       "question_number": 4,
-      "topic": "advanced_math",
-      "subskill": "interpreting_graphs",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
       "difficulty": "easy",
       "question": "The exponential graph shown has a y-intercept at \\((0, y)\\). What is the value of \\(y\\)?",
       "options": {},
@@ -613,12 +613,12 @@
       ],
       "representation": "graph",
       "format": "free_response",
-      "structure": "graph_reading"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 5,
-      "topic": "problem_solving",
-      "subskill": "data_interpretation",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
       "difficulty": "easy",
       "question": "Based on the bar graph of extracurricular activities, how many more students are in drama than in chess?",
       "options": {
@@ -635,12 +635,12 @@
       ],
       "representation": "bar_graph",
       "format": "multiple_choice",
-      "structure": "bar_graph_analysis"
+      "structure": "evaluating_scatterplot"
     },
     {
       "question_number": 6,
-      "topic": "algebra",
-      "subskill": "rational_expressions",
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
       "difficulty": "easy",
       "question": "Which expression is equivalent to \\(\\dfrac{8x(x-7) - 3(x-7)}{2x - 14}\\) for \\(x > 7\\)?",
       "options": {
@@ -658,11 +658,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "simplifying_rationals"
+      "structure": "multiplying_and_dividing_exponents"
     },
     {
       "question_number": 7,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "easy",
       "question": "Out of 300 seeds planted, 80% sprouted. How many seeds sprouted?",
@@ -674,12 +674,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "percent_application"
+      "structure": "applying_percentages"
     },
     {
       "question_number": 8,
-      "topic": "problem_solving",
-      "subskill": "rates",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "easy",
       "question": "Ty must walk at least 24 km. If Ty walks 4 km per hour, what is the minimum number of hours required?",
       "options": {
@@ -695,12 +695,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "distance_rate_time"
+      "structure": "converting_units"
     },
     {
       "question_number": 9,
       "topic": "algebra",
-      "subskill": "tables_and_equations",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "For the equation \\(y = x + 4\\), which table lists three \\((x, y)\\) pairs that satisfy the equation?",
       "options": {
@@ -717,12 +717,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "function_tables"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 10,
       "topic": "algebra",
-      "subskill": "one_variable_linear_equations",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "The function \\(g\\) is defined by \\(g(x) = 6x\\). For what value of \\(x\\) is \\(g(x) = 54\\)?",
       "options": {},
@@ -733,12 +733,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "solving_linear_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 11,
-      "topic": "problem_solving",
-      "subskill": "linear_models",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "Sean rents a tent for $11 per day plus a one-time insurance fee of $10. Which equation represents the total cost \\(c\\) in dollars for \\(d\\) days?",
       "options": {
@@ -754,12 +754,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "linear_cost_models"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 12,
-      "topic": "geometry",
-      "subskill": "parallel_lines",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
       "question": "Lines \\(p\\) and \\(q\\) are parallel and transversal \\(t\\) cuts both, forming angles of \\(x^{\\circ}\\) and \\(142^{\\circ}\\) as shown. What is the value of \\(x + 142\\)?",
       "options": {
@@ -776,12 +776,12 @@
       ],
       "representation": "diagram",
       "format": "multiple_choice",
-      "structure": "linear_pair_angles"
+      "structure": "parallel_lines_and_transversals"
     },
     {
       "question_number": 13,
-      "topic": "geometry",
-      "subskill": "area",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "easy",
       "question": "What is the area, in square centimeters, of a rectangle with length 34 cm and width 29 cm?",
       "options": {},
@@ -792,12 +792,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "area_rectangles"
+      "structure": "area_of_2d_figures"
     },
     {
       "question_number": 14,
       "topic": "algebra",
-      "subskill": "linear_functions",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "For the linear function \\(h(x) = x + b\\), it is known that \\(h(0) = 45\\). What is the value of \\(b\\)?",
       "options": {},
@@ -809,12 +809,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "linear_function_parameters"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 15,
       "topic": "algebra",
-      "subskill": "lines_and_slope",
+      "subskill": "linear_equations",
       "difficulty": "easy",
       "question": "Which equation represents the line passing through \\((0, 5)\\) that is parallel to \\(y = 7x + 4\\)?",
       "options": {
@@ -831,12 +831,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "parallel_lines_equations"
+      "structure": "properties_of_a_line"
     },
     {
       "question_number": 16,
       "topic": "algebra",
-      "subskill": "linear_inequalities",
+      "subskill": "linear_inequality",
       "difficulty": "easy",
       "question": "An inequality is graphed with a shaded region to the right of the boundary line shown. Which ordered pair is a solution?",
       "options": {
@@ -853,11 +853,11 @@
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "graphing_inequalities"
+      "structure": "identifying_solutions_of_linear_inequalities"
     },
     {
       "question_number": 17,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "easy",
       "question": "The number of bacteria in a liquid medium doubles every day. There are 44,000 bacteria at the start of observation. Which expression models the number \\(y\\) of bacteria after \\(t\\) days?",
@@ -875,11 +875,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "exponential_growth_models"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 18,
-      "topic": "algebra",
+      "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "easy",
       "question": "The product of a positive number \\(x\\) and the number 8 greater than \\(x\\) is 180. What is \\(x\\)?",
@@ -897,12 +897,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "quadratic_word_problems"
+      "structure": "quadratic_word_problem"
     },
     {
       "question_number": 19,
-      "topic": "algebra",
-      "subskill": "factoring",
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
       "difficulty": "easy",
       "question": "Which value of \\(x\\) satisfies \\((5x + 4)(2x - 5) = 0\\)?",
       "options": {
@@ -919,12 +919,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "zero_product_property"
+      "structure": "evaluating_solutions_of_quadratics"
     },
     {
       "question_number": 20,
-      "topic": "problem_solving",
-      "subskill": "linear_models",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "Keenan made 32 cups of vegetable broth. He filled \\(x\\) small jars that hold 3 cups each and \\(y\\) large jars that hold 5 cups each, giving the equation \\(3x + 5y = 32\\). What does \\(5y\\) represent?",
       "options": {
@@ -944,8 +944,8 @@
     },
     {
       "question_number": 21,
-      "topic": "geometry",
-      "subskill": "area",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "easy",
       "question": "The area \\(A\\) of a rectangular cutting board is given by \\(A = w(w + 9)\\), where \\(w\\) is the width in centimeters. Which expression represents the length of the board?",
       "options": {
@@ -961,12 +961,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "area_rectangles"
+      "structure": "area_of_2d_figures"
     },
     {
       "question_number": 22,
-      "topic": "geometry",
-      "subskill": "angles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
       "question": "Angle \\(R\\) measures \\(\\tfrac{2\\pi}{3}\\) radians and angle \\(T\\) is \\(\\tfrac{5\\pi}{12}\\) radians greater than angle \\(R\\). What is the measure of angle \\(T\\) in degrees?",
       "options": {
@@ -984,14 +984,14 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "radian_degree_conversion"
+      "structure": "identifying_angle_relationships"
     }
   ],
   "module_2_hard": [
     {
       "question_number": 1,
       "topic": "algebra",
-      "subskill": "linear_functions",
+      "subskill": "linear_equations",
       "difficulty": "hard",
       "question": "For the linear function \\(g\\), the graph of \\(y = g(x)\\) has slope 5 and passes through the point \\((2, 47)\\). Which equation defines \\(g\\)?",
       "options": {
@@ -1009,12 +1009,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "point_slope_form"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 2,
-      "topic": "problem_solving",
-      "subskill": "linear_models",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "hard",
       "question": "A plumber charges according to a linear function \\(f(h)\\), where \\(h\\) is the number of hours worked. The table shows two jobs.\n\n\\[\\begin{array}{c|c}\n h & f(h) \\\\\\hline\n 1 & 140 \\\\\n 3 & 250 \\\\\n\\end{array}\\]\n\nWhich equation represents \\(f(h)\\)?",
       "options": {
@@ -1032,12 +1032,12 @@
       ],
       "representation": "table",
       "format": "multiple_choice",
-      "structure": "two_point_linear_model"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 3,
       "topic": "advanced_math",
-      "subskill": "polynomial_functions",
+      "subskill": "polynomials",
       "difficulty": "hard",
       "question": "Exactly how many \\(x\\)-intercepts does the graph of \\(f(x) = x(x - 10)^2 (x - 11)^3\\) have?",
       "options": {
@@ -1055,12 +1055,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "counting_roots"
+      "structure": "evaluating_polynomials"
     },
     {
       "question_number": 4,
-      "topic": "geometry",
-      "subskill": "circles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
       "difficulty": "hard",
       "question": "The equation \\(2x^2 + 2y^2 + tx + ty - 78 = 0\\), where \\(t > 0\\), defines a circle whose radius is \\(\\sqrt{41}\\). What is the value of \\(t\\)?",
       "options": {},
@@ -1074,12 +1074,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "complete_the_square"
+      "structure": "circle_equations_xy_plane"
     },
     {
       "question_number": 5,
-      "topic": "geometry",
-      "subskill": "triangle_properties",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "hard",
       "question": "In triangle \\(RST\\), \\(m\\angle R = 29^{\\circ}\\). Which of the following statements is sufficient to prove that triangle \\(RST\\) is isosceles?",
       "options": {
@@ -1097,12 +1097,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "angle_properties"
+      "structure": "triangle_angle_sum_and_exterior_angles"
     },
     {
       "question_number": 6,
-      "topic": "problem_solving",
-      "subskill": "linear_functions",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "hard",
       "question": "A polygonal chain has initial length 33 cm. Each new segment added has length \\(8 - r\\) cm. Which function gives the total length \\(f(x)\\), in cm, after \\(x\\) segments are added?",
       "options": {
@@ -1119,12 +1119,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "function_modeling"
+      "structure": "interpreting_linear_equations"
     },
     {
       "question_number": 7,
       "topic": "algebra",
-      "subskill": "solving_linear_equations",
+      "subskill": "linear_equations",
       "difficulty": "hard",
       "question": "If \\(\\tfrac{9}{6}(x - 5) - 36 = \\tfrac{7}{6}(x - 5) + 28\\), what is the value of \\(x - 5\\)?",
       "options": {},
@@ -1137,12 +1137,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "one_variable_linear_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 8,
-      "topic": "problem_solving",
-      "subskill": "basic_equations",
+      "topic": "algebra",
+      "subskill": "linear_equations",
       "difficulty": "hard",
       "question": "A chemist combines 30 grams of compound \\(A\\), 45 grams of compound \\(B\\), and \\(x\\) grams of compound \\(C\\). The resulting mixture has a mass of 135 grams. What is the value of \\(x\\)?",
       "options": {
@@ -1160,12 +1160,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "single_variable_equations"
+      "structure": "evaluating_linear_functions"
     },
     {
       "question_number": 9,
       "topic": "algebra",
-      "subskill": "systems_of_inequalities",
+      "subskill": "linear_inequality",
       "difficulty": "hard",
       "question": "Which point \\((x, y)\\) satisfies the system \\(y \\le x + 15\\) and \\(y \\ge -4x - 15\\)?",
       "options": {
@@ -1183,12 +1183,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "testing_systems"
+      "structure": "identifying_solutions_of_linear_inequalities"
     },
     {
       "question_number": 10,
-      "topic": "geometry",
-      "subskill": "triangle_properties",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
       "difficulty": "hard",
       "question": "An equilateral triangle has a height of \\(47\\sqrt{3}\\) units. What is the length of one side of the triangle?",
       "options": {
@@ -1206,11 +1206,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "special_triangles"
+      "structure": "triangle_angle_sum_and_exterior_angles"
     },
     {
       "question_number": 11,
-      "topic": "algebra",
+      "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "hard",
       "question": "For the equation \\((x + k)^2 + 37 = 37\\), where \\(k\\) is a constant, how many distinct real solutions does the equation have?",
@@ -1229,12 +1229,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "quadratic_roots"
+      "structure": "evaluating_solutions_of_quadratics"
     },
     {
       "question_number": 12,
-      "topic": "geometry",
-      "subskill": "circles",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
       "difficulty": "hard",
       "question": "A circle is inscribed in a square so that it touches the midpoint of each side. If the diagonal of the square is 228 units, what is the area of the circle?",
       "options": {
@@ -1252,11 +1252,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "circle_in_square"
+      "structure": "radius_diameter_circumference"
     },
     {
       "question_number": 13,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
       "question": "In 2005 there were 6.22 pheasants per mile of road. Each year from 2005 to 2015 the number decreased by 3.5% of the previous year's value. Which expression best approximates the number of pheasants per mile in 2015?",
@@ -1275,11 +1275,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "compound_decay"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 14,
-      "topic": "problem_solving",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "hard",
       "question": "The expression \\(kx\\) represents decreasing a positive force \\(x\\) by 0.34%. What is the value of \\(k\\)?",
@@ -1292,12 +1292,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "percentage_change"
+      "structure": "percentage_increase_decrease"
     },
     {
       "question_number": 15,
-      "topic": "problem_solving",
-      "subskill": "scale_models",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "hard",
       "question": "A square map has side length 35 inches and a scale of 1 inch to 13 miles. A smaller version is printed with side length 70% shorter. On the smaller map, what actual distance (in miles) does 1 inch represent?",
       "options": {
@@ -1315,11 +1315,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "scaling_proportions"
+      "structure": "converting_units"
     },
     {
       "question_number": 16,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
       "question": "The function \\(f(x) = a^x + b\\) has a y-intercept at \\((0, -20)\\) and passes through \\((2, 43)\\). With \\(a > 0\\), what is the value of \\(a - b\\)?",
@@ -1333,12 +1333,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "solving_exponential_parameters"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 17,
-      "topic": "problem_solving",
-      "subskill": "unit_rates",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "hard",
       "question": "One gallon of sealant costs $23 and covers 250 square feet. If a deck has area \\(d\\) and must be coated twice, which equation gives the total cost \\(c\\)?",
       "options": {
@@ -1356,11 +1356,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "unit_rate_applications"
+      "structure": "converting_units"
     },
     {
       "question_number": 18,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
       "question": "A bacterial culture starts with 66,000 bacteria and doubles every hour. Which expression gives the number of bacteria \\(y\\) after \\(t\\) hours?",
@@ -1378,12 +1378,12 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "exponential_growth_models"
+      "structure": "exponential_function_word_problem"
     },
     {
       "question_number": 19,
-      "topic": "geometry",
-      "subskill": "triangle_properties",
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
       "difficulty": "hard",
       "question": "An equilateral triangle has perimeter 876 centimeters, and its vertices lie on a circle of radius \\(w\\sqrt{3}\\) centimeters. What is \\(w\\)?",
       "options": {
@@ -1402,11 +1402,11 @@
       ],
       "representation": "",
       "format": "multiple_choice",
-      "structure": "circumradius_equilateral"
+      "structure": "central_and_inscribed_angles"
     },
     {
       "question_number": 20,
-      "topic": "advanced_math",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
       "question": "The function \\(f(x) = a b^{x/n}\\) has \\(f(5) = 7\\) and \\(f(8) = 189\\), where \\(a\\), \\(b\\), and \\(n\\) are constants with \\(b,n\\) integers. What is \\(f(10)\\)?",
@@ -1421,12 +1421,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "exponential_equations"
+      "structure": "evaluating_exponential_functions"
     },
     {
       "question_number": 21,
       "topic": "algebra",
-      "subskill": "absolute_value_functions",
+      "subskill": "absolute_value",
       "difficulty": "hard",
       "question": "Let \\(f(x) = \\tfrac{|x|}{a} - 16\\) with \\(a < 0\\). What is the product \\(f(17a) \\cdot f(8a)\\)?",
       "options": {},
@@ -1440,12 +1440,12 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "absolute_value_properties"
+      "structure": "absolute_value_functions"
     },
     {
       "question_number": 22,
-      "topic": "algebra",
-      "subskill": "factoring_polynomials",
+      "topic": "advanced_math",
+      "subskill": "polynomials",
       "difficulty": "hard",
       "question": "The polynomial \\(6x^4 + 17x^2 + 7\\) can be factored as \\((3x^2 + a)(2x^2 + b)\\), where \\(a\\) and \\(b\\) are positive integers, and also as \\((3x^2 + c)(2x^2 + d)\\), where \\(c\\) and \\(d\\) are positive nonintegers. What is the value of \\(a + c\\)?",
       "options": {},
@@ -1460,7 +1460,7 @@
       ],
       "representation": "",
       "format": "free_response",
-      "structure": "factoring_quartics"
+      "structure": "evaluating_polynomials"
     }
   ]
 }

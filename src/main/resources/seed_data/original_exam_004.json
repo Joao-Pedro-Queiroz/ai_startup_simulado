@@ -1,0 +1,730 @@
+{
+  "exam_id": "SAT_ORIGINAL_004",
+  "version": 1,
+  "name": "SAT Practice Test #4",
+  "difficulty_level": "standard",
+  "is_active": true,
+  "is_adaptive": true,
+  "metadata": {
+    "total_questions": 66,
+    "module_1_questions": 22,
+    "module_2_questions": 22,
+    "threshold": 16,
+    "duration_minutes": 70,
+    "topics_distribution": {
+      "algebra": 12,
+      "advanced_math": 14,
+      "problem_solving_and_data_analysis": 15,
+      "geoemtry_and_trigonometry": 7
+    }
+  },
+  "module_1": [
+    {
+      "question_number": 1,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "probability",
+      "difficulty": "easy",
+      "question": "The table summarizes members of a local organization by age and whether they live north or south of Center St.\n\n| | Live north of Center St. | Live south of Center St. | Total |\n|--|-------------------------|--------------------------|-------|\n| Less than 45 years old | 10 | 11 | 21 |\n| At least 45 years old | 25 | 89 | 114 |\n| Total | 35 | 100 | 135 |\n\nIf a member of the organization is selected at random, what is the probability that the selected member is at least 45 years old?",
+      "options": {
+        "A": "\\(\\tfrac{21}{135}\\)",
+        "B": "\\(\\tfrac{35}{135}\\)",
+        "C": "\\(\\tfrac{100}{135}\\)",
+        "D": "\\(\\tfrac{114}{135}\\)"
+      },
+      "correct_option": "D",
+      "hint": "Find the total number of members who are at least 45 years old from the table, then divide by the total number of members.",
+      "solution": [
+        "From the table, the total number of members in the organization is 135.",
+        "The number of members who are at least 45 years old is 114 (from the 'Total' column of the 'At least 45 years old' row).",
+        "The probability is the ratio of favorable outcomes to total outcomes:",
+        "Probability = \\(\\tfrac{114}{135}\\).",
+        "This matches option D."
+      ],
+      "representation": "table",
+      "format": "multiple_choice",
+      "structure": "evaluating_probability"
+    },
+    {
+      "question_number": 2,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "A number \\(x\\) is at least twice the value of a number \\(y\\). If the value of \\(y\\) is 51, which inequality represents the possible values of \\(x\\)?",
+      "options": {
+        "A": "\\(x \\geq 49\\)",
+        "B": "\\(x \\geq 53\\)",
+        "C": "\\(x \\geq 102\\)",
+        "D": "\\(x \\geq 104\\)"
+      },
+      "correct_option": "C",
+      "hint": "Translate 'at least twice' into an inequality and substitute the given value of \\(y\\).",
+      "solution": [
+        "The phrase 'x is at least twice the value of y' can be written as the inequality: \\(x \\geq 2y\\).",
+        "Given that the value of \\(y\\) is 51, substitute this into the inequality: \\(x \\geq 2(51)\\).",
+        "Multiply the numbers: \\(x \\geq 102\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "linear_inequality_word_problem"
+    },
+    {
+      "question_number": 3,
+      "topic": "algebra",
+      "subskill": "isolating_variables",
+      "difficulty": "easy",
+      "question": "The given equation relates the positive numbers \\(m\\), \\(n\\), and \\(p\\).\n\n\\[11m = 6(n + p)\\]\n\nWhich equation correctly gives \\(m\\) in terms of \\(n\\) and \\(p\\)?",
+      "options": {
+        "A": "\\(m = \\tfrac{6(n + p)}{11}\\)",
+        "B": "\\(m = 6(n + p)\\)",
+        "C": "\\(m = 6(n + p) - 11\\)",
+        "D": "\\(m = 6 - n - p - 11\\)"
+      },
+      "correct_option": "A",
+      "hint": "To isolate \\(m\\), divide both sides of the equation by 11.",
+      "solution": [
+        "Given the equation: \\(11m = 6(n + p)\\).",
+        "To solve for \\(m\\), divide both sides of the equation by 11.",
+        "This yields: \\(m = \\tfrac{6(n + p)}{11}\\).",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "one_step_isolating_variables"
+    },
+    {
+      "question_number": 4,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
+      "difficulty": "easy",
+      "question": "In the right triangle shown, what is the value of \\(a\\)?\n\nNote: Figure not drawn to scale.",
+      "options": {
+        "A": "25",
+        "B": "65",
+        "C": "90",
+        "D": "115"
+      },
+      "correct_option": "B",
+      "hint": "Use the fact that the sum of angles in a triangle is 180 degrees, and one angle is a right angle (90 degrees).",
+      "solution": [
+        "In a right triangle, one angle is 90 degrees.",
+        "The sum of all angles in a triangle is 180 degrees.",
+        "Given: one angle is 25°, one angle is 90° (right angle), and one angle is \\(a\\)°.",
+        "Set up the equation: \\(25 + 90 + a = 180\\)",
+        "Simplify: \\(115 + a = 180\\)",
+        "Subtract 115: \\(a = 65\\)",
+        "Therefore, the value of \\(a\\) is 65.",
+        "This matches option B."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "triangle_angle_sum_and_exterior_angles"
+    },
+    {
+      "question_number": 5,
+      "topic": "algebra",
+      "subskill": "isolating_variables",
+      "difficulty": "easy",
+      "question": "If \\(3x - 18 = -12\\), what is the value of \\(x - 6\\)?",
+      "options": {
+        "A": "-14",
+        "B": "-12",
+        "C": "-4",
+        "D": "-2"
+      },
+      "correct_option": "C",
+      "hint": "First solve for \\(x\\), then substitute into \\(x - 6\\). Alternatively, notice that \\(3x - 18 = 3(x - 6)\\).",
+      "solution": [
+        "Given: \\(3x - 18 = -12\\).",
+        "Add 18 to both sides: \\(3x = 6\\).",
+        "Divide by 3: \\(x = 2\\).",
+        "Substitute into \\(x - 6\\): \\(x - 6 = 2 - 6 = -4\\).",
+        "Alternatively, notice that \\(3x - 18 = 3(x - 6)\\), so \\(3(x - 6) = -12\\), and dividing by 3 gives \\(x - 6 = -4\\).",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "two_step_isolating_variables"
+    },
+    {
+      "question_number": 6,
+      "topic": "advanced_math",
+      "subskill": "radicals_and_exponents",
+      "difficulty": "easy",
+      "question": "If \\(x = \\sqrt[2n]{2x^n + 35}\\), where \\(n\\) is a positive integer constant, what is the value of \\(x^n\\)?",
+      "options": {},
+      "correct_option": "7",
+      "hint": "Raise both sides of the equation to the power \\(2n\\) to eliminate the radical, then substitute \\(u = x^n\\) to solve a quadratic equation.",
+      "solution": [
+        "Given: \\(x = \\sqrt[2n]{2x^n + 35}\\).",
+        "Raise both sides to the power \\(2n\\): \\(x^{2n} = 2x^n + 35\\).",
+        "Since \\(x^{2n} = (x^n)^2\\), let \\(u = x^n\\).",
+        "Substitute: \\(u^2 = 2u + 35\\).",
+        "Rearrange: \\(u^2 - 2u - 35 = 0\\).",
+        "Factor: \\((u - 7)(u + 5) = 0\\).",
+        "So \\(u = 7\\) or \\(u = -5\\).",
+        "Since \\(n\\) is a positive integer and \\(x = \\sqrt[2n]{2x^n + 35}\\) must be positive (as it's a root of a positive expression), we have \\(x > 0\\).",
+        "If \\(x > 0\\) and \\(n > 0\\), then \\(x^n > 0\\), so \\(u = x^n = 7\\).",
+        "Therefore, \\(x^n = 7\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "evaluating_exponent_expressions"
+    },
+    {
+      "question_number": 7,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
+      "difficulty": "easy",
+      "question": "In the triangle shown, what is the value of \\(\\sin y\\)?\n\nNote: Figure not drawn to scale.",
+      "options": {
+        "A": "\\(\\tfrac{5}{26}\\)",
+        "B": "\\(\\tfrac{21}{26}\\)",
+        "C": "\\(\\tfrac{26}{21}\\)",
+        "D": "\\(\\tfrac{26}{5}\\)"
+      },
+      "correct_option": "A",
+      "hint": "In a right triangle, \\(\\sin(\\text{angle}) = \\tfrac{\\text{opposite}}{\\text{hypotenuse}}\\). Identify which side is opposite to angle \\(y\\) and which is the hypotenuse.",
+      "solution": [
+        "In a right triangle, the sine of an angle is the ratio of the length of the side opposite the angle to the length of the hypotenuse.",
+        "For angle \\(y\\), the side opposite is 5, and the hypotenuse is 26.",
+        "Therefore, \\(\\sin y = \\tfrac{5}{26}\\).",
+        "This matches option A."
+      ],
+      "representation": "diagram",
+      "format": "multiple_choice",
+      "structure": "trig_ratios"
+    },
+    {
+      "question_number": 8,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "A bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function \\(f\\) shown, where \\(y = f(x)\\), estimates the account balance, in dollars, in this bank account \\(x\\) months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?",
+      "options": {},
+      "correct_option": "10",
+      "hint": "The initial deposit corresponds to the account balance when \\(x = 0\\), which is the y-intercept of the graph.",
+      "solution": [
+        "The initial deposit is the account balance at \\(x = 0\\) (when the account was first opened).",
+        "Looking at the graph, when \\(x = 0\\), the line intersects the y-axis at \\(y = 10\\).",
+        "Therefore, the initial deposit is $10."
+      ],
+      "representation": "graph",
+      "format": "free_response",
+      "structure": "identifying_intercept"
+    },
+    {
+      "question_number": 9,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "A line segment that has a length of 117 centimeters (cm) is divided into three parts. One part is 47 cm long. The other two parts have lengths that are equal to each other. What is the length, in cm, of one of the other two parts of equal length?",
+      "options": {},
+      "correct_option": "35",
+      "hint": "Subtract the length of the known part from the total length, then divide the remainder by 2.",
+      "solution": [
+        "Total length of the line segment: 117 cm",
+        "Length of one part: 47 cm",
+        "Length of the remaining two equal parts: 117 - 47 = 70 cm",
+        "Since the other two parts are equal, divide by 2: 70 ÷ 2 = 35 cm",
+        "Therefore, each of the other two parts has a length of 35 cm."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "geometry_linear_word_problem"
+    },
+    {
+      "question_number": 10,
+      "topic": "algebra",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "easy",
+      "question": "If the solution to the given system of equations is \\((x, y)\\), which of the following equations is true?\n\n\\[2x + 2y = 60\\]\n\\[x + y = 4x\\]",
+      "options": {
+        "A": "\\(4x = 2\\)",
+        "B": "\\(4x = 30\\)",
+        "C": "\\(4x = 58\\)",
+        "D": "\\(4x = 60\\)"
+      },
+      "correct_option": "B",
+      "hint": "From the second equation, solve for \\(y\\) in terms of \\(x\\), then substitute into the first equation.",
+      "solution": [
+        "Given the system:",
+        "1) \\(2x + 2y = 60\\)",
+        "2) \\(x + y = 4x\\)",
+        "From equation (2): \\(x + y = 4x\\)",
+        "Subtract \\(x\\) from both sides: \\(y = 3x\\)",
+        "Substitute \\(y = 3x\\) into equation (1):",
+        "\\(2x + 2(3x) = 60\\)",
+        "\\(2x + 6x = 60\\)",
+        "\\(8x = 60\\)",
+        "Divide by 2: \\(4x = 30\\)",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "identifying_solution"
+    },
+    {
+      "question_number": 11,
+      "topic": "advanced_math",
+      "subskill": "polynomials",
+      "difficulty": "easy",
+      "question": "\\(f(x) = 3(x - 2)(x - 7)(x - 9)\\)\n\nIf the given function \\(f\\) is graphed in the xy-plane, where \\(y = f(x)\\), what is the x-coordinate of an x-intercept of the graph?",
+      "options": {},
+      "correct_option": "2",
+      "hint": "An x-intercept occurs when \\(f(x) = 0\\). Set the function equal to zero and solve for \\(x\\).",
+      "solution": [
+        "An x-intercept occurs when \\(f(x) = 0\\).",
+        "Set the function equal to zero: \\(3(x - 2)(x - 7)(x - 9) = 0\\).",
+        "Since \\(3 \\neq 0\\), we have \\((x - 2)(x - 7)(x - 9) = 0\\).",
+        "This equation is satisfied when any of the factors equals zero:",
+        "\\(x - 2 = 0\\) → \\(x = 2\\)",
+        "\\(x - 7 = 0\\) → \\(x = 7\\)",
+        "\\(x - 9 = 0\\) → \\(x = 9\\)",
+        "Therefore, the x-intercepts are at \\(x = 2\\), \\(x = 7\\), and \\(x = 9\\).",
+        "Any one of these values is a valid answer (e.g., 2)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "evaluating_polynomials"
+    },
+    {
+      "question_number": 12,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "easy",
+      "question": "Scientists collected fallen acorns that each housed a colony of the ant species *P. ohioensis* and analyzed each colony's structure. For any of these colonies, if the colony has \\(x\\) worker ants, the equation \\(y = 0.67x + 2.6\\), where \\(20 \\leq x \\leq 110\\), gives the predicted number of larvae, \\(y\\), in the colony. If one of these colonies has 41 worker ants, which of the following is closest to the predicted number of larvae in the colony?",
+      "options": {
+        "A": "30",
+        "B": "44",
+        "C": "57",
+        "D": "134"
+      },
+      "correct_option": "A",
+      "hint": "Substitute \\(x = 41\\) into the given equation to find the predicted number of larvae.",
+      "solution": [
+        "Given: \\(y = 0.67x + 2.6\\), where \\(x\\) is the number of worker ants.",
+        "Substitute \\(x = 41\\):",
+        "\\(y = 0.67(41) + 2.6\\)",
+        "\\(y = 27.47 + 2.6\\)",
+        "\\(y = 30.07\\)",
+        "To the nearest whole number, \\(y \\approx 30\\).",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations"
+    },
+    {
+      "question_number": 13,
+      "topic": "advanced_math",
+      "subskill": "linear_and_quadratic",
+      "difficulty": "easy",
+      "question": "The graphs of the equations in the given system intersect at the point \\((x, y)\\) in the xy-plane. What is a possible value of \\(x\\)?\n\n\\[y = x^2 + 16x + 8\\]\n\\[y = x + 8\\]",
+      "options": {
+        "A": "-15",
+        "B": "-12",
+        "C": "8",
+        "D": "12"
+      },
+      "correct_option": "A",
+      "hint": "Set the two equations equal to each other since they both equal \\(y\\), then solve the resulting quadratic equation.",
+      "solution": [
+        "Since both equations equal \\(y\\), set them equal to each other:",
+        "\\(x^2 + 16x + 8 = x + 8\\)",
+        "Subtract \\(x + 8\\) from both sides: \\(x^2 + 16x + 8 - x - 8 = 0\\)",
+        "Simplify: \\(x^2 + 15x = 0\\)",
+        "Factor out \\(x\\): \\(x(x + 15) = 0\\)",
+        "So \\(x = 0\\) or \\(x = -15\\)",
+        "Among the options, \\(x = -15\\) is listed.",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "identifying_solution"
+    },
+    {
+      "question_number": 14,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "cricles",
+      "difficulty": "easy",
+      "question": "A circle in the xy-plane has its center at \\((-5, 1)\\) and the point \\((-9, 4)\\) lies on the circle. Which equation represents this circle?",
+      "options": {
+        "A": "\\((x - 5)^2 + (y + 1)^2 = 5\\)",
+        "B": "\\((x + 5)^2 + (y - 1)^2 = 5\\)",
+        "C": "\\((x - 5)^2 + (y + 1)^2 = 25\\)",
+        "D": "\\((x + 5)^2 + (y - 1)^2 = 25\\)"
+      },
+      "correct_option": "D",
+      "hint": "Use the standard form of a circle equation: \\((x - h)^2 + (y - k)^2 = r^2\\), where \\((h, k)\\) is the center. Find the radius by calculating the distance from the center to the given point.",
+      "solution": [
+        "The standard equation of a circle with center \\((h, k)\\) and radius \\(r\\) is \\((x - h)^2 + (y - k)^2 = r^2\\).",
+        "Given center \\((-5, 1)\\), substitute: \\((x - (-5))^2 + (y - 1)^2 = r^2\\)",
+        "This simplifies to: \\((x + 5)^2 + (y - 1)^2 = r^2\\)",
+        "The point \\((-9, 4)\\) lies on the circle, so substitute to find \\(r^2\\):",
+        "\\((-9 + 5)^2 + (4 - 1)^2 = r^2\\)",
+        "\\((-4)^2 + (3)^2 = r^2\\)",
+        "\\(16 + 9 = r^2\\)",
+        "\\(r^2 = 25\\)",
+        "Therefore, the equation is \\((x + 5)^2 + (y - 1)^2 = 25\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "circle_equations_xy_plane"
+    },
+    {
+      "question_number": 15,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "percentages",
+      "difficulty": "easy",
+      "question": "In 2013, Chloe earned 11% more than in 2012, and in 2014 Chloe earned 6% more than in 2013. If Chloe earned \\(y\\) times as much in 2012 as in 2014, which of the following is closest to the value of \\(y\\)?",
+      "options": {
+        "A": "0.5455",
+        "B": "0.6600",
+        "C": "0.8499",
+        "D": "1.1766"
+      },
+      "correct_option": "C",
+      "hint": "Let Chloe's earnings in 2012 be \\(E\\). Calculate her earnings in 2013 based on an 11% increase from 2012. Then, calculate her earnings in 2014 based on a 6% increase from 2013. Finally, set up the equation \\(E_{2012} = y \\times E_{2014}\\) and solve for \\(y\\).",
+      "solution": [
+        "Let \\(E_{2012}\\) represent Chloe's earnings in 2012.",
+        "In 2013, Chloe earned 11% more than in 2012. So, \\(E_{2013} = E_{2012} \\times (1 + 0.11) = 1.11 \\times E_{2012}\\).",
+        "In 2014, Chloe earned 6% more than in 2013. So, \\(E_{2014} = E_{2013} \\times (1 + 0.06) = 1.06 \\times E_{2013}\\).",
+        "Substitute the expression for \\(E_{2013}\\) into the equation for \\(E_{2014}\\):",
+        "\\(E_{2014} = 1.06 \\times (1.11 \\times E_{2012}) = (1.06 \\times 1.11) \\times E_{2012} = 1.1766 \\times E_{2012}\\).",
+        "The problem states that Chloe earned \\(y\\) times as much in 2012 as in 2014, which can be written as \\(E_{2012} = y \\times E_{2014}\\).",
+        "To find \\(y\\), we can rearrange the equation \\(E_{2014} = 1.1766 \\times E_{2012}\\) to express \\(E_{2012}\\) in terms of \\(E_{2014}\\):",
+        "\\(E_{2012} = \\tfrac{E_{2014}}{1.1766}\\).",
+        "Comparing this with \\(E_{2012} = y \\times E_{2014}\\), we find \\(y = \\tfrac{1}{1.1766}\\).",
+        "Calculate the value: \\(y \\approx 0.8499915\\).",
+        "The closest option is 0.8499.",
+        "This matches option C."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "percentage_increase_decrease"
+    },
+    {
+      "question_number": 16,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
+      "difficulty": "easy",
+      "question": "The graph models the number of online newsletter subscribers at the end of every six-month period, where \\(x\\) is the number of six-month periods since the end of January 1995 and \\(0 \\leq x \\leq 4\\). Which statement is the best interpretation of the point \\((1, 500)\\) in this context?",
+      "options": {
+        "A": "The estimated number of online newsletter subscribers at the end of the first six-month period was 500.",
+        "B": "The estimated number of online newsletter subscribers increased every six months by 500 subscribers.",
+        "C": "The estimated number of online newsletter subscribers at the end of January 1995 was 500.",
+        "D": "The estimated number of online newsletter subscribers at the end of January was 500."
+      },
+      "correct_option": "A",
+      "hint": "The x-coordinate represents the number of six-month periods since the end of January 1995. When \\(x = 1\\), this means one six-month period has passed, which corresponds to the end of the first six-month period.",
+      "solution": [
+        "The point \\((1, 500)\\) has coordinates where \\(x = 1\\) and \\(y = 500\\).",
+        "According to the problem, \\(x\\) is the number of six-month periods since the end of January 1995.",
+        "When \\(x = 1\\), this means 1 six-month period has passed since the end of January 1995, which corresponds to the end of the first six-month period (end of July 1995).",
+        "The y-coordinate of 500 represents the number of online newsletter subscribers.",
+        "Therefore, the point \\((1, 500)\\) means that at the end of the first six-month period, there were 500 subscribers.",
+        "This matches option A."
+      ],
+      "representation": "graph",
+      "format": "multiple_choice",
+      "structure": "evaluating_scatterplot"
+    },
+    {
+      "question_number": 17,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "easy",
+      "question": "An object's speed, in meters per hour, is increasing at a rate of 1,650 meters per hour per second. Which of the following is closest to this rate in feet per second squared? (Use 1 meter = 3.28 feet.)",
+      "options": {
+        "A": "0.14",
+        "B": "1.50",
+        "C": "8.38",
+        "D": "90.2"
+      },
+      "correct_option": "B",
+      "hint": "Convert meters per hour per second to feet per second squared. First convert meters to feet, then convert hours to seconds.",
+      "solution": [
+        "Given rate: 1,650 meters per hour per second.",
+        "This can be written as \\(\\tfrac{1,650 \\text{ m}}{\\text{hour} \\cdot \\text{second}}\\).",
+        "First, convert meters to feet: 1 meter = 3.28 feet, so 1,650 meters = 1,650 × 3.28 = 5,412 feet.",
+        "Now we have \\(\\tfrac{5,412 \\text{ ft}}{\\text{hour} \\cdot \\text{second}}\\).",
+        "Convert hours to seconds: 1 hour = 3,600 seconds.",
+        "So \\(\\tfrac{5,412 \\text{ ft}}{3,600 \\text{ s} \\cdot \\text{second}} = \\tfrac{5,412}{3,600} \\tfrac{\\text{ft}}{\\text{s}^2}\\).",
+        "Calculate: \\(\\tfrac{5,412}{3,600} = 1.503\\).",
+        "The closest option is 1.50.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "converting_units"
+    },
+    {
+      "question_number": 18,
+      "topic": "geoemtry_and_trigonometry",
+      "subskill": "area_and_volume",
+      "difficulty": "easy",
+      "question": "The right square pyramid shown has a height of 9 centimeters (cm). The length, in cm, of one edge of the pyramid's base is \\(\\tfrac{7}{3}\\) times the height of the pyramid. What is the volume, in cm³, of the pyramid?\n\nNote: Figure not drawn to scale.",
+      "options": {},
+      "correct_option": "1323",
+      "hint": "The volume of a pyramid is \\(V = \\tfrac{1}{3} \\times \\text{base area} \\times \\text{height}\\). First find the length of the base edge, then calculate the base area (since it's a square base).",
+      "solution": [
+        "Given: height \\(h = 9\\) cm.",
+        "The length of one edge of the square base is \\(\\tfrac{7}{3}\\) times the height:",
+        "Base edge length = \\(\\tfrac{7}{3} \\times 9 = 7 \\times 3 = 21\\) cm.",
+        "Since the base is a square, the base area is:",
+        "Base area = \\(21^2 = 441\\) cm².",
+        "The volume of a pyramid is:",
+        "\\(V = \\tfrac{1}{3} \\times \\text{base area} \\times \\text{height}\\)",
+        "\\(V = \\tfrac{1}{3} \\times 441 \\times 9\\)",
+        "\\(V = 147 \\times 9 = 1,323\\) cm³."
+      ],
+      "representation": "diagram",
+      "format": "free_response",
+      "structure": "volume_of_3d_figures"
+    },
+    {
+      "question_number": 19,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "In the xy-plane, line \\(p\\) has a slope of \\(-\\tfrac{5}{4}\\) and an x-intercept of \\((-16, 0)\\). What is the y-coordinate of the y-intercept of line \\(p\\)?",
+      "options": {},
+      "correct_option": "-20",
+      "hint": "Use the point-slope form of a line with the given slope and x-intercept point, then find the y-intercept by setting \\(x = 0\\).",
+      "solution": [
+        "Given: slope \\(m = -\\tfrac{5}{4}\\) and x-intercept \\((-16, 0)\\).",
+        "Use the point-slope form: \\(y - y_1 = m(x - x_1)\\).",
+        "Substitute: \\(y - 0 = -\\tfrac{5}{4}(x - (-16))\\)",
+        "Simplify: \\(y = -\\tfrac{5}{4}(x + 16)\\)",
+        "To find the y-intercept, set \\(x = 0\\):",
+        "\\(y = -\\tfrac{5}{4}(0 + 16) = -\\tfrac{5}{4}(16) = -5 \\times 4 = -20\\)",
+        "Therefore, the y-coordinate of the y-intercept is \\(-20\\)."
+      ],
+      "representation": "",
+      "format": "free_response",
+      "structure": "identifying_intercept"
+    },
+    {
+      "question_number": 20,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "exponential_functions",
+      "difficulty": "easy",
+      "question": "In 2018, approximately 20,000 kilowatts of solar power capacity was newly installed in a certain area in the United States. In 2019, the amount of newly installed solar power capacity in this area increased by 13% from the amount of newly installed solar power capacity in 2018. If the amount of newly installed solar power capacity continues to increase each year by 13% of the previous year's newly installed solar power capacity, which of the following types of functions best describes how the amount of newly installed solar power capacity changes over time?",
+      "options": {
+        "A": "Decreasing exponential",
+        "B": "Increasing exponential",
+        "C": "Decreasing linear",
+        "D": "Increasing linear"
+      },
+      "correct_option": "B",
+      "hint": "When a quantity increases by a constant percentage each year, it follows an exponential growth pattern. Since it's increasing (not decreasing), it's an increasing exponential function.",
+      "solution": [
+        "The problem states that the amount increases by 13% each year from the previous year's amount.",
+        "This means each year, the new amount is 113% (or 1.13 times) the previous year's amount.",
+        "If the initial amount is \\(A_0\\), then after \\(t\\) years, the amount is \\(A(t) = A_0(1.13)^t\\).",
+        "This is an exponential function with base 1.13, which is greater than 1, so it's exponential growth.",
+        "Since the amount is increasing (not decreasing), this is an increasing exponential function.",
+        "This matches option B."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "exponential_function_word_problem"
+    },
+    {
+      "question_number": 21,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "An object is launched into the air from ground level. According to a quadratic model, 1.3 seconds after the object is launched, it reaches its maximum height of 27.04 feet above ground level. Which equation represents this model, where \\(f(t)\\) is the object's height, in feet, above ground level \\(t\\) seconds after it was launched?",
+      "options": {
+        "A": "\\(f(t) = -16(t - 1.3)^2 + 27.04\\)",
+        "B": "\\(f(t) = 16(t - 1.3)^2 + 27.04\\)",
+        "C": "\\(f(t) = -16(t + 1.3)^2 + 27.04\\)",
+        "D": "\\(f(t) = 16(t + 1.3)^2 + 27.04\\)"
+      },
+      "correct_option": "A",
+      "hint": "The vertex form of a quadratic is \\(f(t) = a(t - h)^2 + k\\), where \\((h, k)\\) is the vertex. The maximum occurs at \\(t = 1.3\\) with height 27.04. Since the object is launched from ground level and reaches a maximum, the parabola opens downward (negative coefficient).",
+      "solution": [
+        "The vertex form of a quadratic function is \\(f(t) = a(t - h)^2 + k\\), where \\((h, k)\\) is the vertex.",
+        "The maximum height of 27.04 feet occurs at \\(t = 1.3\\) seconds, so the vertex is at \\((1.3, 27.04)\\).",
+        "Since the object is launched from ground level and reaches a maximum, the parabola opens downward, so \\(a < 0\\).",
+        "In physics, the standard form for projectile motion uses \\(a = -16\\) (or \\(-\\tfrac{1}{2}g\\) where \\(g = 32\\) ft/s²).",
+        "Substitute into the vertex form: \\(f(t) = -16(t - 1.3)^2 + 27.04\\).",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "quadratic_word_problem"
+    },
+    {
+      "question_number": 22,
+      "topic": "algebra",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "easy",
+      "question": "One of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?\n\n\\[3x - 24y = 12\\]",
+      "options": {
+        "A": "\\(\\tfrac{1}{2}x - 4y = 0\\)",
+        "B": "\\(x - 8y = 4\\)",
+        "C": "\\(\\tfrac{1}{2}x - 4y = 2\\)",
+        "D": "\\(x - 6y = 0\\)"
+      },
+      "correct_option": "A",
+      "hint": "For a system of linear equations to have no solution, the two equations must have the same slope but different y-intercepts (they are parallel lines). First, rewrite the given equation in slope-intercept form, then check which option has the same slope but a different y-intercept.",
+      "solution": [
+        "Given equation: \\(3x - 24y = 12\\).",
+        "Divide by 3: \\(x - 8y = 4\\).",
+        "Rewrite in slope-intercept form: \\(-8y = -x + 4\\), so \\(y = \\tfrac{1}{8}x - \\tfrac{1}{2}\\).",
+        "The slope is \\(\\tfrac{1}{8}\\) and the y-intercept is \\(-\\tfrac{1}{2}\\).",
+        "For the system to have no solution, the second equation must have the same slope but a different y-intercept (parallel lines).",
+        "Check each option:",
+        "Option A: \\(\\tfrac{1}{2}x - 4y = 0\\). Multiply by 2: \\(x - 8y = 0\\).",
+        "Rewrite: \\(y = \\tfrac{1}{8}x\\). Same slope (\\(\\tfrac{1}{8}\\)), but y-intercept is 0 (different from \\(-\\tfrac{1}{2}\\)).",
+        "These are parallel lines with no solution.",
+        "Option B: \\(x - 8y = 4\\). This is identical to the given equation (after dividing by 3), so same line (infinitely many solutions).",
+        "Option C: \\(\\tfrac{1}{2}x - 4y = 2\\). Multiply by 2: \\(x - 8y = 4\\). This is also the same as the given equation (infinitely many solutions).",
+        "Option D: \\(x - 6y = 0\\). Different slope, so would intersect at one point (one solution).",
+        "Therefore, Option A is the only one that creates a system with no solution.",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "classifying_system_of_linear_equations"
+    }
+  ],
+  "module_2_easy": [],
+  "module_2_hard": [
+    {
+      "question_number": 23,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
+      "difficulty": "hard",
+      "question": "The table shows the frequency of each data value in a data set.\n\n| Data value | Frequency |\n|------------|-----------|\n| 10 | 8 |\n| 20 | 38 |\n| 30 | 15 |\n| 40 | 11 |\n\nWhich data value has a frequency of 38 in this data set?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "correct_option": "B",
+      "hint": "Look at the table and find which data value corresponds to a frequency of 38.",
+      "solution": [
+        "From the table, we can see:",
+        "- Data value 10 has frequency 8",
+        "- Data value 20 has frequency 38",
+        "- Data value 30 has frequency 15",
+        "- Data value 40 has frequency 11",
+        "Therefore, the data value with frequency 38 is 20.",
+        "This matches option B."
+      ],
+      "representation": "table",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range"
+    },
+    {
+      "question_number": 24,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
+      "difficulty": "hard",
+      "question": "The scatterplot shows the relationship between the weight, in pounds, of each of 9 pregnant beavers on April 30 and the number of offspring each beaver produced.\n\nHow many offspring did the 40-pound beaver produce?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct_option": "A",
+      "hint": "Look at the scatterplot and find the point where the weight is 40 pounds, then read the corresponding number of offspring on the y-axis.",
+      "solution": [
+        "From the scatterplot, locate the point where the weight is 40 pounds on the x-axis.",
+        "At weight = 40 pounds, the corresponding point shows 5 offspring on the y-axis.",
+        "Therefore, the 40-pound beaver produced 5 offspring.",
+        "This matches option A."
+      ],
+      "representation": "graph",
+      "format": "multiple_choice",
+      "structure": "evaluating_scatterplot"
+    },
+    {
+      "question_number": 25,
+      "topic": "algebra",
+      "subskill": "isolating_variables",
+      "difficulty": "hard",
+      "question": "What value of \\(p\\) satisfies the equation \\(10p + 55 = 375\\)?",
+      "options": {
+        "A": "32",
+        "B": "43",
+        "C": "310",
+        "D": "375"
+      },
+      "correct_option": "A",
+      "hint": "Isolate \\(p\\) by subtracting 55 from both sides, then dividing by 10.",
+      "solution": [
+        "Given: \\(10p + 55 = 375\\).",
+        "Subtract 55 from both sides: \\(10p = 375 - 55\\)",
+        "Simplify: \\(10p = 320\\)",
+        "Divide by 10: \\(p = 32\\)",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "two_step_isolating_variables"
+    },
+    {
+      "question_number": 26,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "The function \\(f\\) is defined by the equation \\(f(x) = 100x + 8\\). What is the value of \\(f(x)\\) when \\(x = 3\\)?",
+      "options": {
+        "A": "111",
+        "B": "124",
+        "C": "300",
+        "D": "308"
+      },
+      "correct_option": "D",
+      "hint": "Substitute \\(x = 3\\) into the function definition.",
+      "solution": [
+        "Given: \\(f(x) = 100x + 8\\).",
+        "Substitute \\(x = 3\\):",
+        "\\(f(3) = 100(3) + 8\\)",
+        "\\(f(3) = 300 + 8\\)",
+        "\\(f(3) = 308\\)",
+        "Therefore, when \\(x = 3\\), \\(f(x) = 308\\).",
+        "This matches option D."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "evaluating_linear_functions"
+    },
+    {
+      "question_number": 27,
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
+      "difficulty": "hard",
+      "question": "Antonia purchased a box of pasta and some tomatoes at the grocery store. Antonia paid $2 for the box of pasta and $1.30 per pound for the tomatoes. If Antonia paid a total of $7.20 for the box of pasta and the tomatoes, which of the following equations can be used to find \\(p\\), the number of pounds of tomatoes Antonia purchased? (Assume there is no sales tax.)",
+      "options": {
+        "A": "\\(1.30p + 2 = 7.20\\)",
+        "B": "\\(1.30p - 2 = 7.20\\)",
+        "C": "\\(1.30 + 2p = 7.20\\)",
+        "D": "\\(1.30 - 2p = 7.20\\)"
+      },
+      "correct_option": "A",
+      "hint": "Set up an equation where the total cost equals the cost of pasta plus the cost of tomatoes. The cost of tomatoes is the price per pound times the number of pounds.",
+      "solution": [
+        "Total amount paid: $7.20",
+        "Cost of pasta: $2",
+        "Cost of tomatoes: $1.30 per pound × \\(p\\) pounds = \\(1.30p\\)",
+        "The equation is: Cost of pasta + Cost of tomatoes = Total",
+        "\\(2 + 1.30p = 7.20\\)",
+        "Or equivalently: \\(1.30p + 2 = 7.20\\)",
+        "This matches option A."
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations"
+    }
+  ]
+}
+

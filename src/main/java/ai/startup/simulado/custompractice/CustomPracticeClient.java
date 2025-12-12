@@ -1,9 +1,14 @@
 package ai.startup.simulado.custompractice;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.http.*;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
+import org.springframework.web.client.ResourceAccessException;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.server.ResponseStatusException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -74,13 +79,55 @@ public class CustomPracticeClient {
             } else {
                 log.error("[CUSTOM CLIENT] ❌ Resposta inválida do approva-descartes");
                 log.error("[CUSTOM CLIENT] Body recebido: {}", body);
-                throw new RuntimeException("Resposta inválida do serviço de geração de questões");
+                throw new ResponseStatusException(
+                    HttpStatus.BAD_GATEWAY,
+                    "Resposta inválida do serviço de geração de questões"
+                );
             }
             
-        } catch (Exception e) {
-            log.error("[CUSTOM CLIENT] ❌ Erro ao chamar approva-descartes: {}", e.getMessage());
+        } catch (HttpClientErrorException e) {
+            log.error("[CUSTOM CLIENT] ❌ Erro HTTP 4xx do approva-descartes: {} - {}", 
+                e.getStatusCode(), e.getResponseBodyAsString());
             log.error("[CUSTOM CLIENT] ========================================");
-            throw new RuntimeException("Falha ao gerar questões customizadas: " + e.getMessage(), e);
+            throw new ResponseStatusException(
+                HttpStatus.BAD_GATEWAY,
+                "Erro ao comunicar com serviço de geração de questões: " + e.getMessage(),
+                e
+            );
+        } catch (HttpServerErrorException e) {
+            log.error("[CUSTOM CLIENT] ❌ Erro HTTP 5xx do approva-descartes: {} - {}", 
+                e.getStatusCode(), e.getResponseBodyAsString());
+            log.error("[CUSTOM CLIENT] ========================================");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_GATEWAY,
+                "Serviço de geração de questões retornou erro: " + e.getMessage(),
+                e
+            );
+        } catch (ResourceAccessException e) {
+            log.error("[CUSTOM CLIENT] ❌ Erro de conexão com approva-descartes: {}", e.getMessage());
+            log.error("[CUSTOM CLIENT] URL tentada: {}", url);
+            log.error("[CUSTOM CLIENT] ========================================");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_GATEWAY,
+                "Não foi possível conectar ao serviço de geração de questões. Verifique se o serviço está rodando.",
+                e
+            );
+        } catch (RestClientException e) {
+            log.error("[CUSTOM CLIENT] ❌ Erro do RestTemplate ao chamar approva-descartes: {}", e.getMessage());
+            log.error("[CUSTOM CLIENT] ========================================");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_GATEWAY,
+                "Erro ao comunicar com serviço de geração de questões: " + e.getMessage(),
+                e
+            );
+        } catch (Exception e) {
+            log.error("[CUSTOM CLIENT] ❌ Erro inesperado ao chamar approva-descartes: {}", e.getMessage(), e);
+            log.error("[CUSTOM CLIENT] ========================================");
+            throw new ResponseStatusException(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Erro inesperado ao gerar questões customizadas: " + e.getMessage(),
+                e
+            );
         }
     }
 }

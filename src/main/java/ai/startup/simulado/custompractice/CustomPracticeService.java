@@ -5,8 +5,10 @@ import ai.startup.simulado.usuario.*;
 import ai.startup.simulado.questaosimulado.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -72,7 +74,8 @@ public class CustomPracticeService {
         if (usuario.wins() < custoTotal) {
             log.error("[CUSTOM] ❌ Saldo insuficiente. Necessário: {}, Disponível: {}", 
                 custoTotal, usuario.wins());
-            throw new IllegalStateException(
+            throw new ResponseStatusException(
+                HttpStatus.PAYMENT_REQUIRED,
                 String.format("Saldo insuficiente. Necessário: %d wins, Disponível: %d wins",
                     custoTotal, usuario.wins())
             );
@@ -120,7 +123,10 @@ public class CustomPracticeService {
 
             if (questoesGeradas == null || questoesGeradas.isEmpty()) {
                 log.error("[CUSTOM] ❌ Nenhuma questão gerada pelo approva-descartes");
-                throw new RuntimeException("Nenhuma questão foi gerada");
+                throw new ResponseStatusException(
+                    HttpStatus.BAD_GATEWAY,
+                    "Nenhuma questão foi gerada pelo serviço de geração de questões"
+                );
             }
 
             log.info("[CUSTOM] Total de questões geradas: {}", questoesGeradas.size());
@@ -185,14 +191,24 @@ public class CustomPracticeService {
             log.info("[CUSTOM] ========== FIM CUSTOM PRACTICE ==========");
             return resultado;
             
+        } catch (ResponseStatusException e) {
+            // Se já é uma ResponseStatusException, apenas reverte o débito e re-lança
+            log.error("[CUSTOM] ❌ Erro durante criação do custom practice: {}", e.getReason());
+            log.error("[CUSTOM] Revertendo débito de wins...");
+            reverterDebito(request.getUsuarioId(), custoTotal, authorizationHeader);
+            throw e;
         } catch (Exception e) {
-            log.error("[CUSTOM] ❌ Erro durante criação do custom practice: {}", e.getMessage());
+            log.error("[CUSTOM] ❌ Erro durante criação do custom practice: {}", e.getMessage(), e);
             log.error("[CUSTOM] Revertendo débito de wins...");
             
             // Reverter débito de wins em caso de erro
             reverterDebito(request.getUsuarioId(), custoTotal, authorizationHeader);
             
-            throw new RuntimeException("Falha ao criar custom practice: " + e.getMessage(), e);
+            throw new ResponseStatusException(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Falha ao criar custom practice: " + e.getMessage(),
+                e
+            );
         }
     }
 
@@ -242,7 +258,8 @@ public class CustomPracticeService {
         if (!abertos.isEmpty()) {
             log.error("[CUSTOM] ❌ Usuário {} tem simulado em aberto: {}", 
                 usuarioId, abertos.get(0).getId());
-            throw new IllegalStateException(
+            throw new ResponseStatusException(
+                HttpStatus.CONFLICT,
                 "Há um simulado em aberto. Finalize-o antes de iniciar um novo."
             );
         }
@@ -346,15 +363,56 @@ public class CustomPracticeService {
     /**
      * Normaliza strings para o formato esperado pelo MongoDB/approva-descartes.
      * Converte para lowercase e substitui espaços por underscores.
+     * Remove caracteres especiais que podem causar problemas.
      */
     private String normalizar(String texto) {
         if (texto == null) return null;
-        return texto.toLowerCase()
+        
+        // Primeiro, fazer substituições simples de caracteres comuns
+        String normalizado = texto.toLowerCase()
                     .trim()
                     .replace(" ", "_")
                     .replace("-", "_")
                     .replace("&", "and")
-                    .replaceAll("[^a-z0-9_]", "");
+                    .replace("(", "")
+                    .replace(")", "")
+                    .replace("[", "")
+                    .replace("]", "")
+                    .replace("{", "")
+                    .replace("}", "")
+                    .replace("\\", "")
+                    .replace("/", "_")
+                    .replace(".", "_")
+                    .replace(",", "_")
+                    .replace(":", "_")
+                    .replace(";", "_")
+                    .replace("!", "")
+                    .replace("?", "")
+                    .replace("@", "")
+                    .replace("#", "")
+                    .replace("$", "")
+                    .replace("%", "")
+                    .replace("^", "")
+                    .replace("*", "")
+                    .replace("+", "")
+                    .replace("=", "")
+                    .replace("|", "")
+                    .replace("~", "")
+                    .replace("`", "")
+                    .replace("\"", "")
+                    .replace("'", "");
+        
+        // Depois, usar replaceAll apenas para remover qualquer caractere que não seja alfanumérico ou underscore
+        // Usar Pattern.quote não é necessário aqui porque já removemos os caracteres problemáticos
+        normalizado = normalizado.replaceAll("[^a-z0-9_]", "");
+        
+        // Remover underscores múltiplos consecutivos
+        normalizado = normalizado.replaceAll("_{2,}", "_");
+        
+        // Remover underscores no início e fim
+        normalizado = normalizado.replaceAll("^_+|_+$", "");
+        
+        return normalizado;
     }
 
     /**
