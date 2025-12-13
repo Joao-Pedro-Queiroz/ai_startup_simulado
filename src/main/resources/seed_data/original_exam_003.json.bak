@@ -77,7 +77,7 @@
       "question": "A length of \\(450\\) meters is equal to how many decimeters? (\\(1\\) meter = \\(10\\) decimeters)",
       "options": {},
       "correct_option": "4500",
-      "hint": "Multiply the number of meters by the conversion factor (\\(10\\) decimeters per meter).",
+      "hint": "Multiply the number of meters by the conversion factor (10 decimeters per meter).",
       "solution": [
         "Since \\(1\\) meter = \\(10\\) decimeters, multiply \\(450\\) meters by \\(10\\).",
         "\\(450\\) meters × \\(10\\) decimeters/meter = \\(4{,}500\\) decimeters."
@@ -151,7 +151,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "The function \\(f\\) is defined by \\(f(x) = 3x - \\tfrac{1}{4}\\). What is the \\(y\\)-intercept of the graph of \\(y = f(x)\\) in the \\(xy\\)-plane?",
+      "question": "The function \\(f\\) is defined by \\(f(x) = 3x - \\tfrac{1}{4}\\). What is the \\(y\\)-intercept of the graph of \\(y = f(x)\\) in the xy-plane?",
       "options": {
         "A": "\\((0, -\\tfrac{1}{4})\\)",
         "B": "\\((0, -3)\\)",
@@ -264,7 +264,7 @@
       "topic": "algebra",
       "subskill": "isolating_constants",
       "difficulty": "easy",
-      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{4}{7}c\\).\n\n\\[b^\\(2\\) + 4c = 7d\\]\n\nWhich equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?",
+      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{4}{7}c\\).\n\n\\[b^2 + 4c = 7d\\]\n\nWhich equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?",
       "options": {
         "A": "\\(b = \\tfrac{7d + 4c}{2}\\)",
         "B": "\\(b = \\tfrac{7d - 4c}{2}\\)",
@@ -288,7 +288,7 @@
       "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "easy",
-      "question": "\\[x^\\(2\\) - \\tfrac{\\(81\\)}{\\(16\\)} = \\(0\\)\\]\n\nHow many distinct real solutions does the given equation have?",
+      "question": "\\[x^2 - \\tfrac{81}{16} = 0\\]\n\nHow many distinct real solutions does the given equation have?",
       "options": {
         "A": "Zero",
         "B": "Exactly one",
@@ -333,7 +333,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "cricles",
       "difficulty": "easy",
-      "question": "What is the radius of the circle in the \\(xy\\)-plane defined by\n\n\\[(x + \\(3\\))^\\(2\\) + (y + \\(9\\))^\\(2\\) = \\(361\\)\\]?",
+      "question": "What is the radius of the circle in the xy-plane defined by\n\n\\[(x + 3)^2 + (y + 9)^2 = 361\\]?",
       "options": {},
       "correct_option": "19",
       "hint": "The standard form of a circle is \\((x - h)^2 + (y - k)^2 = r^2\\), where \\(r\\) is the radius.",
@@ -351,7 +351,7 @@
       "topic": "algebra",
       "subskill": "linear_inequality",
       "difficulty": "easy",
-      "question": "In the \\(xy\\)-plane, which of the following does NOT contain any points that are part of the solution set to \\(5x - 7y > 35\\)?",
+      "question": "In the xy-plane, which of the following does NOT contain any points that are part of the solution set to \\(5x - 7y > 35\\)?",
       "options": {
         "A": "The \\(x\\)-axis",
         "B": "The region where \\(x > 0\\) and \\(y > 0\\)",
@@ -411,7 +411,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "Line \\(h\\) is defined by \\(\\tfrac{1}{2}x + \\tfrac{1}{9}y - 54 = 0\\). Line \\(j\\) is perpendicular to line \\(h\\) in the \\(xy\\)-plane. What is the slope of line \\(j\\)?",
+      "question": "Line \\(h\\) is defined by \\(\\tfrac{1}{2}x + \\tfrac{1}{9}y - 54 = 0\\). Line \\(j\\) is perpendicular to line \\(h\\) in the xy-plane. What is the slope of line \\(j\\)?",
       "options": {
         "A": "\\(-\\tfrac{9}{2}\\)",
         "B": "\\(-\\tfrac{2}{9}\\)",
@@ -509,7 +509,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "easy",
-      "question": "How many times does the graph of the given equation in the \\(xy\\)-plane cross the \\(x\\)-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 7\\) and \\(b > c\\)?\n\n\\[y = \\(9\\)\\left(\\frac{a}{\\(7\\)}\\right)^{x+c} - b\\]",
+      "question": "How many times does the graph of the given equation in the xy-plane cross the \\(x\\)-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 7\\) and \\(b > c\\)?\n\n\\[y = 9\\left(\\frac{a}{7}\\right)^{x+c} - b\\]",
       "options": {
         "A": "Zero",
         "B": "One",
@@ -591,7 +591,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "For the linear function \\(f\\), the graph of \\(y = f(x)\\) in the \\(xy\\)-plane has a slope of \\(-2\\) and passes through the point \\((0, -19)\\). Which equation defines \\(f\\)?",
+      "question": "For the linear function \\(f\\), the graph of \\(y = f(x)\\) in the xy-plane has a slope of \\(-2\\) and passes through the point \\((0, -19)\\). Which equation defines \\(f\\)?",
       "options": {
         "A": "\\(f(x) = -19x\\)",
         "B": "\\(f(x) = -2x\\)",
@@ -711,7 +711,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "Line \\(p\\) is defined by \\(y = 6x - 8\\). Line \\(s\\) is parallel to line \\(p\\) in the \\(xy\\)-plane. What is the slope of line \\(s\\)?",
+      "question": "Line \\(p\\) is defined by \\(y = 6x - 8\\). Line \\(s\\) is parallel to line \\(p\\) in the xy-plane. What is the slope of line \\(s\\)?",
       "options": {},
       "correct_option": "6",
       "hint": "Parallel lines have the same slope. Identify the slope of line \\(p\\) from its equation.",
@@ -737,7 +737,7 @@
         "D": "\\(7\\)"
       },
       "correct_option": "B",
-      "hint": "The line of best fit appears to have a negative slope and passes approximately through (\\(0\\), \\(7\\).\\(5\\)) and (\\(10\\), \\(0\\).\\(5\\)). Calculate the slope using these points.",
+      "hint": "The line of best fit appears to have a negative slope and passes approximately through (0, 7.5) and (10, 0.5). Calculate the slope using these points.",
       "solution": [
         "Identify two points on the line: approximately \\((0, 7.5)\\) and \\((10, 0.5)\\)",
         "Slope formula: \\(m = \\frac{y_2 - y_1}{x_2 - x_1}\\)",
@@ -766,8 +766,8 @@
         "Total objects: \\(25\\)",
         "Median position: \\((25+1)/2 = 13\\)th object",
         "Cumulative frequencies:",
-        "- \\(0\\) to \\(100\\) cm: \\(8\\) objects (positions \\(1\\)-\\(8\\))",
-        "- \\(101\\) to \\(200\\) cm: \\(8\\) + \\(6\\) = \\(14\\) objects (positions \\(9\\)-\\(14\\))",
+        "- 0 to 100 cm: 8 objects (positions 1-8)",
+        "- 101 to 200 cm: 8 + 6 = 14 objects (positions 9-14)",
         "The 13th object falls in the \\(101\\) to \\(200\\) cm range",
         "Therefore, the median could be \\(155\\) cm (option C)"
       ],
@@ -798,7 +798,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "The \\(y\\)-intercept of the graph of \\(5x + 2y = -18\\) in the \\(xy\\)-plane is \\((0, y)\\). What is the value of \\(y\\)?",
+      "question": "The \\(y\\)-intercept of the graph of \\(5x + 2y = -18\\) in the xy-plane is \\((0, y)\\). What is the value of \\(y\\)?",
       "options": {},
       "correct_option": "-9",
       "hint": "To find the \\(y\\)-intercept, substitute \\(x = 0\\) into the equation and solve for \\(y\\).",
@@ -968,12 +968,12 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "right_triangles_and_trigonometry",
       "difficulty": "easy",
-      "question": "In \\(\\triangle JKL\\), \\(\\cos(K) = \\frac{36}{60}\\) and \\(\\angle J\\) is a right angle. What is the value of \\(\\cos(L)\\)?",
+      "question": "In triangle JKL, \\(\\cos(K) = \\frac{36}{60}\\) and \\(\\angle J\\) is a right angle. What is the value of \\(\\cos(L)\\)?",
       "options": {},
       "correct_option": "4/5",
       "hint": "In a right triangle, if one angle is \\(90\\)°, the other two angles are complementary. Use the relationship between complementary angles and trigonometric ratios.",
       "solution": [
-        "In \\(\\triangle JKL\\), \\(\\angle J = 90°\\)",
+        "In triangle JKL, \\(\\angle J = 90°\\)",
         "Therefore, angles K and L are complementary: \\(K + L = 90°\\)",
         "So \\(L = 90° - K\\)",
         "For complementary angles: \\(\\cos(L) = \\cos(90° - K) = \\sin(K)\\)",
@@ -1133,7 +1133,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "hard",
-      "question": "The solution to the given system of equations is \\((x, y)\\). What is the value of \\(x\\)?\n\n\\[x + 2y = \\(28\\)\\]\n\\[2y = \\(15\\)\\]",
+      "question": "The solution to the given system of equations is \\((x, y)\\). What is the value of \\(x\\)?\n\n\\[x + 2y = 28\\]\n\\[2y = 15\\]",
       "options": {},
       "correct_option": "13",
       "hint": "Substitute the value of \\(2y\\) from the second equation into the first equation.",
@@ -1156,7 +1156,7 @@
       "topic": "algebra",
       "subskill": "isolating_constants",
       "difficulty": "hard",
-      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{5}{6}c\\). Which equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?\n\n\\[b^\\(2\\) + 5c = 6d\\]",
+      "question": "The given equation relates the real numbers \\(b\\), \\(c\\), and \\(d\\), where \\(d > \\tfrac{5}{6}c\\). Which equation correctly expresses \\(b\\) in terms of \\(c\\) and \\(d\\)?\n\n\\[b^2 + 5c = 6d\\]",
       "options": {
         "A": "\\(b = \\tfrac{6d - 5c}{2}\\)",
         "B": "\\(b = \\tfrac{6d + 5c}{2}\\)",
@@ -1208,7 +1208,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "The function \\(g\\) is defined by \\(g(x) = 2(14x - 15)\\). What is the y-coordinate of the \\(y\\)-intercept of the graph of \\(y = g(x) - 5\\) in the \\(xy\\)-plane?",
+      "question": "The function \\(g\\) is defined by \\(g(x) = 2(14x - 15)\\). What is the y-coordinate of the \\(y\\)-intercept of the graph of \\(y = g(x) - 5\\) in the xy-plane?",
       "options": {
         "A": "-\\(35\\)",
         "B": "-\\(30\\)",
@@ -1271,7 +1271,7 @@
       "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "hard",
-      "question": "The function \\(h\\) estimates an object's height, in feet, above the ground \\(t\\) seconds after the object is dropped, where \\(b\\) is a constant.\n\n\\[h(t) = -16t^\\(2\\) + b\\]\n\nThe function estimates that the object is \\(23.04\\) feet above the ground when it is dropped at \\(t = 0\\). How many seconds after being dropped does the function estimate the object will hit the ground?",
+      "question": "The function \\(h\\) estimates an object's height, in feet, above the ground \\(t\\) seconds after the object is dropped, where \\(b\\) is a constant.\n\n\\[h(t) = -16t^2 + b\\]\n\nThe function estimates that the object is \\(23.04\\) feet above the ground when it is dropped at \\(t = 0\\). How many seconds after being dropped does the function estimate the object will hit the ground?",
       "options": {},
       "correct_option": "1.2",
       "hint": "First use the initial condition to find \\(b\\), then set \\(h(t) = 0\\) to find when the object hits the ground.",
@@ -1325,7 +1325,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "cricles",
       "difficulty": "hard",
-      "question": "Circle A: \\((x - 7)^2 + (y - p)^2 = 21\\)\n\nCircle B: \\((x + 7)^2 + (y - p)^2 = 21\\)\n\nIn the given equations, \\(p\\) is a positive constant. Which statement correctly compares the graphs of circles A and B in the \\(xy\\)-plane?",
+      "question": "Circle A: \\((x - 7)^2 + (y - p)^2 = 21\\)\n\nCircle B: \\((x + 7)^2 + (y - p)^2 = 21\\)\n\nIn the given equations, \\(p\\) is a positive constant. Which statement correctly compares the graphs of circles A and B in the xy-plane?",
       "options": {
         "A": "Circle B is the reflection of circle A across the \\(x\\)-axis.",
         "B": "Circle B is the reflection of circle A across the \\(y\\)-axis.",
@@ -1356,7 +1356,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "In the given equation, \\(a\\) is a constant. The equation has exactly one solution. Which of the following CANNOT be the value of \\(a\\)?\n\n\\[a(\\(9\\)-x) = \\(36\\)-4x\\]",
+      "question": "In the given equation, \\(a\\) is a constant. The equation has exactly one solution. Which of the following CANNOT be the value of \\(a\\)?\n\n\\[a(9-x) = 36-4x\\]",
       "options": {
         "A": "\\(1\\)",
         "B": "\\(4\\)",
@@ -1425,7 +1425,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
-      "question": "How many times does the graph of the given equation in the \\(xy\\)-plane cross the \\(x\\)-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 6\\) and \\(b > c\\)?\n\n\\[by = \\(3\\)\\left(\\frac{a}{\\(6\\)}\\right)^{x+c} - b\\]",
+      "question": "How many times does the graph of the given equation in the xy-plane cross the \\(x\\)-axis, where \\(a\\), \\(b\\), and \\(c\\) are positive constants such that \\(a > 6\\) and \\(b > c\\)?\n\n\\[by = 3\\left(\\frac{a}{6}\\right)^{x+c} - b\\]",
       "options": {
         "A": "Zero",
         "B": "One",
@@ -1482,7 +1482,7 @@
       "topic": "advanced_math",
       "subskill": "quadratic_equations",
       "difficulty": "hard",
-      "question": "One solution to the given equation can be written as \\(x = h - \\tfrac{1}{2}\\sqrt{k}\\), where \\(h\\) and \\(k\\) are integer constants. What is the value of \\(h + k\\)?\n\n\\[2x^\\(2\\) - 8x - \\(21\\) = \\(0\\)\\]",
+      "question": "One solution to the given equation can be written as \\(x = h - \\tfrac{1}{2}\\sqrt{k}\\), where \\(h\\) and \\(k\\) are integer constants. What is the value of \\(h + k\\)?\n\n\\[2x^2 - 8x - 21 = 0\\]",
       "options": {
         "A": "-\\(24\\)",
         "B": "\\(10\\)",
@@ -1569,7 +1569,7 @@
       "topic": "advanced_math",
       "subskill": "polynomials",
       "difficulty": "hard",
-      "question": "The function \\(v\\) is defined by the equation \\(v(x) = \\tfrac{x^2 + bx + c}{(x + 5)(x - 19)}\\), where \\(b\\) and \\(c\\) are constants. In the \\(xy\\)-plane, the graph of \\(y = v(x)\\) passes through the points \\((0, \\tfrac{66}{95})\\) and \\((11, 0)\\). If \\(v(q) = 0\\), which of the following could be the value of \\(q\\)?",
+      "question": "The function \\(v\\) is defined by the equation \\(v(x) = \\tfrac{x^2 + bx + c}{(x + 5)(x - 19)}\\), where \\(b\\) and \\(c\\) are constants. In the xy-plane, the graph of \\(y = v(x)\\) passes through the points \\((0, \\tfrac{66}{95})\\) and \\((11, 0)\\). If \\(v(q) = 0\\), which of the following could be the value of \\(q\\)?",
       "options": {
         "A": "-\\(6\\)",
         "B": "-\\(5\\)",
@@ -1606,7 +1606,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "Line \\(s\\) is defined by \\(x - 4y = 24\\). Line \\(t\\) is perpendicular to line \\(s\\) in the \\(xy\\)-plane and passes through the points \\((k, 0)\\) and \\((60, -k)\\). What is the value of \\(k\\)?",
+      "question": "Line \\(s\\) is defined by \\(x - 4y = 24\\). Line \\(t\\) is perpendicular to line \\(s\\) in the xy-plane and passes through the points \\((k, 0)\\) and \\((60, -k)\\). What is the value of \\(k\\)?",
       "options": {},
       "correct_option": "48",
       "hint": "First find the slope of line \\(s\\), then find the slope of the perpendicular line \\(t\\). Use the two given points on line \\(t\\) to set up an equation for \\(k\\).",
@@ -1634,7 +1634,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "hard",
-      "question": "An engineer connects resistors in series, where the resistors in the series have a total resistance of \\(\\tfrac{41}{35}\\) ohms. In this series, there are \\(x\\) resistors of type A, which each have a resistance of \\(a\\) ohms, and \\(y\\) resistors of type B, which each have a resistance of \\(b\\) ohms. The given equation represents this situation.\n\n\\[\\frac{x}{\\(7\\)} + \\frac{y}{\\(5\\)} = \\frac{\\(41\\)}{\\(35\\)}\\]\n\nAccording to this equation, what is the positive difference between the value of \\(a\\) and the value of \\(b\\)?",
+      "question": "An engineer connects resistors in series, where the resistors in the series have a total resistance of \\(\\tfrac{41}{35}\\) ohms. In this series, there are \\(x\\) resistors of type A, which each have a resistance of \\(a\\) ohms, and \\(y\\) resistors of type B, which each have a resistance of \\(b\\) ohms. The given equation represents this situation.\n\n\\[\\frac{x}{7} + \\frac{y}{5} = \\frac{41}{35}\\]\n\nAccording to this equation, what is the positive difference between the value of \\(a\\) and the value of \\(b\\)?",
       "options": {
         "A": "\\(41\\)",
         "B": "\\(2\\)",
@@ -1662,7 +1662,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "hard",
-      "question": "The functions \\(f\\) and \\(g\\) are defined by the given equations, where \\(x \\geq 0\\), \\(a\\) and \\(b\\) are integer constants, \\(a < b\\), and \\(a > 1\\). If \\(y = f(x)\\) and \\(y = g(x)\\) are graphed in the \\(xy\\)-plane, which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where \\(x \\geq 0\\)?\n\nI. \\(f(x) = a(0.63)^{-bx}\\)\n\nII. \\(g(x) = a(1.37)^{x+2} + b\\)",
+      "question": "The functions \\(f\\) and \\(g\\) are defined by the given equations, where \\(x \\geq 0\\), \\(a\\) and \\(b\\) are integer constants, \\(a < b\\), and \\(a > 1\\). If \\(y = f(x)\\) and \\(y = g(x)\\) are graphed in the xy-plane, which of the following equations displays, as a constant or coefficient, the minimum value of the function it defines, where \\(x \\geq 0\\)?\n\nI. \\(f(x) = a(0.63)^{-bx}\\)\n\nII. \\(g(x) = a(1.37)^{x+2} + b\\)",
       "options": {
         "A": "I only",
         "B": "II only",

@@ -1,0 +1,88 @@
+{
+  "exam_id": "SAT_ORIGINAL_001",
+  "version": 1,
+  "name": "SAT Practice Test #1",
+  "difficulty_level": "standard",
+  "is_active": true,
+  "is_adaptive": true,
+  "metadata": {
+    "total_questions": 66,
+    "module_1_questions": 22,
+    "module_2_questions": 22,
+    "threshold": 16,
+    "duration_minutes": 70,
+    "topics_distribution": {
+      "algebra": 11,
+      "advanced_math": 13,
+      "problem_solving": 15,
+      "geometry": 5
+    }
+  },
+  "module_1": [
+    {
+      "question_number": 1,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "Se \\(2x + 5 = 13\\), qual é o valor de \\(x\\)?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_option": "B",
+      "hint": "Subtraia 5 de ambos os lados e depois divida por 2",
+      "solution": [
+        "Subtraia 5 de ambos os lados: \\(2x = 8\\)",
+        "Divida ambos os lados por 2: \\(x = 4\\)"
+      ],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "solving_for_x"
+    }
+  ],
+  "module_2_easy": [
+    {
+      "question_number": 23,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "Questão FÁCIL do módulo 2...",
+      "options": {
+        "A": "Opção A",
+        "B": "Opção B",
+        "C": "Opção C",
+        "D": "Opção D"
+      },
+      "correct_option": "A",
+      "hint": "Dica aqui",
+      "solution": ["Passo 1", "Passo 2"],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "example"
+    }
+  ],
+  "module_2_hard": [
+    {
+      "question_number": 23,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "Questão DIFÍCIL do módulo 2...",
+      "options": {
+        "A": "Opção A",
+        "B": "Opção B",
+        "C": "Opção C",
+        "D": "Opção D"
+      },
+      "correct_option": "C",
+      "hint": "Dica aqui",
+      "solution": ["Passo 1", "Passo 2", "Passo 3"],
+      "representation": "",
+      "format": "multiple_choice",
+      "structure": "example"
+    }
+  ]
+}
+

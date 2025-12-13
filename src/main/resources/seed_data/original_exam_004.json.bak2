@@ -73,7 +73,7 @@
       "topic": "algebra",
       "subskill": "isolating_variables",
       "difficulty": "easy",
-      "question": "The given equation relates the positive numbers \\(m\\), \\(n\\), and \\(p\\).\n\n\\[11m = \\(6\\)(n + p)\\]\n\nWhich equation correctly gives \\(m\\) in terms of \\(n\\) and \\(p\\)?",
+      "question": "The given equation relates the positive numbers \\(m\\), \\(n\\), and \\(p\\).\n\n\\[11m = 6(n + p)\\]\n\nWhich equation correctly gives \\(m\\) in terms of \\(n\\) and \\(p\\)?",
       "options": {
         "A": "\\(m = \\tfrac{6(n + p)}{11}\\)",
         "B": "\\(m = 6(n + p)\\)",
@@ -238,7 +238,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "easy",
-      "question": "If the solution to the given system of equations is \\((x, y)\\), which of the following equations is true?\n\n\\[2x + 2y = \\(60\\)\\]\n\\[x + y = 4x\\]",
+      "question": "If the solution to the given system of equations is \\((x, y)\\), which of the following equations is true?\n\n\\[2x + 2y = 60\\]\n\\[x + y = 4x\\]",
       "options": {
         "A": "\\(4x = 2\\)",
         "B": "\\(4x = 30\\)",
@@ -269,7 +269,7 @@
       "topic": "advanced_math",
       "subskill": "polynomials",
       "difficulty": "easy",
-      "question": "\\(f(x) = 3(x - 2)(x - 7)(x - 9)\\)\n\nIf the given function \\(f\\) is graphed in the \\(xy\\)-plane, where \\(y = f(x)\\), what is the x-coordinate of an \\(x\\)-intercept of the graph?",
+      "question": "\\(f(x) = 3(x - 2)(x - 7)(x - 9)\\)\n\nIf the given function \\(f\\) is graphed in the xy-plane, where \\(y = f(x)\\), what is the x-coordinate of an \\(x\\)-intercept of the graph?",
       "options": {},
       "correct_option": "2",
       "hint": "An \\(x\\)-intercept occurs when \\(f(x) = 0\\). Set the function equal to zero and solve for \\(x\\).",
@@ -320,7 +320,7 @@
       "topic": "advanced_math",
       "subskill": "linear_and_quadratic",
       "difficulty": "easy",
-      "question": "The graphs of the equations in the given system intersect at the point \\((x, y)\\) in the \\(xy\\)-plane. What is a possible value of \\(x\\)?\n\n\\[y = x^\\(2\\) + 16x + \\(8\\)\\]\n\\[y = x + \\(8\\)\\]",
+      "question": "The graphs of the equations in the given system intersect at the point \\((x, y)\\) in the xy-plane. What is a possible value of \\(x\\)?\n\n\\[y = x^2 + 16x + 8\\]\n\\[y = x + 8\\]",
       "options": {
         "A": "-\\(15\\)",
         "B": "-\\(12\\)",
@@ -348,7 +348,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "cricles",
       "difficulty": "easy",
-      "question": "A circle in the \\(xy\\)-plane has its center at \\((-5, 1)\\) and the point \\((-9, 4)\\) lies on the circle. Which equation represents this circle?",
+      "question": "A circle in the xy-plane has its center at \\((-5, 1)\\) and the point \\((-9, 4)\\) lies on the circle. Which equation represents this circle?",
       "options": {
         "A": "\\((x - 5)^2 + (y + 1)^2 = 5\\)",
         "B": "\\((x + 5)^2 + (y - 1)^2 = 5\\)",
@@ -489,7 +489,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "In the \\(xy\\)-plane, line \\(p\\) has a slope of \\(-\\tfrac{5}{4}\\) and an \\(x\\)-intercept of \\((-16, 0)\\). What is the y-coordinate of the \\(y\\)-intercept of line \\(p\\)?",
+      "question": "In the xy-plane, line \\(p\\) has a slope of \\(-\\tfrac{5}{4}\\) and an \\(x\\)-intercept of \\((-16, 0)\\). What is the y-coordinate of the \\(y\\)-intercept of line \\(p\\)?",
       "options": {},
       "correct_option": "-20",
       "hint": "Use the point-slope form of a line with the given slope and \\(x\\)-intercept point, then find the \\(y\\)-intercept by setting \\(x = 0\\).",
@@ -563,7 +563,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "easy",
-      "question": "One of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?\n\n\\[3x - 24y = \\(12\\)\\]",
+      "question": "One of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?\n\n\\[3x - 24y = 12\\]",
       "options": {
         "A": "\\(\\tfrac{1}{2}x - 4y = 0\\)",
         "B": "\\(x - 8y = 4\\)",
@@ -726,11 +726,11 @@
       "question": "A line segment that has a length of \\(125\\) centimeters (cm) is divided into three parts. One part is \\(49\\) cm long. The other two parts have lengths that are equal to each other. What is the length, in cm, of one of the other two parts of equal length?",
       "options": {},
       "correct_option": "38",
-      "hint": "Let \\(x\\) be the length of \\(\\overline{each}\\) of the two equal parts. Set up an equation: \\(49\\) + 2x = \\(125\\), then solve for \\(x\\).",
+      "hint": "Let \\(x\\) be the length of each of the two equal parts. Set up an equation: \\(49\\) + 2x = \\(125\\), then solve for \\(x\\).",
       "solution": [
         "Total length of the segment: \\(125\\) cm",
         "One part: \\(49\\) cm",
-        "Let \\(x\\) = length of \\(\\overline{each}\\) of the two equal parts",
+        "Let \\(x\\) = length of each of the two equal parts",
         "Set up the equation: \\(49 + 2x = 125\\)",
         "Subtract \\(49\\) from both sides: \\(2x = 125 - 49 = 76\\)",
         "Divide both sides by \\(2\\): \\(x = 38\\)",
@@ -819,7 +819,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
-      "question": "In the figure shown, \\(\\triangle CAE\\) is similar to \\(\\triangle CBD\\). The measure of \\(\\angle CBD\\) is \\(56\\), and \\(\\overline{AE}\\) = \\(22\\)(BD). What is the measure of \\(\\angle CAE\\)?",
+      "question": "In the figure shown, triangle CAE is similar to triangle CBD. The measure of \\(\\angle CBD\\) is \\(56\\), and AE = \\(22\\)(BD). What is the measure of \\(\\angle CAE\\)?",
       "options": {
         "A": "\\(22°\\)",
         "B": "\\(56°\\)",
@@ -827,14 +827,14 @@
         "D": "\\((22 \\cdot 56)°\\)"
       },
       "correct_option": "B",
-      "hint": "In similar triangles, corresponding angles are equal. Identify which angle in \\(\\triangle CAE\\) corresponds to \\(\\angle CBD\\) in \\(\\triangle CBD\\).",
+      "hint": "In similar triangles, corresponding angles are equal. Identify which angle in triangle CAE corresponds to \\(\\angle CBD\\) in triangle CBD.",
       "solution": [
-        "Given: Triangle \\(\\overline{CAE}\\) is similar to \\(\\triangle CBD\\)",
+        "Given: Triangle CAE is similar to triangle CBD",
         "In similar triangles, corresponding angles are equal",
-        "\\(\\angle CAE\\) in \\(\\triangle CAE\\) corresponds to \\(\\angle CBD\\) in \\(\\triangle CBD\\)",
+        "\\(\\angle CAE\\) in triangle CAE corresponds to \\(\\angle CBD\\) in triangle CBD",
         "Since the measure of \\(\\angle CBD\\) is \\(56\\)°",
         "The measure of \\(\\angle CAE\\) is also \\(56\\)°",
-        "Note: The information about side lengths (\\(\\overline{AE}\\) = \\(22\\)(BD)) is not needed to find the angle measure, as similar triangles have equal corresponding angles regardless of size"
+        "Note: The information about side lengths (AE = \\(22\\)(BD)) is not needed to find the angle measure, as similar triangles have equal corresponding angles regardless of size"
       ],
       "representation": "",
       "format": "multiple_choice",
@@ -920,7 +920,7 @@
       "topic": "algebra",
       "subskill": "linear_inequality",
       "difficulty": "easy",
-      "question": "In the \\(xy\\)-plane, which of the following does NOT contain any points that are part of the solution set to \\(2x - 6y > 12\\)?",
+      "question": "In the xy-plane, which of the following does NOT contain any points that are part of the solution set to \\(2x - 6y > 12\\)?",
       "options": {
         "A": "The region where \\(x < 0\\) and \\(y > 0\\)",
         "B": "The region where \\(x < 0\\) and \\(y < 0\\)",
@@ -957,7 +957,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "cricles",
       "difficulty": "easy",
-      "question": "A circle in the \\(xy\\)-plane has its center at \\((18, 16)\\) and has a radius of \\(6k\\). Which equation represents this circle?",
+      "question": "A circle in the xy-plane has its center at \\((18, 16)\\) and has a radius of \\(6k\\). Which equation represents this circle?",
       "options": {
         "A": "\\((x - 18)^2 + (y - 16)^2 = 36k\\)",
         "B": "\\((x - 18)^2 + (y - 16)^2 = 36k^2\\)",
@@ -1082,7 +1082,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "In the \\(xy\\)-plane, line \\(k\\) and line \\(\\ell\\) are perpendicular and intersect at the point \\((2, 9)\\). If line \\(k\\) is defined by the equation \\(y = mx + b\\), where \\(m\\) and \\(b\\) are constants and \\(m > 1\\), which of the following points lies on line \\(\\ell\\)?",
+      "question": "In the xy-plane, line \\(k\\) and line \\(\\ell\\) are perpendicular and intersect at the point \\((2, 9)\\). If line \\(k\\) is defined by the equation \\(y = mx + b\\), where \\(m\\) and \\(b\\) are constants and \\(m > 1\\), which of the following points lies on line \\(\\ell\\)?",
       "options": {
         "A": "\\((3, 9 - \\frac{1}{m})\\)",
         "B": "\\((3, 9 + \\frac{1}{m})\\)",
@@ -1120,7 +1120,7 @@
       "hint": "Convert the volume from cubic yards to cubic meters. Since volume is cubic, the conversion factor must be cubed: \\(1 \\text{ yard}^3 = (0.914 \\text{ meter})^3\\).",
       "solution": [
         "Given: Volume = \\(24{,}500\\) cubic yards",
-        "Conversion: \\(1\\) yard = \\(0\\).\\(914\\) meter",
+        "Conversion: 1 yard = 0.914 meter",
         "For volume conversion, we need to cube the conversion factor:",
         "\\(1 \\text{ yard}^3 = (0.914 \\text{ meter})^3 = 0.914^3 \\text{ meters}^3\\)",
         "Calculate: \\(0.914^3 = 0.914 \\times 0.914 \\times 0.914\\approx 0.763\\)",
@@ -1375,7 +1375,7 @@
         "D": "\\(42\\)"
       },
       "correct_option": "B",
-      "hint": "First calculate the area of rectangle X. Since the area of rectangle X is \\(3\\) times the area of triangle Y, find the area of triangle Y. Then use the triangle \\(\\overline{area}\\) formula to find the height.",
+      "hint": "First calculate the area of rectangle X. Since the area of rectangle X is \\(3\\) times the area of triangle Y, find the area of triangle Y. Then use the triangle area formula to find the height.",
       "solution": [
         "Area of rectangle X: \\(24 \\times 17.5 = 420\\) mm²",
         "Area of rectangle X = \\(3\\) × Area of triangle Y",
@@ -1396,7 +1396,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "There is a linear relationship between \\(x\\) and \\(y\\). The table shows three values of \\(x\\) and their corresponding values of \\(y\\) in terms of a constant \\(n\\).\n\n\\[\\begin{array}{|c|c|}\n\\hline\nx & y \\\\\\hline\n0 & n \\\\\\hline\n3 & n + 14 \\\\\\hline\n6 & n + 28 \\\\\\hline\n\\end{array}\\]\n\nWhat is the slope of the line in the \\(xy\\)-plane that represents this relationship?",
+      "question": "There is a linear relationship between \\(x\\) and \\(y\\). The table shows three values of \\(x\\) and their corresponding values of \\(y\\) in terms of a constant \\(n\\).\n\n\\[\\begin{array}{|c|c|}\n\\hline\nx & y \\\\\\hline\n0 & n \\\\\\hline\n3 & n + 14 \\\\\\hline\n6 & n + 28 \\\\\\hline\n\\end{array}\\]\n\nWhat is the slope of the line in the xy-plane that represents this relationship?",
       "options": {
         "A": "\\(12\\)",
         "B": "\\(2\\)",
@@ -1674,7 +1674,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "In the \\(xy\\)-plane, line \\(r\\) passes through the points \\((2, 16)\\) and \\((7, 17)\\). Line \\(s\\) passes through the point \\((1, 2)\\) and is perpendicular to line \\(r\\). An equation of line \\(s\\) is \\(ax + 7y = c\\), where \\(a\\) and \\(c\\) are constants. What is the value of \\(c\\)?",
+      "question": "In the xy-plane, line \\(r\\) passes through the points \\((2, 16)\\) and \\((7, 17)\\). Line \\(s\\) passes through the point \\((1, 2)\\) and is perpendicular to line \\(r\\). An equation of line \\(s\\) is \\(ax + 7y = c\\), where \\(a\\) and \\(c\\) are constants. What is the value of \\(c\\)?",
       "options": {},
       "correct_option": "49",
       "hint": "First, find the slope of line \\(r\\) using the two given points. Then, use the relationship between slopes of perpendicular lines to find the slope of line \\(s\\). Finally, use the point \\((1, 2)\\) and the slope of line \\(s\\) to find its equation in the form \\(ax + 7y = c\\).",
