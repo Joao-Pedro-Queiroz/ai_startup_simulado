@@ -40,5 +40,6 @@ public record QuestoesCreateItemDTO(
         String alternativa_marcada,
         Boolean dica,
         Boolean solucao,
-        Integer modulo   // 1 ou 2 (módulo adaptativo); no original use 1
+        Integer modulo,   // 1 ou 2 (módulo adaptativo); no original use 1
+        Integer ordem     // ordem da questão no simulado
 ) {}
