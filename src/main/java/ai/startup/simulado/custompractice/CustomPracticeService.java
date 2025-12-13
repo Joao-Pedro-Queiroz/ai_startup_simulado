@@ -456,6 +456,17 @@ public class CustomPracticeService {
             @SuppressWarnings("unchecked")
             Map<String, Object> figure = (Map<String, Object>) q.get("figure");
             
+            // Extrair ordem (pode vir como Integer ou Number)
+            Integer ordem = null;
+            Object ordemObj = q.get("ordem");
+            if (ordemObj != null) {
+                if (ordemObj instanceof Integer) {
+                    ordem = (Integer) ordemObj;
+                } else if (ordemObj instanceof Number) {
+                    ordem = ((Number) ordemObj).intValue();
+                }
+            }
+            
             // Criar record usando o construtor
             return new QuestoesCreateItemDTO(
                 simuladoId,        // id_formulario
@@ -481,7 +492,8 @@ public class CustomPracticeService {
                 null,              // alternativa_marcada
                 false,             // dica
                 false,             // solucao
-                1                  // modulo (1 para custom practice)
+                Integer.valueOf(1), // modulo (1 para custom practice)
+                ordem              // ordem
             );
         }).collect(Collectors.toList());
     }

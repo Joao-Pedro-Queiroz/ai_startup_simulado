@@ -479,6 +479,17 @@ public class SimuladoService {
             String hintPt              = str(q.get("hint_portugues"));
 
             Map<String,Object> figure  = (Map<String,Object>) q.get("figure");
+            
+            // Extrair ordem (pode vir como Integer ou Number)
+            Integer ordem = null;
+            Object ordemObj = q.get("ordem");
+            if (ordemObj != null) {
+                if (ordemObj instanceof Integer) {
+                    ordem = (Integer) ordemObj;
+                } else if (ordemObj instanceof Number) {
+                    ordem = ((Number) ordemObj).intValue();
+                }
+            }
 
             out.add(new QuestoesCreateItemDTO(
                     idSimulado,
@@ -508,7 +519,8 @@ public class SimuladoService {
                     null,      // alternativa_marcada
                     false,     // dica
                     false,     // solucao
-                    modulo
+                    Integer.valueOf(modulo),
+                    ordem      // ordem
             ));
         }
         return out;
@@ -561,7 +573,8 @@ public class SimuladoService {
                         null,                             // alternativa_marcada
                         false,                            // dica
                         false,                            // solucao
-                        1                                 // modulo 1
+                        Integer.valueOf(1),               // modulo 1
+                        null                              // ordem (null para questões originais)
                 ));
             }
             // Se for Map (compatibilidade com estrutura antiga)
@@ -596,7 +609,8 @@ public class SimuladoService {
                         null,
                         false,
                         false,
-                        1
+                        Integer.valueOf(1),
+                        null  // ordem (null para questões originais)
                 ));
             }
         }
@@ -646,7 +660,8 @@ public class SimuladoService {
                         null,
                         false,
                         false,
-                        2  // modulo 2
+                        Integer.valueOf(2),  // modulo 2
+                        null  // ordem (null para questões originais)
                 ));
             }
         }
