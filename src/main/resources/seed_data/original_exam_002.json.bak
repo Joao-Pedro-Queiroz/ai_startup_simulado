@@ -191,11 +191,11 @@
         "D": "\\(15\\)"
       },
       "correct_option": "D",
-      "hint": "Use the perimeter to find the third side, then verify that the triangle \\(\\overline{can}\\) be obtuse.",
+      "hint": "Use the perimeter to find the third side, then verify that the triangle can be obtuse.",
       "solution": [
-        "Let the third side \\(\\overline{be}\\) \\(s\\). Perimeter condition: \\(8 + 9 + s = 32\\).",
+        "Let the third side be \\(s\\). Perimeter condition: \\(8 + 9 + s = 32\\).",
         "Solve for \\(s\\): \\(s = 32 - 17 = 15\\).",
-        "Check obtuse: longest side is \\(15\\), and \\(15^2 = 225 > 8^2 + 9^2 = 145\\), so the triangle \\(\\overline{can}\\) be obtuse."
+        "Check obtuse: longest side is \\(15\\), and \\(15^2 = 225 > 8^2 + 9^2 = 145\\), so the triangle can be obtuse."
       ],
       "representation": "",
       "format": "multiple_choice",
@@ -1029,7 +1029,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "For the linear function \\(g\\), the graph of \\(y = g(x)\\) has slope \\(5\\) and passes through the point \\((2, 47)\\). Which equation defines \\(g\\)?",
+      "question": "For the linear function \\(g\\), the graph of \\(y = g(x)\\) has slope 5 and passes through the point \\((2, 47)\\). Which equation defines \\(g\\)?",
       "options": {
         "A": "\\(g(x) = 37x\\)",
         "B": "\\(g(x) = 37x + 5\\)",
@@ -1280,7 +1280,7 @@
         "D": "\\(51\\){,}\\(984\\)\\pi"
       },
       "correct_option": "A",
-      "hint": "Find the square's side length from its diagonal, then use half the side \\(\\overline{as}\\) the circle's radius.",
+      "hint": "Find the square's side length from its diagonal, then use half the side as the circle's radius.",
       "solution": [
         "Side length: \\(s = \\tfrac{228}{\\sqrt{2}} = 114\\sqrt{2}\\).",
         "Radius: \\(r = \\tfrac{s}{2} = 57\\sqrt{2}\\).",
@@ -1335,7 +1335,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "hard",
-      "question": "A square map has side length \\(35\\) inches and a scale of \\(1\\) inch to \\(13\\) miles. A smaller version is printed with side length \\(70\\)% shorter. On the smaller map, what actual distance (in miles) does \\(1\\) inch represent?",
+      "question": "A square map has side length 35 inches and a scale of 1 inch to 13 miles. A smaller version is printed with side length 70% shorter. On the smaller map, what actual distance (in miles) does 1 inch represent?",
       "options": {
         "A": "\\(3.90\\)",
         "B": "\\(7.65\\)",

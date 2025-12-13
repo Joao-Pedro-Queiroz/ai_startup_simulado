@@ -233,6 +233,13 @@ public class SimuladoService {
         try {
             nextExamData = originalExamService.getNextExamForUser(userId);
         } catch (Exception e) {
+            // Verificar se é porque completou todos os simulados
+            if (e.getMessage() != null && e.getMessage().contains("MAIS_PROVAS_EM_BREVE")) {
+                throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, 
+                    "🎉 Mais provas em breve! Enquanto isso, que tal fazer um simulado adaptativo para treinar direcionado?"
+                );
+            }
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Falha ao buscar simulado original.", e);
         }
 
@@ -692,7 +699,7 @@ public class SimuladoService {
                         null,                             // solution_portugues
                         examQ.getHint(),                  // hint_english (reusa hint)
                         null,                             // hint_portugues
-                        null,                             // figure
+                        examQ.getFigure(),                // figure
                         
                         // app
                         null,                             // alternativa_marcada
@@ -730,7 +737,7 @@ public class SimuladoService {
                         null,
                         hint,
                         null,
-                        null,
+                        (Map<String, Object>) qMap.get("figure"),
                         null,
                         false,
                         false,
@@ -781,7 +788,7 @@ public class SimuladoService {
                         null,
                         examQ.getHint(),
                         null,
-                        null,
+                        examQ.getFigure(),
                         null,
                         false,
                         false,

@@ -96,13 +96,15 @@ public class OriginalExamService {
         
         if (available.isEmpty()) {
             log.error("[OriginalExam] ❌ Usuário {} já completou todos os simulados originais!", userId);
-            throw new RuntimeException("Todos os simulados originais já foram completados por este usuário.");
+            throw new RuntimeException("MAIS_PROVAS_EM_BREVE");
         }
         
-        // Ordenar por ordem numérica (SAT_ORIGINAL_001, 002, 003...)
+        // Ordenar por ordem numérica (SAT_ORIGINAL_001, 002, 003, 004...)
+        // String::compareTo funciona porque "SAT_ORIGINAL_001" < "SAT_ORIGINAL_002" < ... < "SAT_ORIGINAL_004"
+        // Garante sequência: 001 -> 002 -> 003 -> 004
         available.sort(String::compareTo);
         
-        // Pegar o primeiro disponível
+        // Pegar o primeiro disponível (sempre será o menor número ainda não completado)
         String nextExamId = available.get(0);
         
         log.info("[OriginalExam] 🎯 Próximo simulado selecionado: {}", nextExamId);

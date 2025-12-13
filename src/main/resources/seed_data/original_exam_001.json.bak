@@ -54,7 +54,7 @@
         "D": "\\((x - 4)(x + 14)\\)"
       },
       "correct_option": "C",
-      "hint": "Find two numbers that multiply to \\(-56\\) and add to \\(-1\\).",
+      "hint": "Find two numbers that multiply to -\\(56\\) and add to -\\(1\\).",
       "solution": [
         "Need two numbers that multiply to -\\(56\\) and add to -\\(1\\)",
         "Those numbers are -\\(8\\) and \\(7\\): \\((-8) \\times 7 = -56\\) and \\((-8) + 7 = -1\\)",
@@ -93,7 +93,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "lines_angles_and_triangles",
       "difficulty": "easy",
-      "question": "What is the measure of \\(\\angle F\\) in the \\(\\triangle DEF\\), where \\(\\angle D\\) is \\(73°\\) and \\(\\angle E\\) is \\(35°\\)?",
+      "question": "What is the measure of \\(\\angle F\\) in the triangle DEF, where \\(\\angle D\\) is \\(73°\\) and \\(\\angle E\\) is \\(35°\\)?",
       "options": {
         "A": "\\(38°\\)",
         "B": "\\(72°\\)",
@@ -117,7 +117,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "medium",
-      "question": "The total amount of plastic remaining to be recycled in a facility over \\(x\\) shifts is represented by the graph. Which of the following represents the \\(y\\)-intercept of the graph?",
+      "question": "The total amount of plastic remaining to be recycled in a facility over \\(x\\) shifts is represented by the graph. The graph shows a line starting from a point on the positive \\(y\\)-axis and decreasing linearly to a point on the positive \\(x\\)-axis. Which of the following represents the \\(y\\)-intercept of the graph?",
       "options": {
         "A": "The total amount of plastic remaining at any given time",
         "B": "The number of shifts it will take to finish recycling the plastic",
@@ -279,7 +279,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "medium",
-      "question": "What is the \\(x\\)-intercept of the function \\(f(x) = (22)^x - 1\\) when it is graphed in the \\(xy\\)-plane, where \\(y = f(x)\\)?",
+      "question": "What is the \\(x\\)-intercept of the function \\(f(x) = (22)^x - 1\\) when it is graphed in the xy-plane, where \\(y = f(x)\\)?",
       "options": {
         "A": "\\((-1, 0)\\)",
         "B": "\\((0, 0)\\)",
@@ -303,7 +303,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "area_and_volume",
       "difficulty": "medium",
-      "question": "In parallelogram \\(ABCD\\), the length of \\(\\overline{AB}\\) is one-third the length of \\(\\overline{AD}\\). The perimeter of the parallelogram is \\(64\\). What is the length of \\(\\overline{AB}\\)?",
+      "question": "In parallelogram ABCD, the length of AB is one-third the length of AD. The perimeter of the parallelogram is \\(64\\). What is the length of AB?",
       "options": {
         "A": "\\(8\\)",
         "B": "\\(16\\)",
@@ -385,7 +385,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "medium",
-      "question": "The equations \\(12x = y\\) and \\(24x + 7 = 2y\\) intersect at how many points when graphed in the \\(xy\\)-plane?",
+      "question": "The equations \\(12x = y\\) and \\(24x + 7 = 2y\\) intersect at how many points when graphed in the xy-plane?",
       "options": {
         "A": "\\(0\\)",
         "B": "\\(1\\)",
@@ -411,7 +411,7 @@
       "topic": "algebra",
       "subskill": "linear_word_problems",
       "difficulty": "easy",
-      "question": "Several tiles labeled with either an A or a B are placed in a bag, and tiles are worth a different point value depending on the label. The equation \\(15a + 10b = 100\\) represents the situation when \\(a\\) of the A tiles and \\(b\\) of the B tiles are drawn from the bag for a total of \\(100\\) points. How many points would be earned by drawing one A tile and one B tile from the bag?",
+      "question": "Several tiles labeled with either an A or a B are placed in a bag, and tiles are worth a different point value depending on the label. The equation \\(15a + 10b = 100\\) represents the situation when \\(a\\) of the A tiles and \\(b\\) of the B tiles are drawn from the bag for a total of 100 points. How many points would be earned by drawing one A tile and one B tile from the bag?",
       "options": {},
       "correct_option": "25",
       "hint": "The coefficients in the equation represent the point value of each tile type.",
@@ -428,21 +428,21 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "medium",
-      "question": "The amount of money remaining in a scholarship fund is reduced by one-fourth every year. The amount of money in the fund is represented by \\(d\\) and the number of years by \\(y\\). If the fund starts with $\\(10.0\\), which equation below represents this situation after \\(y\\) years?",
+      "question": "The amount of money remaining in a scholarship fund is reduced by one-fourth every year. The amount of money in the fund is represented by \\(d\\) and the number of years by \\(y\\). If the fund starts with $\\(10{,}000\\), which equation below represents this situation after \\(y\\) years?",
       "options": {
-        "A": "\\(d = \\frac{1}{4} \\cdot (10.0)^y\\)",
-        "B": "\\(d = \\frac{3}{4} \\cdot (10.0)^y\\)",
-        "C": "\\(d = 10.0 \\cdot \\left(\\frac{1}{4}\\right)^y\\)",
-        "D": "\\(d = 10.0 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
+        "A": "\\(d = \\frac{1}{4} \\cdot (10{,}000)^y\\)",
+        "B": "\\(d = \\frac{3}{4} \\cdot (10{,}000)^y\\)",
+        "C": "\\(d = 10{,}000 \\cdot \\left(\\frac{1}{4}\\right)^y\\)",
+        "D": "\\(d = 10{,}000 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
       },
       "correct_option": "D",
       "hint": "If the fund is reduced by one-fourth, then three-fourths remains each year.",
       "solution": [
-        "Initial amount: $\\(10.0\\)",
+        "Initial amount: $\\(10{,}000\\)",
         "Reduced by one-fourth means \\(\\frac{1}{4}\\) is lost",
         "Amount remaining: \\(1 - \\frac{1}{4} = \\frac{3}{4}\\)",
         "After each year, the fund is multiplied by \\(\\frac{3}{4}\\)",
-        "Exponential decay formula: \\(d = 10.0 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
+        "Exponential decay formula: \\(d = 10{,}000 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
       ],
       "representation": "",
       "format": "multiple_choice",
@@ -479,7 +479,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\n4x + 2y &= 4 \\qquad (1) \\\\\n19x + 10y &= 14 \\qquad (2)\n\\end{align*}\n\\]\n\nWhen graphed in the \\(xy\\)-plane, the linear equations shown above intersect at \\((a, b)\\). What is the value of \\(a\\)?",
+      "question": "\\[\n\\begin{align}\n4x + 2y &= 4 \\\\\n19x + 10y &= 14\n\\end{align}\n\\]\n\nWhen graphed in the xy-plane, the linear equations shown above intersect at \\((a, b)\\). What is the value of \\(a\\)?",
       "options": {
         "A": "\\(-20\\)",
         "B": "\\(-10\\)",
@@ -503,7 +503,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "right_triangles_and_trigonometry",
       "difficulty": "medium",
-      "question": "The longest side of right \\(\\triangle ABC\\) is opposite \\(\\angle B\\). If \\(\\sin(A) = \\frac{9}{41}\\), what is the value of \\(\\sin(C)\\)?",
+      "question": "The longest side of right triangle ABC is opposite \\(\\angle B\\). If \\(\\sin(A) = \\frac{9}{41}\\), what is the value of \\(\\sin(C)\\)?",
       "options": {},
       "correct_option": "40/41",
       "hint": "In a right triangle, if B is the right angle, then \\(\\sin(A) = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\). Use the Pythagorean theorem to find the adjacent side.",
@@ -543,7 +543,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "\\(f(x) = -\\frac{1}{5}x - 3\\)\n\nThe linear function \\(f(x)\\), given above, is perpendicular to \\(g(x)\\) when graphed in the \\(xy\\)-plane. If \\(g(0) = 0\\), what is the value of \\(g(2)\\)?",
+      "question": "\\(f(x) = -\\frac{1}{5}x - 3\\)\n\nThe linear function \\(f(x)\\), given above, is perpendicular to \\(g(x)\\) when graphed in the xy-plane. If \\(g(0) = 0\\), what is the value of \\(g(2)\\)?",
       "options": {},
       "correct_option": "10",
       "hint": "Perpendicular lines have slopes that are negative reciprocals. Find the slope of \\(g(x)\\), then use the point \\((0, 0)\\) to write the equation.",
@@ -562,7 +562,7 @@
       "topic": "advanced_math",
       "subskill": "linear_and_quadratic",
       "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\ny &= 5kx^2 + 2x + 3 \\qquad (1) \\\\\n\\frac{y}{10} &= -x \\qquad (2)\n\\end{align*}\n\\]\n\nThe system of equations above has exactly one solution. If \\(k\\) is a positive constant, what is the value of \\(k\\)?",
+      "question": "\\[\n\\begin{align}\ny &= 5kx^2 + 2x + 3 \\\\\n\\frac{y}{10} &= -x\n\\end{align}\n\\]\n\nThe system of equations above has exactly one solution. If \\(k\\) is a positive constant, what is the value of \\(k\\)?",
       "options": {},
       "correct_option": "2.4",
       "hint": "For the system to have exactly one solution, the discriminant of the resulting quadratic must equal zero.",
@@ -728,7 +728,7 @@
       "topic": "algebra",
       "subskill": "linear_word_problems",
       "difficulty": "easy",
-      "question": "The number of dollars, \\(C\\), it costs for Halle to run a restaurant is modeled by the function \\(C(m) = 10m + 20.0\\) in which \\(m\\) is the number of meals served. What is the meaning of the \\(10\\) in this function?",
+      "question": "The number of dollars, \\(C\\), it costs for Halle to run a restaurant is modeled by the function \\(C(m) = 10m + 10{,}000\\) in which \\(m\\) is the number of meals served. What is the meaning of the \\(10\\) in this function?",
       "options": {
         "A": "The total cost for all the meals sold.",
         "B": "The fixed costs for the restaurant to operate.",
@@ -736,12 +736,12 @@
         "D": "The additional cost to the restaurant for each additional meal"
       },
       "correct_option": "D",
-      "hint": "In the linear function \\(C(m) = 10m + 20.0\\), the coefficient of \\(m\\) represents the rate of change.",
+      "hint": "In the linear function \\(C(m) = 10m + 10{,}000\\), the coefficient of \\(m\\) represents the rate of change.",
       "solution": [
-        "The function is \\(C(m) = 10m + 20.0\\)",
+        "The function is \\(C(m) = 10m + 10{,}000\\)",
         "The term \\(10m\\) represents the variable cost (depends on number of meals)",
         "The coefficient \\(10\\) means each additional meal adds $\\(10\\) to the total cost",
-        "The \\(20.0\\) is the fixed cost (independent of meals served)"
+        "The \\(10{,}000\\) is the fixed cost (independent of meals served)"
       ],
       "representation": "",
       "format": "multiple_choice",
@@ -769,73 +769,7 @@
       ],
       "representation": "graph",
       "format": "multiple_choice",
-      "structure": "identifying_intercept",
-      "option_figures": {
-        "A": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -4], [2, -8]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "B": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -2], [4, 0]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "C": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -1], [1, 1]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "D": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -1], [-1, 0]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        }
-      }
+      "structure": "identifying_intercept"
     },
     {
       "question_number": 31,
@@ -1132,7 +1066,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "right_triangles_and_trigonometry",
       "difficulty": "medium",
-      "question": "In \\(\\triangle ABC\\), angle C is a right angle. \\(\\overline{AC}\\) is \\(24\\) units long and \\(\\overline{BC}\\) is \\(7\\) units long. What is the cosine of \\(\\angle ABC\\)?",
+      "question": "In triangle ABC, angle C is a right angle. AC is \\(24\\) units long and BC is \\(7\\) units long. What is the cosine of \\(\\angle ABC\\)?",
       "options": {
         "A": "\\(\\frac{7}{25}\\)",
         "B": "\\(\\frac{7}{24}\\)",
@@ -1145,7 +1079,7 @@
         "Use Pythagorean theorem to find AB (hypotenuse): \\(AB^2 = AC^2 + BC^2\\)",
         "Calculate: \\(AB^2 = 24^2 + 7^2 = 576 + 49 = 625\\)",
         "Therefore: \\(AB = \\sqrt{625} = 25\\)",
-        "For \\(\\angle ABC\\), the adjacent side is \\(\\overline{BC}\\) = \\(7\\)",
+        "For \\(\\angle ABC\\), the adjacent side is BC = \\(7\\)",
         "\\(\\cos(\\angle ABC) = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{BC}{AB} = \\frac{7}{25}\\)"
       ],
       "representation": "",
@@ -1194,7 +1128,7 @@
       "correct_option": "A",
       "hint": "Use the Pythagorean theorem: \\(a^2 + b^2 = c^2\\), where \\(c\\) is the hypotenuse.",
       "solution": [
-        "Let the unknown side \\(\\overline{be}\\) \\(a\\), given: \\(b = 7\\) and \\(c = 12\\)",
+        "Let the unknown side be \\(a\\), given: \\(b = 7\\) and \\(c = 12\\)",
         "Pythagorean theorem: \\(a^2 + 7^2 = 12^2\\)",
         "Calculate: \\(a^2 + 49 = 144\\)",
         "Solve: \\(a^2 = 144 - 49 = 95\\)",
@@ -1209,7 +1143,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "medium",
-      "question": "In the \\(xy\\)-plane, the graph of \\(y = f(x)\\) for the linear function \\(f\\) passes through the points \\((6, 26)\\) and \\((12, 28)\\). Which of the following equations defines function \\(f\\)?",
+      "question": "In the xy-plane, the graph of \\(y = f(x)\\) for the linear function \\(f\\) passes through the points \\((6, 26)\\) and \\((12, 28)\\). Which of the following equations defines function \\(f\\)?",
       "options": {
         "A": "\\(f(x) = \\frac{1}{3}x + 24\\)",
         "B": "\\(f(x) = 3x - \\frac{8}{3}\\)",
@@ -1279,7 +1213,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\n3y &= 7x \\qquad (1) \\\\\ny - 5 &= 4x \\qquad (2)\n\\end{align*}\n\\]\n\nWhich ordered pair \\((x, y)\\) is the solution to the given system of equations?",
+      "question": "\\[\n\\begin{align}\n3y &= 7x \\\\\ny - 5 &= 4x\n\\end{align}\n\\]\n\nWhich ordered pair \\((x, y)\\) is the solution to the given system of equations?",
       "options": {
         "A": "\\((-7, -3)\\)",
         "B": "\\((-3, -7)\\)",
@@ -1305,7 +1239,7 @@
       "topic": "advanced_math",
       "subskill": "linear_and_quadratic",
       "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\ny &= x^2 - 6x - 18 \\qquad (1) \\\\\ny &= -x + 6 \\qquad (2)\n\\end{align*}\n\\]\n\nA solution to the given system of equations can be expressed as \\((a, b)\\). If \\(a < 0\\), what is the value of \\(a\\)?",
+      "question": "\\[\n\\begin{align}\ny &= x^2 - 6x - 18 \\\\\ny &= -x + 6\n\\end{align}\n\\]\n\nA solution to the given system of equations can be expressed as \\((a, b)\\). If \\(a < 0\\), what is the value of \\(a\\)?",
       "options": {
         "A": "\\(-18\\)",
         "B": "\\(-6\\)",
@@ -1360,7 +1294,7 @@
       "topic": "advanced_math",
       "subskill": "linear_and_quadratic",
       "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\ny &= 7(x + 13)^2 - 19 \\qquad (1) \\\\\ny &= -13 \\qquad (2)\n\\end{align*}\n\\]\n\nAt how many points do the graphs of the given equations intersect in the \\(xy\\)-plane?",
+      "question": "\\[\n\\begin{align}\ny &= 7(x + 13)^2 - 19 \\\\\ny &= -13\n\\end{align}\n\\]\n\nAt how many points do the graphs of the given equations intersect in the xy-plane?",
       "options": {
         "A": "Exactly one",
         "B": "Exactly two",
@@ -1410,7 +1344,7 @@
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "medium",
-      "question": "A line is graphed in the \\(xy\\)-plane. If the line has an \\(x\\)-intercept of \\((20, 0)\\) and a slope of \\(-\\frac{1}{4}\\), what is the y-coordinate of the \\(y\\)-intercept of the line?",
+      "question": "A line is graphed in the xy-plane. If the line has an \\(x\\)-intercept of \\((20, 0)\\) and a slope of \\(-\\frac{1}{4}\\), what is the y-coordinate of the \\(y\\)-intercept of the line?",
       "options": {},
       "correct_option": "5",
       "hint": "Use the point-slope form with the \\(x\\)-intercept and slope to find the \\(y\\)-intercept.",
@@ -1455,7 +1389,7 @@
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
       "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\n3d + 8n &= 24n - 14 \\qquad (1) \\\\\n14 + 3d &= kn \\qquad (2)\n\\end{align*}\n\\]\n\nIn the given system of equations, \\(k\\) is a constant. If the system of equations has infinitely many solutions, what is the value of \\(k\\)?",
+      "question": "\\[\n\\begin{align}\n3d + 8n &= 24n - 14 \\\\\n14 + 3d &= kn\n\\end{align}\n\\]\n\nIn the given system of equations, \\(k\\) is a constant. If the system of equations has infinitely many solutions, what is the value of \\(k\\)?",
       "options": {},
       "correct_option": "16",
       "hint": "For infinitely many solutions, the two equations must be equivalent. Simplify the first equation and compare coefficients.",
@@ -1526,21 +1460,21 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "lines_angles_and_triangles",
       "difficulty": "hard",
-      "question": "In the figure, triangles \\(\\triangle VWX\\) and \\(\\triangle VYZ\\) are similar. Given that \\(VW = 6\\) units, \\(YZ = 15\\) units, and \\(VZ = \\sqrt{549}\\) units, what is the area, in square units, of \\(\\triangle VWX\\)?",
+      "question": "In the figure, triangles VWX and VYZ are similar. Given that \\(VW = 6\\) units, \\(YZ = 15\\) units, and \\(VZ = \\sqrt{549}\\) units, what is the area, in square units, of triangle VWX?",
       "options": {},
       "correct_option": "18",
-      "hint": "Use the ratio of corresponding sides to find the dimensions of \\(\\triangle VWX\\), then calculate its area.",
+      "hint": "Use the ratio of corresponding sides to find the dimensions of triangle VWX, then calculate its area.",
       "solution": [
-        "Triangles \\(\\triangle VWX\\) and \\(\\triangle VYZ\\) are similar",
+        "Triangles VWX and VYZ are similar",
         "Corresponding sides: \\(\\frac{VW}{VY}\\) is the scale factor",
-        "In \\(\\triangle VYZ\\): Use Pythagorean theorem with \\(VZ = \\sqrt{549}\\) and \\(YZ = 15\\)",
+        "In triangle VYZ: Use Pythagorean theorem with \\(VZ = \\sqrt{549}\\) and \\(YZ = 15\\)",
         "Find \\(VY^2 = VZ^2 - YZ^2 = 549 - 225 = 324\\), so \\(VY = 18\\)",
         "Scale factor: \\(\\frac{VW}{VY} = \\frac{6}{18} = \\frac{1}{3}\\)",
         "So \\(WX = \\frac{1}{3} \\times YZ = \\frac{1}{3} \\times 15 = 5\\)",
-        "Area of \\(\\triangle VWX\\): \\(\\frac{1}{2} \\times VW \\times WX = \\frac{1}{2} \\times 6 \\times 5 = 15\\)",
+        "Area of VWX: \\(\\frac{1}{2} \\times VW \\times WX = \\frac{1}{2} \\times 6 \\times 5 = 15\\)",
         "Wait, let me recalculate using area ratio: \\((\\frac{1}{3})^2 = \\frac{1}{9}\\)",
-        "Area of \\(\\triangle VYZ\\): \\(\\frac{1}{2} \\times 18 \\times 15 = 135\\)",
-        "Area of \\(\\triangle VWX\\): \\(135 \\times \\frac{1}{9} = 15\\)",
+        "Area of VYZ: \\(\\frac{1}{2} \\times 18 \\times 15 = 135\\)",
+        "Area of VWX: \\(135 \\times \\frac{1}{9} = 15\\)",
         "Hmm, but answer might be \\(18\\). Let me verify VY calculation again.",
         "Actually \\(VY = 18\\), \\(WX = 5\\), so area = \\(\\frac{1}{2} \\times 6 \\times 6 = 18\\) if it's \\(6 \\times 6\\)",
         "Let me think: if VW = \\(6\\) and scale is \\(1\\)/\\(3\\), then WX should also scale. Area = \\(18\\) makes sense."
@@ -1574,7 +1508,7 @@
       "topic": "advanced_math",
       "subskill": "equivalent_expressions",
       "difficulty": "hard",
-      "question": "The graph of \\(y = g(x) - 14\\) is shown as a line passing through \\((0, -6)\\) with slope \\(3\\). If \\(a\\) is a positive constant and \\(b\\) is a negative constant, the function \\(g\\) could be defined by which of the following equations?",
+      "question": "The graph of \\(y = g(x) - 14\\) is shown as a line passing through \\((0, -6)\\) with slope 3. If \\(a\\) is a positive constant and \\(b\\) is a negative constant, the function \\(g\\) could be defined by which of the following equations?",
       "options": {
         "A": "\\(g(x) = -a - bx\\)",
         "B": "\\(g(x) = -a + bx\\)",
@@ -1600,7 +1534,7 @@
       "topic": "geoemtry_and_trigonometry",
       "subskill": "cricles",
       "difficulty": "hard",
-      "question": "A circle has center O with coordinates \\((h, k)\\) when graphed in the \\(xy\\)-plane. Point Y lies on the circle and has coordinates \\((h + \\sqrt{111}, k - 2)\\). If point X also lies on the circle, and the measure of \\(\\angle XOY\\) is \\(90°\\), what is the length of \\(\\overline{XY}\\)?",
+      "question": "A circle has center O with coordinates \\((h, k)\\) when graphed in the xy-plane. Point Y lies on the circle and has coordinates \\((h + \\sqrt{111}, k - 2)\\). If point X also lies on the circle, and the measure of \\(\\angle XOY\\) is \\(90°\\), what is the length of XY?",
       "options": {
         "A": "\\(115\\sqrt{3}\\)",
         "B": "\\(115\\sqrt{2}\\)",
@@ -1608,10 +1542,10 @@
         "D": "\\(\\sqrt{230}\\)"
       },
       "correct_option": "D",
-      "hint": "Find the radius using point Y, then use the fact that \\(\\triangle XOY\\) is a right isosceles triangle.",
+      "hint": "Find the radius using point Y, then use the fact that triangle XOY is a right isosceles triangle.",
       "solution": [
         "Find radius using distance from O to Y: \\(r = \\sqrt{(\\sqrt{111})^2 + (-2)^2} = \\sqrt{111 + 4} = \\sqrt{115}\\)",
-        "Since \\(\\angle XOY = 90°\\) and \\(\\overline{OX}\\) = \\(\\overline{OY}\\) = r (radii), \\(\\triangle XOY\\) is a right isosceles triangle",
+        "Since \\(\\angle XOY = 90°\\) and OX = OY = r (radii), triangle XOY is a right isosceles triangle",
         "Using Pythagorean theorem: \\(XY^2 = r^2 + r^2 = 2r^2\\)",
         "Calculate: \\(XY^2 = 2(115) = 230\\)",
         "Therefore: \\(XY = \\sqrt{230}\\)"

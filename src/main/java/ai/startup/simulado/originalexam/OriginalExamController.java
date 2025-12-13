@@ -243,6 +243,8 @@ public class OriginalExamController {
         if (totalCompleted >= totalExams) {
             log.info("[OriginalExamAPI] 🎉 Usuário {} completou TODOS os simulados originais!", userId);
             response.put("achievement", "Parabéns! Você completou todos os simulados originais!");
+            response.put("message_completed_all", "🎉 Mais provas em breve! Enquanto isso, que tal fazer um simulado adaptativo para treinar direcionado?");
+            response.put("suggestion", "Fazer simulado adaptativo");
         }
         
         log.info("[OriginalExamAPI] ✅ Simulado completado. Progresso: {}/{}", totalCompleted, totalExams);
