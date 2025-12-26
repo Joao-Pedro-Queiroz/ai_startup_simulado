@@ -131,16 +131,14 @@ public class CustomPracticeService {
 
             log.info("[CUSTOM] Total de questões geradas: {}", questoesGeradas.size());
             
-            // Debug: verificar se as questões têm hint/solution
+            // Debug: verificar se as questões têm hints/solutions bilíngues
             if (!questoesGeradas.isEmpty()) {
                 Map<String, Object> primeiraQuestao = questoesGeradas.get(0);
                 log.info("[CUSTOM] 🔍 DEBUG - Primeira questão do approva-descartes:");
-                log.info("[CUSTOM]   - Tem 'hint': {}", primeiraQuestao.containsKey("hint"));
-                log.info("[CUSTOM]   - Valor de 'hint': {}", primeiraQuestao.get("hint"));
-                log.info("[CUSTOM]   - Tem 'solution': {}", primeiraQuestao.containsKey("solution"));
-                log.info("[CUSTOM]   - Valor de 'solution': {}", primeiraQuestao.get("solution"));
                 log.info("[CUSTOM]   - Tem 'hint_english': {}", primeiraQuestao.containsKey("hint_english"));
+                log.info("[CUSTOM]   - Tem 'hint_portugues': {}", primeiraQuestao.containsKey("hint_portugues"));
                 log.info("[CUSTOM]   - Tem 'solution_english': {}", primeiraQuestao.containsKey("solution_english"));
+                log.info("[CUSTOM]   - Tem 'solution_portugues': {}", primeiraQuestao.containsKey("solution_portugues"));
             }
 
             // 8. Criar simulado no MongoDB
@@ -163,25 +161,25 @@ public class CustomPracticeService {
             log.info("[CUSTOM] ✅ {} questões salvas no banco de questões", 
                 questoesParaSalvar.size());
 
-            // 10. Buscar questões salvas do banco (para garantir que têm todos os campos, incluindo hint/solution)
+            // 10. Buscar questões salvas do banco (para garantir que têm todos os campos bilíngues)
             List<Map<String, Object>> questoesSalvas = questaoClient.listarPorSimulado(
                 authorizationHeader, 
                 simuladoSalvo.getId()
             );
             log.info("[CUSTOM] ✅ {} questões recuperadas do banco", questoesSalvas.size());
             
-            // Debug: verificar se as questões do banco têm hint/solution
+            // Debug: verificar se as questões do banco têm hints/solutions bilíngues
             if (!questoesSalvas.isEmpty()) {
                 Map<String, Object> primeiraQuestao = questoesSalvas.get(0);
                 log.info("[CUSTOM] 🔍 DEBUG - Primeira questão do banco:");
-                log.info("[CUSTOM]   - Tem 'hint': {}", primeiraQuestao.containsKey("hint"));
-                log.info("[CUSTOM]   - Valor de 'hint': {}", primeiraQuestao.get("hint"));
-                log.info("[CUSTOM]   - Tem 'solution': {}", primeiraQuestao.containsKey("solution"));
-                log.info("[CUSTOM]   - Valor de 'solution': {}", primeiraQuestao.get("solution"));
                 log.info("[CUSTOM]   - Tem 'hint_english': {}", primeiraQuestao.containsKey("hint_english"));
                 log.info("[CUSTOM]   - Valor de 'hint_english': {}", primeiraQuestao.get("hint_english"));
+                log.info("[CUSTOM]   - Tem 'hint_portugues': {}", primeiraQuestao.containsKey("hint_portugues"));
+                log.info("[CUSTOM]   - Valor de 'hint_portugues': {}", primeiraQuestao.get("hint_portugues"));
                 log.info("[CUSTOM]   - Tem 'solution_english': {}", primeiraQuestao.containsKey("solution_english"));
                 log.info("[CUSTOM]   - Valor de 'solution_english': {}", primeiraQuestao.get("solution_english"));
+                log.info("[CUSTOM]   - Tem 'solution_portugues': {}", primeiraQuestao.containsKey("solution_portugues"));
+                log.info("[CUSTOM]   - Valor de 'solution_portugues': {}", primeiraQuestao.get("solution_portugues"));
             }
 
             // 11. Retornar simulado com questões do banco (não as geradas diretamente)
@@ -436,77 +434,34 @@ public class CustomPracticeService {
             Object correctOption = q.get("correct_option");
             String structure = (String) q.get("structure");
             String format = (String) q.get("format");
-            String representation = (String) q.get("representation");
             String source = (String) q.get("source");
-            
-            // Approva-descartes retorna apenas "hint" e "solution", não os campos bilíngues
-            // Vamos usar esses campos e mapeá-los para ambos os idiomas
-            @SuppressWarnings("unchecked")
-            List<String> solutionRaw = (List<String>) q.get("solution");
-            Object hintRawObj = q.get("hint");
-            String hintRaw = hintRawObj != null ? String.valueOf(hintRawObj) : null;
+            String exampleId = (String) q.get("example_id");
             
             // Log detalhado para debug (apenas primeira questão)
             boolean isFirstQuestion = questoesGeradasFinal != null && !questoesGeradasFinal.isEmpty() && questoesGeradasFinal.get(0) == q;
             if (isFirstQuestion) {
+                int solEnSize = (q.get("solution_english") instanceof List<?> list) ? list.size() : 0;
+                int solPtSize = (q.get("solution_portugues") instanceof List<?> list) ? list.size() : 0;
                 log.info("[CUSTOM] 🔍 DEBUG montarQuestoesDTO - Primeira questão: {}", q.get("id"));
-                log.info("[CUSTOM]   - hintRaw (tipo: {}): {}", 
-                    hintRawObj != null ? hintRawObj.getClass().getSimpleName() : "null", 
-                    hintRaw);
-                log.info("[CUSTOM]   - solutionRaw (tipo: {}): {}", 
-                    solutionRaw != null ? solutionRaw.getClass().getSimpleName() : "null", 
-                    solutionRaw);
+                log.info("[CUSTOM]   - hint_english: {}", q.get("hint_english"));
+                log.info("[CUSTOM]   - hint_portugues: {}", q.get("hint_portugues"));
+                log.info("[CUSTOM]   - solution_english size: {}", solEnSize);
+                log.info("[CUSTOM]   - solution_portugues size: {}", solPtSize);
             }
             
-            // Se não vier solution_english/solution_portugues, usa solution para ambos
             @SuppressWarnings("unchecked")
             List<String> solutionEnglish = (List<String>) q.get("solution_english");
             @SuppressWarnings("unchecked")
             List<String> solutionPortugues = (List<String>) q.get("solution_portugues");
-            
-            // Mapear solution: se não vier os campos bilíngues, usa solution para ambos
-            if (solutionEnglish == null || solutionEnglish.isEmpty()) {
-                if (solutionRaw != null && !solutionRaw.isEmpty()) {
-                    solutionEnglish = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionRaw);
-                } else {
-                    solutionEnglish = new ArrayList<>();
-                }
-            } else {
-                solutionEnglish = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionEnglish);
-            }
-            if (solutionPortugues == null || solutionPortugues.isEmpty()) {
-                if (solutionRaw != null && !solutionRaw.isEmpty()) {
-                    solutionPortugues = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionRaw);
-                } else {
-                    solutionPortugues = new ArrayList<>();
-                }
-            } else {
-                solutionPortugues = ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionPortugues);
-            }
-            
-            // Se não vier hint_english/hint_portugues, usa hint para ambos
-            String hintEnglish = (String) q.get("hint_english");
-            String hintPortugues = (String) q.get("hint_portugues");
-            
-            // Mapear hint: se não vier os campos bilíngues, usa hint para ambos
-            if (hintEnglish == null || hintEnglish.trim().isEmpty()) {
-                if (hintRaw != null && !hintRaw.trim().isEmpty()) {
-                    hintEnglish = ai.startup.simulado.utils.TextCleaner.cleanText(hintRaw);
-                } else {
-                    hintEnglish = null;
-                }
-            } else {
-                hintEnglish = ai.startup.simulado.utils.TextCleaner.cleanText(hintEnglish);
-            }
-            if (hintPortugues == null || hintPortugues.trim().isEmpty()) {
-                if (hintRaw != null && !hintRaw.trim().isEmpty()) {
-                    hintPortugues = ai.startup.simulado.utils.TextCleaner.cleanText(hintRaw);
-                } else {
-                    hintPortugues = null;
-                }
-            } else {
-                hintPortugues = ai.startup.simulado.utils.TextCleaner.cleanText(hintPortugues);
-            }
+            solutionEnglish = solutionEnglish != null
+                    ? ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionEnglish)
+                    : new ArrayList<>();
+            solutionPortugues = solutionPortugues != null
+                    ? ai.startup.simulado.utils.TextCleaner.cleanStringList(solutionPortugues)
+                    : new ArrayList<>();
+
+            String hintEnglish = ai.startup.simulado.utils.TextCleaner.cleanText((String) q.get("hint_english"));
+            String hintPortugues = ai.startup.simulado.utils.TextCleaner.cleanText((String) q.get("hint_portugues"));
             
             // Log do resultado final (apenas primeira questão)
             if (isFirstQuestion) {
@@ -543,13 +498,11 @@ public class CustomPracticeService {
                 question,          // question
                 options,           // options
                 correctOption,     // correct_option
-                solutionPortugues, // solution (legado)
                 structure,         // structure
                 format,            // format
-                representation,    // representation
-                hintPortugues,     // hint (legado)
                 targetMistakes,    // target_mistakes
                 source,            // source
+                exampleId,         // example_id
                 solutionEnglish,   // solution_english
                 solutionPortugues, // solution_portugues
                 hintEnglish,       // hint_english

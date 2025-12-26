@@ -16,18 +16,12 @@ public record QuestoesCreateItemDTO(
         Map<String,String> options,     // pode ser vazio/null no free_response
         Object correct_option,          // "A"/"B"/... ou -1 (free_response)
 
-        // legado (se o modelo ainda enviar)
-        List<String> solution,
-
         String structure,
         String format,
-        String representation,
-
-        // legado (se vier)
-        String hint,
 
         List<String> target_mistakes,
         String source,
+        String example_id,
 
         // novos campos bilíngues/figura
         List<String> solution_english,
