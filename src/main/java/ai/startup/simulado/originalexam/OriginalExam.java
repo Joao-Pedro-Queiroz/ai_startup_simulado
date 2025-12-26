@@ -82,8 +82,10 @@ public class OriginalExam {
         @Field("correct_option")
         private String correctOption;
         
-        private String hint;
-        private List<String> solution;
+        private String hintEnglish;
+        private String hintPortugues;
+        private List<String> solutionEnglish;
+        private List<String> solutionPortugues;
         private String representation;
         private String format;
         private String structure;

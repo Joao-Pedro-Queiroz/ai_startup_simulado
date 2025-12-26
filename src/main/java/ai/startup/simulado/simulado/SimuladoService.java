@@ -396,8 +396,8 @@ public class SimuladoService {
                         body.id_simulado(), body.id_usuario(),
                         q.topic(), q.subskill(), q.difficulty(),
                         q.question(), q.options(), q.correct_option(),
-                        q.solution(), q.structure(), q.format(), q.representation(),
-                        q.hint(), q.target_mistakes(), q.source(),
+                        q.structure(), q.format(),
+                        q.target_mistakes(), q.source(), q.example_id(),
                         q.solution_english(), q.solution_portugues(),
                         q.hint_english(), q.hint_portugues(),
                         q.figure(), q.alternativa_marcada(), q.dica(), q.solucao(), q.modulo()
@@ -601,16 +601,15 @@ public class SimuladoService {
         for (var q : arr) {
             Map<String,String> options = (Map<String,String>) q.get("options"); // pode ser {}
             Object correct             = q.get("correct_option");               // "A"/"B"/... ou -1
-            List<String> solOld        = (List<String>) q.get("solution");      // legado
 
             List<String> solEn         = (List<String>) q.get("solution_english");
             List<String> solPt         = (List<String>) q.get("solution_portugues");
 
-            String hintOld             = str(q.get("hint"));          // legado
             String hintEn              = str(q.get("hint_english"));
             String hintPt              = str(q.get("hint_portugues"));
 
             Map<String,Object> figure  = (Map<String,Object>) q.get("figure");
+            String exampleId           = str(q.get("example_id"));
             
             // Extrair ordem (pode vir como Integer ou Number)
             Integer ordem = null;
@@ -632,15 +631,12 @@ public class SimuladoService {
                     str(q.get("question")),
                     options,
                     correct,
-                    solOld,
                     str(q.get("structure")),
                     str(q.get("format")),
-                    str(q.get("representation")),
-                    hintOld,
                     (List<String>) q.get("target_mistakes"),
                     str(q.getOrDefault("source","ai_generated")),
+                    exampleId,
 
-                    // novos campos
                     solEn,
                     solPt,
                     hintEn,
@@ -686,19 +682,15 @@ public class SimuladoService {
                         examQ.getQuestion(),
                         examQ.getOptions(),               // Map<String, String>
                         examQ.getCorrectOption(),         // String
-                        examQ.getSolution(),              // List<String> - legado
                         examQ.getStructure(),
                         examQ.getFormat(),
-                        examQ.getRepresentation(),
-                        examQ.getHint(),                  // legado
                         null,                             // target_mistakes
                         "sat_original",                   // source
-                        
-                        // novos campos
-                        examQ.getSolution(),              // solution_english (reusa solution)
-                        null,                             // solution_portugues
-                        examQ.getHint(),                  // hint_english (reusa hint)
-                        null,                             // hint_portugues
+                        null,                             // example_id
+                        examQ.getSolutionEnglish(),
+                        examQ.getSolutionPortugues(),
+                        examQ.getHintEnglish(),
+                        examQ.getHintPortugues(),
                         examQ.getFigure(),                // figure
                         
                         // app
@@ -714,8 +706,11 @@ public class SimuladoService {
                 Map<String,Object> qMap = (Map<String,Object>) q;
                 Map<String,String> options = (Map<String,String>) qMap.get("options");
                 Object correct = qMap.get("correct_option");
-                List<String> solution = (List<String>) qMap.get("solution");
-                String hint = str(qMap.get("hint"));
+                List<String> solutionEn = (List<String>) qMap.get("solution_english");
+                List<String> solutionPt = (List<String>) qMap.get("solution_portugues");
+                String hintEn = str(qMap.get("hint_english"));
+                String hintPt = str(qMap.get("hint_portugues"));
+                String exampleId = str(qMap.get("example_id"));
                 
                 out.add(new QuestoesCreateItemDTO(
                         idSimulado,
@@ -726,17 +721,15 @@ public class SimuladoService {
                         str(qMap.get("question")),
                         options,
                         correct,
-                        solution,
                         str(qMap.get("structure")),
                         str(qMap.get("format")),
-                        str(qMap.get("representation")),
-                        hint,
                         null,
                         "sat_original",
-                        solution,
-                        null,
-                        hint,
-                        null,
+                        exampleId,
+                        solutionEn,
+                        solutionPt,
+                        hintEn,
+                        hintPt,
                         (Map<String, Object>) qMap.get("figure"),
                         null,
                         false,
@@ -752,7 +745,6 @@ public class SimuladoService {
     /**
      * Mapeia as questões do Módulo 2 de um Original Exam para QuestoesCreateItemDTO
      */
-    @SuppressWarnings("unchecked")
     private List<QuestoesCreateItemDTO> mapOriginalExamModule2(String idSimulado, String userId,
                                                                 Map<String, Object> module2Data) {
         Object raw = module2Data == null ? null : module2Data.get("questions");
@@ -777,17 +769,15 @@ public class SimuladoService {
                         examQ.getQuestion(),
                         examQ.getOptions(),
                         examQ.getCorrectOption(),
-                        examQ.getSolution(),
                         examQ.getStructure(),
                         examQ.getFormat(),
-                        examQ.getRepresentation(),
-                        examQ.getHint(),
                         null,
                         "sat_original",
-                        examQ.getSolution(),
                         null,
-                        examQ.getHint(),
-                        null,
+                        examQ.getSolutionEnglish(),
+                        examQ.getSolutionPortugues(),
+                        examQ.getHintEnglish(),
+                        examQ.getHintPortugues(),
                         examQ.getFigure(),
                         null,
                         false,
