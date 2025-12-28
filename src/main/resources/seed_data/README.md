@@ -2,17 +2,18 @@
 
 ## 🎯 Instruções
 
-Nesta pasta você deve criar **5 arquivos JSON**, um para cada simulado original.
+Nesta pasta ficam os simulados originais. No momento existem **4 arquivos JSON** numerados como 011–014 (os 001–010 serão adicionados em seguida).
 
 ---
 
-## 📝 Arquivos Necessários:
+## 📝 Arquivos atuais:
 
-1. **`original_exam_001.json`** - SAT Practice Test #1 (Easy/Standard)
-2. **`original_exam_002.json`** - SAT Practice Test #2 (Medium)
-3. **`original_exam_003.json`** - SAT Practice Test #3 (Medium/Hard)
-4. **`original_exam_004.json`** - SAT Practice Test #4 (Hard)
-5. **`original_exam_005.json`** - SAT Practice Test #5 (Mixed/Realistic)
+1. **`original_exam_011.json`** - SAT Practice Test #11 (Easy/Standard)
+2. **`original_exam_012.json`** - SAT Practice Test #12 (Medium)
+3. **`original_exam_013.json`** - SAT Practice Test #13 (Medium/Hard)
+4. **`original_exam_014.json`** - SAT Practice Test #14 (Hard)
+
+*(Reserve `original_exam_001` a `original_exam_010` para os simulados novos que vamos criar.)*
 
 ---
 
@@ -24,7 +25,7 @@ Use o template em `original_exam_template.json` como base.
 
 ```json
 {
-  "exam_id": "SAT_ORIGINAL_XXX",  // UNIQUE! (001, 002, 003, 004, 005)
+  "exam_id": "SAT_ORIGINAL_XXX",  // UNIQUE! (001-014, sem repetir)
   "version": 1,
   "name": "SAT Practice Test #X",
   "difficulty_level": "standard", // easy/standard/hard
@@ -77,7 +78,7 @@ Use o template em `original_exam_template.json` como base.
 
 ## ✅ Checklist para Cada Simulado:
 
-- [ ] Tem `exam_id` único (SAT_ORIGINAL_001 a 005)
+- [ ] Tem `exam_id` único (SAT_ORIGINAL_001 a 014)
 - [ ] Tem exatamente **44 questões**
 - [ ] Todas as questões estão numeradas (1-44)
 - [ ] Distribuição de tópicos correta
@@ -94,7 +95,7 @@ Antes de importar, valide o JSON:
 
 ```bash
 # No terminal:
-node -e "console.log(JSON.parse(require('fs').readFileSync('original_exam_001.json')))"
+node -e "console.log(JSON.parse(require('fs').readFileSync('original_exam_011.json')))"
 
 # Ou use uma ferramenta online:
 # https://jsonlint.com/
@@ -102,22 +103,13 @@ node -e "console.log(JSON.parse(require('fs').readFileSync('original_exam_001.js
 
 ---
 
-## 📊 Distribuição Recomendada:
+## 📊 Distribuição Recomendada (ajuste conforme o exame):
 
-### **Simulado 001 (Easy):**
-- 50% easy, 40% medium, 10% hard
-
-### **Simulado 002 (Medium):**
-- 30% easy, 50% medium, 20% hard
-
-### **Simulado 003 (Medium/Hard):**
-- 20% easy, 50% medium, 30% hard
-
-### **Simulado 004 (Hard):**
-- 10% easy, 40% medium, 50% hard
-
-### **Simulado 005 (Realistic):**
-- 25% easy, 50% medium, 25% hard (como SAT real)
+- Easy/Standard: 50% easy, 40% medium, 10% hard  
+- Medium: 30% easy, 50% medium, 20% hard  
+- Medium/Hard: 20% easy, 50% medium, 30% hard  
+- Hard: 10% easy, 40% medium, 50% hard  
+- Realistic: 25% easy, 50% medium, 25% hard (como SAT real)
 
 ---
 

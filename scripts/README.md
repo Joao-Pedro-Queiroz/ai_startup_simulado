@@ -43,16 +43,15 @@ npm run import
 
 ## 🚀 Passo a Passo:
 
-### **1. Criar os 5 simulados JSON**
+### **1. Criar os simulados JSON**
 
 Vá para: `../src/main/resources/seed_data/`
 
 Crie os arquivos:
-- `original_exam_001.json` (44 questões)
-- `original_exam_002.json` (44 questões)
-- `original_exam_003.json` (44 questões)
-- `original_exam_004.json` (44 questões)
-- `original_exam_005.json` (44 questões)
+- `original_exam_011.json` (44 questões)
+- `original_exam_012.json` (44 questões)
+- `original_exam_013.json` (44 questões)
+- `original_exam_014.json` (44 questões)
 
 Use `original_exam_template.json` como base!
 
@@ -106,24 +105,24 @@ Ao rodar `npm run import`, você verá:
 
 📊 Simulados existentes: 0
 
-📝 Processando original_exam_001.json...
-   📊 exam_id: SAT_ORIGINAL_001
+📝 Processando original_exam_011.json...
+   📊 exam_id: SAT_ORIGINAL_011
    📚 Questões: 44
    🎯 Nível: standard
    ➕ Inserindo novo simulado...
-   ✅ SAT_ORIGINAL_001 inserido!
+   ✅ SAT_ORIGINAL_011 inserido!
 
-... (repete para 002-005) ...
+... (repete para 012-014) ...
 
 ═══════════════════════════════════════════════
 🎉 Import Concluído!
 ═══════════════════════════════════════════════
-✅ Importados: 5
+✅ Importados: 4
 ⏭️  Pulados: 0
-📊 Total na collection: 5
+📊 Total na collection: 4
 ═══════════════════════════════════════════════
 
-🎯 Perfeito! Todos os 5 simulados estão no MongoDB!
+🎯 Perfeito! Todos os 4 simulados estão no MongoDB!
 ```
 
 ---
@@ -137,7 +136,7 @@ export mongo_felps="sua_uri_mongodb"
 
 ### ❌ "Arquivo não encontrado"
 - Verifique se criou os JSONs em `seed_data/`
-- Nomes devem ser exatamente: `original_exam_001.json`, etc.
+- Nomes devem ser exatamente: `original_exam_011.json`, etc.
 
 ### ❌ "JSON inválido"
 - Valide o JSON em https://jsonlint.com/
@@ -162,7 +161,7 @@ mvn spring-boot:run
 curl http://localhost:8082/api/simulados/original/stats
 ```
 
-Deve retornar: `{"total_active_exams": 5, ...}`
+Deve retornar: `{"total_active_exams": 4, ...}`
 
 ---
 

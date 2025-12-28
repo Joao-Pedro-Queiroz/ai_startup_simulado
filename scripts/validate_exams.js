@@ -3,11 +3,10 @@ const path = require('path');
 
 const seedPath = path.join(__dirname, '../src/main/resources/seed_data');
 const examFiles = [
-  'original_exam_001.json',
-  'original_exam_002.json',
-  'original_exam_003.json',
-  'original_exam_004.json',
-  'original_exam_005.json'
+  'original_exam_011.json',
+  'original_exam_012.json',
+  'original_exam_013.json',
+  'original_exam_014.json'
 ];
 
 console.log('═══════════════════════════════════════════════');

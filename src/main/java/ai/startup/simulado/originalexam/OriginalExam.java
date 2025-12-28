@@ -71,6 +71,7 @@ public class OriginalExam {
     @Data
     public static class ExamQuestion {
         @Field("question_number")
+        @com.fasterxml.jackson.annotation.JsonProperty("question_number")
         private Integer questionNumber;
         
         private String topic;
@@ -80,11 +81,23 @@ public class OriginalExam {
         private Map<String, String> options;
         
         @Field("correct_option")
+        @com.fasterxml.jackson.annotation.JsonProperty("correct_option")
         private String correctOption;
         
+        @Field("hint_english")
+        @com.fasterxml.jackson.annotation.JsonProperty("hint_english")
         private String hintEnglish;
+        
+        @Field("hint_portugues")
+        @com.fasterxml.jackson.annotation.JsonProperty("hint_portugues")
         private String hintPortugues;
+        
+        @Field("solution_english")
+        @com.fasterxml.jackson.annotation.JsonProperty("solution_english")
         private List<String> solutionEnglish;
+        
+        @Field("solution_portugues")
+        @com.fasterxml.jackson.annotation.JsonProperty("solution_portugues")
         private List<String> solutionPortugues;
         private String representation;
         private String format;

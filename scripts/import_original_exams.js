@@ -45,14 +45,14 @@ async function importExams() {
       console.log('');
     }
     
-    // Importar os 5 simulados
+    // Importar os simulados disponíveis
     const seedPath = path.join(__dirname, '../src/main/resources/seed_data');
     const examFiles = [
       'original_exam_001.json',
-      'original_exam_002.json',
-      'original_exam_003.json',
-      'original_exam_004.json',
-      'original_exam_005.json'
+      'original_exam_011.json',
+      'original_exam_012.json',
+      'original_exam_013.json',
+      'original_exam_014.json'
     ];
     
     let imported = 0;
@@ -152,13 +152,14 @@ async function importExams() {
     console.log('═══════════════════════════════════════════════');
     console.log('');
     
-    if (finalCount === 5) {
-      console.log('🎯 Perfeito! Todos os 5 simulados estão no MongoDB!');
-    } else if (finalCount < 5) {
-      console.log(`⚠️  Atenção: Esperava 5 simulados, mas encontrou ${finalCount}`);
+    const expected = examFiles.length;
+    if (finalCount === expected) {
+      console.log(`🎯 Perfeito! Todos os ${expected} simulados estão no MongoDB!`);
+    } else if (finalCount < expected) {
+      console.log(`⚠️  Atenção: Esperava ${expected} simulados, mas encontrou ${finalCount}`);
       console.log('   Verifique se todos os arquivos JSON foram criados');
     } else {
-      console.log(`⚠️  Atenção: Encontrou ${finalCount} simulados (esperava 5)`);
+      console.log(`⚠️  Atenção: Encontrou ${finalCount} simulados (esperava ${expected})`);
       console.log('   Pode ter simulados duplicados ou extras');
     }
     

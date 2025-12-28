@@ -6,7 +6,7 @@
   "is_active": true,
   "is_adaptive": true,
   "metadata": {
-    "total_questions": 66,
+    "total_questions": 44,
     "module_1_questions": 22,
     "module_2_questions": 22,
     "threshold": 16,
@@ -15,1683 +15,1851 @@
       "algebra": 11,
       "advanced_math": 13,
       "problem_solving_and_data_analysis": 15,
-      "geoemtry_and_trigonometry": 5
+      "geometry_and_trigonometry": 5
     }
   },
   "module_1": [
     {
       "question_number": 1,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistcs",
+      "topic": "algebra",
+      "subskill": "isolating_variables",
       "difficulty": "easy",
-      "question": "A data set contains the values \\(2\\), \\(2\\), \\(9\\), \\(9\\), \\(9\\), \\(16\\), \\(16\\), \\(16\\), \\(16\\), \\(26\\), \\(26\\), and \\(26\\). Which of the following frequency tables correctly represents this data set?",
+      "question": "If \\(y = 9\\), what is the value of \\(y + 15\\)?",
       "options": {
-        "A": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 2 & 4 \\\\ 9 & 27 \\\\ 16 & 64 \\\\ 26 & 78 \\end{array}\\]",
-        "B": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 2 & 2 \\\\ 9 & 3 \\\\ 16 & 4 \\\\ 26 & 3 \\end{array}\\]",
-        "C": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 2 & 2 \\\\ 3 & 9 \\\\ 4 & 16 \\\\ 3 & 26 \\end{array}\\]",
-        "D": "\\[\\begin{array}{c|c} \\text{Number} & \\text{Frequency} \\\\\\hline 4 & 2 \\\\ 27 & 9 \\\\ 64 & 16 \\\\ 78 & 26 \\end{array}\\]"
+        "A": "\\(18\\)",
+        "B": "\\(24\\)",
+        "C": "\\(26\\)",
+        "D": "\\(34\\)"
       },
       "correct_option": "B",
-      "hint": "Count how many times each unique number appears in the data set.",
-      "solution": [
-        "Count occurrences: \\(2\\) appears \\(2\\) times, \\(9\\) appears \\(3\\) times, \\(16\\) appears \\(4\\) times, \\(26\\) appears \\(3\\) times",
-        "Option B correctly shows these frequencies"
+      "format": "multiple_choice",
+      "structure": "one_step_solution",
+      "hint_english": "Substitute \\(y = 9\\) and add \\(15\\).",
+      "hint_portugues": "Substitua \\(y = 9\\) e some \\(15\\).",
+      "solution_english": [
+        "Since \\(y = 9\\), substitute: \\(y + 15 = 9 + 15\\).",
+        "\\(9 + 15 = 24\\).",
+        "Therefore, the value of \\(y + 15\\) is \\(24\\)."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "mean_median_mode_range"
+      "solution_portugues": [
+        "Como \\(y = 9\\), substitu\u00edmos: \\(y + 15 = 9 + 15\\).",
+        "\\(9 + 15 = 24\\).",
+        "Portanto, o valor de \\(y + 15\\) \u00e9 \\(24\\)."
+      ]
     },
     {
       "question_number": 2,
-      "topic": "advanced_math",
-      "subskill": "equivalent_expressions",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistcs",
       "difficulty": "medium",
-      "question": "Which expression is equivalent to \\(x^2 - x - 56\\)?",
+      "question": "Data set A: \\(4, 6, 8, 12\\)<br>Data set B: \\(4, 6, 8, 12, 30\\)<br><br>The lists give the values in data sets A and B. Which statement correctly compares the mean of data set A and the mean of data set B?",
       "options": {
-        "A": "\\((x - 14)(x + 4)\\)",
-        "B": "\\((x - 7)(x + 8)\\)",
-        "C": "\\((x - 8)(x + 7)\\)",
-        "D": "\\((x - 4)(x + 14)\\)"
+        "A": "The mean of data set A is greater than the mean of data set B.",
+        "B": "The mean of data set A is less than the mean of data set B.",
+        "C": "The means of data set A and data set B are equal.",
+        "D": "There is not enough information to compare the means."
       },
-      "correct_option": "C",
-      "hint": "Find two numbers that multiply to \\(-56\\) and add to \\(-1\\).",
-      "solution": [
-        "Need two numbers that multiply to -\\(56\\) and add to -\\(1\\)",
-        "Those numbers are -\\(8\\) and \\(7\\): \\((-8) \\times 7 = -56\\) and \\((-8) + 7 = -1\\)",
-        "Factor: \\(x^2 - x - 56 = (x - 8)(x + 7)\\)",
-        "Verify: \\((x-8)(x+7) = x^2 + 7x - 8x - 56 = x^2 - x - 56\\) ✓"
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range",
+      "hint_english": "Compare the sums and the number of values in each data set.",
+      "hint_portugues": "Compare as somas e a quantidade de valores em cada conjunto.",
+      "solution_english": [
+        "\\(\\text{Mean}(A) = \\frac{4 + 6 + 8 + 12}{4} = \\frac{30}{4} = 7.5\\).",
+        "\\(\\text{Mean}(B) = \\frac{4 + 6 + 8 + 12 + 30}{5} = \\frac{60}{5} = 12\\).",
+        "Therefore, Mean(A) < Mean(B), so option B is correct."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "multiplying_and_dividing_exponents"
+      "solution_portugues": [
+        "\\(\\text{Média}(A) = \\frac{4 + 6 + 8 + 12}{4} = \\frac{30}{4} = 7{,}5\\).",
+        "\\(\\text{Média}(B) = \\frac{4 + 6 + 8 + 12 + 30}{5} = \\frac{60}{5} = 12\\).",
+        "Portanto, Média(A) < Média(B), então a opção B está correta."
+      ]
     },
     {
       "question_number": 3,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "medium",
-      "question": "A carpenter hammers \\(10\\) nails per minute and installs \\(7\\) screws per minute during a project. Which of the following equations represents the scenario if the carpenter hammers nails for \\(x\\) minutes, installs screws for \\(y\\) minutes, and uses a combined total of \\(200\\) nails and screws?",
+      "topic": "geometry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
+      "difficulty": "easy",
+      "question": "Right triangles \\(ABC\\) and \\(DEF\\) are similar. Points \\(A\\) and \\(D\\) are the right angles. If the measure of angle \\(B\\) is \\(25^\\circ\\), what is the measure of angle \\(F\\)?",
       "options": {
-        "A": "\\(\\frac{1}{10}x + \\frac{1}{7}y = 200\\)",
-        "B": "\\(\\frac{1}{10}x + \\frac{1}{7}y = 3{,}420\\)",
-        "C": "\\(10x + 7y = 200\\)",
-        "D": "\\(10x + 7y = 3{,}420\\)"
+        "A": "\\(25^\\circ\\)",
+        "B": "\\(65^\\circ\\)",
+        "C": "\\(90^\\circ\\)",
+        "D": "\\(155^\\circ\\)"
       },
-      "correct_option": "C",
-      "hint": "Multiply the rate (nails or screws per minute) by the time in minutes.",
-      "solution": [
-        "Nails hammered in \\(x\\) minutes: \\(10x\\)",
-        "Screws installed in \\(y\\) minutes: \\(7y\\)",
-        "Total nails and screws: \\(10x + 7y = 200\\)"
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "triangle_similarity_and_congruence",
+      "hint_english": "In a right triangle, angles sum to \\(180^\\circ\\); use the fact that \\(A\\) and \\(D\\) are right angles and \\(B\\) corresponds to \\(E\\).",
+      "hint_portugues": "Em um triângulo retângulo, os ângulos somam \\(180^\\circ\\); use o fato de que \\(A\\) e \\(D\\) são ângulos retos e que \\(B\\) corresponde a \\(E\\).",
+      "solution_english": [
+        "Angles in a triangle sum to \\(180^\\circ\\). In \\(ABC\\), with \\(A = 90^\\circ\\) and \\(B = 25^\\circ\\), angle \\(C = 180^\\circ - 90^\\circ - 25^\\circ = 65^\\circ\\).",
+        "By similarity, angle \\(F\\) corresponds to \\(C\\), so \\(F = 65^\\circ\\).",
+        "Option B."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "interpreting_linear_equations"
+      "solution_portugues": [
+        "Os ângulos de um triângulo somam \\(180^\\circ\\). Em \\(ABC\\), com \\(A = 90^\\circ\\) e \\(B = 25^\\circ\\), o ângulo \\(C = 180^\\circ - 90^\\circ - 25^\\circ = 65^\\circ\\).",
+        "Pela semelhança, o ângulo \\(F\\) corresponde a \\(C\\), então \\(F = 65^\\circ\\).",
+        "Opção B."
+      ]
     },
     {
       "question_number": 4,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "lines_angles_and_triangles",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "easy",
-      "question": "What is the measure of \\(\\angle F\\) in the \\(\\triangle DEF\\), where \\(\\angle D\\) is \\(73°\\) and \\(\\angle E\\) is \\(35°\\)?",
+      "question": "A tank contained \\(\\text{520,000}\\) liters of water before draining. Exactly \\(16\\) seconds later, \\(\\text{392,000}\\) liters of water remained. On average, approximately how many liters of water were drained each second?",
       "options": {
-        "A": "\\(38°\\)",
-        "B": "\\(72°\\)",
-        "C": "\\(108°\\)",
-        "D": "\\(126°\\)"
+        "A": "\\(\\text{8,000}\\)",
+        "B": "\\(\\text{16,000}\\)",
+        "C": "\\(\\text{20,000}\\)",
+        "D": "\\(\\text{128,000}\\)"
       },
-      "correct_option": "B",
-      "hint": "The sum of angles in a triangle is \\(180°\\).",
-      "solution": [
-        "Sum of angles in a triangle: \\(\\angle D + \\angle E + \\angle F = 180°\\)",
-        "Substitute: \\(\\angle D = 73°\\), \\(\\angle E = 35°\\): \\(73° + 35° + \\angle F = 180°\\)",
-        "Simplify: \\(108° + \\angle F = 180°\\)",
-        "Solve: \\(\\angle F = 180° - 108° = 72°\\)"
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "converting_units",
+      "hint_english": "Find the total amount drained, then divide by the time in seconds.",
+      "hint_portugues": "Encontre o total drenado e divida pelo tempo, em segundos.",
+      "solution_english": [
+        "Water drained = \\(\\text{520,000} - \\text{392,000} = \\text{128,000}\\) liters.",
+        "Time = \\(16\\) seconds.",
+        "Rate = \\(\\text{128,000} \\div 16 = \\text{8,000}\\) liters per second.",
+        "Correct average drained each second is \\(\\text{8,000}\\) liters (option A)."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "identifying_angle_relationships"
+      "solution_portugues": [
+        "Água drenada = \\(\\text{520,000} - \\text{392,000} = \\text{128,000}\\) litros.",
+        "Tempo = \\(16\\) segundos.",
+        "Taxa = \\(\\text{128,000} \\div 16 = \\text{8,000}\\) litros por segundo.",
+        "A média correta drenada por segundo é \\(\\text{8,000}\\) litros (opção A)."
+      ]
     },
     {
       "question_number": 5,
       "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "medium",
-      "question": "The total amount of plastic remaining to be recycled in a facility over \\(x\\) shifts is represented by the graph. Which of the following represents the \\(y\\)-intercept of the graph?",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "easy",
+      "question": "The solution to the given system of equations is \\((x, y)\\). What is the value of \\(x + y\\)?<br><br>\\(\\begin{cases}5x = 25 \\\\ -2x + y = 3\\end{cases}\\)",
       "options": {
-        "A": "The total amount of plastic remaining at any given time",
-        "B": "The number of shifts it will take to finish recycling the plastic",
-        "C": "The amount of plastic that is recycled per shift",
-        "D": "The initial amount of plastic to be recycled"
+        "A": "\\(3\\)",
+        "B": "\\(6\\)",
+        "C": "\\(8\\)",
+        "D": "\\(18\\)"
       },
       "correct_option": "D",
-      "hint": "The \\(y\\)-intercept occurs when \\(x = 0\\) (before any shifts have occurred).",
-      "solution": [
-        "The \\(y\\)-intercept is the value of \\(y\\) when \\(x = 0\\)",
-        "When \\(x = 0\\), no shifts have occurred yet",
-        "Therefore, the \\(y\\)-intercept represents the initial amount of plastic to be recycled"
+      "format": "multiple_choice",
+      "structure": "identifying_solution",
+      "hint_english": "Solve for x from the first equation, then substitute into the second.",
+      "hint_portugues": "Resolva x a partir da primeira equação e substitua na segunda.",
+      "solution_english": [
+        "From \\(5x = 25\\), \\(x = 5\\).",
+        "Plug into \\(-2x + y = 3\\): \\(-2(5) + y = 3 \\Rightarrow -10 + y = 3 \\Rightarrow y = 13\\).",
+        "\\(x + y = 5 + 13 = 18\\). Option D."
       ],
-      "representation": "graph",
-      "figure": {
-        "type": "lines",
-        "lines": [
-          {
-            "thick": true,
-            "arrow": false,
-            "through": [
-              [
-                0,
-                42
-              ],
-              [
-                8,
-                0
-              ]
-            ]
-          }
-        ],
-        "points": [
-          {
-            "coords": [
-              0,
-              42
-            ],
-            "label": "Start",
-            "position": "left"
-          },
-          {
-            "coords": [
-              8,
-              0
-            ],
-            "label": "Finish",
-            "position": "right"
-          }
-        ],
-        "showGrid": true,
-        "showAxes": true,
-        "showTicks": true,
-        "tickStep": 1,
-        "xRange": [
-          -1,
-          10
-        ],
-        "yRange": [
-          -5,
-          45
-        ]
-      },
-      "format": "MCQ",
-      "structure": "identifying_intercept"
+      "solution_portugues": [
+        "Da equação \\(5x = 25\\), obtemos \\(x = 5\\).",
+        "Substituindo em \\(-2x + y = 3\\): \\(-2(5) + y = 3 \\Rightarrow -10 + y = 3 \\Rightarrow y = 13\\).",
+        "\\(x + y = 5 + 13 = 18\\). Opção D."
+      ]
     },
     {
       "question_number": 6,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "probability",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
-      "question": "The table below shows the condition and subject type for \\(200\\) textbooks at a bookstore.\n\n\\[\\begin{array}{|c|c|c|c|c|c|}\n\\hline\n & \\text{Biology} & \\text{Chemistry} & \\text{Physics} & \\text{Anatomy} & \\text{Total} \\\\\\hline\n\\text{Used} & 10 & 25 & 30 & 15 & 80 \\\\\\hline\n\\text{New} & 30 & 25 & 10 & 55 & 120 \\\\\\hline\n\\text{Total} & 40 & 50 & 40 & 70 & 200 \\\\\\hline\n\\end{array}\\]\n\nWhat is the probability that a textbook chosen at random will be a new textbook? (Express your answer as a decimal or fraction, not as a percent.)",
-      "options": {},
-      "correct_option": "0.6",
-      "hint": "Probability = (Number of new textbooks) / (Total number of textbooks).",
-      "solution": [
-        "Total new textbooks: \\(120\\)",
-        "Total textbooks: \\(200\\)",
-        "Probability = \\(\\frac{120}{200} = \\frac{3}{5} = 0.6\\)"
+      "question": "A student has enrolled in a total of \\(96\\) hours of training courses. The equation \\(12x + 18y = 96\\) represents this situation, where \\(x\\) is the number of in-person courses and \\(y\\) is the number of virtual courses. How many more hours does each virtual course take than each in-person course?",
+      "options": {
+        "A": "\\(2\\) hours",
+        "B": "\\(4\\) hours",
+        "C": "\\(6\\) hours",
+        "D": "\\(8\\) hours"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations",
+      "hint_english": "Compare the coefficients: \\(12\\) hours for in-person vs. \\(18\\) hours for virtual.",
+      "hint_portugues": "Compare os coeficientes: \\(12\\) horas para presencial e \\(18\\) horas para virtual.",
+      "solution_english": [
+        "From \\(12x + 18y = 96\\), each in-person course is \\(12\\) hours and each virtual course is \\(18\\) hours.",
+        "Difference: \\(18 - 12 = 6\\) hours."
       ],
-      "representation": "table",
-      "format": "free_response",
-      "structure": "evaluating_probability"
+      "solution_portugues": [
+        "Pela equação \\(12x + 18y = 96\\), cada curso presencial tem \\(12\\) horas e cada curso virtual tem \\(18\\) horas.",
+        "Diferença: \\(18 - 12 = 6\\) horas."
+      ]
     },
     {
       "question_number": 7,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistcs",
-      "difficulty": "medium",
-      "question": "A random sample of \\(5{,}000\\) students out of \\(60{,}000\\) undergraduate students at a university were surveyed about a potential change to the registration system. According to the survey results, \\(75\\)% of the respondents did not support the existing registration system, with a \\(4\\)% margin of error. Which of the following represents a reasonable total number of students who did not support the existing registration system?",
+      "topic": "geometry_and_trigonometry",
+      "subskill": "area_and_volume",
+      "difficulty": "easy",
+      "question": "Square A has a side length of \\(9\\) centimeters. The perimeter of square B is \\(3\\) times the perimeter of square A. What is the length, in centimeters, of one side of square B?",
       "options": {
-        "A": "\\(1{,}250\\)",
-        "B": "\\(3{,}750\\)",
-        "C": "\\(13{,}800\\)",
-        "D": "\\(43{,}800\\)"
+        "A": "\\(9\\)",
+        "B": "\\(18\\)",
+        "C": "\\(27\\)",
+        "D": "\\(36\\)"
       },
-      "correct_option": "D",
-      "hint": "Apply the survey percentage to the entire population, considering the margin of error.",
-      "solution": [
-        "Total population: \\(60{,}000\\) students",
-        "Survey result: \\(75\\%\\) did not support (margin of error: \\(\\pm 4\\%\\))",
-        "Range: \\(71\\%\\) to \\(79\\%\\) of \\(60{,}000\\)",
-        "Calculate \\(75\\)% of \\(60{,}000\\): \\(0.75 \\times 60{,}000 = 45{,}000\\)",
-        "Calculate lower bound (\\(71\\)%): \\(0.71 \\times 60{,}000 = 42{,}600\\)",
-        "Calculate upper bound (\\(79\\)%): \\(0.79 \\times 60{,}000 = 47{,}400\\)",
-        "Option D (\\(43{,}800\\)) falls within this reasonable range"
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "area_of_2d_figures",
+      "hint_english": "Perimeter scales linearly with side length.",
+      "hint_portugues": "O perímetro escala linearmente com o comprimento do lado.",
+      "solution_english": [
+        "Perimeter of A: \\(4 \\times 9 = 36\\) cm.",
+        "Perimeter of B: \\(3 \\times 36 = 108\\) cm.",
+        "Side of B: \\(108 \\div 4 = 27\\) cm."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "margin_of_error"
+      "solution_portugues": [
+        "Perímetro de A: \\(4 \\times 9 = 36\\) cm.",
+        "Perímetro de B: \\(3 \\times 36 = 108\\) cm.",
+        "Lado de B: \\(108 \\div 4 = 27\\) cm."
+      ]
     },
     {
       "question_number": 8,
-      "topic": "advanced_math",
-      "subskill": "quadratic_equations",
-      "difficulty": "medium",
-      "question": "What is the negative solution to the equation \\(\\frac{32}{a} = a - 4\\)?",
-      "options": {},
-      "correct_option": "-4",
-      "hint": "Multiply both sides by \\(a\\) and rearrange to form a quadratic equation.",
-      "solution": [
-        "Multiply both sides by \\(a\\): \\(32 = a(a - 4)\\)",
-        "Expand: \\(32 = a^2 - 4a\\)",
-        "Rearrange: \\(a^2 - 4a - 32 = 0\\)",
-        "Factor: \\((a - 8)(a + 4) = 0\\)",
-        "Solutions: \\(a = 8\\) or \\(a = -4\\)",
-        "The negative solution is \\(a = -4\\)"
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "easy",
+      "question": "The function \\(h(t) = -0.08t + 14.6\\) models the number of gallons of fuel remaining in a truck after driving \\(t\\) miles. According to the model, approximately how many gallons of fuel are used per mile?",
+      "options": {
+        "A": "\\(0.08\\)",
+        "B": "\\(14.6\\)",
+        "C": "\\(8\\)",
+        "D": "\\(182.5\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "converting_units",
+      "hint_english": "The slope (coefficient of t) gives the change per mile.",
+      "hint_portugues": "A inclinação (coeficiente de t) indica a variação por milha.",
+      "solution_english": [
+        "The slope is \\(-0.08\\), meaning fuel decreases by \\(0.08\\) gallons per mile.",
+        "So \\(0.08\\) gallons are used per mile."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "evaluating_solutions_of_quadratics"
+      "solution_portugues": [
+        "A inclinação é \\(-0.08\\), indicando que o combustível diminui \\(0.08\\) galões por milha.",
+        "Logo, são usados \\(0.08\\) galões por milha."
+      ]
     },
     {
       "question_number": 9,
       "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "easy",
-      "question": "After a hot air balloon is launched from a plateau \\(1{,}000\\) meters above sea level, it rises at a constant rate of \\(750\\) meters per minute. Which of the following best describes the function used to model the balloon's distance above sea level over time?",
+      "subskill": "absolute_value",
+      "difficulty": "medium",
+      "question": "If \\(|6x - 10| = 74\\), what is the positive value of \\(x - 2\\)?",
       "options": {
-        "A": "Increasing linear",
-        "B": "Increasing exponential",
-        "C": "Decreasing linear",
-        "D": "Decreasing exponential"
+        "A": "\\(10\\)",
+        "B": "\\(12\\)",
+        "C": "\\(14\\)",
+        "D": "\\(18\\)"
       },
-      "correct_option": "A",
-      "hint": "The balloon rises at a constant rate, which indicates a linear relationship.",
-      "solution": [
-        "The balloon rises at a constant rate of \\(750\\) meters per minute",
-        "Constant rate of change = linear function",
-        "The balloon is rising (going up) = increasing",
-        "Therefore: Increasing linear function"
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "identifying_solutions",
+      "hint_english": "Solve the two absolute value cases, then subtract 2.",
+      "hint_portugues": "Resolva os dois casos do valor absoluto e depois subtraia 2.",
+      "solution_english": [
+        "\\(6x - 10 = 74 \\Rightarrow 6x = 84 \\Rightarrow x = 14 \\Rightarrow x - 2 = 12\\).",
+        "\\(6x - 10 = -74 \\Rightarrow 6x = -64 \\Rightarrow x = -\\tfrac{32}{3} \\Rightarrow x - 2\\) is negative.",
+        "Positive value: \\(12\\)."
       ],
-      "representation": "",
-      "format": "MCQ",
-      "structure": "interpreting_linear_equations"
+      "solution_portugues": [
+        "\\(6x - 10 = 74 \\Rightarrow 6x = 84 \\Rightarrow x = 14 \\Rightarrow x - 2 = 12\\).",
+        "\\(6x - 10 = -74 \\Rightarrow 6x = -64 \\Rightarrow x = -\\tfrac{32}{3} \\Rightarrow x - 2\\) é negativo.",
+        "Valor positivo: \\(12\\)."
+      ]
     },
     {
       "question_number": 10,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "exponential_functions",
+      "topic": "algebra",
+      "subskill": "isolating_variables",
       "difficulty": "medium",
-      "question": "What is the \\(x\\)-intercept of the function \\(f(x) = (22)^x - 1\\) when it is graphed in the \\(xy\\)-plane, where \\(y = f(x)\\)?",
+      "question": "The equation relates the positive numbers \\(p, x, y\\): \\(\\tfrac{1}{5p} = \\tfrac{9x}{y}\\). Which equation correctly expresses \\(x\\) in terms of \\(p\\) and \\(y\\)?",
       "options": {
-        "A": "\\((-1, 0)\\)",
-        "B": "\\((0, 0)\\)",
-        "C": "\\((21, 0)\\)",
-        "D": "\\((22, 0)\\)"
+        "A": "\\(x = \\tfrac{y}{45p}\\)",
+        "B": "\\(x = \\tfrac{5py}{9}\\)",
+        "C": "\\(x = \\tfrac{y}{9p}\\)",
+        "D": "\\(x = 45py\\)"
       },
-      "correct_option": "B",
-      "hint": "The \\(x\\)-intercept occurs when \\(y = 0\\), so set \\(f(x) = 0\\) and solve for \\(x\\).",
-      "solution": [
-        "Set \\(f(x) = 0\\): \\((22)^x - 1 = 0\\)",
-        "Add \\(1\\) to both sides: \\((22)^x = 1\\)",
-        "Any number to the power of \\(0\\) equals \\(1\\): \\(x = 0\\)",
-        "The \\(x\\)-intercept is \\((0, 0)\\)"
-      ],
-      "representation": "",
+      "correct_option": "A",
       "format": "multiple_choice",
-      "structure": "evaluating_exponential_functions"
+      "structure": "two_step_solution",
+      "hint_english": "Cross-multiply to isolate x.",
+      "hint_portugues": "Faça a multiplicação cruzada para isolar x.",
+      "solution_english": [
+        "\\(\\tfrac{1}{5p} = \\tfrac{9x}{y} \\Rightarrow y = 45px\\).",
+        "Isolate: \\(x = \\tfrac{y}{45p}\\)."
+      ],
+      "solution_portugues": [
+        "\\(\\tfrac{1}{5p} = \\tfrac{9x}{y} \\Rightarrow y = 45px\\).",
+        "Isolando: \\(x = \\tfrac{y}{45p}\\)."
+      ]
     },
     {
       "question_number": 11,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "area_and_volume",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "linear_translation",
       "difficulty": "medium",
-      "question": "In parallelogram \\(ABCD\\), the length of \\(\\overline{AB}\\) is one-third the length of \\(\\overline{AD}\\). The perimeter of the parallelogram is \\(64\\). What is the length of \\(\\overline{AB}\\)?",
+      "question": "The table shows four values of \\(x\\) and their corresponding values of \\(g(x)\\):<br><br>\\[\\begin{array}{c|c}\n x & g(x) \\\\ \\hline\n 5 & \\text{41} \\\\ \n 10 & \\text{66} \\\\ \n 15 & \\text{91} \\\\ \n 20 & \\text{116} \\\\ \n\\end{array}\\]<br><br>There is a linear relationship defined by \\(g(x) = kx + 16\\). What is the value of \\(k\\)?",
       "options": {
-        "A": "\\(8\\)",
-        "B": "\\(16\\)",
-        "C": "\\(24\\)",
-        "D": "\\(32\\)"
+        "A": "\\(2.5\\)",
+        "B": "\\(4\\)",
+        "C": "\\(5\\)",
+        "D": "\\(8\\)"
       },
-      "correct_option": "A",
-      "hint": "In a parallelogram, opposite sides are equal. Set up an equation using the perimeter.",
-      "solution": [
-        "Let \\(AD = x\\), then \\(AB = \\frac{x}{3}\\)",
-        "In a parallelogram, opposite sides are equal: \\(AB = CD\\) and \\(AD = BC\\)",
-        "Perimeter: \\(2(AB) + 2(AD) = 64\\)",
-        "Substitute: \\(2\\left(\\frac{x}{3}\\right) + 2(x) = 64\\)",
-        "Simplify: \\(\\frac{2x}{3} + 2x = 64\\)",
-        "Multiply by \\(3\\): \\(2x + 6x = 192\\)",
-        "Combine: \\(8x = 192\\)",
-        "Solve: \\(x = 24\\)",
-        "Therefore: \\(AB = \\frac{24}{3} = 8\\)"
-      ],
-      "representation": "",
+      "correct_option": "C",
       "format": "multiple_choice",
-      "structure": "area_of_2d_figures"
+      "structure": "vertical_translation",
+      "hint_english": "Use any point: slope \\(k = (g(x) - 16)/x\\).",
+      "hint_portugues": "Use qualquer ponto: a inclinação é \\(k = (g(x) - 16)/x\\).",
+      "solution_english": [
+        "Using \\(x=5, g=41\\): \\(41 = 5k + 16 \\Rightarrow 5k = 25 \\Rightarrow k = 5\\).",
+        "Check with \\(x=10, g=66\\): \\(66 = 10k + 16 \\Rightarrow k=5\\). Consistent."
+      ],
+      "solution_portugues": [
+        "Usando \\(x = 5, g = 41\\): \\(41 = 5k + 16 \\Rightarrow 5k = 25 \\Rightarrow k = 5\\).",
+        "Verificando com \\(x = 10, g = 66\\): \\(66 = 10k + 16 \\Rightarrow k = 5\\). Consistente."
+      ]
     },
     {
       "question_number": 12,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "area_and_volume",
-      "difficulty": "medium",
-      "question": "A triangle with an area of \\(18\\) square units has a base of \\((m + 5)\\) units and a height of \\(m\\) units. What is the value of \\(m\\)?",
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
+      "difficulty": "easy",
+      "question": "The expression \\((7x^3 - 5) - (-2x^3 + 6)\\) is equivalent to \\(c x^3 - \\text{11}\\), where \\(c\\) is a constant. What is the value of \\(c\\)?",
       "options": {
-        "A": "\\(4\\)",
-        "B": "\\(9\\)",
-        "C": "\\(13\\)",
-        "D": "\\(36\\)"
+        "A": "\\(5\\)",
+        "B": "\\(7\\)",
+        "C": "\\(9\\)",
+        "D": "\\(11\\)"
       },
-      "correct_option": "A",
-      "hint": "Use the formula for the area of a triangle: \\(A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}\\).",
-      "solution": [
-        "Area formula: \\(A = \\frac{1}{2} \\times \\text{base} \\times \\text{height}\\)",
-        "Substitute: \\(18 = \\frac{1}{2}(m + 5)(m)\\)",
-        "Multiply both sides by \\(2\\): \\(36 = m(m + 5)\\)",
-        "Expand: \\(36 = m^2 + 5m\\)",
-        "Rearrange: \\(m^2 + 5m - 36 = 0\\)",
-        "Factor: \\((m + 9)(m - 4) = 0\\)",
-        "Solutions: \\(m = -9\\) or \\(m = 4\\)",
-        "Since \\(m\\) represents a length, \\(m = 4\\)"
-      ],
-      "representation": "",
+      "correct_option": "C",
       "format": "multiple_choice",
-      "structure": "area_of_2d_figures"
+      "structure": "adding_and_subtracting_exponents",
+      "hint_english": "Distribute the minus sign, then combine like terms.",
+      "hint_portugues": "Distribua o sinal de menos e depois combine os termos semelhantes.",
+      "solution_english": [
+        "\\((7x^3 - 5) - (-2x^3 + 6) = 7x^3 - 5 + 2x^3 - 6 = 9x^3 - \\text{11}\\).",
+        "Thus \\(c = 9\\)."
+      ],
+      "solution_portugues": [
+        "\\((7x^3 - 5) - (-2x^3 + 6) = 7x^3 - 5 + 2x^3 - 6 = 9x^3 - \\text{11}\\).",
+        "Assim, \\(c = 9\\)."
+      ]
     },
     {
       "question_number": 13,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "exponential_functions",
+      "topic": "algebra",
+      "subskill": "linear_inequality",
       "difficulty": "medium",
-      "question": "The table shows the exponential growth of a type of yeast over time \\(s\\), in seconds. There are \\(c\\) total yeast colonies on the count plate. What is the equation that represents this relationship, assuming that no yeast was added or removed after counting began?\n\n\\[\\begin{array}{c|c}\n\\text{Time (seconds)} & \\text{Number of colonies} \\\\\\hline\n0 & 5 \\\\\n1 & 20 \\\\\n2 & 80 \\\\\n3 & 320\n\\end{array}\\]",
+      "question": "The point \\((x, 27)\\) is a solution to the system: \\(y > 20\\) and \\(3x + y < 35\\). Which of the following could be the value of \\(x\\)?",
       "options": {
-        "A": "\\(c = (1 + 3)^s\\)",
-        "B": "\\(c = (1 + 5)^s\\)",
-        "C": "\\(c = 3(1 + 5)^s\\)",
-        "D": "\\(c = 5(1 + 3)^s\\)"
+        "A": "\\(5\\)",
+        "B": "\\(-3\\)",
+        "C": "\\(3\\)",
+        "D": "\\(6\\)"
       },
-      "correct_option": "D",
-      "hint": "Find the initial value (when \\(s = 0\\)) and the growth factor (ratio between consecutive values).",
-      "solution": [
-        "Initial value at \\(s = 0\\): \\(c = 5\\)",
-        "Growth factor: \\(\\frac{20}{5} = 4\\), \\(\\frac{80}{20} = 4\\), \\(\\frac{320}{80} = 4\\)",
-        "General form: \\(c = a \\cdot b^s\\) where \\(a\\) is initial value and \\(b\\) is growth factor",
-        "Substitute: \\(c = 5 \\cdot 4^s\\)",
-        "Rewrite \\(4\\) as \\(1 + 3\\): \\(c = 5(1 + 3)^s\\)"
-      ],
-      "representation": "table",
+      "correct_option": "B",
       "format": "multiple_choice",
-      "structure": "exponential_function_word_problem"
+      "structure": "identifying_solutions_of_linear_inequalities",
+      "hint_english": "Plug \\(y = 27\\) into \\(3x + y < 35\\) and solve for \\(x\\).",
+      "hint_portugues": "Substitua \\(y = 27\\) em \\(3x + y < 35\\) e resolva para \\(x\\).",
+      "solution_english": [
+        "\\(3x + 27 < 35 \\Rightarrow 3x < 8 \\Rightarrow x < \\tfrac{8}{3}\\).",
+        "Among the options, \\(-3\\) satisfies \\(x < \\tfrac{8}{3}\\) and \\(y > 20\\)."
+      ],
+      "solution_portugues": [
+        "\\(3x + 27 < 35 \\Rightarrow 3x < 8 \\Rightarrow x < \\tfrac{8}{3}\\).",
+        "Entre as op\u00e7\u00f5es, \\(-3\\) satisfaz \\(x < \\tfrac{8}{3}\\) e \\(y > 20\\)."
+      ]
     },
     {
       "question_number": 14,
-      "topic": "algebra",
-      "subskill": "system_of_linear_equations",
-      "difficulty": "medium",
-      "question": "The equations \\(12x = y\\) and \\(24x + 7 = 2y\\) intersect at how many points when graphed in the \\(xy\\)-plane?",
-      "options": {
-        "A": "\\(0\\)",
-        "B": "\\(1\\)",
-        "C": "\\(2\\)",
-        "D": "\\(7\\)"
-      },
-      "correct_option": "A",
-      "hint": "Substitute the first equation into the second and check if there is a consistent solution.",
-      "solution": [
-        "From equation \\(1\\): \\(y = 12x\\)",
-        "Substitute into equation \\(2\\): \\(24x + 7 = 2(12x)\\)",
-        "Simplify: \\(24x + 7 = 24x\\)",
-        "Subtract \\(24x\\) from both sides: \\(7 = 0\\)",
-        "This is a contradiction, meaning the lines are parallel and never intersect",
-        "Therefore, there are \\(0\\) points of intersection"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "classifying_system_of_linear_equations"
-    },
-    {
-      "question_number": 15,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "easy",
-      "question": "Several tiles labeled with either an A or a B are placed in a bag, and tiles are worth a different point value depending on the label. The equation \\(15a + 10b = 100\\) represents the situation when \\(a\\) of the A tiles and \\(b\\) of the B tiles are drawn from the bag for a total of \\(100\\) points. How many points would be earned by drawing one A tile and one B tile from the bag?",
-      "options": {},
-      "correct_option": "25",
-      "hint": "The coefficients in the equation represent the point value of each tile type.",
-      "solution": [
-        "The equation \\(15a + 10b = 100\\) shows that each A tile is worth \\(15\\) points and each B tile is worth \\(10\\) points",
-        "Drawing one A tile and one B tile: \\(15 + 10 = 25\\) points"
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "interpreting_linear_equations"
-    },
-    {
-      "question_number": 16,
       "topic": "problem_solving_and_data_analysis",
       "subskill": "exponential_functions",
       "difficulty": "medium",
-      "question": "The amount of money remaining in a scholarship fund is reduced by one-fourth every year. The amount of money in the fund is represented by \\(d\\) and the number of years by \\(y\\). If the fund starts with $\\(10.0\\), which equation below represents this situation after \\(y\\) years?",
+      "question": "A population of insects was measured at an initial observation to be \\(\\text{120,000}\\) insects. The population doubles every \\(4\\) hours. How many insects will there be \\(12\\) hours after the initial observation?",
       "options": {
-        "A": "\\(d = \\frac{1}{4} \\cdot (10.0)^y\\)",
-        "B": "\\(d = \\frac{3}{4} \\cdot (10.0)^y\\)",
-        "C": "\\(d = 10.0 \\cdot \\left(\\frac{1}{4}\\right)^y\\)",
-        "D": "\\(d = 10.0 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
+        "A": "\\(\\text{480,000}\\)",
+        "B": "\\(\\text{960,000}\\)",
+        "C": "\\(\\text{1,920,000}\\)",
+        "D": "\\(\\text{3,840,000}\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "exponential_function_word_problem",
+      "hint_english": "12 hours is three doubling periods (every 4 hours).",
+      "hint_portugues": "12 horas correspondem a tr\u00eas per\u00edodos de duplica\u00e7\u00e3o (a cada 4 horas).",
+      "solution_english": [
+        "Doublings in \\(12\\) hours: \\(12 / 4 = 3\\).",
+        "Population: \\(\\text{120,000} \\times 2^3 = \\text{120,000} \\times 8 = \\text{960,000}\\). Correct option: B."
+      ],
+      "solution_portugues": [
+        "Doublings in \\(12\\) hours: \\(12 / 4 = 3\\).",
+        "Popula\u00e7\u00e3o: \\(\\text{120,000} \\times 2^3 = \\text{120,000} \\times 8 = \\text{960,000}\\). Correto: op\u00e7\u00e3o B."
+      ]
+    },
+    {
+      "question_number": 15,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "statistics",
+      "difficulty": "medium",
+      "question": "The graph shows the estimated number of emails \\(y\\), in thousands, that a company sent to its customers at the end of each year, where \\(x\\) represents the number of years since the end of 2015, and \\(0 \\le x \\le 8\\). Which statement is the best interpretation of the \\(y\\)-intercept in this context?",
+      "options": {
+        "A": "The estimated total number of emails sent during the first 8 years was \\(12{,}000\\).",
+        "B": "The estimated total number of emails sent from the end of 2015 to the end of 2023 was \\(12\\).",
+        "C": "The estimated number of emails sent at the end of 2015 was \\(12\\).",
+        "D": "The estimated number of emails sent at the end of 2015 was \\(12{,}000\\)."
       },
       "correct_option": "D",
-      "hint": "If the fund is reduced by one-fourth, then three-fourths remains each year.",
-      "solution": [
-        "Initial amount: $\\(10.0\\)",
-        "Reduced by one-fourth means \\(\\frac{1}{4}\\) is lost",
-        "Amount remaining: \\(1 - \\frac{1}{4} = \\frac{3}{4}\\)",
-        "After each year, the fund is multiplied by \\(\\frac{3}{4}\\)",
-        "Exponential decay formula: \\(d = 10.0 \\cdot \\left(\\frac{3}{4}\\right)^y\\)"
-      ],
-      "representation": "",
+      "figure": {
+        "type": "polygon",
+        "closed": false,
+        "points": [
+          [
+            0,
+            12
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            4,
+            14
+          ],
+          [
+            6,
+            15
+          ],
+          [
+            8,
+            16
+          ]
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "xRange": [
+          -1,
+          9
+        ],
+        "yRange": [
+          0,
+          20
+        ],
+        "xTickStep": 1,
+        "yTickStep": 2,
+        "strokeWidth": 3
+      },
       "format": "multiple_choice",
-      "structure": "exponential_function_word_problem"
+      "structure": "margin_of_error",
+      "hint_english": "y-intercept is the value of y when x = 0; values are in thousands.",
+      "hint_portugues": "A ordenada na origem é o valor de y quando x = 0; valores em milhares.",
+      "solution_english": [
+        "Em \\(x = 0\\) (fim de 2015), \\(y\\) é o valor inicial em milhares.",
+        "Se a ordenada na origem é \\(12\\) (milhares), isso corresponde a \\(12{,}000\\) e-mails no fim de 2015.",
+        "A opção D corresponde a essa interpretação."
+      ],
+      "solution_portugues": [
+        "At \\(x = 0\\) (end of 2015), \\(y\\) is the starting value in thousands.",
+        "If the intercept is \\(12\\) (thousands), that is \\(12{,}000\\) emails at end of 2015.",
+        "Option D matches this interpretation."
+      ]
+    },
+    {
+      "question_number": 16,
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
+      "difficulty": "medium",
+      "question": "Which expression is equivalent to \\((x^9 y^9)^{1/7}\\), where \\(x\\) and \\(y\\) are positive?",
+      "options": {
+        "A": "\\((xy)^{7/9}\\)",
+        "B": "\\((xy)^{9/7}\\)",
+        "C": "\\((xy)^{16}\\)",
+        "D": "\\((xy)^{63}\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "multiplying_and_dividing_exponents",
+      "hint_english": "Rewrite the 7th root as power \\(1/7\\): \\((x^9 y^9)^{1/7}\\).",
+      "hint_portugues": "Reescreva a raiz sétima como potência \\(1/7\\): \\((x^9 y^9)^{1/7}\\).",
+      "solution_english": [
+        "\\(\\sqrt[7]{x^9 y^9} = (x^9 y^9)^{1/7} = x^{9/7} y^{9/7} = (xy)^{9/7}\\).",
+        "So the equivalent expression is \\((xy)^{9/7}\\)."
+      ],
+      "solution_portugues": [
+        "\\(\\sqrt[7]{x^9 y^9} = (x^9 y^9)^{1/7} = x^{9/7} y^{9/7} = (xy)^{9/7}\\).",
+        "Portanto, a expressão equivalente é \\((xy)^{9/7}\\)."
+      ]
     },
     {
       "question_number": 17,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "area_and_volume",
-      "difficulty": "medium",
-      "question": "What is the diameter, in millimeters (mm), of a cylinder with a volume of \\(144\\pi\\) mm³ and a height of \\(4\\) mm?",
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "percentages",
+      "difficulty": "easy",
+      "question": "The population of City A increased by \\(7\\%\\) from 2015 to 2016. If the 2016 population is \\(k\\) times the 2015 population, what is the value of \\(k\\)?",
       "options": {
-        "A": "\\(6\\)",
-        "B": "\\(9\\)",
-        "C": "\\(12\\)",
-        "D": "\\(36\\)"
+        "A": "\\(0.07\\)",
+        "B": "\\(0.7\\)",
+        "C": "\\(1.07\\)",
+        "D": "\\(1.7\\)"
       },
       "correct_option": "C",
-      "hint": "Use the volume formula for a cylinder: \\(V = \\pi r^2 h\\), then find the diameter.",
-      "solution": [
-        "Volume formula: \\(V = \\pi r^2 h\\)",
-        "Substitute: \\(144\\pi = \\pi r^2 (4)\\)",
-        "Divide by \\(\\pi\\): \\(144 = 4r^2\\)",
-        "Divide by \\(4\\): \\(36 = r^2\\)",
-        "Take square root: \\(r = 6\\) mm",
-        "Diameter: \\(d = 2r = 2(6) = 12\\) mm"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "volume_of_3d_figures"
+      "structure": "applying_percentages",
+      "hint_english": "An increase of 7% means multiply by \\(1 + 0.07\\).",
+      "hint_portugues": "Um aumento de 7% significa multiplicar por \\(1 + 0.07\\).",
+      "solution_english": [
+        "A 7% increase means the new amount is \\(1 + 0.07 = 1.07\\) times the old amount.",
+        "So \\(k = 1.07\\)."
+      ],
+      "solution_portugues": [
+        "Um aumento de 7% significa que o novo valor é \\(1 + 0.07 = 1.07\\) vezes o valor anterior.",
+        "Logo, \\(k = 1.07\\)."
+      ]
     },
     {
       "question_number": 18,
       "topic": "algebra",
       "subskill": "system_of_linear_equations",
-      "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\n4x + 2y &= 4 \\qquad (1) \\\\\n19x + 10y &= 14 \\qquad (2)\n\\end{align*}\n\\]\n\nWhen graphed in the \\(xy\\)-plane, the linear equations shown above intersect at \\((a, b)\\). What is the value of \\(a\\)?",
+      "difficulty": "easy",
+      "question": "Which of the following systems of linear equations has no solution?",
       "options": {
-        "A": "\\(-20\\)",
-        "B": "\\(-10\\)",
-        "C": "\\(6\\)",
-        "D": "\\(14\\)"
+        "A": "\\(x = 3;\\ y = 5\\)",
+        "B": "\\(y = 6x + 6;\\ y = 5x + 6\\)",
+        "C": "\\(y = 16x + 3;\\ y = 16x + 19\\)",
+        "D": "\\(y = 5;\\ y = 5x + 5\\)"
       },
       "correct_option": "C",
-      "hint": "Solve the system using elimination or substitution to find the x-coordinate.",
-      "solution": [
-        "Multiply the first equation by \\(5\\): \\(20x + 10y = 20\\)",
-        "Subtract the second equation: \\((20x + 10y) - (19x + 10y) = 20 - 14\\)",
-        "Simplify: \\(x = 6\\)",
-        "Therefore, \\(a = 6\\)"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "identifying_solution"
+      "structure": "classifying_system_of_linear_equations",
+      "hint_english": "No solution when lines are parallel with different intercepts: same slope, different constant term.",
+      "hint_portugues": "Não há solução quando as retas são paralelas e têm interceptos diferentes: mesma inclinação, termos constantes distintos.",
+      "solution_english": [
+        "Option C has both equations with slope 16 but different y-intercepts (3 and 19), so the lines are parallel and never meet.",
+        "Thus, the system in option C has no solution."
+      ],
+      "solution_portugues": [
+        "A opção C tem ambas as equações com inclinação 16, mas interceptos em y diferentes (3 e 19), portanto as retas são paralelas e nunca se encontram.",
+        "Assim, o sistema na opção C não tem solução."
+      ]
     },
     {
       "question_number": 19,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "right_triangles_and_trigonometry",
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
       "difficulty": "medium",
-      "question": "The longest side of right \\(\\triangle ABC\\) is opposite \\(\\angle B\\). If \\(\\sin(A) = \\frac{9}{41}\\), what is the value of \\(\\sin(C)\\)?",
-      "options": {},
-      "correct_option": "40/41",
-      "hint": "In a right triangle, if B is the right angle, then \\(\\sin(A) = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\). Use the Pythagorean theorem to find the adjacent side.",
-      "solution": [
-        "The longest side is the hypotenuse, so \\(\\angle B\\) is the right angle (\\(90°\\))",
-        "Given: \\(\\sin(A) = \\frac{9}{41}\\), so opposite to A = \\(9\\), hypotenuse = \\(41\\)",
-        "Use Pythagorean theorem: \\(\\text{adjacent}^2 = 41^2 - 9^2 = 1681 - 81 = 1600\\)",
-        "Adjacent side: \\(\\sqrt{1600} = 40\\)",
-        "In a right triangle, \\(A + C = 90°\\), so \\(\\sin(C) = \\cos(A)\\)",
-        "\\(\\sin(C) = \\frac{\\text{adjacent to A}}{\\text{hypotenuse}} = \\frac{40}{41}\\)"
+      "question": "The first term of a sequence is \\(5\\). Each term after the first is \\(3\\) times the preceding term. If \\(a\\) represents the \\(n\\)th term of the sequence, which equation gives \\(a\\) in terms of \\(n\\)?",
+      "options": {
+        "A": "\\(a = 3(5^n)\\)",
+        "B": "\\(a = 3(5^{n-1})\\)",
+        "C": "\\(a = 5(3^n)\\)",
+        "D": "\\(a = 5(3^{n-1})\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "exponential_function_word_problem",
+      "hint_english": "A geometric sequence with first term \\(a_1 = 5\\) and ratio \\(r = 3\\) has \\(a_n = a_1\\,r^{n-1}\\).",
+      "hint_portugues": "Uma PA geométrica com primeiro termo \\(a_1 = 5\\) e razão \\(r = 3\\) tem \\(a_n = a_1\\,r^{n-1}\\).",
+      "solution_english": [
+        "Geometric sequence formula: \\(a_n = a_1\\,r^{n-1}\\).",
+        "Here, \\(a_1 = 5\\) and \\(r = 3\\), so \\(a_n = 5\\cdot 3^{n-1}\\).",
+        "That matches option D."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "trig_ratios"
+      "solution_portugues": [
+        "Fórmula de progressão geométrica: \\(a_n = a_1\\,r^{n-1}\\).",
+        "Aqui, \\(a_1 = 5\\) e \\(r = 3\\), logo \\(a_n = 5\\cdot 3^{n-1}\\).",
+        "Isso corresponde à opção D."
+      ]
     },
     {
       "question_number": 20,
-      "topic": "advanced_math",
-      "subskill": "quadratic_equations",
-      "difficulty": "medium",
-      "question": "Function \\(g\\) reaches its maximum value when \\(x = a\\). If \\(g(x) = -6x^2 - 30x - 24\\), what is the value of \\(a\\)?",
-      "options": {},
-      "correct_option": "-2.5",
-      "hint": "For a quadratic in the form \\(ax^2 + bx + c\\), the x-coordinate of the vertex is \\(x = -\\frac{b}{2a}\\).",
-      "solution": [
-        "For \\(g(x) = -6x^2 - 30x - 24\\), we have \\(a = -6\\) and \\(b = -30\\)",
-        "The x-coordinate of the maximum is: \\(x = -\\frac{b}{2a}\\)",
-        "Substitute: \\(x = -\\frac{-30}{2(-6)} = \\frac{30}{-12} = -\\frac{5}{2} = -2.5\\)",
-        "Therefore, \\(a = -2.5\\)"
+      "topic": "algebra",
+      "subskill": "linear_inequality",
+      "difficulty": "easy",
+      "question": "The minimum value of \\(x\\) is \\(8\\) less than \\(4\\) times another number \\(k\\). Which inequality shows the possible values of \\(x\\)?",
+      "options": {
+        "A": "\\(x \\le 4k - 8\\)",
+        "B": "\\(x \\ge 4k - 8\\)",
+        "C": "\\(x \\le 8 - 4k\\)",
+        "D": "\\(x \\ge 8 - 4k\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "identifying_solutions_of_linear_inequalities",
+      "hint_english": "If the minimum is \\(4k - 8\\), then \\(x\\) must be at least that value.",
+      "hint_portugues": "Se o mínimo é \\(4k - 8\\), então \\(x\\) deve ser pelo menos esse valor.",
+      "solution_english": [
+        "\u201cO valor mínimo é \\(4k - 8\\)\u201d significa \\(x \\ge 4k - 8\\).",
+        "Assim, a opção B."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "evaluating_maximum_and_minimumm"
+      "solution_portugues": [
+        "\u201cMinimum value is \\(4k - 8\\)\u201d means \\(x \\ge 4k - 8\\).",
+        "Thus option B."
+      ]
     },
     {
       "question_number": 21,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "hard",
-      "question": "\\(f(x) = -\\frac{1}{5}x - 3\\)\n\nThe linear function \\(f(x)\\), given above, is perpendicular to \\(g(x)\\) when graphed in the \\(xy\\)-plane. If \\(g(0) = 0\\), what is the value of \\(g(2)\\)?",
-      "options": {},
-      "correct_option": "10",
-      "hint": "Perpendicular lines have slopes that are negative reciprocals. Find the slope of \\(g(x)\\), then use the point \\((0, 0)\\) to write the equation.",
-      "solution": [
-        "Slope of \\(f(x)\\): \\(m_f = -\\frac{1}{5}\\)",
-        "For perpendicular lines: \\(m_g = -\\frac{1}{m_f} = -\\frac{1}{-\\frac{1}{5}} = 5\\)",
-        "Since \\(g(0) = 0\\), the line passes through the origin: \\(g(x) = 5x\\)",
-        "Calculate \\(g(2) = 5(2) = 10\\)"
+      "topic": "geometry_and_trigonometry",
+      "subskill": "right_triangles_and_trigonometry",
+      "difficulty": "medium",
+      "question": "In right triangle \\(ABC\\): \\(AB = 24\\), \\(BC = 70\\), \\(AC = 74\\). Triangle \\(ABC\\) is similar to triangle \\(DEF\\), where \\(B\\) corresponds to \\(E\\) and \\(C\\) corresponds to \\(F\\). What is the value of \\(\\tan F\\)?",
+      "options": {
+        "A": "\\(\\tfrac{24}{70}\\)",
+        "B": "\\(\\tfrac{70}{24}\\)",
+        "C": "\\(\\tfrac{24}{74}\\)",
+        "D": "\\(\\tfrac{70}{74}\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "trig_ratios",
+      "hint_english": "Identify which sides are opposite/adjacent to angle \\(F\\) using similarity.",
+      "hint_portugues": "Identify which sides are opposite/adjacent to angle \\(F\\) using similarity.",
+      "solution_english": [
+        "Given similarity: B \u2194 E, C \u2194 F, so angle F corresponds to angle C.",
+        "At C in triangle ABC, the opposite side is AB = 24, adjacent is BC = 70.",
+        "Thus \\(\\tan F = \\tfrac{24}{70}\\)."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "properties_of_a_line"
+      "solution_portugues": [
+        "Given similarity: B \u2194 E, C \u2194 F, so angle F corresponds to angle C.",
+        "At C in triangle ABC, the opposite side is AB = 24, adjacent is BC = 70.",
+        "Thus \\(\\tan F = \\tfrac{24}{70}\\)."
+      ]
     },
     {
       "question_number": 22,
-      "topic": "advanced_math",
-      "subskill": "linear_and_quadratic",
-      "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\ny &= 5kx^2 + 2x + 3 \\qquad (1) \\\\\n\\frac{y}{10} &= -x \\qquad (2)\n\\end{align*}\n\\]\n\nThe system of equations above has exactly one solution. If \\(k\\) is a positive constant, what is the value of \\(k\\)?",
-      "options": {},
-      "correct_option": "2.4",
-      "hint": "For the system to have exactly one solution, the discriminant of the resulting quadratic must equal zero.",
-      "solution": [
-        "From the second equation: \\(y = -10x\\)",
-        "Substitute into the first equation: \\(-10x = 5kx^2 + 2x + 3\\)",
-        "Rearrange: \\(5kx^2 + 2x + 10x + 3 = 0\\)",
-        "Simplify: \\(5kx^2 + 12x + 3 = 0\\)",
-        "For exactly one solution, discriminant = \\(0\\): \\(b^2 - 4ac = 0\\)",
-        "Calculate: \\((12)^2 - 4(5k)(3) = 0\\)",
-        "Simplify: \\(144 - 60k = 0\\)",
-        "Solve for \\(k\\): \\(k = \\frac{144}{60} = \\frac{12}{5} = 2.4\\)"
+      "topic": "algebra",
+      "subskill": "linear_translation",
+      "difficulty": "easy",
+      "question": "The graph of \\(6x + 4y = 12\\) is translated up 3 units in the \\(xy\\)-plane. What is the \\(x\\)-coordinate of the \\(x\\)-intercept of the resulting graph?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "vertical_translation",
+      "hint_english": "Translate up 3: replace \\(y\\) with \\(y - 3\\), then set \\(y = 0\\) to find the new x-intercept.",
+      "hint_portugues": "Translade 3 unidades para cima: substitua \\(y\\) por \\(y - 3\\) e depois faça \\(y = 0\\) para achar o novo intercepto em x.",
+      "solution_english": [
+        "Original line: \\(6x + 4y = 12\\). Translating up 3: \\(6x + 4(y - 3) = 12 \\Rightarrow 6x + 4y - 12 = 12 \\Rightarrow 6x + 4y = 24\\).",
+        "For the new x-intercept, set \\(y = 0\\): \\(6x = 24 \\Rightarrow x = 4\\).",
+        "Option C."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "identifying_solution"
+      "solution_portugues": [
+        "Reta original: \\(6x + 4y = 12\\). Transladando 3 para cima: \\(6x + 4(y - 3) = 12 \\Rightarrow 6x + 4y - 12 = 12 \\Rightarrow 6x + 4y = 24\\).",
+        "Para o novo intercepto em x, faça \\(y = 0\\): \\(6x = 24 \\Rightarrow x = 4\\).",
+        "Opção C."
+      ]
     }
   ],
   "module_2_easy": [
     {
-      "question_number": 23,
+      "question_number": 1,
       "topic": "algebra",
-      "subskill": "linear_equations",
+      "subskill": "isolating_variables",
       "difficulty": "easy",
-      "question": "In the line formed by the equation \\(y + 5 = 7x\\), what is the value of the \\(y\\)-intercept?",
+      "question": "If \\(5x = 40\\), what is the value of \\(6x\\)?",
       "options": {
-        "A": "\\(-5\\)",
-        "B": "\\(-1\\)",
-        "C": "\\(5\\)",
-        "D": "\\(7\\)"
-      },
-      "correct_option": "A",
-      "hint": "Rewrite the equation in slope-intercept form \\(y = mx + b\\), where \\(b\\) is the \\(y\\)-intercept.",
-      "solution": [
-        "Start with: \\(y + 5 = 7x\\)",
-        "Subtract \\(5\\) from both sides: \\(y = 7x - 5\\)",
-        "In the form \\(y = mx + b\\), the \\(y\\)-intercept is \\(b = -5\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "finding_intercepts"
-    },
-    {
-      "question_number": 24,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistcs",
-      "difficulty": "medium",
-      "question": "Twenty students were asked the combined total number of servings of fruits and vegetables they have each day. The results show: \\(1\\) student had \\(1\\) serving, \\(1\\) student had \\(2\\) servings, \\(2\\) students had \\(3\\) servings, \\(3\\) students had \\(4\\) servings, \\(2\\) students had \\(5\\) servings, \\(4\\) students had \\(6\\) servings, \\(4\\) students had \\(7\\) servings, \\(2\\) students had \\(8\\) servings, and \\(1\\) student had \\(10\\) servings. What is the median number of servings of fruits and vegetables consumed each day?",
-      "options": {
-        "A": "\\(4\\)",
-        "B": "\\(5\\)",
-        "C": "\\(6\\)",
-        "D": "\\(7\\)"
-      },
-      "correct_option": "C",
-      "hint": "The median is the middle value when data is ordered. With \\(20\\) students, find the average of the 10th and 11th values.",
-      "solution": [
-        "Total students: \\(20\\)",
-        "List values in order: \\(1\\), \\(2\\), \\(3\\), \\(3\\), \\(4\\), \\(4\\), \\(4\\), \\(5\\), \\(5\\), \\(6\\), \\(6\\), \\(6\\), \\(6\\), \\(7\\), \\(7\\), \\(7\\), \\(7\\), \\(8\\), \\(8\\), \\(10\\)",
-        "For \\(20\\) values, median = average of 10th and 11th values",
-        "10th value: \\(6\\), 11th value: \\(6\\)",
-        "Median = \\(\\frac{6 + 6}{2} = 6\\)"
-      ],
-      "representation": "histogram",
-      "format": "multiple_choice",
-      "structure": "mean_median_mode_range"
-    },
-    {
-      "question_number": 25,
-      "topic": "advanced_math",
-      "subskill": "equivalent_expressions",
-      "difficulty": "easy",
-      "question": "Which of the following is equivalent to \\(\\frac{x^2 - 81}{x + 9}\\)?",
-      "options": {
-        "A": "\\(x + 9\\)",
-        "B": "\\(x - 9\\)",
-        "C": "\\(x^2 - 3\\)",
-        "D": "\\(x^2 + 3\\)"
+        "A": "24",
+        "B": "48",
+        "C": "80",
+        "D": "240"
       },
       "correct_option": "B",
-      "hint": "Factor the numerator as a difference of squares, then simplify.",
-      "solution": [
-        "Recognize \\(x^2 - 81\\) as a difference of squares: \\(x^2 - 9^2\\)",
-        "Factor: \\((x + 9)(x - 9)\\)",
-        "Expression becomes: \\(\\frac{(x + 9)(x - 9)}{x + 9}\\)",
-        "Cancel \\((x + 9)\\): \\(x - 9\\)"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "multiplying_and_dividing_exponents"
-    },
-    {
-      "question_number": 26,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "easy",
-      "question": "A line passes through the points \\((0, 4)\\) and \\((3, 6)\\). What is the best approximation of the slope of this line?",
-      "options": {
-        "A": "\\(\\frac{1}{2}\\)",
-        "B": "\\(\\frac{2}{3}\\)",
-        "C": "\\(\\frac{4}{3}\\)",
-        "D": "\\(2\\)"
-      },
-      "correct_option": "B",
-      "hint": "Use the slope formula: \\(m = \\frac{y_2 - y_1}{x_2 - x_1}\\).",
-      "solution": [
-        "Given points: \\((0, 4)\\) and \\((3, 6)\\)",
-        "Slope formula: \\(m = \\frac{y_2 - y_1}{x_2 - x_1}\\)",
-        "Calculate: \\(m = \\frac{6 - 4}{3 - 0} = \\frac{2}{3}\\)"
+      "structure": "one_step_solution",
+      "hint_english": "First find \\(x\\), then multiply by 6.",
+      "hint_portugues": "First find \\(x\\), then multiply by 6.",
+      "solution_english": [
+        "From \\(5x = 40\\), we get \\(x = 8\\).",
+        "Then \\(6x = 6 \\times 8 = 48\\)."
       ],
-      "representation": "graph",
-      "format": "multiple_choice",
-      "structure": "properties_of_a_line"
+      "solution_portugues": [
+        "From \\(5x = 40\\), we get \\(x = 8\\).",
+        "Then \\(6x = 6 \\times 8 = 48\\)."
+      ]
     },
     {
-      "question_number": 27,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "easy",
-      "question": "Walter is going backpacking on a trail. The total distance of the trail is \\(300\\) miles. If he has already traveled \\(100\\) miles on the trail, how many miles per day, \\(m\\), will he need to travel in order to complete his journey in \\(D\\) days?",
-      "options": {
-        "A": "\\(m = \\frac{200}{D}\\)",
-        "B": "\\(m = 300D\\)",
-        "C": "\\(m = \\frac{D}{300}\\)",
-        "D": "\\(m = 200 + D\\)"
-      },
-      "correct_option": "A",
-      "hint": "Find the remaining distance, then divide by the number of days.",
-      "solution": [
-        "Total distance: \\(300\\) miles",
-        "Distance already traveled: \\(100\\) miles",
-        "Remaining distance: \\(300 - 100 = 200\\) miles",
-        "Miles per day: \\(m = \\frac{\\text{remaining distance}}{\\text{number of days}} = \\frac{200}{D}\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "interpreting_linear_equations"
-    },
-    {
-      "question_number": 28,
-      "topic": "advanced_math",
-      "subskill": "equivalent_expressions",
-      "difficulty": "easy",
-      "question": "Which of the following expressions is equivalent to \\(2(x - 4) + 4\\)?",
-      "options": {
-        "A": "\\(2x - 4\\)",
-        "B": "\\(2x + 4\\)",
-        "C": "\\(4x - 4\\)",
-        "D": "\\(4x + 4\\)"
-      },
-      "correct_option": "A",
-      "hint": "Distribute the \\(2\\), then combine like terms.",
-      "solution": [
-        "Distribute: \\(2(x - 4) = 2x - 8\\)",
-        "Add \\(4\\): \\(2x - 8 + 4 = 2x - 4\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "adding_and_subtracting_exponents"
-    },
-    {
-      "question_number": 29,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "easy",
-      "question": "The number of dollars, \\(C\\), it costs for Halle to run a restaurant is modeled by the function \\(C(m) = 10m + 20.0\\) in which \\(m\\) is the number of meals served. What is the meaning of the \\(10\\) in this function?",
-      "options": {
-        "A": "The total cost for all the meals sold.",
-        "B": "The fixed costs for the restaurant to operate.",
-        "C": "The profit the restaurant has for each meal sold.",
-        "D": "The additional cost to the restaurant for each additional meal"
-      },
-      "correct_option": "D",
-      "hint": "In the linear function \\(C(m) = 10m + 20.0\\), the coefficient of \\(m\\) represents the rate of change.",
-      "solution": [
-        "The function is \\(C(m) = 10m + 20.0\\)",
-        "The term \\(10m\\) represents the variable cost (depends on number of meals)",
-        "The coefficient \\(10\\) means each additional meal adds $\\(10\\) to the total cost",
-        "The \\(20.0\\) is the fixed cost (independent of meals served)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "interpreting_linear_equations"
-    },
-    {
-      "question_number": 30,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "medium",
-      "question": "Which of the following represents the graph of \\(\\frac{1}{2}y + 2 = -x\\)?",
-      "options": {
-        "A": "A line with \\(y\\)-intercept at \\(-4\\) and slope \\(-2\\)",
-        "B": "A line with \\(y\\)-intercept at \\(-2\\) and slope \\(\\frac{1}{2}\\)",
-        "C": "A line with \\(y\\)-intercept at \\(-1\\) and slope \\(2\\)",
-        "D": "A line with \\(y\\)-intercept at \\(-1\\) and slope \\(-1\\)"
-      },
-      "correct_option": "A",
-      "hint": "Solve for \\(y\\) to get slope-intercept form \\(y = mx + b\\).",
-      "solution": [
-        "Start with: \\(\\frac{1}{2}y + 2 = -x\\)",
-        "Subtract \\(2\\): \\(\\frac{1}{2}y = -x - 2\\)",
-        "Multiply by \\(2\\): \\(y = -2x - 4\\)",
-        "Slope: \\(m = -2\\), \\(y\\)-intercept: \\(b = -4\\)"
-      ],
-      "representation": "graph",
-      "format": "multiple_choice",
-      "structure": "identifying_intercept",
-      "option_figures": {
-        "A": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -4], [2, -8]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "B": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -2], [4, 0]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "C": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -1], [1, 1]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        },
-        "D": {
-          "type": "lines",
-          "lines": [
-            {
-              "thick": true,
-              "arrow": false,
-              "through": [[0, -1], [-1, 0]]
-            }
-          ],
-          "showGrid": false,
-          "showAxes": true,
-          "showTicks": true,
-          "tickStep": 1,
-          "xRange": [-5, 5],
-          "yRange": [-6, 2]
-        }
-      }
-    },
-    {
-      "question_number": 31,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "probability",
-      "difficulty": "easy",
-      "question": "In a survey of \\(1{,}000\\) likely voters, \\(\\frac{1}{2}\\) like Candidate A, \\(\\frac{1}{3}\\) like Candidate B, and the remainder like neither candidate. If a likely voter is selected at random, what is the probability that they will like neither candidate?",
-      "options": {
-        "A": "\\(\\frac{1}{12}\\)",
-        "B": "\\(\\frac{1}{6}\\)",
-        "C": "\\(\\frac{1}{4}\\)",
-        "D": "\\(\\frac{1}{3}\\)"
-      },
-      "correct_option": "B",
-      "hint": "Find the fraction of voters who like either candidate, then subtract from \\(1\\).",
-      "solution": [
-        "Fraction who like Candidate A: \\(\\frac{1}{2}\\)",
-        "Fraction who like Candidate B: \\(\\frac{1}{3}\\)",
-        "Total who like either: \\(\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}\\)",
-        "Fraction who like neither: \\(1 - \\frac{5}{6} = \\frac{1}{6}\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "evaluating_probability"
-    },
-    {
-      "question_number": 32,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "ratios_rates_and_proportional_relationships",
-      "difficulty": "medium",
-      "question": "A silverware drawer has a total of \\(80\\) forks and spoons. If there are \\(5\\) forks for every \\(3\\) spoons, how many forks are there in the drawer?",
-      "options": {},
-      "correct_option": "50",
-      "hint": "Use the ratio to set up an equation. If there are \\(5\\) forks for every \\(3\\) spoons, the total parts are \\(5\\) + \\(3\\) = \\(8\\).",
-      "solution": [
-        "Ratio of forks to spoons: \\(5\\):\\(3\\)",
-        "Total parts: \\(5 + 3 = 8\\)",
-        "Each part represents: \\(\\frac{80}{8} = 10\\) items",
-        "Number of forks: \\(5 \\times 10 = 50\\)"
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "converting_units"
-    },
-    {
-      "question_number": 33,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "models_and_scatterplots",
-      "difficulty": "medium",
-      "question": "A bar graph shows traffic density (in vehicles per mile per lane) over time. The densities are: \\(7\\):\\(00\\) AM (\\(20\\)), \\(9\\):\\(00\\) AM (\\(40\\)), \\(11\\):\\(00\\) AM (\\(30\\)), \\(1\\):\\(00\\) PM (\\(25\\)), \\(3\\):\\(00\\) PM (\\(30\\)), \\(5\\):\\(00\\) PM (\\(42\\)), \\(7\\):\\(00\\) PM (\\(44\\)), \\(9\\):\\(00\\) PM (\\(28\\)). Between what two hours does the traffic density increase the most?",
-      "options": {
-        "A": "Between \\(7\\) a.m. and \\(9\\) a.m.",
-        "B": "Between \\(9\\) a.m. and \\(11\\) a.m.",
-        "C": "Between \\(1\\) p.m. and \\(3\\) p.m.",
-        "D": "Between \\(3\\) p.m. and \\(5\\) p.m."
-      },
-      "correct_option": "A",
-      "hint": "Calculate the change in traffic density for each interval.",
-      "solution": [
-        "Calculate changes for each option:",
-        "A) \\(7\\) a.m. to \\(9\\) a.m.: \\(40 - 20 = 20\\) vehicles/mile/lane",
-        "B) \\(9\\) a.m. to \\(11\\) a.m.: \\(30 - 40 = -10\\) (decrease)",
-        "C) \\(1\\) p.m. to \\(3\\) p.m.: \\(30 - 25 = 5\\) vehicles/mile/lane",
-        "D) \\(3\\) p.m. to \\(5\\) p.m.: \\(42 - 30 = 12\\) vehicles/mile/lane",
-        "The largest increase is \\(20\\), occurring between \\(7\\) a.m. and \\(9\\) a.m."
-      ],
-      "representation": "bar_graph",
-      "format": "multiple_choice",
-      "structure": "evaluating_scatterplot"
-    },
-    {
-      "question_number": 34,
-      "topic": "algebra",
-      "subskill": "linear_inequality",
-      "difficulty": "hard",
-      "question": "In the system of inequalities \\(y + 10 \\leq 3x\\) and \\(x \\leq -y - 2\\), what is the maximum value of \\(y\\)?",
-      "options": {
-        "A": "\\(-6\\)",
-        "B": "\\(-4\\)",
-        "C": "\\(0\\)",
-        "D": "\\(3\\)"
-      },
-      "correct_option": "A",
-      "hint": "Find the intersection point of the boundary lines \\(y + 10 = 3x\\) and \\(x = -y - 2\\).",
-      "solution": [
-        "Rewrite inequalities as equations: \\(y = 3x - 10\\) and \\(x = -y - 2\\)",
-        "Substitute: \\(x = -(3x - 10) - 2\\)",
-        "Simplify: \\(x = -3x + 10 - 2\\)",
-        "Combine: \\(4x = 8\\)",
-        "Solve: \\(x = 2\\)",
-        "Find \\(y\\): \\(y = 3(2) - 10 = -4\\)",
-        "Check the feasible region: the maximum \\(y\\) in the intersection is \\(-6\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solutions_of_linear_inequalities"
-    },
-    {
-      "question_number": 35,
+      "question_number": 2,
       "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
-      "difficulty": "medium",
-      "question": "A meal costs \\(x\\) dollars. The sales tax on the meal is \\(7\\)%. If the cashier accidentally subtracted the sales tax from the price of the meal instead of adding it, what would the price be in terms of \\(x\\)?",
+      "difficulty": "easy",
+      "question": "A farmer harvested 920 apples this year and saved 15% of them to sell at a local market. How many apples did the farmer save?",
       "options": {
-        "A": "\\(0.07x\\)",
-        "B": "\\(0.7x\\)",
-        "C": "\\(0.93x\\)",
-        "D": "\\(1.07x\\)"
+        "A": "92",
+        "B": "120",
+        "C": "138",
+        "D": "156"
       },
       "correct_option": "C",
-      "hint": "The sales tax is \\(7\\)% of \\(x\\), which is \\(0.07x\\). Subtract this from \\(x\\).",
-      "solution": [
-        "Sales tax: \\(0.07x\\)",
-        "If subtracted instead of added: \\(x - 0.07x\\)",
-        "Simplify: \\(1x - 0.07x = 0.93x\\)"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "applying_percentages"
-    },
-    {
-      "question_number": 36,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "easy",
-      "question": "Ken's commute takes \\(25\\) more minutes in the evening than it does in the morning. If his total daily commute takes \\(95\\) minutes, how long does his morning commute take in minutes?",
-      "options": {},
-      "correct_option": "35",
-      "hint": "Let \\(m\\) be the morning commute time. The evening commute is \\(m + 25\\). Their sum is \\(95\\).",
-      "solution": [
-        "Let \\(m\\) = morning commute time",
-        "Evening commute: \\(m + 25\\)",
-        "Total: \\(m + (m + 25) = 95\\)",
-        "Simplify: \\(2m + 25 = 95\\)",
-        "Subtract \\(25\\): \\(2m = 70\\)",
-        "Divide by \\(2\\): \\(m = 35\\) minutes"
+      "structure": "applying_percentages",
+      "hint_english": "Compute 15% of 920.",
+      "hint_portugues": "Compute 15% of 920.",
+      "solution_english": [
+        "15% of 920 is \\(0.15 \\times 920 = 138\\).",
+        "So the farmer saved 138 apples."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "interpreting_linear_equations"
+      "solution_portugues": [
+        "15% of 920 is \\(0.15 \\times 920 = 138\\).",
+        "So the farmer saved 138 apples."
+      ]
     },
     {
-      "question_number": 37,
-      "topic": "advanced_math",
-      "subskill": "polynomials",
+      "question_number": 3,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
       "difficulty": "easy",
-      "question": "The function \\(f\\) is determined by \\(f(x) = \\frac{x^3}{4} + 3\\). What is the value of \\(f(2)\\)?",
+      "question": "A machine produces labels at a constant rate of \\(36\\) labels per minute. At what rate, in labels per hour, does the machine produce labels?",
+      "options": {
+        "A": "\\(216\\)",
+        "B": "\\(360\\)",
+        "C": "\\(2160\\)",
+        "D": "\\(3600\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "converting_units",
+      "hint_english": "There are 60 minutes in an hour.",
+      "hint_portugues": "There are 60 minutes in an hour.",
+      "solution_english": [
+        "\\(36\\) labels/minute times \\(60\\) minutes/hour = \\(36 \\times 60 = 2160\\) labels/hour."
+      ],
+      "solution_portugues": [
+        "\\(36\\) labels/minute times \\(60\\) minutes/hour = \\(36 \\times 60 = 2160\\) labels/hour."
+      ]
+    },
+    {
+      "question_number": 4,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "A line passes through the points \\((2, 5)\\) and \\((8, 17)\\). What is the slope of the line?",
       "options": {
         "A": "\\(1\\)",
-        "B": "\\(5\\)",
-        "C": "\\(6\\)",
-        "D": "\\(9\\)"
+        "B": "\\(2\\)",
+        "C": "\\(3\\)",
+        "D": "\\(4\\)"
       },
       "correct_option": "B",
-      "hint": "Substitute \\(x = 2\\) into the function and calculate.",
-      "solution": [
-        "Substitute \\(x = 2\\): \\(f(2) = \\frac{2^3}{4} + 3\\)",
-        "Calculate: \\(f(2) = \\frac{8}{4} + 3\\)",
-        "Simplify: \\(f(2) = 2 + 3 = 5\\)"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "evaluating_polynomials"
-    },
-    {
-      "question_number": 38,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "area_and_volume",
-      "difficulty": "easy",
-      "question": "If the volume of a right rectangular prism is \\(90\\) cubic inches, and the product of the length and width of the prism is \\(30\\) square inches, what is the height of the prism?",
-      "options": {},
-      "correct_option": "3",
-      "hint": "Volume formula for a rectangular prism: \\(V = l \\times w \\times h\\).",
-      "solution": [
-        "Volume formula: \\(V = l \\times w \\times h\\)",
-        "Given: \\(V = 90\\) cubic inches and \\(l \\times w = 30\\) square inches",
-        "Substitute: \\(90 = 30 \\times h\\)",
-        "Solve: \\(h = \\frac{90}{30} = 3\\) inches"
+      "structure": "identifying_slope",
+      "hint_english": "Use \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1}\\).",
+      "hint_portugues": "Use \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1}\\).",
+      "solution_english": [
+        "Slope formula: \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1} = \\tfrac{17 - 5}{8 - 2}\\).",
+        "\\(\\tfrac{12}{6} = 2\\).",
+        "So the slope is \\(2\\)."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "volume_of_3d_figures"
+      "solution_portugues": [
+        "Slope formula: \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1} = \\tfrac{17 - 5}{8 - 2}\\).",
+        "\\(\\tfrac{12}{6} = 2\\).",
+        "So the slope is \\(2\\)."
+      ]
     },
     {
-      "question_number": 39,
+      "question_number": 5,
       "topic": "advanced_math",
       "subskill": "quadratic_equations",
-      "difficulty": "medium",
-      "question": "\\(x^2 - x - 20 = 0\\)\n\nWhat is the sum of the solutions to the equation above?",
-      "options": {},
-      "correct_option": "1",
-      "hint": "For a quadratic \\(ax^2 + bx + c = 0\\), the sum of solutions is \\(-\\frac{b}{a}\\).",
-      "solution": [
-        "For \\(x^2 - x - 20 = 0\\), we have \\(a = 1\\) and \\(b = -1\\)",
-        "Sum of solutions: \\(-\\frac{b}{a} = -\\frac{-1}{1} = 1\\)",
-        "Alternatively, factor: \\((x - 5)(x + 4) = 0\\)",
-        "Solutions: \\(x = 5\\) or \\(x = -4\\)",
-        "Sum: \\(5 + (-4) = 1\\)"
-      ],
-      "representation": "",
+      "difficulty": "easy",
+      "question": "The x-intercept of the graph shown is \\((x, 0)\\). What is the value of \\(x\\)?",
+      "options": {
+        "A": "\\(5\\)",
+        "B": "\\(6\\)",
+        "C": "\\(7\\)",
+        "D": "\\(8\\)"
+      },
+      "correct_option": "C",
+      "figure": {
+        "type": "polygon",
+        "closed": false,
+        "points": [
+          [
+            5.5,
+            9
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6.5,
+            1
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            7.5,
+            1
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8.5,
+            9
+          ]
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "xRange": [
+          0,
+          12
+        ],
+        "yRange": [
+          -2,
+          10
+        ],
+        "xTickStep": 1,
+        "yTickStep": 1,
+        "strokeWidth": 3
+      },
       "format": "free_response",
-      "structure": "vietas_formulas"
-    },
-    {
-      "question_number": 40,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "models_and_scatterplots",
-      "difficulty": "medium",
-      "question": "A circle graph shows votes in favor of a tax levy. Of \\(800\\) city residents who voted, the central angle formed by the portion allocated to \"NO\" is \\(45°\\). How many of the residents voted \"NO\"?",
-      "options": {
-        "A": "\\(90\\)",
-        "B": "\\(100\\)",
-        "C": "\\(110\\)",
-        "D": "\\(120\\)"
-      },
-      "correct_option": "B",
-      "hint": "A full circle is \\(360°\\). Find what fraction \\(45°\\) is of \\(360°\\), then multiply by the total voters.",
-      "solution": [
-        "Total degrees in a circle: \\(360°\\)",
-        "Fraction for \"NO\": \\(\\frac{45°}{360°} = \\frac{1}{8}\\)",
-        "Number who voted \"NO\": \\(\\frac{1}{8} \\times 800 = 100\\) residents"
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "The vertex touches the x-axis at the intercept.",
+      "hint_portugues": "The vertex touches the x-axis at the intercept.",
+      "solution_english": [
+        "From the graph, the parabola meets the x-axis at \\(x = 7\\).",
+        "So the x-intercept is \\((7, 0)\\)."
       ],
-      "representation": "pie_chart",
-      "format": "multiple_choice",
-      "structure": "evaluating_scatterplot"
+      "solution_portugues": [
+        "From the graph, the parabola meets the x-axis at \\(x = 7\\).",
+        "So the x-intercept is \\((7, 0)\\)."
+      ]
     },
     {
-      "question_number": 41,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "ratios_rates_and_proportional_relationships",
+      "question_number": 6,
+      "topic": "algebra",
+      "subskill": "linear_equations",
       "difficulty": "easy",
-      "question": "Density, mass, and volume are related by this formula: \\(\\text{Density} = \\frac{\\text{Mass}}{\\text{Volume}}\\)\n\nIf the mass of an object is \\(2\\) kilograms and its volume is \\(8\\) liters, what is the object's density in kg/L?",
-      "options": {
-        "A": "\\(\\frac{1}{8}\\)",
-        "B": "\\(\\frac{1}{4}\\)",
-        "C": "\\(\\frac{1}{2}\\)",
-        "D": "\\(\\frac{3}{4}\\)"
-      },
-      "correct_option": "B",
-      "hint": "Substitute the given values into the density formula and simplify.",
-      "solution": [
-        "Formula: \\(\\text{Density} = \\frac{\\text{Mass}}{\\text{Volume}}\\)",
-        "Given: Mass = \\(2\\) kg, Volume = \\(8\\) L",
-        "Substitute: \\(\\text{Density} = \\frac{2}{8}\\)",
-        "Simplify: \\(\\frac{2}{8} = \\frac{1}{4}\\) kg/L"
+      "question": "The function \\(f\\) is defined by \\(f(x) = 7x + 2\\). What is the value of \\(f(x)\\) when \\(x = 4\\)?",
+      "options": {},
+      "correct_option": "30",
+      "format": "free_response",
+      "structure": "evaluating_linear_functions",
+      "hint_english": "Substitute \\(x = 4\\) into the expression.",
+      "hint_portugues": "Substitute \\(x = 4\\) into the expression.",
+      "solution_english": [
+        "Compute: \\(f(4) = 7\\times 4 + 2 = 28 + 2 = 30\\)."
       ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "converting_units"
+      "solution_portugues": [
+        "Compute: \\(f(4) = 7\\times 4 + 2 = 28 + 2 = 30\\)."
+      ]
     },
     {
-      "question_number": 42,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "percentages",
+      "question_number": 7,
+      "topic": "geometry_and_trigonometry",
+      "subskill": "area_and_volume",
       "difficulty": "easy",
-      "question": "What percentage of \\(70\\) is \\(35\\)?",
-      "options": {
-        "A": "\\(40\\)%",
-        "B": "\\(50\\)%",
-        "C": "\\(75\\)%",
-        "D": "\\(200\\)%"
-      },
-      "correct_option": "B",
-      "hint": "Divide the part by the whole and multiply by \\(100\\) to get the percentage.",
-      "solution": [
-        "Formula: \\(\\text{Percentage} = \\frac{\\text{Part}}{\\text{Whole}} \\times 100\\%\\)",
-        "Calculate: \\(\\frac{35}{70} \\times 100\\% = 0.5 \\times 100\\% = 50\\%\\)"
+      "question": "Each side of a square has length 45. What is the perimeter of this square?",
+      "options": {},
+      "correct_option": "180",
+      "format": "free_response",
+      "structure": "area_of_2d_figures",
+      "hint_english": "Perimeter of a square is 4 times the side length.",
+      "hint_portugues": "Perimeter of a square is 4 times the side length.",
+      "solution_english": [
+        "Perimeter = 4 \u00d7 45 = 180."
       ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "applying_percentages"
+      "solution_portugues": [
+        "Perimeter = 4 \u00d7 45 = 180."
+      ]
     },
     {
-      "question_number": 43,
+      "question_number": 8,
       "topic": "algebra",
       "subskill": "linear_equations",
       "difficulty": "medium",
-      "question": "A line that is perpendicular to the line with the equation \\(y = -3x + 5\\) has a \\(y\\)-intercept of \\(4\\). What is the y-value of a point in this perpendicular line when its x-value is \\(3\\)?",
-      "options": {},
-      "correct_option": "5",
-      "hint": "Perpendicular lines have slopes that are negative reciprocals. Find the slope of the perpendicular line, then use the \\(y\\)-intercept to write its equation.",
-      "solution": [
-        "Original line: \\(y = -3x + 5\\) has slope \\(m_1 = -3\\)",
-        "Perpendicular slope: \\(m_2 = -\\frac{1}{m_1} = -\\frac{1}{-3} = \\frac{1}{3}\\)",
-        "Perpendicular line with \\(y\\)-intercept \\(4\\): \\(y = \\frac{1}{3}x + 4\\)",
-        "When \\(x = 3\\): \\(y = \\frac{1}{3}(3) + 4 = 1 + 4 = 5\\)"
+      "question": "The point with coordinates \\((d, 4)\\) lies on the line shown. What is the value of \\(d\\)?",
+      "options": {
+        "A": "\\(\\tfrac{7}{2}\\)",
+        "B": "\\(\\tfrac{26}{7}\\)",
+        "C": "\\(\\tfrac{24}{7}\\)",
+        "D": "\\(\\tfrac{27}{8}\\)"
+      },
+      "correct_option": "C",
+      "figure": {
+        "type": "polygon",
+        "closed": false,
+        "points": [
+          [
+            0,
+            7
+          ],
+          [
+            8,
+            0
+          ]
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "xRange": [
+          0,
+          14
+        ],
+        "yRange": [
+          0,
+          14
+        ],
+        "xTickStep": 1,
+        "yTickStep": 1,
+        "strokeWidth": 3
+      },
+      "format": "multiple_choice",
+      "structure": "identifying_intercept",
+      "hint_english": "Use the line passing through \\((0,7)\\) and \\((8,0)\\): find x when y = 4.",
+      "hint_portugues": "Use the line passing through \\((0,7)\\) and \\((8,0)\\): find x when y = 4.",
+      "solution_english": [
+        "Slope from (0,7) to (8,0) is \\(-7/8\\). Equation: \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Set y = 4: \\(4 = -\\tfrac{7}{8}x + 7 \\Rightarrow -\\tfrac{7}{8}x = -3 \\Rightarrow x = \\tfrac{24}{7}\\).",
+        "Thus \\(d = \\tfrac{24}{7}\\)."
       ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "properties_of_a_line"
+      "solution_portugues": [
+        "Slope from (0,7) to (8,0) is \\(-7/8\\). Equation: \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Set y = 4: \\(4 = -\\tfrac{7}{8}x + 7 \\Rightarrow -\\tfrac{7}{8}x = -3 \\Rightarrow x = \\tfrac{24}{7}\\).",
+        "Thus \\(d = \\tfrac{24}{7}\\)."
+      ]
     },
     {
-      "question_number": 44,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "right_triangles_and_trigonometry",
-      "difficulty": "medium",
-      "question": "In \\(\\triangle ABC\\), angle C is a right angle. \\(\\overline{AC}\\) is \\(24\\) units long and \\(\\overline{BC}\\) is \\(7\\) units long. What is the cosine of \\(\\angle ABC\\)?",
+      "question_number": 9,
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
+      "difficulty": "easy",
+      "question": "Which expression is equivalent to \\(6x^2 - 18xy^2\\)?",
       "options": {
-        "A": "\\(\\frac{7}{25}\\)",
-        "B": "\\(\\frac{7}{24}\\)",
-        "C": "\\(\\frac{24}{27}\\)",
-        "D": "\\(\\frac{25}{27}\\)"
+        "A": "\\(6x(x - 3y^2)\\)",
+        "B": "\\(6x^2(x - 3y^2)\\)",
+        "C": "\\(3x(2x - 6y^2)\\)",
+        "D": "\\(6x(x^2 - 3y^2)\\)"
       },
       "correct_option": "A",
-      "hint": "First find the hypotenuse using the Pythagorean theorem. Then use the cosine ratio: adjacent/hypotenuse.",
-      "solution": [
-        "Use Pythagorean theorem to find AB (hypotenuse): \\(AB^2 = AC^2 + BC^2\\)",
-        "Calculate: \\(AB^2 = 24^2 + 7^2 = 576 + 49 = 625\\)",
-        "Therefore: \\(AB = \\sqrt{625} = 25\\)",
-        "For \\(\\angle ABC\\), the adjacent side is \\(\\overline{BC}\\) = \\(7\\)",
-        "\\(\\cos(\\angle ABC) = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{BC}{AB} = \\frac{7}{25}\\)"
-      ],
-      "representation": "",
       "format": "multiple_choice",
-      "structure": "trig_ratios"
+      "structure": "adding_and_subtracting_exponents",
+      "hint_english": "Factor out the greatest common factor.",
+      "hint_portugues": "Factor out the greatest common factor.",
+      "solution_english": [
+        "GCF is \\(6x\\): \\(6x^2 - 18xy^2 = 6x(x - 3y^2)\\)."
+      ],
+      "solution_portugues": [
+        "GCF is \\(6x\\): \\(6x^2 - 18xy^2 = 6x(x - 3y^2)\\)."
+      ]
+    },
+    {
+      "question_number": 10,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "The function \\(g\\) is defined by \\(g(x) = 4x^2\\). What is the value of \\(g(6)\\)?",
+      "options": {
+        "A": "24",
+        "B": "72",
+        "C": "96",
+        "D": "144"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Substitute \\(x=6\\) and compute.",
+      "hint_portugues": "Substitute \\(x=6\\) and compute.",
+      "solution_english": [
+        "\\(g(6) = 4 \\times 6^2 = 4 \\times 36 = 144\\)."
+      ],
+      "solution_portugues": [
+        "\\(g(6) = 4 \\times 6^2 = 4 \\times 36 = 144\\)."
+      ]
+    },
+    {
+      "question_number": 11,
+      "topic": "probability",
+      "subskill": "probability",
+      "difficulty": "easy",
+      "question": "Each face of a fair 10-sided die is labeled with a different integer from \\(1\\) through \\(10\\). If the die is rolled one time, what is the probability of rolling a multiple of \\(5\\)?",
+      "options": {
+        "A": "\\(\\tfrac{1}{10}\\)",
+        "B": "\\(\\tfrac{2}{10}\\)",
+        "C": "\\(\\tfrac{5}{10}\\)",
+        "D": "\\(\\tfrac{8}{10}\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "evaluating_probability",
+      "hint_english": "Count multiples of 5 between 1 and 10.",
+      "hint_portugues": "Count multiples of 5 between 1 and 10.",
+      "solution_english": [
+        "Multiples of \\(5\\) in \\(1\\ldots 10\\) s\u00e3o \\(5\\) e \\(10\\) (2 resultados).",
+        "Probabilidade = \\(\\tfrac{2}{10}\\)."
+      ],
+      "solution_portugues": [
+        "Multiples of \\(5\\) in \\(1\\ldots 10\\) s\u00e3o \\(5\\) e \\(10\\) (2 resultados).",
+        "Probabilidade = \\(\\tfrac{2}{10}\\)."
+      ]
+    },
+    {
+      "question_number": 12,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "medium",
+      "question": "A line has slope \\(-3\\) and passes through the point \\((2,7)\\). Which equation represents this line?",
+      "options": {
+        "A": "\\(y = -3x + 13\\)",
+        "B": "\\(y = -3x + 1\\)",
+        "C": "\\(y = 3x + 1\\)",
+        "D": "\\(y = 3x - 13\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "identifying_intercept",
+      "hint_english": "Use point-slope form: \\(y - 7 = -3(x - 2)\\).",
+      "hint_portugues": "Use point-slope form: \\(y - 7 = -3(x - 2)\\).",
+      "solution_english": [
+        "Point-slope: \\(y - 7 = -3(x - 2)\\) \u2192 \\(y - 7 = -3x + 6\\) \u2192 \\(y = -3x + 13\\)."
+      ],
+      "solution_portugues": [
+        "Point-slope: \\(y - 7 = -3(x - 2)\\) \u2192 \\(y - 7 = -3x + 6\\) \u2192 \\(y = -3x + 13\\)."
+      ]
+    },
+    {
+      "question_number": 13,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "models_and_scatterplots",
+      "difficulty": "medium",
+      "question": "A scatterplot shows the relationship between two variables, \\(x\\) and \\(y\\). A line of best fit is also shown. Which of the following equations best represents the line of best fit?",
+      "options": {
+        "A": "\\(y = 3.1 + 1.5x\\)",
+        "B": "\\(y = 3.1 - 1.5x\\)",
+        "C": "\\(y = -3.1 + 1.5x\\)",
+        "D": "\\(y = -3.1 - 1.5x\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "identifying_model",
+      "hint_english": "Pick the equation with positive slope (~1.5) and intercept around 3.",
+      "hint_portugues": "Pick the equation with positive slope (~1.5) and intercept around 3.",
+      "solution_english": [
+        "Line of best fit has positive slope and y-intercept near \\(3.1\\).",
+        "So equation is \\(y = 3.1 + 1.5x\\) (option A)."
+      ],
+      "solution_portugues": [
+        "Line of best fit has positive slope and y-intercept near \\(3.1\\).",
+        "So equation is \\(y = 3.1 + 1.5x\\) (option A)."
+      ]
+    },
+    {
+      "question_number": 14,
+      "topic": "statistics",
+      "subskill": "statistcs",
+      "difficulty": "medium",
+      "question": "The dot plot represents the values in data set C. Data set D is created by adding \\(40\\) to each value in data set C. Which of the following correctly compares the medians and the ranges of data sets C and D?",
+      "options": {
+        "A": "The median of D is equal to the median of C, and the range of D is equal to the range of C.",
+        "B": "The median of D is equal to the median of C, and the range of D is greater than the range of C.",
+        "C": "The median of D is greater than the median of C, and the range of D is equal to the range of C.",
+        "D": "The median of D is greater than the median of C, and the range of D is greater than the range of C."
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range",
+      "hint_english": "Adding a constant shifts all values equally: median shifts by 40, range unchanged.",
+      "hint_portugues": "Adding a constant shifts all values equally: median shifts by 40, range unchanged.",
+      "solution_english": [
+        "Adding \\(40\\) increases median by \\(40\\) (so D's median is greater).",
+        "Range stays the same because spread is unchanged."
+      ],
+      "solution_portugues": [
+        "Adding \\(40\\) increases median by \\(40\\) (so D's median is greater).",
+        "Range stays the same because spread is unchanged."
+      ]
+    },
+    {
+      "question_number": 15,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "ratios_rates_and_proportional_relationships",
+      "difficulty": "easy",
+      "question": "Last month, a tutor earned \\(\\$1{,}020\\) from teaching for \\(x\\) hours and grading assignments for \\(y\\) hours. The equation \\(45x + 30y = 1{,}020\\) represents this situation. Which of the following is the best interpretation of \\(45\\) in this context?",
+      "options": {
+        "A": "The tutor earned \\(\\$45\\) per hour teaching.",
+        "B": "The tutor worked \\(45\\) hours teaching.",
+        "C": "The tutor earned \\(\\$45\\) per hour grading assignments.",
+        "D": "The tutor worked \\(45\\) hours grading assignments."
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "interpreting_linear_equations",
+      "hint_english": "Coefficient of x is the rate for teaching hours.",
+      "hint_portugues": "Coefficient of x is the rate for teaching hours.",
+      "solution_english": [
+        "The coefficient \\(45\\) multiplies teaching hours \\(x\\), so it represents \\(\\$45\\) per hour for teaching."
+      ],
+      "solution_portugues": [
+        "The coefficient \\(45\\) multiplies teaching hours \\(x\\), so it represents \\(\\$45\\) per hour for teaching."
+      ]
+    },
+    {
+      "question_number": 16,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "The graphs of the equations intersect at the point \\((x, y)\\) in the \\(xy\\)-plane. Given \\(x = 6\\) and \\(y = x^2 + 4\\), what is the value of \\(y\\)?",
+      "options": {
+        "A": "\\(10\\)",
+        "B": "\\(36\\)",
+        "C": "\\(40\\)",
+        "D": "\\(52\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Substitute x=6 into y = x^2 + 4.",
+      "hint_portugues": "Substitute x=6 into y = x^2 + 4.",
+      "solution_english": [
+        "\\(y = 6^2 + 4 = 36 + 4 = 40\\)."
+      ],
+      "solution_portugues": [
+        "\\(y = 6^2 + 4 = 36 + 4 = 40\\)."
+      ]
+    },
+    {
+      "question_number": 17,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "medium",
+      "question": "The graph of \\(y = f(x)\\) is shown. What is the value of \\(f(0)\\)?",
+      "options": {
+        "A": "\\(-3\\)",
+        "B": "\\(0\\)",
+        "C": "\\(\\tfrac{3}{5}\\)",
+        "D": "\\(3\\)"
+      },
+      "correct_option": "D",
+      "figure": {
+        "type": "polygon",
+        "closed": false,
+        "points": [
+          [
+            -8,
+            1.5
+          ],
+          [
+            -6,
+            1.8
+          ],
+          [
+            -4,
+            2.1
+          ],
+          [
+            -2,
+            2.4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5.5
+          ],
+          [
+            3,
+            7.5
+          ]
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "xRange": [
+          -8,
+          8
+        ],
+        "yRange": [
+          -8,
+          8
+        ],
+        "xTickStep": 1,
+        "yTickStep": 1,
+        "strokeWidth": 3
+      },
+      "format": "multiple_choice",
+      "structure": "evaluating_exponential_functions",
+      "hint_english": "Read the y-value at x = 0 on the graph.",
+      "hint_portugues": "Read the y-value at x = 0 on the graph.",
+      "solution_english": [
+        "At \\(x=0\\), the graph shows \\(y \\approx 3\\).",
+        "So \\(f(0) = 3\\)."
+      ],
+      "solution_portugues": [
+        "At \\(x=0\\), the graph shows \\(y \\approx 3\\).",
+        "So \\(f(0) = 3\\)."
+      ]
+    },
+    {
+      "question_number": 18,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "easy",
+      "question": "Line \\(k\\) in the \\(xy\\)-plane has a slope of \\(\\tfrac{2}{5}\\) and passes through the point \\((10, 4)\\). Which equation defines line \\(k\\)?",
+      "options": {
+        "A": "\\(y = \\tfrac{2}{5}x + 4\\)",
+        "B": "\\(y = \\tfrac{2}{5}x\\)",
+        "C": "\\(y = \\tfrac{2}{5}x - 2\\)",
+        "D": "\\(y = \\tfrac{2}{5}x - 0\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "identifying_intercept",
+      "hint_english": "Use point-slope form with slope 2/5 and point (10,4).",
+      "hint_portugues": "Use point-slope form with slope 2/5 and point (10,4).",
+      "solution_english": [
+        "Point-slope: \\(y - 4 = \\tfrac{2}{5}(x - 10)\\) \u2192 \\(y - 4 = \\tfrac{2}{5}x - 4\\) \u2192 \\(y = \\tfrac{2}{5}x\\).",
+        "So the line is \\(y = \\tfrac{2}{5}x\\) (option B)."
+      ],
+      "solution_portugues": [
+        "Point-slope: \\(y - 4 = \\tfrac{2}{5}(x - 10)\\) \u2192 \\(y - 4 = \\tfrac{2}{5}x - 4\\) \u2192 \\(y = \\tfrac{2}{5}x\\).",
+        "So the line is \\(y = \\tfrac{2}{5}x\\) (option B)."
+      ]
+    },
+    {
+      "question_number": 19,
+      "topic": "advanced_math",
+      "subskill": "radicals_and_exponents",
+      "difficulty": "easy",
+      "question": "The function \\(g\\) is defined by \\(g(x) = 6\\sqrt{x}\\). For what value of \\(x\\) does \\(g(x) = 30\\)?",
+      "options": {
+        "A": "\\(5\\)",
+        "B": "\\(16\\)",
+        "C": "\\(25\\)",
+        "D": "\\(36\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "evaluating_exponent_expressions",
+      "hint_english": "Solve 6\\sqrt{x} = 30.",
+      "hint_portugues": "Solve 6\\sqrt{x} = 30.",
+      "solution_english": [
+        "\\(6\\sqrt{x} = 30 \\Rightarrow \\sqrt{x} = 5 \\Rightarrow x = 25\\)."
+      ],
+      "solution_portugues": [
+        "\\(6\\sqrt{x} = 30 \\Rightarrow \\sqrt{x} = 5 \\Rightarrow x = 25\\)."
+      ]
+    },
+    {
+      "question_number": 20,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "easy",
+      "question": "A museum sells tickets for \\(\\$25\\) per adult and \\(\\$15\\) per child. A group of \\(18\\) people attended, and the total cost was \\(\\$350\\). How many people in the group were children?",
+      "options": {
+        "A": "\\(6\\)",
+        "B": "\\(8\\)",
+        "C": "\\(10\\)",
+        "D": "\\(12\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "identifying_solution",
+      "hint_english": "Set up system: a + c = 18, 25a + 15c = 350.",
+      "hint_portugues": "Set up system: a + c = 18, 25a + 15c = 350.",
+      "solution_english": [
+        "From \\(a + c = 18\\) we get \\(a = 18 - c\\).",
+        "\\(25(18 - c) + 15c = 350 \\Rightarrow 450 - 25c + 15c = 350 \\Rightarrow -10c = -100 \\Rightarrow c = 10\\).",
+        "So \\(10\\) children attended (option C)."
+      ],
+      "solution_portugues": [
+        "From \\(a + c = 18\\) we get \\(a = 18 - c\\).",
+        "\\(25(18 - c) + 15c = 350 \\Rightarrow 450 - 25c + 15c = 350 \\Rightarrow -10c = -100 \\Rightarrow c = 10\\).",
+        "So \\(10\\) children attended (option C)."
+      ]
+    },
+    {
+      "question_number": 21,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "easy",
+      "question": "How many distinct real solutions does the equation \\(3x^2 - 12x + 12 = 0\\) have?",
+      "options": {
+        "A": "Exactly one",
+        "B": "Exactly two",
+        "C": "Infinitely many",
+        "D": "Zero"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Check the discriminant: b^2 - 4ac.",
+      "hint_portugues": "Check the discriminant: b^2 - 4ac.",
+      "solution_english": [
+        "For \\(3x^2 -12x +12\\): discriminant \\(\\Delta = (-12)^2 - 4\\cdot3\\cdot12 = 144 - 144 = 0\\).",
+        "\\(\\Delta = 0 \\Rightarrow\\) one distinct real solution."
+      ],
+      "solution_portugues": [
+        "For \\(3x^2 -12x +12\\): discriminant \\(\\Delta = (-12)^2 - 4\\cdot3\\cdot12 = 144 - 144 = 0\\).",
+        "\\(\\Delta = 0 \\Rightarrow\\) one distinct real solution."
+      ]
+    },
+    {
+      "question_number": 22,
+      "topic": "geometry_and_trigonometry",
+      "subskill": "circles",
+      "difficulty": "easy",
+      "question": "The equation \\((x - 3)^2 + (y + 1)^2 = 25\\) represents circle \\(C\\). Circle \\(D\\) is obtained by shifting circle \\(C\\) up \\(5\\) units in the \\(xy\\)-plane. Which of the following equations represents circle \\(D\\)?",
+      "options": {
+        "A": "\\((x - 3)^2 + (y + 6)^2 = 25\\)",
+        "B": "\\((x - 3)^2 + (y - 4)^2 = 25\\)",
+        "C": "\\((x + 2)^2 + (y + 1)^2 = 25\\)",
+        "D": "\\((x - 8)^2 + (y + 1)^2 = 25\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "circle_equations_xy_plane",
+      "hint_english": "Shifting up by 5 increases the y-coordinate of the center by 5.",
+      "hint_portugues": "Shifting up by 5 increases the y-coordinate of the center by 5.",
+      "solution_english": [
+        "Center of \\(C\\) is \\((3, -1)\\).",
+        "Shift up \\(5\\): new center is \\((3, 4)\\). Equation: \\((x - 3)^2 + (y - 4)^2 = 25\\), which is option B."
+      ],
+      "solution_portugues": [
+        "Center of \\(C\\) is \\((3, -1)\\).",
+        "Shift up \\(5\\): new center is \\((3, 4)\\). Equation: \\((x - 3)^2 + (y - 4)^2 = 25\\), which is option B."
+      ]
     }
   ],
   "module_2_hard": [
     {
-      "question_number": 23,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistcs",
-      "difficulty": "medium",
-      "question": "Hoping to gauge public support for an upcoming local referendum, a political pollster surveys a random sample of \\(560\\) registered voters within the municipality in question. Based on the results of the survey, the pollster predicts, with a \\(4.4\\)% margin of error, that \\(60\\)% of registered voters will support the referendum. Based on this information, which conclusion can most reasonably be drawn with respect to the upcoming referendum?",
-      "options": {
-        "A": "\\(4.4\\)% of registered voters will support the referendum.",
-        "B": "\\(60\\)% of registered voters will support the referendum.",
-        "C": "It is likely that between \\(55.6\\)% and \\(64.4\\)% of registered voters will support the referendum.",
-        "D": "It is likely that less than \\(55.6\\)% of registered voters will support the referendum."
-      },
-      "correct_option": "C",
-      "hint": "The margin of error creates a confidence interval around the predicted value.",
-      "solution": [
-        "Predicted support: \\(60\\)%",
-        "Margin of error: \\(4.4\\)%",
-        "Lower bound: \\(60\\% - 4.4\\% = 55.6\\%\\)",
-        "Upper bound: \\(60\\% + 4.4\\% = 64.4\\%\\)",
-        "The most reasonable conclusion is that support is likely between \\(55.6\\)% and \\(64.4\\)%"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "margin_of_error"
-    },
-    {
-      "question_number": 24,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "right_triangles_and_trigonometry",
-      "difficulty": "easy",
-      "question": "What is the length of one side of a right triangle, in inches, if the length of the hypotenuse of the triangle is \\(12\\) inches and the length of the other side is \\(7\\) inches?",
-      "options": {
-        "A": "\\(\\sqrt{95}\\)",
-        "B": "\\(\\sqrt{193}\\)",
-        "C": "\\(19\\)",
-        "D": "\\(95\\)"
-      },
-      "correct_option": "A",
-      "hint": "Use the Pythagorean theorem: \\(a^2 + b^2 = c^2\\), where \\(c\\) is the hypotenuse.",
-      "solution": [
-        "Let the unknown side \\(\\overline{be}\\) \\(a\\), given: \\(b = 7\\) and \\(c = 12\\)",
-        "Pythagorean theorem: \\(a^2 + 7^2 = 12^2\\)",
-        "Calculate: \\(a^2 + 49 = 144\\)",
-        "Solve: \\(a^2 = 144 - 49 = 95\\)",
-        "Therefore: \\(a = \\sqrt{95}\\) inches"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "applying_pythagorean_theorem"
-    },
-    {
-      "question_number": 25,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "medium",
-      "question": "In the \\(xy\\)-plane, the graph of \\(y = f(x)\\) for the linear function \\(f\\) passes through the points \\((6, 26)\\) and \\((12, 28)\\). Which of the following equations defines function \\(f\\)?",
-      "options": {
-        "A": "\\(f(x) = \\frac{1}{3}x + 24\\)",
-        "B": "\\(f(x) = 3x - \\frac{8}{3}\\)",
-        "C": "\\(f(x) = 6x + 26\\)",
-        "D": "\\(f(x) = 12x + 28\\)"
-      },
-      "correct_option": "A",
-      "hint": "Find the slope using the two points, then use point-slope form to find the \\(y\\)-intercept.",
-      "solution": [
-        "Find slope: \\(m = \\frac{28 - 26}{12 - 6} = \\frac{2}{6} = \\frac{1}{3}\\)",
-        "Use point-slope form with \\((6, 26)\\): \\(y - 26 = \\frac{1}{3}(x - 6)\\)",
-        "Simplify: \\(y - 26 = \\frac{1}{3}x - 2\\)",
-        "Solve for \\(y\\): \\(y = \\frac{1}{3}x + 24\\)",
-        "Therefore: \\(f(x) = \\frac{1}{3}x + 24\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "evaluating_linear_functions"
-    },
-    {
-      "question_number": 26,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "statistcs",
-      "difficulty": "easy",
-      "question": "The ages of six children are: \\(7\\), \\(7\\), \\(8\\), \\(10\\), \\(12\\), \\(12\\). What is the median of these ages?",
-      "options": {},
-      "correct_option": "9",
-      "hint": "The median is the middle value when data is ordered. With an even number of values, average the two middle values.",
-      "solution": [
-        "Data already ordered: \\(7\\), \\(7\\), \\(8\\), \\(10\\), \\(12\\), \\(12\\)",
-        "With \\(6\\) values, median = average of 3rd and 4th values",
-        "3rd value: \\(8\\), 4th value: \\(10\\)",
-        "Median = \\(\\frac{8 + 10}{2} = \\frac{18}{2} = 9\\)"
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "mean_median_mode_range"
-    },
-    {
-      "question_number": 27,
-      "topic": "algebra",
-      "subskill": "linear_inequality",
-      "difficulty": "medium",
-      "question": "A baker can bake a maximum of \\(50\\) layers of cake in one day. This includes \\(10\\)-layer wedding cakes and birthday cakes with either \\(2\\) layers or \\(3\\) layers. Which of the following inequalities represents the possible combinations of \\(2\\)-layer birthday cakes (\\(b\\)) and \\(3\\)-layer birthday cakes (\\(c\\)) that the baker can bake in one day, given that the baker bakes \\(1\\) wedding cake, \\(b\\) \\(2\\)-layer birthday cakes, \\(c\\) \\(3\\)-layer birthday cakes, and no other items that day?",
-      "options": {
-        "A": "\\(2b + 3c \\geq 40\\)",
-        "B": "\\(2b + 3c \\leq 40\\)",
-        "C": "\\(3b + 2c \\geq 50\\)",
-        "D": "\\(3b + 2c \\leq 50\\)"
-      },
-      "correct_option": "B",
-      "hint": "Calculate the layers used by the wedding cake, then determine the maximum layers available for birthday cakes.",
-      "solution": [
-        "Total maximum layers: \\(50\\)",
-        "Wedding cake uses: \\(1 \\times 10 = 10\\) layers",
-        "Remaining for birthday cakes: \\(50 - 10 = 40\\) layers",
-        "\\(2\\)-layer cakes contribute: \\(2b\\) layers",
-        "\\(3\\)-layer cakes contribute: \\(3c\\) layers",
-        "Inequality: \\(2b + 3c \\leq 40\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solutions_of_linear_inequalities"
-    },
-    {
-      "question_number": 28,
-      "topic": "algebra",
-      "subskill": "system_of_linear_equations",
-      "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\n3y &= 7x \\qquad (1) \\\\\ny - 5 &= 4x \\qquad (2)\n\\end{align*}\n\\]\n\nWhich ordered pair \\((x, y)\\) is the solution to the given system of equations?",
-      "options": {
-        "A": "\\((-7, -3)\\)",
-        "B": "\\((-3, -7)\\)",
-        "C": "\\(\\left(1, \\frac{3}{7}\\right)\\)",
-        "D": "\\(\\left(\\frac{7}{3}, 1\\right)\\)"
-      },
-      "correct_option": "B",
-      "hint": "From the first equation, express \\(y\\) in terms of \\(x\\), then substitute into the second equation.",
-      "solution": [
-        "From equation \\(1\\): \\(y = \\frac{7x}{3}\\)",
-        "Substitute into equation \\(2\\): \\(\\frac{7x}{3} - 5 = 4x\\)",
-        "Multiply by \\(3\\): \\(7x - 15 = 12x\\)",
-        "Solve: \\(-15 = 5x\\), so \\(x = -3\\)",
-        "Find \\(y\\): \\(y = \\frac{7(-3)}{3} = \\frac{-21}{3} = -7\\)",
-        "Solution: \\((-3, -7)\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solution"
-    },
-    {
-      "question_number": 29,
-      "topic": "advanced_math",
-      "subskill": "linear_and_quadratic",
-      "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\ny &= x^2 - 6x - 18 \\qquad (1) \\\\\ny &= -x + 6 \\qquad (2)\n\\end{align*}\n\\]\n\nA solution to the given system of equations can be expressed as \\((a, b)\\). If \\(a < 0\\), what is the value of \\(a\\)?",
-      "options": {
-        "A": "\\(-18\\)",
-        "B": "\\(-6\\)",
-        "C": "\\(-3\\)",
-        "D": "\\(8\\)"
-      },
-      "correct_option": "C",
-      "hint": "Set the two equations equal to each other and solve the resulting quadratic equation.",
-      "solution": [
-        "Set equations equal: \\(x^2 - 6x - 18 = -x + 6\\)",
-        "Rearrange: \\(x^2 - 6x + x - 18 - 6 = 0\\)",
-        "Simplify: \\(x^2 - 5x - 24 = 0\\)",
-        "Factor: \\((x - 8)(x + 3) = 0\\)",
-        "Solutions: \\(x = 8\\) or \\(x = -3\\)",
-        "Since \\(a < 0\\), we have \\(a = -3\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solution"
-    },
-    {
-      "question_number": 30,
-      "topic": "algebra",
-      "subskill": "system_of_linear_equations",
-      "difficulty": "hard",
-      "question": "Two employees at a jewelry store are weighing identical pieces of jewelry. The first employee weighs \\(4\\) pairs of earrings and \\(2\\) necklaces and obtains a weight of \\(38.8\\) grams. The second employee weighs \\(1\\) pair of earrings and \\(5\\) necklaces and obtains a weight of \\(42.1\\) grams. What is the weight, in grams, of \\(1\\) pair of earrings?",
-      "options": {
-        "A": "\\(6.1\\)",
-        "B": "\\(6.5\\)",
-        "C": "\\(7.0\\)",
-        "D": "\\(7.2\\)"
-      },
-      "correct_option": "A",
-      "hint": "Set up a system of equations with \\(e\\) for earring weight and \\(n\\) for necklace weight.",
-      "solution": [
-        "Let \\(e\\) = weight of \\(1\\) pair of earrings, \\(n\\) = weight of \\(1\\) necklace",
-        "Equation \\(1\\): \\(4e + 2n = 38.8\\)",
-        "Equation \\(2\\): \\(e + 5n = 42.1\\)",
-        "From equation \\(2\\): \\(e = 42.1 - 5n\\)",
-        "Substitute into equation \\(1\\): \\(4(42.1 - 5n) + 2n = 38.8\\)",
-        "Expand: \\(168.4 - 20n + 2n = 38.8\\)",
-        "Simplify: \\(168.4 - 18n = 38.8\\)",
-        "Solve: \\(18n = 129.6\\), so \\(n = 7.2\\) grams",
-        "Find \\(e\\): \\(e = 42.1 - 5(7.2) = 42.1 - 36 = 6.1\\) grams"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solution"
-    },
-    {
-      "question_number": 31,
-      "topic": "advanced_math",
-      "subskill": "linear_and_quadratic",
-      "difficulty": "medium",
-      "question": "\\[\n\\begin{align*}\ny &= 7(x + 13)^2 - 19 \\qquad (1) \\\\\ny &= -13 \\qquad (2)\n\\end{align*}\n\\]\n\nAt how many points do the graphs of the given equations intersect in the \\(xy\\)-plane?",
-      "options": {
-        "A": "Exactly one",
-        "B": "Exactly two",
-        "C": "Infinitely many",
-        "D": "Zero"
-      },
-      "correct_option": "B",
-      "hint": "Set the equations equal and solve for \\(x\\). The number of real solutions indicates the number of intersection points.",
-      "solution": [
-        "Set equations equal: \\(7(x + 13)^2 - 19 = -13\\)",
-        "Add \\(19\\): \\(7(x + 13)^2 = 6\\)",
-        "Divide by \\(7\\): \\((x + 13)^2 = \\frac{6}{7}\\)",
-        "Take square root: \\(x + 13 = \\pm\\sqrt{\\frac{6}{7}}\\)",
-        "This gives two distinct real solutions for \\(x\\)",
-        "Therefore, the graphs intersect at exactly two points"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "identifying_solution"
-    },
-    {
-      "question_number": 32,
-      "topic": "algebra",
-      "subskill": "linear_word_problems",
-      "difficulty": "medium",
-      "question": "An opening-day promotion at a hobby shop gave a consistent number of free trading cards to each customer who visited between \\(10\\):\\(00\\) A.M. and \\(11\\):\\(00\\) A.M. The relationship between \\(t\\), the total number of trading cards the store started with, and \\(c\\), the number of customers who entered the store between \\(10\\):\\(00\\) A.M. and \\(11\\):\\(00\\) A.M., is given by the equation \\(t - 3c = 132\\). What is the best interpretation of the number \\(3\\) in this equation?",
-      "options": {
-        "A": "Each customer received \\(3\\) trading cards.",
-        "B": "The shop had \\(3\\) trading cards remaining at \\(11\\):\\(00\\) A.M.",
-        "C": "The shop started with \\(3\\) trading cards at \\(10\\):\\(00\\) A.M.",
-        "D": "\\(3\\) customers visited the store between \\(10\\):\\(00\\) A.M. and \\(11\\):\\(00\\) A.M."
-      },
-      "correct_option": "A",
-      "hint": "The coefficient of \\(c\\) represents the rate at which cards were given per customer.",
-      "solution": [
-        "The equation is \\(t - 3c = 132\\)",
-        "Rearranging: \\(t = 3c + 132\\)",
-        "This means: total cards = (\\(3\\) cards per customer × number of customers) + \\(132\\) remaining",
-        "The coefficient \\(3\\) represents the number of cards each customer received"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "interpreting_linear_equations"
-    },
-    {
-      "question_number": 33,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "medium",
-      "question": "A line is graphed in the \\(xy\\)-plane. If the line has an \\(x\\)-intercept of \\((20, 0)\\) and a slope of \\(-\\frac{1}{4}\\), what is the y-coordinate of the \\(y\\)-intercept of the line?",
-      "options": {},
-      "correct_option": "5",
-      "hint": "Use the point-slope form with the \\(x\\)-intercept and slope to find the \\(y\\)-intercept.",
-      "solution": [
-        "Point-slope form: \\(y - y_1 = m(x - x_1)\\)",
-        "Using \\((20, 0)\\) and \\(m = -\\frac{1}{4}\\): \\(y - 0 = -\\frac{1}{4}(x - 20)\\)",
-        "Simplify: \\(y = -\\frac{1}{4}x + 5\\)",
-        "The \\(y\\)-intercept occurs when \\(x = 0\\): \\(y = 5\\)"
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "identifying_intercept"
-    },
-    {
-      "question_number": 34,
-      "topic": "algebra",
-      "subskill": "linear_equations",
-      "difficulty": "hard",
-      "question": "\\(-5(x + 14) = 5(14 - x)\\)\n\nHow many solutions does the given equation have?",
-      "options": {
-        "A": "Exactly one",
-        "B": "Exactly two",
-        "C": "Infinitely many",
-        "D": "Zero"
-      },
-      "correct_option": "D",
-      "hint": "Expand both sides and simplify to see if you get a true statement, false statement, or an equation in \\(x\\).",
-      "solution": [
-        "Expand left side: \\(-5x - 70\\)",
-        "Expand right side: \\(70 - 5x\\)",
-        "Equation becomes: \\(-5x - 70 = 70 - 5x\\)",
-        "Add \\(5x\\) to both sides: \\(-70 = 70\\)",
-        "This is a contradiction (false statement)",
-        "Therefore, the equation has zero solutions"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "evaluating_linear_functions"
-    },
-    {
-      "question_number": 35,
-      "topic": "algebra",
-      "subskill": "system_of_linear_equations",
-      "difficulty": "hard",
-      "question": "\\[\n\\begin{align*}\n3d + 8n &= 24n - 14 \\qquad (1) \\\\\n14 + 3d &= kn \\qquad (2)\n\\end{align*}\n\\]\n\nIn the given system of equations, \\(k\\) is a constant. If the system of equations has infinitely many solutions, what is the value of \\(k\\)?",
-      "options": {},
-      "correct_option": "16",
-      "hint": "For infinitely many solutions, the two equations must be equivalent. Simplify the first equation and compare coefficients.",
-      "solution": [
-        "Simplify equation \\(1\\): \\(3d + 8n = 24n - 14\\)",
-        "Rearrange: \\(3d = 16n - 14\\)",
-        "Add \\(14\\): \\(3d + 14 = 16n\\)",
-        "Compare with equation \\(2\\): \\(14 + 3d = kn\\)",
-        "For the equations to be equivalent: \\(kn = 16n\\)",
-        "Therefore: \\(k = 16\\)"
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "classifying_system_of_linear_equations"
-    },
-    {
-      "question_number": 36,
-      "topic": "advanced_math",
-      "subskill": "quadratic_equations",
-      "difficulty": "hard",
-      "question": "Which of the following quadratic equations has exactly two real solutions?",
-      "options": {
-        "A": "\\(x^2 - 6x + 9 = 0\\)",
-        "B": "\\(x^2 - 2x + 3 = 0\\)",
-        "C": "\\(x^2 + 2x - 3 = 0\\)",
-        "D": "\\(x^2 + 6x + 9 = 0\\)"
-      },
-      "correct_option": "C",
-      "hint": "Use the discriminant \\(b^2 - 4ac\\). Two real solutions occur when the discriminant is positive.",
-      "solution": [
-        "Check discriminant for each option:",
-        "A) \\((-6)^2 - 4(1)(9) = 36 - 36 = 0\\) (one solution)",
-        "B) \\((-2)^2 - 4(1)(3) = 4 - 12 = -8\\) (no real solutions)",
-        "C) \\((2)^2 - 4(1)(-3) = 4 + 12 = 16 > 0\\) (two solutions) ✓",
-        "D) \\((6)^2 - 4(1)(9) = 36 - 36 = 0\\) (one solution)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "evaluating_solutions_of_quadratics"
-    },
-    {
-      "question_number": 37,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "exponential_functions",
-      "difficulty": "hard",
-      "question": "\\(g(x) = (0.35)^{x/5}\\)\n\nThe function \\(g\\) is defined by the given equation, which can be rewritten as \\(g(x) = \\left(1 - \\frac{n}{100}\\right)^x\\) where \\(n\\) is a constant. Which of the following is closest to the value of \\(n\\)?",
-      "options": {
-        "A": "\\(5\\)",
-        "B": "\\(7\\)",
-        "C": "\\(13\\)",
-        "D": "\\(19\\)"
-      },
-      "correct_option": "D",
-      "hint": "Rewrite \\((0.35)^{x/5}\\) as \\((0.35^{1/5})^x\\), then calculate \\(0.35^{1/5}\\) and express as \\(1 - n/100\\).",
-      "solution": [
-        "Rewrite: \\(g(x) = (0.35)^{x/5} = (0.35^{1/5})^x\\)",
-        "Calculate \\(0.35^{1/5} = 0.35^{0.2} \\approx 0.8098\\)",
-        "Set equal: \\(1 - \\frac{n}{100} = 0.8098\\)",
-        "Solve: \\(\\frac{n}{100} = 1 - 0.8098 = 0.1902\\)",
-        "Therefore: \\(n \\approx 19.02 \\approx 19\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "evaluating_exponential_functions"
-    },
-    {
-      "question_number": 38,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "lines_angles_and_triangles",
-      "difficulty": "hard",
-      "question": "In the figure, triangles \\(\\triangle VWX\\) and \\(\\triangle VYZ\\) are similar. Given that \\(VW = 6\\) units, \\(YZ = 15\\) units, and \\(VZ = \\sqrt{549}\\) units, what is the area, in square units, of \\(\\triangle VWX\\)?",
-      "options": {},
-      "correct_option": "18",
-      "hint": "Use the ratio of corresponding sides to find the dimensions of \\(\\triangle VWX\\), then calculate its area.",
-      "solution": [
-        "Triangles \\(\\triangle VWX\\) and \\(\\triangle VYZ\\) are similar",
-        "Corresponding sides: \\(\\frac{VW}{VY}\\) is the scale factor",
-        "In \\(\\triangle VYZ\\): Use Pythagorean theorem with \\(VZ = \\sqrt{549}\\) and \\(YZ = 15\\)",
-        "Find \\(VY^2 = VZ^2 - YZ^2 = 549 - 225 = 324\\), so \\(VY = 18\\)",
-        "Scale factor: \\(\\frac{VW}{VY} = \\frac{6}{18} = \\frac{1}{3}\\)",
-        "So \\(WX = \\frac{1}{3} \\times YZ = \\frac{1}{3} \\times 15 = 5\\)",
-        "Area of \\(\\triangle VWX\\): \\(\\frac{1}{2} \\times VW \\times WX = \\frac{1}{2} \\times 6 \\times 5 = 15\\)",
-        "Wait, let me recalculate using area ratio: \\((\\frac{1}{3})^2 = \\frac{1}{9}\\)",
-        "Area of \\(\\triangle VYZ\\): \\(\\frac{1}{2} \\times 18 \\times 15 = 135\\)",
-        "Area of \\(\\triangle VWX\\): \\(135 \\times \\frac{1}{9} = 15\\)",
-        "Hmm, but answer might be \\(18\\). Let me verify VY calculation again.",
-        "Actually \\(VY = 18\\), \\(WX = 5\\), so area = \\(\\frac{1}{2} \\times 6 \\times 6 = 18\\) if it's \\(6 \\times 6\\)",
-        "Let me think: if VW = \\(6\\) and scale is \\(1\\)/\\(3\\), then WX should also scale. Area = \\(18\\) makes sense."
-      ],
-      "representation": "",
-      "format": "free_response",
-      "structure": "triangle_similarity_and_congruence"
-    },
-    {
-      "question_number": 39,
-      "topic": "advanced_math",
-      "subskill": "quadratic_equations",
-      "difficulty": "hard",
-      "question": "The graph of \\(y = -x^2 + bx + c\\) is shown. The parabola has a vertex at \\((1, 4)\\) and passes through \\((0, 3)\\). If \\(b\\) and \\(c\\) are constants, what is the value of \\(b - c\\)?",
-      "options": {},
-      "correct_option": "-1",
-      "hint": "Use the vertex and a point on the parabola to find \\(b\\) and \\(c\\), then calculate \\(b - c\\).",
-      "solution": [
-        "From the graph, \\(y\\)-intercept is at \\((0, 3)\\), so \\(c = 3\\)",
-        "Vertex form: \\(y = -1(x - 1)^2 + 4\\) (since vertex is at \\((1, 4)\\))",
-        "Expand: \\(y = -(x^2 - 2x + 1) + 4 = -x^2 + 2x - 1 + 4 = -x^2 + 2x + 3\\)",
-        "Therefore: \\(b = 2\\) and \\(c = 3\\)",
-        "Calculate: \\(b - c = 2 - 3 = -1\\)"
-      ],
-      "representation": "graph",
-      "format": "free_response",
-      "structure": "evaluating_quadratic_functions"
-    },
-    {
-      "question_number": 40,
-      "topic": "advanced_math",
-      "subskill": "equivalent_expressions",
-      "difficulty": "hard",
-      "question": "The graph of \\(y = g(x) - 14\\) is shown as a line passing through \\((0, -6)\\) with slope \\(3\\). If \\(a\\) is a positive constant and \\(b\\) is a negative constant, the function \\(g\\) could be defined by which of the following equations?",
-      "options": {
-        "A": "\\(g(x) = -a - bx\\)",
-        "B": "\\(g(x) = -a + bx\\)",
-        "C": "\\(g(x) = a - bx\\)",
-        "D": "\\(g(x) = a + bx\\)"
-      },
-      "correct_option": "C",
-      "hint": "From the graph, find the equation of \\(y = g(x) - 14\\), then solve for \\(g(x)\\).",
-      "solution": [
-        "The graphed line has slope \\(3\\) and \\(y\\)-intercept -\\(6\\): \\(y = 3x - 6\\)",
-        "Since \\(y = g(x) - 14\\), we have: \\(3x - 6 = g(x) - 14\\)",
-        "Solve for \\(g(x)\\): \\(g(x) = 3x - 6 + 14 = 3x + 8\\)",
-        "Given \\(a > 0\\) and \\(b < 0\\), check which option matches \\(3x + 8\\):",
-        "Option C: \\(g(x) = a - bx\\). Since \\(b < 0\\), \\(-b > 0\\), so \\(a - bx = a + |b|x\\)",
-        "This matches \\(3x + 8\\) with \\(a = 8\\) (positive) and \\(-b = 3\\) (so \\(b = -3\\), negative)"
-      ],
-      "representation": "graph",
-      "format": "multiple_choice",
-      "structure": "multiplying_and_dividing_exponents"
-    },
-    {
-      "question_number": 41,
-      "topic": "geoemtry_and_trigonometry",
-      "subskill": "cricles",
-      "difficulty": "hard",
-      "question": "A circle has center O with coordinates \\((h, k)\\) when graphed in the \\(xy\\)-plane. Point Y lies on the circle and has coordinates \\((h + \\sqrt{111}, k - 2)\\). If point X also lies on the circle, and the measure of \\(\\angle XOY\\) is \\(90°\\), what is the length of \\(\\overline{XY}\\)?",
-      "options": {
-        "A": "\\(115\\sqrt{3}\\)",
-        "B": "\\(115\\sqrt{2}\\)",
-        "C": "\\(2\\sqrt{111}\\)",
-        "D": "\\(\\sqrt{230}\\)"
-      },
-      "correct_option": "D",
-      "hint": "Find the radius using point Y, then use the fact that \\(\\triangle XOY\\) is a right isosceles triangle.",
-      "solution": [
-        "Find radius using distance from O to Y: \\(r = \\sqrt{(\\sqrt{111})^2 + (-2)^2} = \\sqrt{111 + 4} = \\sqrt{115}\\)",
-        "Since \\(\\angle XOY = 90°\\) and \\(\\overline{OX}\\) = \\(\\overline{OY}\\) = r (radii), \\(\\triangle XOY\\) is a right isosceles triangle",
-        "Using Pythagorean theorem: \\(XY^2 = r^2 + r^2 = 2r^2\\)",
-        "Calculate: \\(XY^2 = 2(115) = 230\\)",
-        "Therefore: \\(XY = \\sqrt{230}\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "central_and_inscribed_angles"
-    },
-    {
-      "question_number": 42,
+      "question_number": 1,
       "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "hard",
-      "question": "When the quantity \\(n\\) is decreased by \\(150\\)%, the result is \\(-90\\). What is the value of \\(n\\)?",
+      "question": "There are \\(80\\) students in the debate club. A random sample was surveyed, and \\(25\\%\\) said they plan to attend a regional competition. Based on this survey, which of the following is the best estimate of the total number of debate club members who plan to attend the competition?",
       "options": {
-        "A": "\\(-135\\)",
-        "B": "\\(-60\\)",
-        "C": "\\(60\\)",
-        "D": "\\(180\\)"
-      },
-      "correct_option": "D",
-      "hint": "Decreasing by \\(150\\)% means subtracting \\(1.5\\) times the original value.",
-      "solution": [
-        "Decreasing \\(n\\) by \\(150\\)% means: \\(n - 1.5n = -0.5n\\)",
-        "Set up equation: \\(-0.5n = -90\\)",
-        "Divide by -\\(0.5\\): \\(n = \\frac{-90}{-0.5} = 180\\)"
-      ],
-      "representation": "",
-      "format": "multiple_choice",
-      "structure": "percentage_increase_decrease"
-    },
-    {
-      "question_number": 43,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "models_and_scatterplots",
-      "difficulty": "hard",
-      "question": "For data set A, a scatterplot shows the relationship between two variables, \\(x\\) and \\(y\\). A line of best fit is also shown with equation approximately \\(y = 71.8 - 0.9x\\). Data set B is created by dividing the y-coordinate of each data point from data set A by \\(5.2\\). Which of the following is closest to the equation of a line of best fit for data set B?",
-      "options": {
-        "A": "\\(y = 13.8 - 0.9x\\)",
-        "B": "\\(y = 13.8 - 0.2x\\)",
-        "C": "\\(y = 71.8 - 0.9x\\)",
-        "D": "\\(y = 71.8 - 0.2x\\)"
+        "A": "\\(10\\)",
+        "B": "\\(20\\)",
+        "C": "\\(40\\)",
+        "D": "\\(60\\)"
       },
       "correct_option": "B",
-      "hint": "When all y-values are divided by a constant, both the \\(y\\)-intercept and slope are divided by that constant.",
-      "solution": [
-        "Original line of best fit: \\(y_A = 71.8 - 0.9x\\)",
-        "Data set B: \\(y_B = \\frac{y_A}{5.2}\\)",
-        "Substitute: \\(y_B = \\frac{71.8 - 0.9x}{5.2} = \\frac{71.8}{5.2} - \\frac{0.9}{5.2}x\\)",
-        "Calculate \\(y\\)-intercept: \\(\\frac{71.8}{5.2} \\approx 13.8\\)",
-        "Calculate slope: \\(\\frac{0.9}{5.2} \\approx 0.173 \\approx 0.2\\)",
-        "Therefore: \\(y = 13.8 - 0.2x\\)"
-      ],
-      "representation": "scatterplot",
       "format": "multiple_choice",
-      "structure": "evaluating_scatterplot"
+      "structure": "applying_percentages",
+      "hint_english": "Compute 25% of 80.",
+      "hint_portugues": "Compute 25% of 80.",
+      "solution_english": [
+        "\\(25\\%\\) of \\(80\\) is \\(0.25 \\times 80 = 20\\).",
+        "So about \\(20\\) students plan to attend."
+      ],
+      "solution_portugues": [
+        "\\(25\\%\\) of \\(80\\) is \\(0.25 \\times 80 = 20\\).",
+        "So about \\(20\\) students plan to attend."
+      ]
     },
     {
-      "question_number": 44,
+      "question_number": 5,
       "topic": "problem_solving_and_data_analysis",
-      "subskill": "ratios_rates_and_proportional_relationships",
+      "subskill": "linear_equations",
       "difficulty": "hard",
-      "question": "Pressure is defined in physics as the amount of force applied perpendicular to the surface of an object divided by the area over which that force is distributed. As part of the design test for an automotive part, two flat circular discs are placed on a flat surface. A constant pressure of \\(50\\) pascals is applied simultaneously straight down onto the surface of the two discs. The smaller disc has a radius that is \\(\\frac{1}{4}\\) of the radius of the larger disc. If the amount of force on the two circular discs combined is \\(3{,}400\\pi\\) newtons, what is the amount of force, in newtons, on the smaller circular disc, to the nearest integer?",
-      "options": {},
-      "correct_option": "628",
-      "hint": "Use \\(\\text{Pressure} = \\frac{\\text{Force}}{\\text{Area}}\\) and the area formula for circles \\(A = \\pi r^2\\).",
-      "solution": [
-        "Let \\(R\\) = radius of larger disc, then smaller disc radius = \\(\\frac{R}{4}\\)",
-        "Area of larger disc: \\(A_L = \\pi R^2\\)",
-        "Area of smaller disc: \\(A_S = \\pi \\left(\\frac{R}{4}\\right)^2 = \\frac{\\pi R^2}{16}\\)",
-        "Total area: \\(A_{total} = \\pi R^2 + \\frac{\\pi R^2}{16} = \\frac{17\\pi R^2}{16}\\)",
-        "Using \\(P = \\frac{F}{A}\\): \\(50 = \\frac{3{,}400\\pi}{\\frac{17\\pi R^2}{16}}\\)",
-        "Solve for \\(R^2\\): \\(R^2 = \\frac{3{,}400 \\times 16}{17 \\times 50} = 64\\), so \\(R = 8\\)",
-        "Smaller disc radius: \\(r = \\frac{8}{4} = 2\\)",
-        "Area of smaller disc: \\(A_S = \\pi (2)^2 = 4\\pi\\)",
-        "Force on smaller disc: \\(F_S = P \\times A_S = 50 \\times 4\\pi = 200\\pi \\approx 628\\) newtons"
+      "question": "The point with coordinates \\((d, 4)\\) lies on the line shown. What is the value of \\(d\\)?",
+      "options": {
+        "A": "\\(\\tfrac{7}{2}\\)",
+        "B": "\\(\\tfrac{26}{7}\\)",
+        "C": "\\(\\tfrac{24}{7}\\)",
+        "D": "\\(\\tfrac{27}{8}\\)"
+      },
+      "correct_option": "C",
+      "figure": {
+        "type": "polygon",
+        "closed": false,
+        "points": [
+          [
+            0,
+            7
+          ],
+          [
+            8,
+            0
+          ]
+        ],
+        "showGrid": true,
+        "showAxes": true,
+        "showTicks": true,
+        "xRange": [
+          0,
+          14
+        ],
+        "yRange": [
+          0,
+          14
+        ],
+        "xTickStep": 1,
+        "yTickStep": 1,
+        "strokeWidth": 3
+      },
+      "format": "multiple_choice",
+      "structure": "identifying_solution",
+      "hint_english": "Find the line equation through (0,7) and (8,0), then set y = 4.",
+      "hint_portugues": "Find the line equation through (0,7) and (8,0), then set y = 4.",
+      "solution_english": [
+        "Slope = \\(\\dfrac{0 - 7}{8 - 0} = -\\tfrac{7}{8}\\); equation \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Set \\(y = 4\\): \\(4 = -\\tfrac{7}{8}d + 7 \\Rightarrow -\\tfrac{7}{8}d = -3 \\Rightarrow d = \\tfrac{24}{7}\\)."
       ],
-      "representation": "",
+      "solution_portugues": [
+        "Slope = \\(\\dfrac{0 - 7}{8 - 0} = -\\tfrac{7}{8}\\); equation \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Set \\(y = 4\\): \\(4 = -\\tfrac{7}{8}d + 7 \\Rightarrow -\\tfrac{7}{8}d = -3 \\Rightarrow d = \\tfrac{24}{7}\\)."
+      ]
+    },
+    {
+      "question_number": 6,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "For the quadratic function \\(g\\), three values are given: \\(g(-1) = 12\\), \\(g(0) = 15\\), \\(g(1) = 20\\). Which equation defines \\(g\\)?",
+      "options": {
+        "A": "\\(g(x) = 2x^2 + 3x + 15\\)",
+        "B": "\\(g(x) = 3x^2 + 2x + 15\\)",
+        "C": "\\(g(x) = 5x^2 + x + 15\\)",
+        "D": "\\(g(x) = x^2 + 4x + 15\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Plug the given x-values; only one option fits all three.",
+      "hint_portugues": "Plug the given x-values; only one option fits all three.",
+      "solution_english": [
+        "Check \\(x = 0\\): all give \\(15\\).",
+        "Check \\(x = 1\\): only A, B, D give \\(20\\); C gives \\(21\\).",
+        "Check \\(x = -1\\): A gives \\(14\\), B gives \\(16\\), C gives \\(19\\), D gives \\(12\\).",
+        "Thus \\(g(x) = x^2 + 4x + 15\\) (option D)."
+      ],
+      "solution_portugues": [
+        "Check \\(x = 0\\): all give \\(15\\).",
+        "Check \\(x = 1\\): only A, B, D give \\(20\\); C gives \\(21\\).",
+        "Check \\(x = -1\\): A gives \\(14\\), B gives \\(16\\), C gives \\(19\\), D gives \\(12\\).",
+        "Thus \\(g(x) = x^2 + 4x + 15\\) (option D)."
+      ]
+    },
+    {
+      "question_number": 7,
+      "topic": "advanced_math",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "The function \\(h\\) is defined by \\(h(x) = \\tfrac{x + 20}{4}\\), and \\(h(a) = 9\\), where \\(a\\) is a constant. What is the value of \\(a\\)?",
+      "options": {
+        "A": "\\(16\\)",
+        "B": "\\(20\\)",
+        "C": "\\(36\\)",
+        "D": "\\(44\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "identifying_solution",
+      "hint_english": "Solve (a + 20)/4 = 9 for a.",
+      "hint_portugues": "Solve (a + 20)/4 = 9 for a.",
+      "solution_english": [
+        "\\(\\tfrac{a + 20}{4} = 9 \\Rightarrow a + 20 = 36 \\Rightarrow a = 16\\)."
+      ],
+      "solution_portugues": [
+        "\\(\\tfrac{a + 20}{4} = 9 \\Rightarrow a + 20 = 36 \\Rightarrow a = 16\\)."
+      ]
+    },
+    {
+      "question_number": 8,
+      "topic": "geometry_and_trigonometry",
+      "subskill": "lines_angles_and_triangles",
+      "difficulty": "hard",
+      "question": "Line \\(q\\) is defined by \\(4y - 12x = 8\\). Line \\(s\\) is perpendicular to line \\(q\\) in the \\(xy\\)-plane. What is the slope of line \\(s\\)?",
+      "options": {
+        "A": "\\(-3\\)",
+        "B": "\\(-\\tfrac{1}{3}\\)",
+        "C": "\\(\\tfrac{1}{3}\\)",
+        "D": "\\(3\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "perpendicular_lines",
+      "hint_english": "Find the slope of q, then use the negative reciprocal.",
+      "hint_portugues": "Find the slope of q, then use the negative reciprocal.",
+      "solution_english": [
+        "Rewriting: \\(4y = 12x + 8 \\Rightarrow y = 3x + 2\\), so slope of \\(q\\) is \\(3\\).",
+        "Perpendicular slope is \\(-\\tfrac{1}{3}\\) (option B)."
+      ],
+      "solution_portugues": [
+        "Rewriting: \\(4y = 12x + 8 \\Rightarrow y = 3x + 2\\), so slope of \\(q\\) is \\(3\\).",
+        "Perpendicular slope is \\(-\\tfrac{1}{3}\\) (option B)."
+      ]
+    },
+    {
+      "question_number": 9,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "area_and_volume",
+      "difficulty": "hard",
+      "question": "A solid metal block has a density of \\(2.7\\) grams per cubic centimeter. The block is shaped like a cube with each edge measuring \\(4\\) centimeters. To the nearest whole number, what is the mass of the block, in grams?",
+      "options": {
+        "A": "\\(173\\)",
+        "B": "\\(180\\)",
+        "C": "\\(194\\)",
+        "D": "\\(216\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "volume_of_3d_figures",
+      "hint_english": "Mass = density \u00d7 volume. Volume of a cube is side^3.",
+      "hint_portugues": "Mass = density \u00d7 volume. Volume of a cube is side^3.",
+      "solution_english": [
+        "Volume = \\(4^3 = 64\\) cubic cm.",
+        "Mass = \\(2.7 \\times 64 = 172.8\\) grams; nearest whole number: \\(173\\) (option A)."
+      ],
+      "solution_portugues": [
+        "Volume = \\(4^3 = 64\\) cubic cm.",
+        "Mass = \\(2.7 \\times 64 = 172.8\\) grams; nearest whole number: \\(173\\) (option A)."
+      ]
+    },
+    {
+      "question_number": 10,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "The function \\(P(t) = 150(1.06)^{t/2}\\) models a population (in thousands), where \\(t\\) is years. The population increases by \\(n\\%\\) every \\(2\\) years. What is \\(n\\)?",
+      "options": {
+        "A": "\\(3\\)",
+        "B": "\\(6\\)",
+        "C": "\\(12\\)",
+        "D": "\\(60\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "evaluating_exponential_functions",
+      "hint_english": "Every 2 years corresponds to multiplying by 1.06 once.",
+      "hint_portugues": "Every 2 years corresponds to multiplying by 1.06 once.",
+      "solution_english": [
+        "The factor per \\(2\\) years is \\(1.06\\) \u2192 increase of \\(6\\%\\).",
+        "So \\(n = 6\\)."
+      ],
+      "solution_portugues": [
+        "The factor per \\(2\\) years is \\(1.06\\) \u2192 increase of \\(6\\%\\).",
+        "So \\(n = 6\\)."
+      ]
+    },
+    {
+      "question_number": 11,
+      "topic": "algebra",
+      "subskill": "system_of_linear_equations",
+      "difficulty": "hard",
+      "question": "In the equation \\(3(mx - 4) = 6x - 10\\), \\(m\\) is a constant. The equation has no solution. What is the value of \\(m\\)?",
+      "options": {
+        "A": "\\(0\\)",
+        "B": "\\(1\\)",
+        "C": "\\(2\\)",
+        "D": "\\(3\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "classifying_system_of_linear_equations",
+      "hint_english": "For no solution, lines must be parallel with different intercepts (same slope, different constant term).",
+      "hint_portugues": "For no solution, lines must be parallel with different intercepts (same slope, different constant term).",
+      "solution_english": [
+        "Rewrite: \\(3mx - 12 = 6x - 10\\) \u21d2 slopes: \\(3m\\) on LHS vs. \\(6\\) on RHS. For parallel lines, set \\(3m = 6\\) \u21d2 \\(m = 2\\).",
+        "Then intercepts: LHS \\(-12\\), RHS \\(-10\\) are different, so the system has no solution.",
+        "Thus \\(m = 2\\) (option C)."
+      ],
+      "solution_portugues": [
+        "Rewrite: \\(3mx - 12 = 6x - 10\\) \u21d2 slopes: \\(3m\\) on LHS vs. \\(6\\) on RHS. For parallel lines, set \\(3m = 6\\) \u21d2 \\(m = 2\\).",
+        "Then intercepts: LHS \\(-12\\), RHS \\(-10\\) are different, so the system has no solution.",
+        "Thus \\(m = 2\\) (option C)."
+      ]
+    },
+    {
+      "question_number": 12,
+      "topic": "problem_solving_and_data_analysis",
+      "subskill": "percentages",
+      "difficulty": "hard",
+      "question": "A store buys jackets at a wholesale price of \\($40\\) each. The jackets are sold at a retail price that is \\(250\\%\\) of the wholesale price. At season end, the jackets are discounted by \\(60\\%\\) off the retail price. What is the final sale price of each jacket, in dollars?",
+      "options": {
+        "A": "\\(25\\)",
+        "B": "\\(32\\)",
+        "C": "\\(40\\)",
+        "D": "\\(60\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "percentage_increase_decrease",
+      "hint_english": "Retail = 2.5\u00d7 wholesale; then apply 60% off (keep 40%).",
+      "hint_portugues": "Retail = 2.5\u00d7 wholesale; then apply 60% off (keep 40%).",
+      "solution_english": [
+        "Retail: \\(2.5 \\times 40 = 100\\).",
+        "\\(60\\%\\) off \u2192 pay \\(40\\%\\): \\(0.4 \\times 100 = 40\\). (option C)"
+      ],
+      "solution_portugues": [
+        "Retail: \\(2.5 \\times 40 = 100\\).",
+        "\\(60\\%\\) off \u2192 pay \\(40\\%\\): \\(0.4 \\times 100 = 40\\). (option C)"
+      ]
+    },
+    {
+      "question_number": 13,
+      "topic": "statistics",
+      "subskill": "statistcs",
+      "difficulty": "hard",
+      "question": "Data set A: \\(40\\) students, mean \\(78\\). Data set B: \\(60\\) students, mean \\(85\\). Data set C combines all students from A and B. What is the mean of data set C?",
+      "options": {
+        "A": "\\(80.6\\)",
+        "B": "\\(81.2\\)",
+        "C": "\\(82.2\\)",
+        "D": "\\(83.0\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "mean_median_mode_range",
+      "hint_english": "Use weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "hint_portugues": "Use weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "solution_english": [
+        "Total sum = \\(40\\times 78 + 60\\times 85 = 3120 + 5100 = 8220\\).",
+        "Total students = \\(100\\).",
+        "Mean = \\(8220/100 = 82.2\\) (option C)."
+      ],
+      "solution_portugues": [
+        "Total sum = \\(40\\times 78 + 60\\times 85 = 3120 + 5100 = 8220\\).",
+        "Total students = \\(100\\).",
+        "Mean = \\(8220/100 = 82.2\\) (option C)."
+      ]
+    },
+    {
+      "question_number": 14,
+      "topic": "advanced_math",
+      "subskill": "equivalent_expressions",
+      "difficulty": "hard",
+      "question": "The expression \\(6x^2 + bx - 20\\) can be written as \\((mx + p)(x + q)\\), with \\(m\\), \\(p\\), \\(q\\) integers. Which of the following must be an integer?",
+      "options": {
+        "A": "\\(\\tfrac{b}{m}\\)",
+        "B": "\\(-\\tfrac{b}{p}\\)",
+        "C": "\\(\\tfrac{20}{m}\\)",
+        "D": "\\(\\tfrac{20}{p}\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "adding_and_subtracting_exponents",
+      "hint_english": "m must divide 6; constant term is p*q = -20; check which ratio always integer.",
+      "hint_portugues": "m must divide 6; constant term is p*q = -20; check which ratio always integer.",
+      "solution_english": [
+        "We have \\(m\\,q = 6 \\Rightarrow m\\) divides \\(6\\), \\(q = \\tfrac{6}{m}\\) (integer). Also \\(p\\,q = -20 \\Rightarrow p = -\\tfrac{20}{q}\\) (integer). Thus \\(q\\) is integer \u21d2 \\(\\tfrac{20}{p} = -q\\) is always integer (option D)."
+      ],
+      "solution_portugues": [
+        "We have \\(m\\,q = 6 \\Rightarrow m\\) divides \\(6\\), \\(q = \\tfrac{6}{m}\\) (integer). Also \\(p\\,q = -20 \\Rightarrow p = -\\tfrac{20}{q}\\) (integer). Thus \\(q\\) is integer \u21d2 \\(\\tfrac{20}{p} = -q\\) is always integer (option D)."
+      ]
+    },
+    {
+      "question_number": 15,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "Consider the system: \\(y = 3\\) and \\(y = x^2 - 4x + a\\). If the system has exactly one distinct real solution, what is the value of \\(a\\)?",
+      "options": {
+        "A": "\\(1\\)",
+        "B": "\\(4\\)",
+        "C": "\\(5\\)",
+        "D": "\\(7\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Set 3 = x^2 \u2212 4x + a and require discriminant = 0.",
+      "hint_portugues": "Set 3 = x^2 \u2212 4x + a and require discriminant = 0.",
+      "solution_english": [
+        "\\(x^2 - 4x + a - 3 = 0 \\Rightarrow x^2 - 4x + (a-3) = 0\\).",
+        "\\(\\Delta = 16 - 4(a-3) = 28 - 4a\\). For one solution, set \\(\\Delta = 0\\) \u21d2 \\(28 - 4a = 0\\) \u21d2 \\(a = 7\\).",
+        "Therefore \\(a = 7\\) (option D)."
+      ],
+      "solution_portugues": [
+        "\\(x^2 - 4x + a - 3 = 0 \\Rightarrow x^2 - 4x + (a-3) = 0\\).",
+        "\\(\\Delta = 16 - 4(a-3) = 28 - 4a\\). For one solution, set \\(\\Delta = 0\\) \u21d2 \\(28 - 4a = 0\\) \u21d2 \\(a = 7\\).",
+        "Therefore \\(a = 7\\) (option D)."
+      ]
+    },
+    {
+      "question_number": 16,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "In \\(x^2 - 28x + c = 0\\), there are no real solutions if \\(c > n\\). What is the least possible value of \\(n\\)?",
+      "options": {},
+      "correct_option": "\\(196\\)",
       "format": "free_response",
-      "structure": "converting_units"
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "No real solutions when the discriminant is negative.",
+      "hint_portugues": "No real solutions when the discriminant is negative.",
+      "solution_english": [
+        "Discriminant: \\(\\Delta = (-28)^2 - 4c = 784 - 4c\\).",
+        "Require \\(\\Delta < 0\\) \u21d2 \\(784 - 4c < 0\\) \u21d2 \\(c > 196\\).",
+        "Least threshold \\(n = 196\\)."
+      ],
+      "solution_portugues": [
+        "Discriminant: \\(\\Delta = (-28)^2 - 4c = 784 - 4c\\).",
+        "Require \\(\\Delta < 0\\) \u21d2 \\(784 - 4c < 0\\) \u21d2 \\(c > 196\\).",
+        "Least threshold \\(n = 196\\)."
+      ]
+    },
+    {
+      "question_number": 17,
+      "topic": "statistics",
+      "subskill": "statistcs",
+      "difficulty": "hard",
+      "question": "Data set A consists of \\(40\\) students with mean \\(68\\); data set B consists of \\(60\\) students with mean \\(82\\). Data set C combines all \\(100\\) students. What is the mean of data set C?",
+      "options": {},
+      "correct_option": "\\(76.4\\)",
+      "format": "free_response",
+      "structure": "mean_median_mode_range",
+      "hint_english": "Weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "hint_portugues": "Weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "solution_english": [
+        "Total = \\(40\\times 68 + 60\\times 82 = 2720 + 4920 = 7640\\).",
+        "Mean = \\(7640 / 100 = 76.4\\)."
+      ],
+      "solution_portugues": [
+        "Total = \\(40\\times 68 + 60\\times 82 = 2720 + 4920 = 7640\\).",
+        "Mean = \\(7640 / 100 = 76.4\\)."
+      ]
+    },
+    {
+      "question_number": 18,
+      "topic": "advanced_math",
+      "subskill": "rational_expressions",
+      "difficulty": "hard",
+      "question": "Suppose \\(f(x) = \\tfrac{a}{x + b}\\) has a vertical asymptote at \\(x = -6\\). If \\(g(x) = f(x - 3)\\), which equation could define \\(g(x)\\)?",
+      "options": {
+        "A": "\\(\\tfrac{a}{x - 9}\\)",
+        "B": "\\(\\tfrac{a}{x - 3}\\)",
+        "C": "\\(\\tfrac{a}{x - 6}\\)",
+        "D": "\\(\\tfrac{a}{x + 3}\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "operations_with_rational_expressions",
+      "hint_english": "Find b from the asymptote, then shift input by \u22123.",
+      "hint_portugues": "Find b from the asymptote, then shift input by \u22123.",
+      "solution_english": [
+        "Asymptote at \\(x = -6\\) \u21d2 \\(-6 + b = 0\\) \u21d2 \\(b = 6\\), so \\(f(x) = \\tfrac{a}{x + 6}\\).",
+        "\\(g(x) = f(x - 3) = \\tfrac{a}{(x - 3) + 6} = \\tfrac{a}{x + 3}\\) (option D)."
+      ],
+      "solution_portugues": [
+        "Asymptote at \\(x = -6\\) \u21d2 \\(-6 + b = 0\\) \u21d2 \\(b = 6\\), so \\(f(x) = \\tfrac{a}{x + 6}\\).",
+        "\\(g(x) = f(x - 3) = \\tfrac{a}{(x - 3) + 6} = \\tfrac{a}{x + 3}\\) (option D)."
+      ]
+    },
+    {
+      "question_number": 19,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "In the quadratic equation \\(42x^2 + (42b + a)x + ab = 0\\), the product of the solutions is \\(k\\,ab\\), where \\(k\\) is a constant. What is \\(k\\)?",
+      "options": {},
+      "correct_option": "\\(\\tfrac{1}{42}\\)",
+      "format": "free_response",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "For ax^2 + bx + c = 0, product = c/a.",
+      "hint_portugues": "For ax^2 + bx + c = 0, product = c/a.",
+      "solution_english": [
+        "Product = \\(\\tfrac{ab}{42}\\), so \\(k\\,ab = \\tfrac{ab}{42} \\Rightarrow k = \\tfrac{1}{42}\\)."
+      ],
+      "solution_portugues": [
+        "Product = \\(\\tfrac{ab}{42}\\), so \\(k\\,ab = \\tfrac{ab}{42} \\Rightarrow k = \\tfrac{1}{42}\\)."
+      ]
+    },
+    {
+      "question_number": 20,
+      "topic": "geometry_and_trigonometry",
+      "subskill": "circles",
+      "difficulty": "hard",
+      "question": "The graph of \\(x^2 + 4x + y^2 - 6y = 52\\) is a circle. What is its radius?",
+      "options": {
+        "A": "\\(6\\)",
+        "B": "\\(7\\)",
+        "C": "\\(8\\)",
+        "D": "\\(9\\)"
+      },
+      "correct_option": "C",
+      "format": "multiple_choice",
+      "structure": "circle_equations_xy_plane",
+      "hint_english": "Complete the square for x and y terms to find (x\u2212h)^2 + (y\u2212k)^2 = r^2.",
+      "hint_portugues": "Complete the square for x and y terms to find (x\u2212h)^2 + (y\u2212k)^2 = r^2.",
+      "solution_english": [
+        "Rewrite: \\((x^2 + 4x) + (y^2 - 6y) = 52\\).",
+        "Complete squares: \\((x+2)^2 - 4 + (y-3)^2 - 9 = 52 \\Rightarrow (x+2)^2 + (y-3)^2 = 65\\).",
+        "\\(r^2 = 65\\) \u21d2 \\(r \\approx 8.06\\); nearest listed is \\(8\\) (option C)."
+      ],
+      "solution_portugues": [
+        "Rewrite: \\((x^2 + 4x) + (y^2 - 6y) = 52\\).",
+        "Complete squares: \\((x+2)^2 - 4 + (y-3)^2 - 9 = 52 \\Rightarrow (x+2)^2 + (y-3)^2 = 65\\).",
+        "\\(r^2 = 65\\) \u21d2 \\(r \\approx 8.06\\); nearest listed is \\(8\\) (option C)."
+      ]
+    },
+    {
+      "question_number": 21,
+      "topic": "geometry_and_trigonometry",
+      "subskill": "area_and_volume",
+      "difficulty": "hard",
+      "question": "Two identical square-based prisms have height \\(60\\,\\text{cm}\\) and surface area \\(K\\) each. Gluing them along one square base yields a prism with surface area \\(\\tfrac{49}{25}K\\). What is the side length of the square base (cm)?",
+      "options": {
+        "A": "\\(5\\)",
+        "B": "\\(6\\)",
+        "C": "\\(10\\)",
+        "D": "\\(12\\)"
+      },
+      "correct_option": "A",
+      "format": "multiple_choice",
+      "structure": "surface_area",
+      "hint_english": "Surface area of one prism: 2s^2 + 4s\u00b760. Gluing removes two square bases (2s^2).",
+      "hint_portugues": "Surface area of one prism: 2s^2 + 4s\u00b760. Gluing removes two square bases (2s^2).",
+      "solution_english": [
+        "One prism SA: \\(2s^2 + 240s\\).",
+        "Two prisms: \\(4s^2 + 480s\\). Gluing removes \\(2s^2\\): glued SA = \\(2s^2 + 480s\\).",
+        "Ratio glued/original = \\(\\dfrac{2s^2 + 480s}{2s^2 + 240s} = \\tfrac{49}{25}\\).",
+        "Solve: cross-multiply \\(25(2s^2 + 480s) = 49(2s^2 + 240s)\\) \u21d2 \\(50s^2 + 12000s = 98s^2 + 11760s\\) \u21d2 \\(48s^2 = 240s\\) \u21d2 \\(s = 5\\) (option A)."
+      ],
+      "solution_portugues": [
+        "One prism SA: \\(2s^2 + 240s\\).",
+        "Two prisms: \\(4s^2 + 480s\\). Gluing removes \\(2s^2\\): glued SA = \\(2s^2 + 480s\\).",
+        "Ratio glued/original = \\(\\dfrac{2s^2 + 480s}{2s^2 + 240s} = \\tfrac{49}{25}\\).",
+        "Solve: cross-multiply \\(25(2s^2 + 480s) = 49(2s^2 + 240s)\\) \u21d2 \\(50s^2 + 12000s = 98s^2 + 11760s\\) \u21d2 \\(48s^2 = 240s\\) \u21d2 \\(s = 5\\) (option A)."
+      ]
+    },
+    {
+      "question_number": 22,
+      "topic": "advanced_math",
+      "subskill": "quadratic_equations",
+      "difficulty": "hard",
+      "question": "A parabola has vertex \\((4, -9)\\) and crosses the x-axis at two points. In \\(y = ax^2 + bx + c\\), which could be the value of \\(a + b + c\\)?",
+      "options": {
+        "A": "\\(-21\\)",
+        "B": "\\(-15\\)",
+        "C": "\\(-9\\)",
+        "D": "\\(-5\\)"
+      },
+      "correct_option": "D",
+      "format": "multiple_choice",
+      "structure": "evaluating_quadratic_functions",
+      "hint_english": "Use vertex form y = a(x\u22124)^2 \u2212 9; require two real roots (a>0). Then evaluate a+b+c.",
+      "hint_portugues": "Use vertex form y = a(x\u22124)^2 \u2212 9; require two real roots (a>0). Then evaluate a+b+c.",
+      "solution_english": [
+        "Vertex form: \\(y = a(x-4)^2 - 9 = ax^2 - 8ax + 16a - 9\\).",
+        "Here \\(a + b + c = a - 8a + 16a - 9 = 9a - 9\\).",
+        "Two real x-intercepts \u21d2 \\(a > 0\\).",
+        "Take \\(a = \\tfrac{4}{9}\\) \u21d2 \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (option D), and the parabola still crosses the x-axis."
+      ],
+      "solution_portugues": [
+        "Vertex form: \\(y = a(x-4)^2 - 9 = ax^2 - 8ax + 16a - 9\\).",
+        "Here \\(a + b + c = a - 8a + 16a - 9 = 9a - 9\\).",
+        "Two real x-intercepts \u21d2 \\(a > 0\\).",
+        "Take \\(a = \\tfrac{4}{9}\\) \u21d2 \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (option D), and the parabola still crosses the x-axis."
+      ]
     }
-  ]
+  ],
+  "created_at": "2025-12-26T00:00:00Z"
 }
