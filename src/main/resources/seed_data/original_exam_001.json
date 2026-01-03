@@ -42,9 +42,9 @@
         "Therefore, the value of \\(y + 15\\) is \\(24\\)."
       ],
       "solution_portugues": [
-        "Como \\(y = 9\\), substitu\u00edmos: \\(y + 15 = 9 + 15\\).",
+        "Como \\(y = 9\\), substituímos: \\(y + 15 = 9 + 15\\).",
         "\\(9 + 15 = 24\\).",
-        "Portanto, o valor de \\(y + 15\\) \u00e9 \\(24\\)."
+        "Portanto, o valor de \\(y + 15\\) é \\(24\\)."
       ]
     },
     {
@@ -63,7 +63,7 @@
       "format": "multiple_choice",
       "structure": "mean_median_mode_range",
       "hint_english": "Compare the sums and the number of values in each data set.",
-      "hint_portugues": "Compare as somas e a quantidade de valores em cada conjunto.",
+      "hint_portugues": "Compare as somas e o número de valores em cada conjunto.",
       "solution_english": [
         "\\(\\text{Mean}(A) = \\frac{4 + 6 + 8 + 12}{4} = \\frac{30}{4} = 7.5\\).",
         "\\(\\text{Mean}(B) = \\frac{4 + 6 + 8 + 12 + 30}{5} = \\frac{60}{5} = 12\\).",
@@ -105,8 +105,8 @@
     },
     {
       "question_number": 4,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "ratios_rates_and_proportional_relationships",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "A tank contained \\(\\text{520,000}\\) liters of water before draining. Exactly \\(16\\) seconds later, \\(\\text{392,000}\\) liters of water remained. On average, approximately how many liters of water were drained each second?",
       "options": {
@@ -117,7 +117,7 @@
       },
       "correct_option": "A",
       "format": "multiple_choice",
-      "structure": "converting_units",
+      "structure": "interpreting_linear_equations",
       "hint_english": "Find the total amount drained, then divide by the time in seconds.",
       "hint_portugues": "Encontre o total drenado e divida pelo tempo, em segundos.",
       "solution_english": [
@@ -177,7 +177,7 @@
       "format": "multiple_choice",
       "structure": "interpreting_linear_equations",
       "hint_english": "Compare the coefficients: \\(12\\) hours for in-person vs. \\(18\\) hours for virtual.",
-      "hint_portugues": "Compare os coeficientes: \\(12\\) horas para presencial e \\(18\\) horas para virtual.",
+      "hint_portugues": "Compare os coeficientes: \\(12\\) horas presencial versus \\(18\\) horas virtual.",
       "solution_english": [
         "From \\(12x + 18y = 96\\), each in-person course is \\(12\\) hours and each virtual course is \\(18\\) hours.",
         "Difference: \\(18 - 12 = 6\\) hours."
@@ -217,8 +217,8 @@
     },
     {
       "question_number": 8,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "ratios_rates_and_proportional_relationships",
+      "topic": "algebra",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "The function \\(h(t) = -0.08t + 14.6\\) models the number of gallons of fuel remaining in a truck after driving \\(t\\) miles. According to the model, approximately how many gallons of fuel are used per mile?",
       "options": {
@@ -229,7 +229,7 @@
       },
       "correct_option": "A",
       "format": "multiple_choice",
-      "structure": "converting_units",
+      "structure": "interpreting_linear_equations",
       "hint_english": "The slope (coefficient of t) gives the change per mile.",
       "hint_portugues": "A inclinação (coeficiente de t) indica a variação por milha.",
       "solution_english": [
@@ -272,7 +272,7 @@
     {
       "question_number": 10,
       "topic": "algebra",
-      "subskill": "isolating_variables",
+      "subskill": "isolating_constants",
       "difficulty": "medium",
       "question": "The equation relates the positive numbers \\(p, x, y\\): \\(\\tfrac{1}{5p} = \\tfrac{9x}{y}\\). Which equation correctly expresses \\(x\\) in terms of \\(p\\) and \\(y\\)?",
       "options": {
@@ -283,7 +283,7 @@
       },
       "correct_option": "A",
       "format": "multiple_choice",
-      "structure": "two_step_solution",
+      "structure": "rearranging_equations",
       "hint_english": "Cross-multiply to isolate x.",
       "hint_portugues": "Faça a multiplicação cruzada para isolar x.",
       "solution_english": [
@@ -291,14 +291,14 @@
         "Isolate: \\(x = \\tfrac{y}{45p}\\)."
       ],
       "solution_portugues": [
-        "\\(\\tfrac{1}{5p} = \\tfrac{9x}{y} \\Rightarrow y = 45px\\).",
-        "Isolando: \\(x = \\tfrac{y}{45p}\\)."
+        "Da equação \\(\\tfrac{1}{5p} = \\tfrac{9x}{y}\\), faça multiplicação cruzada: \\(y = 45px\\).",
+        "Isolando \\(x\\): \\(x = \\tfrac{y}{45p}\\)."
       ]
     },
     {
       "question_number": 11,
-      "topic": "problem_solving_and_data_analysis",
-      "subskill": "linear_translation",
+      "topic": "algebra",
+      "subskill": "linear_functions",
       "difficulty": "medium",
       "question": "The table shows four values of \\(x\\) and their corresponding values of \\(g(x)\\):<br><br>\\[\\begin{array}{c|c}\n x & g(x) \\\\ \\hline\n 5 & \\text{41} \\\\ \n 10 & \\text{66} \\\\ \n 15 & \\text{91} \\\\ \n 20 & \\text{116} \\\\ \n\\end{array}\\]<br><br>There is a linear relationship defined by \\(g(x) = kx + 16\\). What is the value of \\(k\\)?",
       "options": {
@@ -309,7 +309,7 @@
       },
       "correct_option": "C",
       "format": "multiple_choice",
-      "structure": "vertical_translation",
+      "structure": "evaluating_linear_functions",
       "hint_english": "Use any point: slope \\(k = (g(x) - 16)/x\\).",
       "hint_portugues": "Use qualquer ponto: a inclinação é \\(k = (g(x) - 16)/x\\).",
       "solution_english": [
@@ -317,8 +317,8 @@
         "Check with \\(x=10, g=66\\): \\(66 = 10k + 16 \\Rightarrow k=5\\). Consistent."
       ],
       "solution_portugues": [
-        "Usando \\(x = 5, g = 41\\): \\(41 = 5k + 16 \\Rightarrow 5k = 25 \\Rightarrow k = 5\\).",
-        "Verificando com \\(x = 10, g = 66\\): \\(66 = 10k + 16 \\Rightarrow k = 5\\). Consistente."
+        "Usando \\(x = 5\\) e \\(g = 41\\): \\(41 = 5k + 16 \\Rightarrow 5k = 25 \\Rightarrow k = 5\\).",
+        "Verificação com \\(x = 10\\) e \\(g = 66\\): \\(66 = 10k + 16 \\Rightarrow k = 5\\). Valor consistente."
       ]
     },
     {
@@ -343,8 +343,8 @@
         "Thus \\(c = 9\\)."
       ],
       "solution_portugues": [
-        "\\((7x^3 - 5) - (-2x^3 + 6) = 7x^3 - 5 + 2x^3 - 6 = 9x^3 - \\text{11}\\).",
-        "Assim, \\(c = 9\\)."
+        "A expressão \\((7x^3 - 5) - (-2x^3 + 6)\\) resulta em \\(7x^3 - 5 + 2x^3 - 6 = 9x^3 - \\text{11}\\).",
+        "Concluímos que \\(c = 9\\)."
       ]
     },
     {
@@ -370,7 +370,7 @@
       ],
       "solution_portugues": [
         "\\(3x + 27 < 35 \\Rightarrow 3x < 8 \\Rightarrow x < \\tfrac{8}{3}\\).",
-        "Entre as op\u00e7\u00f5es, \\(-3\\) satisfaz \\(x < \\tfrac{8}{3}\\) e \\(y > 20\\)."
+        "Entre as opções, \\(-3\\) satisfaz \\(x < \\tfrac{8}{3}\\) e \\(y > 20\\)."
       ]
     },
     {
@@ -389,14 +389,14 @@
       "format": "multiple_choice",
       "structure": "exponential_function_word_problem",
       "hint_english": "12 hours is three doubling periods (every 4 hours).",
-      "hint_portugues": "12 horas correspondem a tr\u00eas per\u00edodos de duplica\u00e7\u00e3o (a cada 4 horas).",
+      "hint_portugues": "12 horas correspondem a três períodos de duplicação (a cada 4 horas).",
       "solution_english": [
         "Doublings in \\(12\\) hours: \\(12 / 4 = 3\\).",
         "Population: \\(\\text{120,000} \\times 2^3 = \\text{120,000} \\times 8 = \\text{960,000}\\). Correct option: B."
       ],
       "solution_portugues": [
         "Doublings in \\(12\\) hours: \\(12 / 4 = 3\\).",
-        "Popula\u00e7\u00e3o: \\(\\text{120,000} \\times 2^3 = \\text{120,000} \\times 8 = \\text{960,000}\\). Correto: op\u00e7\u00e3o B."
+        "População: \\(\\text{120,000} \\times 2^3 = \\text{120,000} \\times 8 = \\text{960,000}\\). Correto: opção B."
       ]
     },
     {
@@ -406,10 +406,10 @@
       "difficulty": "medium",
       "question": "The graph shows the estimated number of emails \\(y\\), in thousands, that a company sent to its customers at the end of each year, where \\(x\\) represents the number of years since the end of 2015, and \\(0 \\le x \\le 8\\). Which statement is the best interpretation of the \\(y\\)-intercept in this context?",
       "options": {
-        "A": "The estimated total number of emails sent during the first 8 years was \\(12{,}000\\).",
+        "A": "The estimated total number of emails sent during the first 8 years was \\(\\text{12,000}\\).",
         "B": "The estimated total number of emails sent from the end of 2015 to the end of 2023 was \\(12\\).",
         "C": "The estimated number of emails sent at the end of 2015 was \\(12\\).",
-        "D": "The estimated number of emails sent at the end of 2015 was \\(12{,}000\\)."
+        "D": "The estimated number of emails sent at the end of 2015 was \\(\\text{12,000}\\)."
       },
       "correct_option": "D",
       "figure": {
@@ -457,14 +457,14 @@
       "hint_english": "y-intercept is the value of y when x = 0; values are in thousands.",
       "hint_portugues": "A ordenada na origem é o valor de y quando x = 0; valores em milhares.",
       "solution_english": [
+        "At \\(x = 0\\) (end of 2015), \\(y\\) is the starting value in thousands.",
+        "If the intercept is \\(12\\) (thousands), that is \\(12{,}000\\) emails at the end of 2015.",
+        "Option D matches this interpretation."
+      ],
+      "solution_portugues": [
         "Em \\(x = 0\\) (fim de 2015), \\(y\\) é o valor inicial em milhares.",
         "Se a ordenada na origem é \\(12\\) (milhares), isso corresponde a \\(12{,}000\\) e-mails no fim de 2015.",
         "A opção D corresponde a essa interpretação."
-      ],
-      "solution_portugues": [
-        "At \\(x = 0\\) (end of 2015), \\(y\\) is the starting value in thousands.",
-        "If the intercept is \\(12\\) (thousands), that is \\(12{,}000\\) emails at end of 2015.",
-        "Option D matches this interpretation."
       ]
     },
     {
@@ -507,9 +507,9 @@
       },
       "correct_option": "C",
       "format": "multiple_choice",
-      "structure": "applying_percentages",
+      "structure": "percentage_increase_decrease",
       "hint_english": "An increase of 7% means multiply by \\(1 + 0.07\\).",
-      "hint_portugues": "Um aumento de 7% significa multiplicar por \\(1 + 0.07\\).",
+      "hint_portugues": "Um aumento de 7% significa multiplicar por \\(1 + 0{,}07\\).",
       "solution_english": [
         "A 7% increase means the new amount is \\(1 + 0.07 = 1.07\\) times the old amount.",
         "So \\(k = 1.07\\)."
@@ -526,10 +526,10 @@
       "difficulty": "easy",
       "question": "Which of the following systems of linear equations has no solution?",
       "options": {
-        "A": "\\(x = 3;\\ y = 5\\)",
-        "B": "\\(y = 6x + 6;\\ y = 5x + 6\\)",
-        "C": "\\(y = 16x + 3;\\ y = 16x + 19\\)",
-        "D": "\\(y = 5;\\ y = 5x + 5\\)"
+        "A": "\\(\\begin{aligned} x &= 3 \\\\ y &= 5 \\end{aligned}\\)",
+        "B": "\\(\\begin{aligned} y &= 6x + 6 \\\\ y &= 5x + 6 \\end{aligned}\\)",
+        "C": "\\(\\begin{aligned} y &= 16x + 3 \\\\ y &= 16x + 19 \\end{aligned}\\)",
+        "D": "\\(\\begin{aligned} y &= 5 \\\\ y &= 5x + 5 \\end{aligned}\\)"
       },
       "correct_option": "C",
       "format": "multiple_choice",
@@ -576,7 +576,7 @@
     {
       "question_number": 20,
       "topic": "algebra",
-      "subskill": "linear_inequality",
+      "subskill": "linear_word_problems",
       "difficulty": "easy",
       "question": "The minimum value of \\(x\\) is \\(8\\) less than \\(4\\) times another number \\(k\\). Which inequality shows the possible values of \\(x\\)?",
       "options": {
@@ -587,16 +587,16 @@
       },
       "correct_option": "B",
       "format": "multiple_choice",
-      "structure": "identifying_solutions_of_linear_inequalities",
+      "structure": "linear_inequality_word_problem",
       "hint_english": "If the minimum is \\(4k - 8\\), then \\(x\\) must be at least that value.",
       "hint_portugues": "Se o mínimo é \\(4k - 8\\), então \\(x\\) deve ser pelo menos esse valor.",
       "solution_english": [
-        "\u201cO valor mínimo é \\(4k - 8\\)\u201d significa \\(x \\ge 4k - 8\\).",
-        "Assim, a opção B."
+        "\\\"Minimum value is \\(4k - 8\\)\\\" means \\(x \\ge 4k - 8\\).",
+        "Thus option B."
       ],
       "solution_portugues": [
-        "\u201cMinimum value is \\(4k - 8\\)\u201d means \\(x \\ge 4k - 8\\).",
-        "Thus option B."
+        "\\\"O valor mínimo é \\(4k - 8\\)\\\" significa \\(x \\ge 4k - 8\\).",
+        "Assim, a opção B."
       ]
     },
     {
@@ -615,16 +615,16 @@
       "format": "multiple_choice",
       "structure": "trig_ratios",
       "hint_english": "Identify which sides are opposite/adjacent to angle \\(F\\) using similarity.",
-      "hint_portugues": "Identify which sides are opposite/adjacent to angle \\(F\\) using similarity.",
+      "hint_portugues": "Identifique quais lados são opostos/adjacentes ao ângulo \\(F\\) usando a semelhança.",
       "solution_english": [
-        "Given similarity: B \u2194 E, C \u2194 F, so angle F corresponds to angle C.",
+        "Given similarity: B ↔ E, C ↔ F, so angle F corresponds to angle C.",
         "At C in triangle ABC, the opposite side is AB = 24, adjacent is BC = 70.",
         "Thus \\(\\tan F = \\tfrac{24}{70}\\)."
       ],
       "solution_portugues": [
-        "Given similarity: B \u2194 E, C \u2194 F, so angle F corresponds to angle C.",
-        "At C in triangle ABC, the opposite side is AB = 24, adjacent is BC = 70.",
-        "Thus \\(\\tan F = \\tfrac{24}{70}\\)."
+        "Pela semelhança: B \\u2194 E, C \\u2194 F, logo o ângulo F corresponde ao ângulo C.",
+        "Em C no triângulo ABC, o lado oposto é AB = 24 e o adjacente é BC = 70.",
+        "Assim, \\(\\tan F = \\tfrac{24}{70}\\)."
       ]
     },
     {
@@ -673,14 +673,14 @@
       "format": "multiple_choice",
       "structure": "one_step_solution",
       "hint_english": "First find \\(x\\), then multiply by 6.",
-      "hint_portugues": "First find \\(x\\), then multiply by 6.",
+      "hint_portugues": "Primeiro encontre \\(x\\); depois, multiplique por 6.",
       "solution_english": [
         "From \\(5x = 40\\), we get \\(x = 8\\).",
         "Then \\(6x = 6 \\times 8 = 48\\)."
       ],
       "solution_portugues": [
-        "From \\(5x = 40\\), we get \\(x = 8\\).",
-        "Then \\(6x = 6 \\times 8 = 48\\)."
+        "De \\(5x = 40\\), obtemos \\(x = 8\\).",
+        "Então \\(6x = 6 \\times 8 = 48\\)."
       ]
     },
     {
@@ -699,14 +699,14 @@
       "format": "multiple_choice",
       "structure": "applying_percentages",
       "hint_english": "Compute 15% of 920.",
-      "hint_portugues": "Compute 15% of 920.",
+      "hint_portugues": "Calcule 15% de 920.",
       "solution_english": [
         "15% of 920 is \\(0.15 \\times 920 = 138\\).",
         "So the farmer saved 138 apples."
       ],
       "solution_portugues": [
-        "15% of 920 is \\(0.15 \\times 920 = 138\\).",
-        "So the farmer saved 138 apples."
+        "15% de 920 é \\(0{,}15 \\times 920 = 138\\).",
+        "Portanto, o agricultor reservou 138 maçãs."
       ]
     },
     {
@@ -725,12 +725,12 @@
       "format": "multiple_choice",
       "structure": "converting_units",
       "hint_english": "There are 60 minutes in an hour.",
-      "hint_portugues": "There are 60 minutes in an hour.",
+      "hint_portugues": "Há 60 minutos em uma hora.",
       "solution_english": [
         "\\(36\\) labels/minute times \\(60\\) minutes/hour = \\(36 \\times 60 = 2160\\) labels/hour."
       ],
       "solution_portugues": [
-        "\\(36\\) labels/minute times \\(60\\) minutes/hour = \\(36 \\times 60 = 2160\\) labels/hour."
+        "Produção média: \\(36\\) etiquetas/minuto × \\(60\\) minutos/hora = \\(36 \\times 60 = 2160\\) etiquetas por hora."
       ]
     },
     {
@@ -749,16 +749,16 @@
       "format": "multiple_choice",
       "structure": "identifying_slope",
       "hint_english": "Use \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1}\\).",
-      "hint_portugues": "Use \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1}\\).",
+      "hint_portugues": "Use \\(m = \tfrac{y_2 - y_1}{x_2 - x_1}\\).",
       "solution_english": [
         "Slope formula: \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1} = \\tfrac{17 - 5}{8 - 2}\\).",
         "\\(\\tfrac{12}{6} = 2\\).",
         "So the slope is \\(2\\)."
       ],
       "solution_portugues": [
-        "Slope formula: \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1} = \\tfrac{17 - 5}{8 - 2}\\).",
+        "Fórmula da inclinação: \\(m = \\tfrac{y_2 - y_1}{x_2 - x_1} = \\tfrac{17 - 5}{8 - 2}\\).",
         "\\(\\tfrac{12}{6} = 2\\).",
-        "So the slope is \\(2\\)."
+        "Logo, a inclinação é \\(2\\)."
       ]
     },
     {
@@ -825,14 +825,14 @@
       "format": "free_response",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "The vertex touches the x-axis at the intercept.",
-      "hint_portugues": "The vertex touches the x-axis at the intercept.",
+      "hint_portugues": "O vértice toca o eixo x no intercepto.",
       "solution_english": [
         "From the graph, the parabola meets the x-axis at \\(x = 7\\).",
         "So the x-intercept is \\((7, 0)\\)."
       ],
       "solution_portugues": [
-        "From the graph, the parabola meets the x-axis at \\(x = 7\\).",
-        "So the x-intercept is \\((7, 0)\\)."
+        "Pelo gráfico, a parábola cruza o eixo x em \\(x = 7\\).",
+        "Portanto, o intercepto em x é \\((7, 0)\\)."
       ]
     },
     {
@@ -846,12 +846,12 @@
       "format": "free_response",
       "structure": "evaluating_linear_functions",
       "hint_english": "Substitute \\(x = 4\\) into the expression.",
-      "hint_portugues": "Substitute \\(x = 4\\) into the expression.",
+      "hint_portugues": "Substitua \\(x = 4\\) na expressão.",
       "solution_english": [
         "Compute: \\(f(4) = 7\\times 4 + 2 = 28 + 2 = 30\\)."
       ],
       "solution_portugues": [
-        "Compute: \\(f(4) = 7\\times 4 + 2 = 28 + 2 = 30\\)."
+        "Cálculo: \\(f(4) = 7\\times 4 + 2 = 28 + 2 = 30\\)."
       ]
     },
     {
@@ -865,12 +865,12 @@
       "format": "free_response",
       "structure": "area_of_2d_figures",
       "hint_english": "Perimeter of a square is 4 times the side length.",
-      "hint_portugues": "Perimeter of a square is 4 times the side length.",
+      "hint_portugues": "O perímetro de um quadrado é 4 vezes o comprimento do lado.",
       "solution_english": [
-        "Perimeter = 4 \u00d7 45 = 180."
+        "Perimeter = 4 × 45 = 180."
       ],
       "solution_portugues": [
-        "Perimeter = 4 \u00d7 45 = 180."
+        "Perímetro = 4 \\times 45 = 180."
       ]
     },
     {
@@ -917,16 +917,16 @@
       "format": "multiple_choice",
       "structure": "identifying_intercept",
       "hint_english": "Use the line passing through \\((0,7)\\) and \\((8,0)\\): find x when y = 4.",
-      "hint_portugues": "Use the line passing through \\((0,7)\\) and \\((8,0)\\): find x when y = 4.",
+      "hint_portugues": "Use a reta que passa por \\((0,7)\\) e \\((8,0)\\); encontre \\(x\\) quando \\(y = 4\\).",
       "solution_english": [
         "Slope from (0,7) to (8,0) is \\(-7/8\\). Equation: \\(y = -\\tfrac{7}{8}x + 7\\).",
         "Set y = 4: \\(4 = -\\tfrac{7}{8}x + 7 \\Rightarrow -\\tfrac{7}{8}x = -3 \\Rightarrow x = \\tfrac{24}{7}\\).",
         "Thus \\(d = \\tfrac{24}{7}\\)."
       ],
       "solution_portugues": [
-        "Slope from (0,7) to (8,0) is \\(-7/8\\). Equation: \\(y = -\\tfrac{7}{8}x + 7\\).",
-        "Set y = 4: \\(4 = -\\tfrac{7}{8}x + 7 \\Rightarrow -\\tfrac{7}{8}x = -3 \\Rightarrow x = \\tfrac{24}{7}\\).",
-        "Thus \\(d = \\tfrac{24}{7}\\)."
+        "A inclinação de \\((0,7)\\) a \\((8,0)\\) é \\(-\\tfrac{7}{8}\\). Equação: \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Para \\(y = 4\\): \\(4 = -\\tfrac{7}{8}x + 7 \\Rightarrow -\\tfrac{7}{8}x = -3 \\Rightarrow x = \\tfrac{24}{7}\\).",
+        "Assim, \\(d = \\tfrac{24}{7}\\)."
       ]
     },
     {
@@ -945,12 +945,12 @@
       "format": "multiple_choice",
       "structure": "adding_and_subtracting_exponents",
       "hint_english": "Factor out the greatest common factor.",
-      "hint_portugues": "Factor out the greatest common factor.",
+      "hint_portugues": "Fatore o máximo divisor comum (MDC).",
       "solution_english": [
         "GCF is \\(6x\\): \\(6x^2 - 18xy^2 = 6x(x - 3y^2)\\)."
       ],
       "solution_portugues": [
-        "GCF is \\(6x\\): \\(6x^2 - 18xy^2 = 6x(x - 3y^2)\\)."
+        "O MDC é \\(6x\\): \\(6x^2 - 18xy^2 = 6x(x - 3y^2)\\)."
       ]
     },
     {
@@ -969,12 +969,12 @@
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "Substitute \\(x=6\\) and compute.",
-      "hint_portugues": "Substitute \\(x=6\\) and compute.",
+      "hint_portugues": "Substitua \\(x = 6\\) e calcule o valor.",
       "solution_english": [
         "\\(g(6) = 4 \\times 6^2 = 4 \\times 36 = 144\\)."
       ],
       "solution_portugues": [
-        "\\(g(6) = 4 \\times 6^2 = 4 \\times 36 = 144\\)."
+        "Portanto, \\(g(6) = 4 \\times 6^2 = 4 \\times 36 = 144\\) é o valor obtido."
       ]
     },
     {
@@ -993,13 +993,13 @@
       "format": "multiple_choice",
       "structure": "evaluating_probability",
       "hint_english": "Count multiples of 5 between 1 and 10.",
-      "hint_portugues": "Count multiples of 5 between 1 and 10.",
+      "hint_portugues": "Conte os múltiplos de 5 entre 1 e 10.",
       "solution_english": [
-        "Multiples of \\(5\\) in \\(1\\ldots 10\\) s\u00e3o \\(5\\) e \\(10\\) (2 resultados).",
-        "Probabilidade = \\(\\tfrac{2}{10}\\)."
+        "Multiples of \\(5\\) in \\(1\\ldots 10\\) are \\(5\\) and \\(10\\) (2 outcomes).",
+        "Probability = \\(\\tfrac{2}{10}\\)."
       ],
       "solution_portugues": [
-        "Multiples of \\(5\\) in \\(1\\ldots 10\\) s\u00e3o \\(5\\) e \\(10\\) (2 resultados).",
+        "Os múltiplos de \\(5\\) em \\(1\\ldots 10\\) são \\(5\\) e \\(10\\) (2 resultados).",
         "Probabilidade = \\(\\tfrac{2}{10}\\)."
       ]
     },
@@ -1019,12 +1019,12 @@
       "format": "multiple_choice",
       "structure": "identifying_intercept",
       "hint_english": "Use point-slope form: \\(y - 7 = -3(x - 2)\\).",
-      "hint_portugues": "Use point-slope form: \\(y - 7 = -3(x - 2)\\).",
+      "hint_portugues": "Use a forma ponto-inclinação: \\(y - 7 = -3(x - 2)\\).",
       "solution_english": [
-        "Point-slope: \\(y - 7 = -3(x - 2)\\) \u2192 \\(y - 7 = -3x + 6\\) \u2192 \\(y = -3x + 13\\)."
+        "Point-slope: \\(y - 7 = -3(x - 2)\\) → \\(y - 7 = -3x + 6\\) → \\(y = -3x + 13\\)."
       ],
       "solution_portugues": [
-        "Point-slope: \\(y - 7 = -3(x - 2)\\) \u2192 \\(y - 7 = -3x + 6\\) \u2192 \\(y = -3x + 13\\)."
+        "Forma ponto-inclinação: \\(y - 7 = -3(x - 2) \\Rightarrow y - 7 = -3x + 6 \\Rightarrow y = -3x + 13\\)."
       ]
     },
     {
@@ -1043,19 +1043,19 @@
       "format": "multiple_choice",
       "structure": "identifying_model",
       "hint_english": "Pick the equation with positive slope (~1.5) and intercept around 3.",
-      "hint_portugues": "Pick the equation with positive slope (~1.5) and intercept around 3.",
+      "hint_portugues": "Escolha a equação com inclinação positiva (~1{,}5) e intercepto em y perto de 3.",
       "solution_english": [
         "Line of best fit has positive slope and y-intercept near \\(3.1\\).",
         "So equation is \\(y = 3.1 + 1.5x\\) (option A)."
       ],
       "solution_portugues": [
-        "Line of best fit has positive slope and y-intercept near \\(3.1\\).",
-        "So equation is \\(y = 3.1 + 1.5x\\) (option A)."
+        "A reta de melhor ajuste tem inclinação positiva e intercepto em y perto de \\(3{,}1\\).",
+        "Portanto, a equação é \\(y = 3{,}1 + 1{,}5x\\) (opção A)."
       ]
     },
     {
       "question_number": 14,
-      "topic": "statistics",
+      "topic": "problem_solving_and_data_analysis",
       "subskill": "statistcs",
       "difficulty": "medium",
       "question": "The dot plot represents the values in data set C. Data set D is created by adding \\(40\\) to each value in data set C. Which of the following correctly compares the medians and the ranges of data sets C and D?",
@@ -1069,14 +1069,14 @@
       "format": "multiple_choice",
       "structure": "mean_median_mode_range",
       "hint_english": "Adding a constant shifts all values equally: median shifts by 40, range unchanged.",
-      "hint_portugues": "Adding a constant shifts all values equally: median shifts by 40, range unchanged.",
+      "hint_portugues": "Adicionar uma constante desloca todos os valores igualmente: a mediana sobe 40 e a amplitude não muda.",
       "solution_english": [
         "Adding \\(40\\) increases median by \\(40\\) (so D's median is greater).",
         "Range stays the same because spread is unchanged."
       ],
       "solution_portugues": [
-        "Adding \\(40\\) increases median by \\(40\\) (so D's median is greater).",
-        "Range stays the same because spread is unchanged."
+        "Adicionar \\(40\\) aumenta a mediana em \\(40\\) (logo a mediana de D é maior).",
+        "O intervalo permanece o mesmo porque a amplitude não muda."
       ]
     },
     {
@@ -1095,12 +1095,12 @@
       "format": "multiple_choice",
       "structure": "interpreting_linear_equations",
       "hint_english": "Coefficient of x is the rate for teaching hours.",
-      "hint_portugues": "Coefficient of x is the rate for teaching hours.",
+      "hint_portugues": "O coeficiente de \\(x\\) representa a taxa para as horas de ensino.",
       "solution_english": [
         "The coefficient \\(45\\) multiplies teaching hours \\(x\\), so it represents \\(\\$45\\) per hour for teaching."
       ],
       "solution_portugues": [
-        "The coefficient \\(45\\) multiplies teaching hours \\(x\\), so it represents \\(\\$45\\) per hour for teaching."
+        "O coeficiente \\(45\\) multiplica as horas de ensino \\(x\\), portanto representa a remuneração de \\$45 por hora de aula."
       ]
     },
     {
@@ -1119,12 +1119,12 @@
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "Substitute x=6 into y = x^2 + 4.",
-      "hint_portugues": "Substitute x=6 into y = x^2 + 4.",
+      "hint_portugues": "Substitua \\(x = 6\\) em \\(y = x^2 + 4\\).",
       "solution_english": [
         "\\(y = 6^2 + 4 = 36 + 4 = 40\\)."
       ],
       "solution_portugues": [
-        "\\(y = 6^2 + 4 = 36 + 4 = 40\\)."
+        "O valor de \\(y\\) é \\(6^2 + 4 = 36 + 4 = 40\\)."
       ]
     },
     {
@@ -1195,14 +1195,14 @@
       "format": "multiple_choice",
       "structure": "evaluating_exponential_functions",
       "hint_english": "Read the y-value at x = 0 on the graph.",
-      "hint_portugues": "Read the y-value at x = 0 on the graph.",
+      "hint_portugues": "Leia no gráfico o valor de \\(y\\) quando \\(x = 0\\).",
       "solution_english": [
         "At \\(x=0\\), the graph shows \\(y \\approx 3\\).",
         "So \\(f(0) = 3\\)."
       ],
       "solution_portugues": [
-        "At \\(x=0\\), the graph shows \\(y \\approx 3\\).",
-        "So \\(f(0) = 3\\)."
+        "Em \\(x = 0\\), o gráfico mostra \\(y \\approx 3\\).",
+        "Logo, \\(f(0) = 3\\)."
       ]
     },
     {
@@ -1221,14 +1221,14 @@
       "format": "multiple_choice",
       "structure": "identifying_intercept",
       "hint_english": "Use point-slope form with slope 2/5 and point (10,4).",
-      "hint_portugues": "Use point-slope form with slope 2/5 and point (10,4).",
+      "hint_portugues": "Use a forma ponto-inclinação com inclinação \\(\tfrac{2}{5}\\) e ponto \\((10,4)\\).",
       "solution_english": [
-        "Point-slope: \\(y - 4 = \\tfrac{2}{5}(x - 10)\\) \u2192 \\(y - 4 = \\tfrac{2}{5}x - 4\\) \u2192 \\(y = \\tfrac{2}{5}x\\).",
+        "Point-slope: \\(y - 4 = \\tfrac{2}{5}(x - 10)\\) → \\(y - 4 = \\tfrac{2}{5}x - 4\\) → \\(y = \\tfrac{2}{5}x\\).",
         "So the line is \\(y = \\tfrac{2}{5}x\\) (option B)."
       ],
       "solution_portugues": [
-        "Point-slope: \\(y - 4 = \\tfrac{2}{5}(x - 10)\\) \u2192 \\(y - 4 = \\tfrac{2}{5}x - 4\\) \u2192 \\(y = \\tfrac{2}{5}x\\).",
-        "So the line is \\(y = \\tfrac{2}{5}x\\) (option B)."
+        "Forma ponto-inclinação: \\(y - 4 = \\tfrac{2}{5}(x - 10) \\Rightarrow y - 4 = \\tfrac{2}{5}x - 4 \\Rightarrow y = \\tfrac{2}{5}x\\).",
+        "Portanto, a reta é \\(y = \\tfrac{2}{5}x\\) (opção B)."
       ]
     },
     {
@@ -1247,12 +1247,12 @@
       "format": "multiple_choice",
       "structure": "evaluating_exponent_expressions",
       "hint_english": "Solve 6\\sqrt{x} = 30.",
-      "hint_portugues": "Solve 6\\sqrt{x} = 30.",
+      "hint_portugues": "Resolva \\(6\\sqrt{x} = 30\\).",
       "solution_english": [
         "\\(6\\sqrt{x} = 30 \\Rightarrow \\sqrt{x} = 5 \\Rightarrow x = 25\\)."
       ],
       "solution_portugues": [
-        "\\(6\\sqrt{x} = 30 \\Rightarrow \\sqrt{x} = 5 \\Rightarrow x = 25\\)."
+        "\\(6\\sqrt{x} = 30 \\Rightarrow \\sqrt{x} = 5 \\Rightarrow x = 25\\); logo, o resultado é \\(x = 25\\)."
       ]
     },
     {
@@ -1271,16 +1271,16 @@
       "format": "multiple_choice",
       "structure": "identifying_solution",
       "hint_english": "Set up system: a + c = 18, 25a + 15c = 350.",
-      "hint_portugues": "Set up system: a + c = 18, 25a + 15c = 350.",
+      "hint_portugues": "Monte o sistema: \\(a + c = 18\\) e \\(25a + 15c = 350\\).",
       "solution_english": [
         "From \\(a + c = 18\\) we get \\(a = 18 - c\\).",
         "\\(25(18 - c) + 15c = 350 \\Rightarrow 450 - 25c + 15c = 350 \\Rightarrow -10c = -100 \\Rightarrow c = 10\\).",
         "So \\(10\\) children attended (option C)."
       ],
       "solution_portugues": [
-        "From \\(a + c = 18\\) we get \\(a = 18 - c\\).",
+        "De \\(a + c = 18\\) temos \\(a = 18 - c\\).",
         "\\(25(18 - c) + 15c = 350 \\Rightarrow 450 - 25c + 15c = 350 \\Rightarrow -10c = -100 \\Rightarrow c = 10\\).",
-        "So \\(10\\) children attended (option C)."
+        "Portanto, 10 crianças participaram (opção C)."
       ]
     },
     {
@@ -1299,14 +1299,14 @@
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "Check the discriminant: b^2 - 4ac.",
-      "hint_portugues": "Check the discriminant: b^2 - 4ac.",
+      "hint_portugues": "Verifique o discriminante: \\(b^2 - 4ac\\).",
       "solution_english": [
         "For \\(3x^2 -12x +12\\): discriminant \\(\\Delta = (-12)^2 - 4\\cdot3\\cdot12 = 144 - 144 = 0\\).",
         "\\(\\Delta = 0 \\Rightarrow\\) one distinct real solution."
       ],
       "solution_portugues": [
-        "For \\(3x^2 -12x +12\\): discriminant \\(\\Delta = (-12)^2 - 4\\cdot3\\cdot12 = 144 - 144 = 0\\).",
-        "\\(\\Delta = 0 \\Rightarrow\\) one distinct real solution."
+        "Para \\(3x^2 - 12x + 12\\): discriminante \\(\\Delta = (-12)^2 - 4\\cdot3\\cdot12 = 144 - 144 = 0\\).",
+        "\\(\\Delta = 0 \\Rightarrow\\) uma solução real distinta."
       ]
     },
     {
@@ -1325,14 +1325,14 @@
       "format": "multiple_choice",
       "structure": "circle_equations_xy_plane",
       "hint_english": "Shifting up by 5 increases the y-coordinate of the center by 5.",
-      "hint_portugues": "Shifting up by 5 increases the y-coordinate of the center by 5.",
+      "hint_portugues": "Transladar 5 unidades para cima aumenta em 5 a coordenada y do centro.",
       "solution_english": [
         "Center of \\(C\\) is \\((3, -1)\\).",
         "Shift up \\(5\\): new center is \\((3, 4)\\). Equation: \\((x - 3)^2 + (y - 4)^2 = 25\\), which is option B."
       ],
       "solution_portugues": [
-        "Center of \\(C\\) is \\((3, -1)\\).",
-        "Shift up \\(5\\): new center is \\((3, 4)\\). Equation: \\((x - 3)^2 + (y - 4)^2 = 25\\), which is option B."
+        "Centro de \\(C\\) é \\((3, -1)\\).",
+        "Transladar 5 para cima: novo centro \\((3, 4)\\). Equação: \\((x - 3)^2 + (y - 4)^2 = 25\\), opção B."
       ]
     }
   ],
@@ -1353,14 +1353,90 @@
       "format": "multiple_choice",
       "structure": "applying_percentages",
       "hint_english": "Compute 25% of 80.",
-      "hint_portugues": "Compute 25% of 80.",
+      "hint_portugues": "Calcule 25% de 80.",
       "solution_english": [
         "\\(25\\%\\) of \\(80\\) is \\(0.25 \\times 80 = 20\\).",
         "So about \\(20\\) students plan to attend."
       ],
       "solution_portugues": [
-        "\\(25\\%\\) of \\(80\\) is \\(0.25 \\times 80 = 20\\).",
-        "So about \\(20\\) students plan to attend."
+        "25% de \\(80\\) é \\(0{,}25 \\times 80 = 20\\).",
+        "Então cerca de \\(20\\) alunos pretendem participar."
+      ]
+    },
+    {
+      "question_number": 2,
+      "topic": "algebra",
+      "subskill": "linear_equations",
+      "difficulty": "hard",
+      "question": "A workshop produces metal parts and plastic parts, one at a time, for a total of \\(600\\) minutes each day. It takes \\(12\\) minutes to produce one metal part and \\(6\\) minutes to produce one plastic part. Which equation represents the possible number of metal parts, \\(x\\), and plastic parts, \\(y\\), the workshop can produce each day?",
+      "options": {
+        "A": "\\\\(6x + 12y = 600\\\\)",
+        "B": "\\\\(12x + 6y = 600\\\\)",
+        "C": "\\\\((x + y)(12 + 6) = 600\\\\)",
+        "D": "\\\\((12 + x)(6 + y) = 600\\\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "linear_equations",
+      "hint_english": "Total time = time per metal part \\(\\times x\\) plus time per plastic part \\(\\times y\\).",
+      "hint_portugues": "Tempo total = tempo por peça de metal \\(\\times x\\) mais tempo por peça plástica \\(\\times y\\).",
+      "solution_english": [
+        "Time for metals: \\(12x\\) minutes. Time for plastics: \\(6y\\) minutes.",
+        "Total: \\(12x + 6y = 600\\). Option B."
+      ],
+      "solution_portugues": [
+        "Tempo para metais: \\(12x\\) minutos. Tempo para plásticos: \\(6y\\) minutos.",
+        "Total: \\(12x + 6y = 600\\). Opção B."
+      ]
+    },
+    {
+      "question_number": 3,
+      "topic": "statistics",
+      "subskill": "linear_regression",
+      "difficulty": "hard",
+      "question": "The scatterplot shows the relationship between two variables, \\(x\\) and \\(y\\). A line of best fit is also shown. Which equation best represents the line of best fit?",
+      "options": {
+        "A": "\\\\(y = 13.5 + 0.8x\\\\)",
+        "B": "\\\\(y = 13.5 - 0.8x\\\\)",
+        "C": "\\\\(y = -13.5 + 0.8x\\\\)",
+        "D": "\\\\(y = -13.5 - 0.8x\\\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "line_of_best_fit",
+      "hint_english": "Use the y-intercept near 13.5 and note the negative slope.",
+      "hint_portugues": "Use o intercepto em torno de 13,5 e note que a inclinação é negativa.",
+      "solution_english": [
+        "Line crosses near \\(y \\approx 13.5\\) when \\(x = 0\\) and slopes downward.",
+        "Negative slope about \\(-0.8\\); so \\(y = 13.5 - 0.8x\\). Option B."
+      ],
+      "solution_portugues": [
+        "A reta cruza próximo de \\(y \\approx 13{,}5\\) quando \\(x = 0\\) e desce.",
+        "Inclinação negativa próxima de \\(-0.8\\); portanto \\(y = 13.5 - 0.8x\\). Opção B."
+      ]
+    },
+    {
+      "question_number": 4,
+      "topic": "advanced_math",
+      "subskill": "exponential_functions",
+      "difficulty": "hard",
+      "question": "In the \\(xy\\)-plane, the graph of the equation \\(y = 5^x\\) is translated \\(3\\) units down. What is an equation of the resulting graph?",
+      "options": {
+        "A": "\\\\(y = 5^{x} + 3\\\\)",
+        "B": "\\\\(y = 5^{x} - 3\\\\)",
+        "C": "\\\\(y = 5^{x+3}\\\\)",
+        "D": "\\\\(y = 5^{x-3}\\\\)"
+      },
+      "correct_option": "B",
+      "format": "multiple_choice",
+      "structure": "function_transformations",
+      "hint_english": "Vertical shifts add or subtract outside the function.",
+      "hint_portugues": "Translações verticais somam ou subtraem fora da função.",
+      "solution_english": [
+        "Shifting down 3 subtracts 3 from the output: \\(y = 5^x - 3\\)."
+      ],
+      "solution_portugues": [
+        "Transladar 3 para baixo subtrai 3 da saída: \\(y = 5^x - 3\\)."
       ]
     },
     {
@@ -1407,14 +1483,14 @@
       "format": "multiple_choice",
       "structure": "identifying_solution",
       "hint_english": "Find the line equation through (0,7) and (8,0), then set y = 4.",
-      "hint_portugues": "Find the line equation through (0,7) and (8,0), then set y = 4.",
+      "hint_portugues": "Encontre a equação da reta que passa por \\((0,7)\\) e \\((8,0)\\); depois faça \\(y = 4\\).",
       "solution_english": [
         "Slope = \\(\\dfrac{0 - 7}{8 - 0} = -\\tfrac{7}{8}\\); equation \\(y = -\\tfrac{7}{8}x + 7\\).",
         "Set \\(y = 4\\): \\(4 = -\\tfrac{7}{8}d + 7 \\Rightarrow -\\tfrac{7}{8}d = -3 \\Rightarrow d = \\tfrac{24}{7}\\)."
       ],
       "solution_portugues": [
-        "Slope = \\(\\dfrac{0 - 7}{8 - 0} = -\\tfrac{7}{8}\\); equation \\(y = -\\tfrac{7}{8}x + 7\\).",
-        "Set \\(y = 4\\): \\(4 = -\\tfrac{7}{8}d + 7 \\Rightarrow -\\tfrac{7}{8}d = -3 \\Rightarrow d = \\tfrac{24}{7}\\)."
+        "Inclinação = \\(\\dfrac{0 - 7}{8 - 0} = -\\tfrac{7}{8}\\); equação \\(y = -\\tfrac{7}{8}x + 7\\).",
+        "Definindo \\(y = 4\\): \\(4 = -\\tfrac{7}{8}d + 7 \\Rightarrow -\\tfrac{7}{8}d = -3 \\Rightarrow d = \\tfrac{24}{7}\\)."
       ]
     },
     {
@@ -1433,7 +1509,7 @@
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "Plug the given x-values; only one option fits all three.",
-      "hint_portugues": "Plug the given x-values; only one option fits all three.",
+      "hint_portugues": "Teste os valores de \\(x\\) dados; apenas uma opção funciona nos três casos.",
       "solution_english": [
         "Check \\(x = 0\\): all give \\(15\\).",
         "Check \\(x = 1\\): only A, B, D give \\(20\\); C gives \\(21\\).",
@@ -1441,10 +1517,10 @@
         "Thus \\(g(x) = x^2 + 4x + 15\\) (option D)."
       ],
       "solution_portugues": [
-        "Check \\(x = 0\\): all give \\(15\\).",
-        "Check \\(x = 1\\): only A, B, D give \\(20\\); C gives \\(21\\).",
-        "Check \\(x = -1\\): A gives \\(14\\), B gives \\(16\\), C gives \\(19\\), D gives \\(12\\).",
-        "Thus \\(g(x) = x^2 + 4x + 15\\) (option D)."
+        "Para \\(x = 0\\): todas as expressões dão \\(15\\).",
+        "Para \\(x = 1\\): apenas A, B e D dão \\(20\\); C dá \\(21\\).",
+        "Para \\(x = -1\\): A dá \\(14\\), B \\(16\\), C \\(19\\), D \\(12\\).",
+        "Portanto, \\(g(x) = x^2 + 4x + 15\\) (opção D)."
       ]
     },
     {
@@ -1463,12 +1539,12 @@
       "format": "multiple_choice",
       "structure": "identifying_solution",
       "hint_english": "Solve (a + 20)/4 = 9 for a.",
-      "hint_portugues": "Solve (a + 20)/4 = 9 for a.",
+      "hint_portugues": "Resolva \\(\tfrac{a + 20}{4} = 9\\) para \\(a\\).",
       "solution_english": [
         "\\(\\tfrac{a + 20}{4} = 9 \\Rightarrow a + 20 = 36 \\Rightarrow a = 16\\)."
       ],
       "solution_portugues": [
-        "\\(\\tfrac{a + 20}{4} = 9 \\Rightarrow a + 20 = 36 \\Rightarrow a = 16\\)."
+        "O valor encontrado é \\(a = 16\\)."
       ]
     },
     {
@@ -1487,14 +1563,14 @@
       "format": "multiple_choice",
       "structure": "perpendicular_lines",
       "hint_english": "Find the slope of q, then use the negative reciprocal.",
-      "hint_portugues": "Find the slope of q, then use the negative reciprocal.",
+      "hint_portugues": "Ache a inclinação de \\(q\\) e use o recíproco negativo para a reta perpendicular.",
       "solution_english": [
         "Rewriting: \\(4y = 12x + 8 \\Rightarrow y = 3x + 2\\), so slope of \\(q\\) is \\(3\\).",
         "Perpendicular slope is \\(-\\tfrac{1}{3}\\) (option B)."
       ],
       "solution_portugues": [
-        "Rewriting: \\(4y = 12x + 8 \\Rightarrow y = 3x + 2\\), so slope of \\(q\\) is \\(3\\).",
-        "Perpendicular slope is \\(-\\tfrac{1}{3}\\) (option B)."
+        "Reescrevendo: \\(4y = 12x + 8 \\Rightarrow y = 3x + 2\\), então a inclinação de \\(q\\) é \\(3\\).",
+        "Uma reta perpendicular tem inclinação \\(-\\tfrac{1}{3}\\) (opção B)."
       ]
     },
     {
@@ -1512,15 +1588,15 @@
       "correct_option": "A",
       "format": "multiple_choice",
       "structure": "volume_of_3d_figures",
-      "hint_english": "Mass = density \u00d7 volume. Volume of a cube is side^3.",
-      "hint_portugues": "Mass = density \u00d7 volume. Volume of a cube is side^3.",
+      "hint_english": "Mass = density × volume. Volume of a cube is side^3.",
+      "hint_portugues": "Massa = densidade × volume. Volume de um cubo é lado³.",
       "solution_english": [
         "Volume = \\(4^3 = 64\\) cubic cm.",
         "Mass = \\(2.7 \\times 64 = 172.8\\) grams; nearest whole number: \\(173\\) (option A)."
       ],
       "solution_portugues": [
-        "Volume = \\(4^3 = 64\\) cubic cm.",
-        "Mass = \\(2.7 \\times 64 = 172.8\\) grams; nearest whole number: \\(173\\) (option A)."
+        "Volume = \\(4^3 = 64\\) cm³.",
+        "Massa = \\(2{,}7 \\times 64 = 172{,}8\\) gramas; inteiro mais próximo: \\(173\\) (opção A)."
       ]
     },
     {
@@ -1539,14 +1615,14 @@
       "format": "multiple_choice",
       "structure": "evaluating_exponential_functions",
       "hint_english": "Every 2 years corresponds to multiplying by 1.06 once.",
-      "hint_portugues": "Every 2 years corresponds to multiplying by 1.06 once.",
+      "hint_portugues": "A cada 2 anos multiplica-se por \\(1{,}06\\) uma vez.",
       "solution_english": [
-        "The factor per \\(2\\) years is \\(1.06\\) \u2192 increase of \\(6\\%\\).",
+        "The factor per \\(2\\) years is \\(1.06\\) → increase of \\(6\\%\\).",
         "So \\(n = 6\\)."
       ],
       "solution_portugues": [
-        "The factor per \\(2\\) years is \\(1.06\\) \u2192 increase of \\(6\\%\\).",
-        "So \\(n = 6\\)."
+        "O fator a cada 2 anos é \\(1{,}06\\), ou seja, aumento de \\(6\\%\\).",
+        "Logo \\(n = 6\\)."
       ]
     },
     {
@@ -1565,16 +1641,16 @@
       "format": "multiple_choice",
       "structure": "classifying_system_of_linear_equations",
       "hint_english": "For no solution, lines must be parallel with different intercepts (same slope, different constant term).",
-      "hint_portugues": "For no solution, lines must be parallel with different intercepts (same slope, different constant term).",
+      "hint_portugues": "Sem solução: retas paralelas com interceptos diferentes (mesma inclinação, termo constante distinto).",
       "solution_english": [
-        "Rewrite: \\(3mx - 12 = 6x - 10\\) \u21d2 slopes: \\(3m\\) on LHS vs. \\(6\\) on RHS. For parallel lines, set \\(3m = 6\\) \u21d2 \\(m = 2\\).",
+        "Rewrite: \\(3mx - 12 = 6x - 10\\) ⇒ slopes: \\(3m\\) on LHS vs. \\(6\\) on RHS. For parallel lines, set \\(3m = 6\\) ⇒ \\(m = 2\\).",
         "Then intercepts: LHS \\(-12\\), RHS \\(-10\\) are different, so the system has no solution.",
         "Thus \\(m = 2\\) (option C)."
       ],
       "solution_portugues": [
-        "Rewrite: \\(3mx - 12 = 6x - 10\\) \u21d2 slopes: \\(3m\\) on LHS vs. \\(6\\) on RHS. For parallel lines, set \\(3m = 6\\) \u21d2 \\(m = 2\\).",
-        "Then intercepts: LHS \\(-12\\), RHS \\(-10\\) are different, so the system has no solution.",
-        "Thus \\(m = 2\\) (option C)."
+        "Reescreva: \\(3mx - 12 = 6x - 10\\); as inclinações são \\(3m\\) e \\(6\\). Para paralelas, \\(3m = 6\\) \\Rightarrow \\(m = 2\\).",
+        "Os interceptos são \\(-12\\) e \\(-10\\), diferentes, então o sistema não tem solução.",
+        "Assim, \\(m = 2\\) (opção C)."
       ]
     },
     {
@@ -1582,7 +1658,7 @@
       "topic": "problem_solving_and_data_analysis",
       "subskill": "percentages",
       "difficulty": "hard",
-      "question": "A store buys jackets at a wholesale price of \\($40\\) each. The jackets are sold at a retail price that is \\(250\\%\\) of the wholesale price. At season end, the jackets are discounted by \\(60\\%\\) off the retail price. What is the final sale price of each jacket, in dollars?",
+      "question": "A store buys jackets at a wholesale price of \\$40 each. The jackets are sold at a retail price that is \\(250\\%\\) of the wholesale price. At season end, the jackets are discounted by \\(60\\%\\) off the retail price. What is the final sale price of each jacket, in dollars?",
       "options": {
         "A": "\\(25\\)",
         "B": "\\(32\\)",
@@ -1592,15 +1668,15 @@
       "correct_option": "C",
       "format": "multiple_choice",
       "structure": "percentage_increase_decrease",
-      "hint_english": "Retail = 2.5\u00d7 wholesale; then apply 60% off (keep 40%).",
-      "hint_portugues": "Retail = 2.5\u00d7 wholesale; then apply 60% off (keep 40%).",
+      "hint_english": "Retail = 2.5× wholesale; then apply 60% off (keep 40%).",
+      "hint_portugues": "Preço de varejo = 2{,}5× o atacado; depois aplique desconto de 60% (paga-se 40%).",
       "solution_english": [
         "Retail: \\(2.5 \\times 40 = 100\\).",
-        "\\(60\\%\\) off \u2192 pay \\(40\\%\\): \\(0.4 \\times 100 = 40\\). (option C)"
+        "\\(60\\%\\) off → pay \\(40\\%\\): \\(0.4 \\times 100 = 40\\). (option C)"
       ],
       "solution_portugues": [
-        "Retail: \\(2.5 \\times 40 = 100\\).",
-        "\\(60\\%\\) off \u2192 pay \\(40\\%\\): \\(0.4 \\times 100 = 40\\). (option C)"
+        "Preço cheio: \\(2{,}5 \\times 40 = 100\\).",
+        "Desconto de 60% \\Rightarrow paga-se 40%: \\(0{,}4 \\times 100 = 40\\) (opção C)."
       ]
     },
     {
@@ -1619,16 +1695,16 @@
       "format": "multiple_choice",
       "structure": "mean_median_mode_range",
       "hint_english": "Use weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
-      "hint_portugues": "Use weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "hint_portugues": "Use a média ponderada: \\((n_1\\cdot\text{média}_1 + n_2\\cdot\text{média}_2)/(n_1 + n_2)\\).",
       "solution_english": [
         "Total sum = \\(40\\times 78 + 60\\times 85 = 3120 + 5100 = 8220\\).",
         "Total students = \\(100\\).",
         "Mean = \\(8220/100 = 82.2\\) (option C)."
       ],
       "solution_portugues": [
-        "Total sum = \\(40\\times 78 + 60\\times 85 = 3120 + 5100 = 8220\\).",
-        "Total students = \\(100\\).",
-        "Mean = \\(8220/100 = 82.2\\) (option C)."
+        "Soma total = \\(40\\times 78 + 60\\times 85 = 3120 + 5100 = 8220\\).",
+        "Total de alunos = 100.",
+        "Média = \\(8220/100 = 82{,}2\\) (opção C)."
       ]
     },
     {
@@ -1647,12 +1723,13 @@
       "format": "multiple_choice",
       "structure": "adding_and_subtracting_exponents",
       "hint_english": "m must divide 6; constant term is p*q = -20; check which ratio always integer.",
-      "hint_portugues": "m must divide 6; constant term is p*q = -20; check which ratio always integer.",
+      "hint_portugues": "\\(m\\) deve dividir 6; \\(p q = -20\\). Verifique qual razão é sempre inteira.",
       "solution_english": [
-        "We have \\(m\\,q = 6 \\Rightarrow m\\) divides \\(6\\), \\(q = \\tfrac{6}{m}\\) (integer). Also \\(p\\,q = -20 \\Rightarrow p = -\\tfrac{20}{q}\\) (integer). Thus \\(q\\) is integer \u21d2 \\(\\tfrac{20}{p} = -q\\) is always integer (option D)."
+        "We have \\(m\\,q = 6 \\Rightarrow m\\) divides \\(6\\), \\(q = \\tfrac{6}{m}\\) (integer). Also \\(p\\,q = -20 \\Rightarrow p = -\\tfrac{20}{q}\\) (integer). Thus \\(q\\) is integer ⇒ \\(\\tfrac{20}{p} = -q\\) is always integer (option D)."
       ],
       "solution_portugues": [
-        "We have \\(m\\,q = 6 \\Rightarrow m\\) divides \\(6\\), \\(q = \\tfrac{6}{m}\\) (integer). Also \\(p\\,q = -20 \\Rightarrow p = -\\tfrac{20}{q}\\) (integer). Thus \\(q\\) is integer \u21d2 \\(\\tfrac{20}{p} = -q\\) is always integer (option D)."
+        "Temos \\(m q = 6\\) \\Rightarrow \\(m\\) divide 6 e \\(q = \\tfrac{6}{m}\\) é inteiro. Também \\(p q = -20\\) \\Rightarrow \\(p = -\\tfrac{20}{q}\\) é inteiro.",
+        "Logo \\(q\\) é inteiro, então \\(\\tfrac{20}{p} = -q\\) é sempre inteiro (opção D)."
       ]
     },
     {
@@ -1670,17 +1747,17 @@
       "correct_option": "D",
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
-      "hint_english": "Set 3 = x^2 \u2212 4x + a and require discriminant = 0.",
-      "hint_portugues": "Set 3 = x^2 \u2212 4x + a and require discriminant = 0.",
+      "hint_english": "Set 3 = x^2 − 4x + a and require discriminant = 0.",
+      "hint_portugues": "Defina \\(3 = x^2 - 4x + a\\) e imponha discriminante igual a 0.",
       "solution_english": [
         "\\(x^2 - 4x + a - 3 = 0 \\Rightarrow x^2 - 4x + (a-3) = 0\\).",
-        "\\(\\Delta = 16 - 4(a-3) = 28 - 4a\\). For one solution, set \\(\\Delta = 0\\) \u21d2 \\(28 - 4a = 0\\) \u21d2 \\(a = 7\\).",
+        "\\(\\Delta = 16 - 4(a-3) = 28 - 4a\\). For one solution, set \\(\\Delta = 0\\) ⇒ \\(28 - 4a = 0\\) ⇒ \\(a = 7\\).",
         "Therefore \\(a = 7\\) (option D)."
       ],
       "solution_portugues": [
-        "\\(x^2 - 4x + a - 3 = 0 \\Rightarrow x^2 - 4x + (a-3) = 0\\).",
-        "\\(\\Delta = 16 - 4(a-3) = 28 - 4a\\). For one solution, set \\(\\Delta = 0\\) \u21d2 \\(28 - 4a = 0\\) \u21d2 \\(a = 7\\).",
-        "Therefore \\(a = 7\\) (option D)."
+        "\\(x^2 - 4x + a - 3 = 0 \\Rightarrow x^2 - 4x + (a - 3) = 0\\).",
+        "\\(\\Delta = 16 - 4(a - 3) = 28 - 4a\\). Para uma solução, \\(\\Delta = 0\\) \\Rightarrow \\(28 - 4a = 0\\) \\Rightarrow \\(a = 7\\).",
+        "Portanto, \\(a = 7\\) (opção D)."
       ]
     },
     {
@@ -1690,20 +1767,20 @@
       "difficulty": "hard",
       "question": "In \\(x^2 - 28x + c = 0\\), there are no real solutions if \\(c > n\\). What is the least possible value of \\(n\\)?",
       "options": {},
-      "correct_option": "\\(196\\)",
+      "correct_option": "196",
       "format": "free_response",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "No real solutions when the discriminant is negative.",
-      "hint_portugues": "No real solutions when the discriminant is negative.",
+      "hint_portugues": "Não há raízes reais quando o discriminante é negativo.",
       "solution_english": [
         "Discriminant: \\(\\Delta = (-28)^2 - 4c = 784 - 4c\\).",
-        "Require \\(\\Delta < 0\\) \u21d2 \\(784 - 4c < 0\\) \u21d2 \\(c > 196\\).",
+        "Require \\(\\Delta < 0\\) ⇒ \\(784 - 4c < 0\\) ⇒ \\(c > 196\\).",
         "Least threshold \\(n = 196\\)."
       ],
       "solution_portugues": [
-        "Discriminant: \\(\\Delta = (-28)^2 - 4c = 784 - 4c\\).",
-        "Require \\(\\Delta < 0\\) \u21d2 \\(784 - 4c < 0\\) \u21d2 \\(c > 196\\).",
-        "Least threshold \\(n = 196\\)."
+        "Discriminante: \\(\\Delta = (-28)^2 - 4c = 784 - 4c\\).",
+        "Aplicando a condição \\(\\Delta < 0\\) \\Rightarrow \\(784 - 4c < 0\\) \\Rightarrow \\(c > 196\\).",
+        "O limite mínimo é \\(n = 196\\)."
       ]
     },
     {
@@ -1713,18 +1790,18 @@
       "difficulty": "hard",
       "question": "Data set A consists of \\(40\\) students with mean \\(68\\); data set B consists of \\(60\\) students with mean \\(82\\). Data set C combines all \\(100\\) students. What is the mean of data set C?",
       "options": {},
-      "correct_option": "\\(76.4\\)",
+      "correct_option": "76.4",
       "format": "free_response",
       "structure": "mean_median_mode_range",
       "hint_english": "Weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
-      "hint_portugues": "Weighted mean: (n1*mean1 + n2*mean2)/(n1+n2).",
+      "hint_portugues": "Média ponderada: \\((n_1\\cdot\text{média}_1 + n_2\\cdot\text{média}_2)/(n_1 + n_2)\\).",
       "solution_english": [
         "Total = \\(40\\times 68 + 60\\times 82 = 2720 + 4920 = 7640\\).",
         "Mean = \\(7640 / 100 = 76.4\\)."
       ],
       "solution_portugues": [
         "Total = \\(40\\times 68 + 60\\times 82 = 2720 + 4920 = 7640\\).",
-        "Mean = \\(7640 / 100 = 76.4\\)."
+        "Média = \\(7640 / 100 = 76{,}4\\)."
       ]
     },
     {
@@ -1742,15 +1819,15 @@
       "correct_option": "D",
       "format": "multiple_choice",
       "structure": "operations_with_rational_expressions",
-      "hint_english": "Find b from the asymptote, then shift input by \u22123.",
-      "hint_portugues": "Find b from the asymptote, then shift input by \u22123.",
+      "hint_english": "Find b from the asymptote, then shift input by −3.",
+      "hint_portugues": "Encontre \\(b\\) pela assíntota e depois desloque a entrada em \\(-3\\).",
       "solution_english": [
-        "Asymptote at \\(x = -6\\) \u21d2 \\(-6 + b = 0\\) \u21d2 \\(b = 6\\), so \\(f(x) = \\tfrac{a}{x + 6}\\).",
+        "Asymptote at \\(x = -6\\) ⇒ \\(-6 + b = 0\\) ⇒ \\(b = 6\\), so \\(f(x) = \\tfrac{a}{x + 6}\\).",
         "\\(g(x) = f(x - 3) = \\tfrac{a}{(x - 3) + 6} = \\tfrac{a}{x + 3}\\) (option D)."
       ],
       "solution_portugues": [
-        "Asymptote at \\(x = -6\\) \u21d2 \\(-6 + b = 0\\) \u21d2 \\(b = 6\\), so \\(f(x) = \\tfrac{a}{x + 6}\\).",
-        "\\(g(x) = f(x - 3) = \\tfrac{a}{(x - 3) + 6} = \\tfrac{a}{x + 3}\\) (option D)."
+        "Assíntota em \\(x = -6\\) \\Rightarrow \\(-6 + b = 0\\) \\Rightarrow \\(b = 6\\), logo \\(f(x) = \\tfrac{a}{x + 6}\\).",
+        "\\(g(x) = f(x - 3) = \\tfrac{a}{(x - 3) + 6} = \\tfrac{a}{x + 3}\\) (opção D)."
       ]
     },
     {
@@ -1764,12 +1841,12 @@
       "format": "free_response",
       "structure": "evaluating_quadratic_functions",
       "hint_english": "For ax^2 + bx + c = 0, product = c/a.",
-      "hint_portugues": "For ax^2 + bx + c = 0, product = c/a.",
+      "hint_portugues": "Para \\(ax^2 + bx + c = 0\\), o produto das raízes é \\(\tfrac{c}{a}\\).",
       "solution_english": [
         "Product = \\(\\tfrac{ab}{42}\\), so \\(k\\,ab = \\tfrac{ab}{42} \\Rightarrow k = \\tfrac{1}{42}\\)."
       ],
       "solution_portugues": [
-        "Product = \\(\\tfrac{ab}{42}\\), so \\(k\\,ab = \\tfrac{ab}{42} \\Rightarrow k = \\tfrac{1}{42}\\)."
+        "O produto é \\(\\tfrac{ab}{42}\\), então \\(k\\,ab = \\tfrac{ab}{42} \\Rightarrow k = \\tfrac{1}{42}\\)."
       ]
     },
     {
@@ -1787,17 +1864,17 @@
       "correct_option": "C",
       "format": "multiple_choice",
       "structure": "circle_equations_xy_plane",
-      "hint_english": "Complete the square for x and y terms to find (x\u2212h)^2 + (y\u2212k)^2 = r^2.",
-      "hint_portugues": "Complete the square for x and y terms to find (x\u2212h)^2 + (y\u2212k)^2 = r^2.",
+      "hint_english": "Complete the square for x and y terms to find (x−h)^2 + (y−k)^2 = r^2.",
+      "hint_portugues": "Complete quadrados em \\(x\\) e \\(y\\) para obter \\((x-h)^2 + (y-k)^2 = r^2\\).",
       "solution_english": [
         "Rewrite: \\((x^2 + 4x) + (y^2 - 6y) = 52\\).",
         "Complete squares: \\((x+2)^2 - 4 + (y-3)^2 - 9 = 52 \\Rightarrow (x+2)^2 + (y-3)^2 = 65\\).",
-        "\\(r^2 = 65\\) \u21d2 \\(r \\approx 8.06\\); nearest listed is \\(8\\) (option C)."
+        "\\(r^2 = 65\\) ⇒ \\(r \\approx 8.06\\); nearest listed is \\(8\\) (option C)."
       ],
       "solution_portugues": [
-        "Rewrite: \\((x^2 + 4x) + (y^2 - 6y) = 52\\).",
-        "Complete squares: \\((x+2)^2 - 4 + (y-3)^2 - 9 = 52 \\Rightarrow (x+2)^2 + (y-3)^2 = 65\\).",
-        "\\(r^2 = 65\\) \u21d2 \\(r \\approx 8.06\\); nearest listed is \\(8\\) (option C)."
+        "Reescreva: \\((x^2 + 4x) + (y^2 - 6y) = 52\\).",
+        "Completando quadrados: \\((x+2)^2 - 4 + (y-3)^2 - 9 = 52 \\Rightarrow (x+2)^2 + (y-3)^2 = 65\\).",
+        "\\(r^2 = 65\\) \\Rightarrow \\(r \\approx 8{,}06\\); mais próximo é \\(8\\) (opção C)."
       ]
     },
     {
@@ -1815,19 +1892,19 @@
       "correct_option": "A",
       "format": "multiple_choice",
       "structure": "surface_area",
-      "hint_english": "Surface area of one prism: 2s^2 + 4s\u00b760. Gluing removes two square bases (2s^2).",
-      "hint_portugues": "Surface area of one prism: 2s^2 + 4s\u00b760. Gluing removes two square bases (2s^2).",
+      "hint_english": "Surface area of one prism: 2s^2 + 4s·60. Gluing removes two square bases (2s^2).",
+      "hint_portugues": "Área de uma pirâmide: \\(2s^2 + 4s\\cdot60\\). Ao colar, subtraem-se duas bases quadradas (\\(2s^2\\)).",
       "solution_english": [
         "One prism SA: \\(2s^2 + 240s\\).",
         "Two prisms: \\(4s^2 + 480s\\). Gluing removes \\(2s^2\\): glued SA = \\(2s^2 + 480s\\).",
         "Ratio glued/original = \\(\\dfrac{2s^2 + 480s}{2s^2 + 240s} = \\tfrac{49}{25}\\).",
-        "Solve: cross-multiply \\(25(2s^2 + 480s) = 49(2s^2 + 240s)\\) \u21d2 \\(50s^2 + 12000s = 98s^2 + 11760s\\) \u21d2 \\(48s^2 = 240s\\) \u21d2 \\(s = 5\\) (option A)."
+        "Solve: cross-multiply \\(25(2s^2 + 480s) = 49(2s^2 + 240s)\\) ⇒ \\(50s^2 + 12000s = 98s^2 + 11760s\\) ⇒ \\(48s^2 = 240s\\) ⇒ \\(s = 5\\) (option A)."
       ],
       "solution_portugues": [
-        "One prism SA: \\(2s^2 + 240s\\).",
-        "Two prisms: \\(4s^2 + 480s\\). Gluing removes \\(2s^2\\): glued SA = \\(2s^2 + 480s\\).",
-        "Ratio glued/original = \\(\\dfrac{2s^2 + 480s}{2s^2 + 240s} = \\tfrac{49}{25}\\).",
-        "Solve: cross-multiply \\(25(2s^2 + 480s) = 49(2s^2 + 240s)\\) \u21d2 \\(50s^2 + 12000s = 98s^2 + 11760s\\) \u21d2 \\(48s^2 = 240s\\) \u21d2 \\(s = 5\\) (option A)."
+        "Uma pirâmide: \\(2s^2 + 240s\\).",
+        "Duas pirâmides: \\(4s^2 + 480s\\). Ao colar, removem-se \\(2s^2\\): área colada = \\(2s^2 + 480s\\).",
+        "Razão colada/original = \\(\\dfrac{2s^2 + 480s}{2s^2 + 240s} = \\tfrac{49}{25}\\).",
+        "Multiplicando cruzado: \\(25(2s^2 + 480s) = 49(2s^2 + 240s) \\Rightarrow 50s^2 + 12000s = 98s^2 + 11760s \\Rightarrow 48s^2 = 240s \\Rightarrow s = 5\\) (opção A)."
       ]
     },
     {
@@ -1845,19 +1922,19 @@
       "correct_option": "D",
       "format": "multiple_choice",
       "structure": "evaluating_quadratic_functions",
-      "hint_english": "Use vertex form y = a(x\u22124)^2 \u2212 9; require two real roots (a>0). Then evaluate a+b+c.",
-      "hint_portugues": "Use vertex form y = a(x\u22124)^2 \u2212 9; require two real roots (a>0). Then evaluate a+b+c.",
+      "hint_english": "Use vertex form y = a(x−4)^2 − 9; require two real roots (a>0). Then evaluate a+b+c.",
+      "hint_portugues": "Use a forma de vértice \\(y = a(x-4)^2 - 9\\); exija duas raízes reais (\\(a > 0\\)) e então avalie \\(a + b + c\\).",
       "solution_english": [
         "Vertex form: \\(y = a(x-4)^2 - 9 = ax^2 - 8ax + 16a - 9\\).",
         "Here \\(a + b + c = a - 8a + 16a - 9 = 9a - 9\\).",
-        "Two real x-intercepts \u21d2 \\(a > 0\\).",
-        "Take \\(a = \\tfrac{4}{9}\\) \u21d2 \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (option D), and the parabola still crosses the x-axis."
+        "Two real x-intercepts ⇒ \\(a > 0\\).",
+        "Take \\(a = \\tfrac{4}{9}\\) ⇒ \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (option D), and the parabola still crosses the x-axis."
       ],
       "solution_portugues": [
-        "Vertex form: \\(y = a(x-4)^2 - 9 = ax^2 - 8ax + 16a - 9\\).",
-        "Here \\(a + b + c = a - 8a + 16a - 9 = 9a - 9\\).",
-        "Two real x-intercepts \u21d2 \\(a > 0\\).",
-        "Take \\(a = \\tfrac{4}{9}\\) \u21d2 \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (option D), and the parabola still crosses the x-axis."
+        "Forma de vértice: \\(y = a(x-4)^2 - 9 = ax^2 - 8ax + 16a - 9\\).",
+        "Aqui \\(a + b + c = a - 8a + 16a - 9 = 9a - 9\\).",
+        "Duas interseções reais \\Rightarrow \\(a > 0\\).",
+        "Escolhendo \\(a = \\tfrac{4}{9}\\): \\(a + b + c = 9\\left(\\tfrac{4}{9}\\right) - 9 = 4 - 9 = -5\\) (opção D), e a parábola cruza o eixo x."
       ]
     }
   ],
